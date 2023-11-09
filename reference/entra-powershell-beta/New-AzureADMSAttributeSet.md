@@ -38,30 +38,25 @@ The New-EntraMSAttributeSet cmdlet Create a new attributeSet object
 
 ## Permissions
 
-|Permission type      | Least privileged permissions     |    Higher privileged permissions   |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | CustomSecAttributeDefinition.ReadWrite.All |  Not available.  |
-|Delegated (personal Microsoft account) | Not supported.   | Not supported. |
-|Application | CustomSecAttributeDefinition.ReadWrite.All	 | Not available.
+|Permission type|Least privileged permissions|Higher privileged permissions|
+|:---|:---|:---|
+|Delegated (work or school account)|CustomSecAttributeDefinition.ReadWrite.All|Not available.|
+|Delegated (personal Microsoft account)|Not supported.|Not supported.|
+|Application|CustomSecAttributeDefinition.ReadWrite.All|Not available.|
 
 ## Examples
 
-### Example 1: Create a new attributeSet object
-
-    
-
-
-    
+### Example : Create a new attributeSet object
+  
 ```powershell
- New-EntraMSAttributeSet-Id "Engineering" -Description "Attributes for engineering team" -MaxAttributesPerSet 10
+ New-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for engineering team" -MaxAttributesPerSet 10
 ``` 
      
-
     
 ```Output
-   Id       OdataType Description MaxAttributesPerSet
---       --------- ----------- -------------------
-Engineering           Attributes for engineering team                  10
+   Id          OdataType   Description                       MaxAttributesPerSet
+   --          ---------   -----------                       -------------------
+   Engineering             Attributes for engineering team   10
 ```
 
 Add a single attribute set.
