@@ -16,7 +16,7 @@ author: msewaweru
 
 Reference
 
-Module: **Microsoft.Entra.Users**
+Module: **Microsoft.Graph.Entra.Beta**
 
 ## Synopsis
 
