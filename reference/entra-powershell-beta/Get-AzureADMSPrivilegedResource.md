@@ -53,7 +53,7 @@ Get azure AD MS privileged resource.
 
 ## Examples
 
-### Example 1: Get all users
+### Example 1: Get all resources
     
 This example demonstrates how to retrieve all resource from Microsoft Entra ID.
 
