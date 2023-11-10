@@ -1,16 +1,14 @@
 ---
-title: Example of the Microsoft Entra PowerShell cmdlet reference content.
-description: This article provides an example of how to write cmdlet reference content for Microsoft Entra PowerShell docs.
+title: Get-EntraMSPrivilegedResource.
+description: This article provides details on Get-EntraMSPrivilegedResource command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 10/25/2023
+ms.date: 11/10/2023
 ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
 ---
-
-# Microsoft Entra PowerShell cmdlet reference example
 
 # Get-EntraMSPrivilegedResource
 
@@ -18,11 +16,11 @@ Reference
 
 Module: **Microsoft.Graph.Entra.Beta**
 
-## Synopsis
+## SYNOPSIS
 
-Get azure AD MS privileged resource.
+Get Azure AD MS privileged resource.
 
-## Syntax
+## SYNTAX
 
 ```powershell
 Get-EntraMSPrivilegedResource
@@ -39,11 +37,11 @@ Get-EntraMSPrivilegedResource
    [<CommonParameters>]
 ```
 
-## Description  
+## DESCRIPTION  
   
-Get azure AD MS privileged resource.
+Get Azure AD MS privileged resource.
 
-## Permissions
+## PERMISSIONS
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
@@ -51,11 +49,11 @@ Get azure AD MS privileged resource.
 |Delegated (personal Microsoft account) |     |
 |Application | PrivilegedAccess.Read.AzureResources, PrivilegedAccess.ReadWrite.AzureResources |
 
-## Examples
+## EXAMPLES
 
 ### Example 1: Get all resources
     
-This example demonstrates how to retrieve all resource from Microsoft Entra ID.
+This example demonstrates how to retrieve all resources from Microsoft Entra ID.
 
     
 ```powershell
@@ -75,7 +73,7 @@ d40bbf91-9b28-42bb-a42c-f2ada9332fb6 AdminUnitName1                       /admin
 d5aec55f-2d12-4442-8d2f-ccca95d4390e Contoso                              /
 eb2a1f04-5fb2-44fb-b159-b8989da9a6a8 56544new2$£3                         /eb2a1f04-5fb2-44fb-b159-b8989da9a6a8
 ```
-Get all resources for AzureResource provider
+Get all resources for AzureResource provider.
 
 ### Example 2: Get a specific privileged resource
 In this example, we'll provide the resource ID to retrieve a specific resource.
@@ -107,6 +105,7 @@ d40bbf91-9b28-42bb-a42c-f2ada9332fb6 AdminUnitName1 /administrativeUnits/d40bbf9
 Get a resource for AzureResource provider by Filter
 
 ### Example 3: Get top privileged resources.
+
 ```powershell
 Get-EntraMSPrivilegedResource -ProviderId aadRoles -Top 1
 ```
@@ -116,9 +115,9 @@ Id                                   DisplayName       ExternalId
 --                                   -----------       ----------
 0d626126-a0f3-444c-a025-84c2715389b4 ToGraph_443DEMos1 /0d626126-a0f3-444c-a025-84c271...
 ```
-Get top resources for AzureResource provider
+Get top resources for AzureResource provider.
 
-## Parameters
+## PARAMETERS
 
 ### -Filter
 The filter for Odata query.
@@ -180,11 +179,11 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-## Inputs
+## INPUTS
 String
 
-## Outputs
+## OUTPUTS
 Object
 
 
-## Related links
+## RELATED LINKS
