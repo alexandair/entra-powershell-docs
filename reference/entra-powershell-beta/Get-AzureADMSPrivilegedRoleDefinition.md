@@ -90,7 +90,7 @@ Id                                   DisplayName  ExternalId                    
 d405c6df-0af8-4e3b-95e4-4d06e542189e Device Users d405c6df-0af8-4e3b-95e4-4d06e542189e d5aec55f...
 ```
 
-Get a role definitions for a specific provider, resource and Id
+Get a role definitions for a specific provider, resource and filter
 
 ## PARAMETERS
 
