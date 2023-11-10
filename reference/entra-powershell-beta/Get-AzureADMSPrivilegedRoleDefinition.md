@@ -120,64 +120,62 @@ Get top resources for AzureResource provider
 
 ## Parameters
 
-### -Filter
+### -Filter 
 The filter for Odata query.
 
 ```yaml
 Type: String
-Parameter Sets: GetQuery
+Parameter Sets: 
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
 ### -Id
-The unique identifier of the specific resource
+The unique identifier of the specific resource.
 
 ```yaml
 Type: String
-Parameter Sets: GetById
+Parameter Sets: 
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ProviderId
+### -ProviderId 
 The unique identifier of the specific provider
-
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type:	String
+Parameter Sets: 
 Aliases:
 
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Position:	Named
+Default value:	None
+Required:	True
+Accept pipeline input:	True
+Accept wildcard characters:	False
 ```
 
 ### -Top
 The top result count
-
 ```yaml
-Type: Int32
-Parameter Sets: GetQuery
+Type:	String
+Parameter Sets: 
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Position:	Named
+Default value:	None
+Required:	False
+Accept pipeline input:	True
+Accept wildcard characters:	False
 ```
 
 ## Inputs
