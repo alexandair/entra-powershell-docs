@@ -1,16 +1,14 @@
 ---
-title: Example of the Microsoft Entra PowerShell cmdlet reference content.
-description: This article provides an example of how to write cmdlet reference content for Microsoft Entra PowerShell docs.
+title: Get-EntraAuditSignInLogs.
+description: This article provides details on Get-EntraAuditSignInLogs command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 10/25/2023
+ms.date: 11/10/2023
 ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
 ---
-
-# Microsoft Entra PowerShell cmdlet reference example
 
 # Get-EntraAuditSignInLogs
 
@@ -18,11 +16,11 @@ Reference
 
 Module: **Microsoft.Graph.Entra.Beta**
 
-## Synopsis
+## SYNOPSIS
 
 Get audit logs of sign ins.
 
-## Syntax
+## SYNTAX
 
 ```powershell
 Get-EntraAuditSignInLogs 
@@ -32,11 +30,11 @@ Get-EntraAuditSignInLogs
  [<CommonParameters>]
 ```
 
-## Description  
+## DESCRIPTION  
   
 The Get-EntraAuditSignInLogs cmdlet gets an Azure Active Directory sign in log.
 
-## Permissions
+## PERMISSIONS
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
@@ -44,10 +42,10 @@ The Get-EntraAuditSignInLogs cmdlet gets an Azure Active Directory sign in log.
 |Delegated (personal Microsoft account) | Not supported   |
 |Application | AuditLog.Read.All and Directory.Read.All |
 
-## Examples
+## EXAMPLES
 
 ### Example 1: Get all logs
-    
+This command gets all sign in logs.
 ```powershell
  Get-EntraAuditSignInLogs -All $true 
 ``` 
@@ -63,32 +61,32 @@ Id                                   AppDisplayName                     AppId   
 b88f8107-f8b8-494a-bd7e-3ceddc3b8400 Azure Active Directory PowerShell  1b730954-1685-4b74-9bfd-dac224a7b894                          {}                        ropc                   si...
 e05ec15b-8698-4633-81ff-983f233b8500 Azure Active Directory PowerShell  1b730954-1685-4b74-9bfd-dac224a7b894                          {}                        none
 ```
-This command gets all sign in logs.
+
 
 ### Example 2: Get first n logs
-
+This example returns first n logs.
 ```powershell
  Get-EntraAuditSignInLogs -Top 1
 ```
-This example returns first n logs
+
 
 ### Example 3: Get audit logs containing a given ActivityDisplayName
-
+These commands show how to get sign in logs by ActivityDisplayName.
 ```powershell
  Get-EntraAuditSignInLogs -Filter "ActivityDisplayName eq 'Add owner to application'"
  Get-EntraAuditSignInLogs -Filter "ActivityDisplayName eq 'Add owner to application'" -Top 1
 ```
-These commands show how to get sign in logs by ActivityDisplayName
+
 
 ### Example 4: Get all sign in logs with a given result
-
+These commands show how to get sign in logs by result.
 ```powershell
  Get-EntraAuditSignInLogs -Filter "result eq 'success'"
  Get-EntraAuditSignInLogs -Filter "result eq 'failure'" -Top 1cls
 ```
-These commands show how to get sign in logs by result
 
-## Parameters
+
+## PARAMETERS
 
 ### -All
 Boolean to express that return all results from the server for the specific query
@@ -139,10 +137,10 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Inputs
+## INPUTS
 
 
-## Outputs
+## OUTPUTS
 
 
-## Related links
+## RELATED LINKS
