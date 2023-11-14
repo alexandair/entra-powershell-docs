@@ -18,11 +18,11 @@ Reference
 
 Module: **Microsoft.Graph.Entra.Beta**
 
-## Synopsis
+## SYNOPSIS
 
 Updates an existing attribute set.
 
-## Syntax
+## SYNTAX
 
 ```powershell
 Set-EntraMSAttributeSet 
@@ -32,10 +32,11 @@ Set-EntraMSAttributeSet
 [<CommonParameters>]
 ```
 
-## Description  
-  
-The Set-EntraMSAttributeSet cmdlet Updates an attribute set object identified by ID.
-## Permissions
+## DESCRIPTION 
+
+  Updates an Azure Active Directory (Azure AD) attribute set object identified by ID.
+
+## PERMISSIONS
 
 |Permission type|Least privileged permissions|Higher privileged permissions|
 |:---|:---|:---|
@@ -43,28 +44,29 @@ The Set-EntraMSAttributeSet cmdlet Updates an attribute set object identified by
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
 |Application|CustomSecAttributeDefinition.ReadWrite.All|Not available.|
 
-## Examples
+## EXAMPLES
 
-### Example 1 
+### Example 1: Update an attribute set.
   
 ```powershell
  Set-AzureADMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
 ``` 
 
-Update an attribute set.
+This example Update an attribute set.
 
 - Attribute set: `Engineering`
 
-### Example 2
+### Example 2: Update an Maximum number of custom security attributes.
+
 ```powershell
 Set-AzureADMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
 ```
 
-Update an attribute set.
+This example Update an  Maximum number of custom security attributes.
 
 - Attribute set: `Engineering`
 
-## Parameters
+## PARAMETERS
 
 ### -Description
 Description for the attribute set.
@@ -111,15 +113,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Inputs
+## INPUTS
 
-### System.String
+## OUTPUTS
 
-## Outputs
-
-### System.Object
-
-## Related links
+## RELATED LINKS
 
 - Get-EntraMSAttributeSet
 - New-EntraMSAttributeSet
