@@ -49,7 +49,7 @@ Set-EntraMSAttributeSet
 ### Example 1: Update an attribute set.
   
 ```powershell
- Set-AzureADMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
+ Set-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
 ``` 
 
 This example Update an attribute set.
@@ -59,7 +59,7 @@ This example Update an attribute set.
 ### Example 2: Update an Maximum number of custom security attributes.
 
 ```powershell
-Set-AzureADMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
+Set-EntraMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
 ```
 
 This example Update an  Maximum number of custom security attributes.
