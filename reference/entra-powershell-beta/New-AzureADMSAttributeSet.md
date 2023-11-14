@@ -1,10 +1,10 @@
 ---
-title: Example of the Microsoft Entra PowerShell cmdlet reference content.
-description: This article provides an example of how to write cmdlet reference content for Microsoft Entra PowerShell docs.
+title: New-EntraMSAttributeSet
+description: This article provides details of New-EntraMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 10/25/2023
+ms.date: 11/10/2023
 ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
@@ -18,11 +18,11 @@ Reference
 
 Module: **Microsoft.Graph.Entra.Beta**
 
-## Synopsis
+## SYNOPSIS
 
-Create a new attributeSet object.
+Adds a new attribute set.
 
-## Syntax
+## SYNTAX
 
 ```powershell
 New-EntraMSAttributeSet 
@@ -32,11 +32,11 @@ New-EntraMSAttributeSet
 [<CommonParameters>]
 ```
 
-## Description  
+## DESCRIPTION 
   
-The New-EntraMSAttributeSet cmdlet Create a new attributeSet object
+The New-EntraMSAttributeSet cmdlet Adds a new Azure Active Directory (Azure AD) attribute set object.
 
-## Permissions
+## PERMISSIONS
 
 |Permission type|Least privileged permissions|Higher privileged permissions|
 |:---|:---|:---|
@@ -44,9 +44,9 @@ The New-EntraMSAttributeSet cmdlet Create a new attributeSet object
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
 |Application|CustomSecAttributeDefinition.ReadWrite.All|Not available.|
 
-## Examples
+## EXAMPLES
 
-### Example : Create a new attributeSet object
+### Example : Create a new attributeSet object.
   
 ```powershell
  New-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for engineering team" -MaxAttributesPerSet 10
@@ -59,11 +59,11 @@ The New-EntraMSAttributeSet cmdlet Create a new attributeSet object
    Engineering             Attributes for engineering team   10
 ```
 
-Add a single attribute set.
+this example Add a single attribute set.
 
 - Attribute set: `Engineering`
 
-## Parameters
+## PARAMETERS
 
 ### -Description
 Description for the attribute set.
@@ -110,15 +110,11 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Inputs
+## INPUTS
 
-### None
+## OUTPUT
 
-## Outputs
-
-### System.Object
-
-## Related links
+## RELATED LINKS
 
 - Get-EntraMSAttributeSet
 - Set-EntraMSAttributeSet
