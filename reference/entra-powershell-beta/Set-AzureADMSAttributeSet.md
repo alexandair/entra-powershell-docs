@@ -1,10 +1,10 @@
 ---
-title: Example of the Microsoft Entra PowerShell cmdlet reference content.
-description: This article provides an example of how to write cmdlet reference content for Microsoft Entra PowerShell docs.
+title: Set-EntraMSAttributeSet.
+description: This article provides details on Set-EntraMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 10/25/2023
+ms.date: 11/10/2023
 ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
