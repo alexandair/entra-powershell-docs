@@ -1,7 +1,7 @@
 ---
 title: New-EntraMSCustomSecurityAttributeDefinition
 
-description: This article provides details of New-EntraMSCustomSecurityAttributeDefinition command.
+description: This article provides details of the New-EntraMSCustomSecurityAttributeDefinition command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -10,8 +10,6 @@ ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
 ---
-
-# Microsoft Entra PowerShell cmdlet reference example
 
 # New-EntraMSCustomSecurityAttributeDefinition
 
@@ -39,7 +37,7 @@ New-EntraMSCustomSecurityAttributeDefinition
 
 ## DESCRIPTION 
   
-Adds a new Azure Active Directory (Azure AD) custom security attribute definition object.
+Adds a new Microsoft Entra ID custom security attribute definition object.
 
 ## PERMISSIONS
 
@@ -51,13 +49,13 @@ Adds a new Azure Active Directory (Azure AD) custom security attribute definitio
 
 ## EXAMPLES
 
-### Example : Add a custom security attribute definition.
+### Example 1: Add a custom security attribute definition.
   
 ```powershell
 New-EntraMSCustomSecurityAttributeDefinition-AttributeSet "Engineering" -Name "ProjectDate" -Description "Target completion date" -Type "String" -Status "Available" -IsCollection $false -IsSearchable $true -UsePreDefinedValuesOnly $true
 ``` 
     
-This example Add a custom security attribute definition.
+This example adds a custom security attribute definition.
 
 - Attribute set: `Engineering`
 - Attribute: `ProjectDate`
@@ -122,7 +120,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Name
-Name of the custom security attribute. Must be unique within an attribute set.
+Name of the custom security attribute. It must be unique within an attribute set.
 
 ```yaml
 Type: String
@@ -188,4 +186,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - Get-EntraMSCustomSecurityAttributeDefinition
-- Set-EntraMSCustomSecurityAttributeDefinition
+- [Set-EntraMSCustomSecurityAttributeDefinition](./Set-EntraMSCustomSecurityAttributeDefinition.md)
