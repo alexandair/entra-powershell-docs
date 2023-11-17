@@ -1,6 +1,6 @@
 ---
 title: Set-EntraMSAttributeSet.
-description: This article provides details on Set-EntraMSAttributeSet command.
+description: This article provides details on the Set-EntraMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -9,8 +9,6 @@ ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
 ---
-
-# Microsoft Entra PowerShell cmdlet reference example
 
 # Set-EntraMSAttributeSet
 
@@ -34,7 +32,7 @@ Set-EntraMSAttributeSet
 
 ## DESCRIPTION 
 
-  Updates an Azure Active Directory (Azure AD) attribute set object identified by ID.
+Updates a Microsoft Entra ID attribute set object identified by ID.
 
 ## PERMISSIONS
 
@@ -56,13 +54,13 @@ This example Update an attribute set.
 
 - Attribute set: `Engineering`
 
-### Example 2: Update an Maximum number of custom security attributes.
+### Example 2: Update a Maximum number of custom security attributes.
 
 ```powershell
 Set-EntraMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
 ```
 
-This example Update an  Maximum number of custom security attributes.
+This example updates the maximum number of custom security attributes.
 
 - Attribute set: `Engineering`
 
@@ -120,4 +118,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 - Get-EntraMSAttributeSet
-- New-EntraMSAttributeSet
+- [New-EntraMSAttributeSet](./New-EntraMSAttributeSet.md)
