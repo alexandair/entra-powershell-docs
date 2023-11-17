@@ -10,8 +10,6 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Microsoft Entra PowerShell cmdlet reference example
-
 # New-EntraMSAttributeSet
 
 Reference
@@ -34,7 +32,7 @@ New-EntraMSAttributeSet
 
 ## DESCRIPTION 
   
-The New-EntraMSAttributeSet cmdlet Adds a new Azure Active Directory (Azure AD) attribute set object.
+The New-EntraMSAttributeSet cmdlet Adds a new Microsoft Entra ID attribute set object.
 
 ## PERMISSIONS
 
@@ -59,7 +57,7 @@ The New-EntraMSAttributeSet cmdlet Adds a new Azure Active Directory (Azure AD) 
    Engineering             Attributes for engineering team   10
 ```
 
-this example Add a single attribute set.
+This example Add a single attribute set.
 
 - Attribute set: `Engineering`
 
