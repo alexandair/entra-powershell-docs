@@ -1,6 +1,6 @@
 ---
 title: Get-EntraAuditSignInLogs.
-description: This article provides details on Get-EntraAuditSignInLogs command.
+description: This article provides details on the Get-EntraAuditSignInLogs command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -18,7 +18,7 @@ Module: **Microsoft.Graph.Entra.Beta**
 
 ## SYNOPSIS
 
-Get audit logs of sign ins.
+Get audit logs of sign-ins.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Get-EntraAuditSignInLogs
 
 ## DESCRIPTION  
   
-The Get-EntraAuditSignInLogs cmdlet gets an Azure Active Directory sign in log.
+The Get-EntraAuditSignInLogs cmdlet gets the Microsoft Entra ID sign-in log.
 
 ## PERMISSIONS
 
@@ -45,7 +45,9 @@ The Get-EntraAuditSignInLogs cmdlet gets an Azure Active Directory sign in log.
 ## EXAMPLES
 
 ### Example 1: Get all logs
-This command gets all sign in logs.
+
+This command gets all sign-in logs.
+
 ```powershell
  Get-EntraAuditSignInLogs -All $true 
 ``` 
@@ -62,24 +64,28 @@ b88f8107-f8b8-494a-bd7e-3ceddc3b8400 Azure Active Directory PowerShell  1b730954
 e05ec15b-8698-4633-81ff-983f233b8500 Azure Active Directory PowerShell  1b730954-1685-4b74-9bfd-dac224a7b894                          {}                        none
 ```
 
+### Example 2: Get the first n logs
 
-### Example 2: Get first n logs
-This example returns first n logs.
+This example returns the first n logs.
+
 ```powershell
  Get-EntraAuditSignInLogs -Top 1
 ```
 
-
 ### Example 3: Get audit logs containing a given ActivityDisplayName
-These commands show how to get sign in logs by ActivityDisplayName.
+
+These commands show how to get sign-in logs by ActivityDisplayName.
+
 ```powershell
  Get-EntraAuditSignInLogs -Filter "ActivityDisplayName eq 'Add owner to application'"
  Get-EntraAuditSignInLogs -Filter "ActivityDisplayName eq 'Add owner to application'" -Top 1
 ```
 
 
-### Example 4: Get all sign in logs with a given result
-These commands show how to get sign in logs by result.
+### Example 4: Get all sign-in logs with a given result
+
+These commands show how to get sign-in logs by the result.
+
 ```powershell
  Get-EntraAuditSignInLogs -Filter "result eq 'success'"
  Get-EntraAuditSignInLogs -Filter "result eq 'failure'" -Top 1cls
