@@ -32,7 +32,7 @@ Get-EntraAuditDirectoryLogs
 
 ## DESCRIPTION  
   
-The Get-EntraAuditDirectoryLogs cmdlet gets an Azure Active Directory audit log.
+The Get-EntraAuditDirectoryLogs cmdlet gets a Microsoft Entra ID audit log.
 
 ## PERMISSIONS
 
@@ -63,7 +63,7 @@ Directory_aa14d505-735f-4c2d-a3e5-9f2774b15cbf_AE4VI_41199522           11/9/202
 
 
 ### Example 2: Get first n logs
-This example returns first n logs.
+This example returns the first n logs.
 ```powershell
  Get-EntraAuditDirectoryLogs -Top 1
 ```
