@@ -1,6 +1,6 @@
 ---
 title: Set-EntraMSCustomSecurityAttributeDefinition.
-description: This article provides details on Set-EntraMSCustomSecurityAttributeDefinition command.
+description: This article provides details on the Set-EntraMSCustomSecurityAttributeDefinition command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -9,8 +9,6 @@ ms.author: eunicewaweru
 manager: CelesteDG
 author: msewaweru
 ---
-
-# Microsoft Entra PowerShell cmdlet reference example
 
 # Set-EntraMSCustomSecurityAttributeDefinition
 
@@ -35,7 +33,8 @@ Set-EntraMSCustomSecurityAttributeDefinition
 
 ## DESCRIPTION 
   
-Updates an Azure Active Directory (Azure AD) custom security attribute definition object identified by ID. 
+Updates a Microsoft Entra ID custom security attribute definition object identified by ID. 
+
 ## PERMISSIONS
 
 |Permission type|Least privileged permissions|Higher privileged permissions|
@@ -46,14 +45,14 @@ Updates an Azure Active Directory (Azure AD) custom security attribute definitio
 
 ## EXAMPLES
 
-### Example 1: Update custom security attribute definition
+### Example 1: Update custom security attribute definition.
 
 
 ```powershell
 Set-EntraMSCustomSecurityAttributeDefinition -Id "Engineering_ProjectDate" -Description "Target completion date (YYYY/MM/DD)" -UsePreDefinedValuesOnly $false
 ``` 
 
-This example Update a custom security attribute definition.
+This example updates a custom security attribute definition.
 
 - Attribute set: `Engineering`
 - Attribute: `ProjectDate`
