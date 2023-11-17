@@ -1,6 +1,6 @@
 ---
 title: Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue.
-description: This article provides details on Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue command.
+description: This article provides details on the Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -10,9 +10,8 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Microsoft Entra PowerShell cmdlet reference example
-
 # Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue
+
 Reference
 
 Module: **Microsoft.Graph.Entra.Beta**
@@ -34,7 +33,7 @@ Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue
 
 ## DESCRIPTION 
   
-Updates an Azure Active Directory (Azure AD) custom security attribute definition predefined value object identified by ID.
+Updates a Microsoft Entra ID custom security attribute definition predefined value object identified by ID.
 
 ## PERMISSIONS
 
@@ -46,14 +45,14 @@ Updates an Azure Active Directory (Azure AD) custom security attribute definitio
 
 ## EXAMPLES
 
-### Example : Deactivate a predefined value.
+### Example 1: Deactivate a predefined value.
 
 
 ```powershell
 Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue -CustomSecurityAttributeDefinitionId "Engineering_Project" -Id "Alpine" -IsActive $false
 ``` 
 
-This example Deactivate a predefined value.
+This example deactivates a predefined value.
 
 - Attribute set: `Engineering`
 - Attribute: `Project`
