@@ -1,11 +1,12 @@
 ---
 title: Get-EntraAuditDirectoryLogs.
-description: This article provides details on Get-EntraAuditDirectoryLogs command.
+description: This article provides details on the Get-EntraAuditDirectoryLogs command.
 
 ms.service: active-directory
 ms.topic: reference
 ms.date: 11/10/2023
 ms.author: eunicewaweru
+ms.reviewer: stevemutungi254
 manager: CelesteDG
 author: msewaweru
 ---
