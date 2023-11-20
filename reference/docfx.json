@@ -5,19 +5,19 @@
         "files": [ "**/*.md", "**/*.yml" ],
         "src": "docs-conceptual",
         "dest": "docs-conceptual",
-        "version": "samples-v1.0"
+        "version": "entra-powershell"
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
         "src": "samples-v2.0",
         "dest": "module",
-        "version": "samples-v1.0"
+        "version": "entra-powershell"
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
         "src": "samples-v3.0",
         "dest": "module",
-        "version": "testmoniker-1.0"
+        "version": "entra-powershell-beta"
       },
       {
         "files": [ "toc.yml" ],
@@ -26,12 +26,13 @@
       }
     ],
     "versions": {
-      "samples-v1.0": { "dest": "samples-v2.0" },
-      "testmoniker-1.0": { "dest": "samples-v3.0" }
+      "entra-powershell": { "dest": "samples-v2.0" },
+      "entra-powershell-beta": { "dest": "samples-v3.0" }
     },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/powershell/samples/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "Standard"
