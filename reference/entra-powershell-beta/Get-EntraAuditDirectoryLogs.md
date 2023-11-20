@@ -18,7 +18,7 @@ Module: **Microsoft.Graph.Entra.Beta**
 
 ## SYNOPSIS
 
-Get directory audit logs
+Get directory audit logs.
 
 ## SYNTAX
 
@@ -78,7 +78,7 @@ These commands show how to get audit logs by ActivityDisplayName.
 
 
 ### Example 4: Get all audit logs with a given result
-These commands show how to get audit logs by result.
+These commands show how to get audit logs by the result.
 ```powershell
  Get-EntraAuditDirectoryLogs -Filter "result eq 'success'"
  Get-EntraAuditDirectoryLogs -Filter "result eq 'failure'" -All $true
