@@ -64,14 +64,14 @@ Directory_aa14d505-735f-4c2d-a3e5-9f2774b15cbf_AE4VI_41199522           11/9/202
 
 
 ### Example 2: Get first n logs
-This example returns the first n logs.
+This example returns the first N logs.
 ```powershell
  Get-EntraAuditDirectoryLogs -Top 1
 ```
 
 
 ### Example 3: Get audit logs containing a given ActivityDisplayName
-These commands show how to get audit logs by ActivityDisplayName.
+This command shows how to get audit logs by ActivityDisplayName.
 ```powershell
  Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" 
  Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" -Top 1
@@ -79,7 +79,7 @@ These commands show how to get audit logs by ActivityDisplayName.
 
 
 ### Example 4: Get all audit logs with a given result
-These commands show how to get audit logs by the result.
+This command shows how to get audit logs by the result.
 ```powershell
  Get-EntraAuditDirectoryLogs -Filter "result eq 'success'"
  Get-EntraAuditDirectoryLogs -Filter "result eq 'failure'" -All $true
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The oData v3.0 filter statement. 
+The OData v3.0 filter statement. 
 Controls which objects are returned.
 
 ```yaml
