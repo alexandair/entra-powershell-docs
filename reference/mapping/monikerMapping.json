@@ -1,6 +1,6 @@
 {
   "entra-powershell": {
-      "packageRoot": "graph-powershell-1.0",
+      "packageRoot": "entra-powershell-1.0",
       "conceptualToc": "docs-conceptual/toc.yml",
       "conceptualTocUrl": "/powershell/docs-conceptual/toc.json",
       "referenceTocUrl": "/powershell/module/toc.json"
