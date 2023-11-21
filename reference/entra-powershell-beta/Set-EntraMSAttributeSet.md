@@ -6,9 +6,8 @@ ms.service: active-directory
 ms.topic: reference
 ms.date: 11/20/2023
 ms.author: eunicewaweru
-manager: CelesteDG
-author: msewaweru
 ms.reviewer: stevemutungi254
+manager: CelesteDG
 ---
 
 # Set-EntraMSAttributeSet
