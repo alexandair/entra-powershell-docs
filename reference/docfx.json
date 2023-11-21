@@ -9,13 +9,13 @@
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
-        "src": "samples-v2.0",
+        "src": "entra-powershell-1.0",
         "dest": "module",
         "version": "entra-powershell"
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
-        "src": "samples-v3.0",
+        "src": "entra-powershell-beta",
         "dest": "module",
         "version": "entra-powershell-beta"
       },
@@ -26,8 +26,8 @@
       }
     ],
     "versions": {
-      "entra-powershell": { "dest": "samples-v2.0" },
-      "entra-powershell-beta": { "dest": "samples-v3.0" }
+      "entra-powershell": { "dest": "module" },
+      "entra-powershell-beta": { "dest": "module" }
     },
     "overwrite": [],
     "externalReference": [],
