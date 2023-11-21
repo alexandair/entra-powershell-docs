@@ -4,8 +4,9 @@ description: This article provides details on Get-EntraMSPrivilegedResource comm
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 11/10/2023
+ms.date: 11/22/2023
 ms.author: eunicewaweru
+ms.reviewer: stevemutungi254
 manager: CelesteDG
 author: msewaweru
 ---
@@ -18,7 +19,7 @@ Module: **Microsoft.Graph.Entra.Beta**
 
 ## SYNOPSIS
 
-Get Azure AD MS privileged resource.
+Get Microsoft Entra ID privileged resource.
 
 ## SYNTAX
 
@@ -39,7 +40,7 @@ Get-EntraMSPrivilegedResource
 
 ## DESCRIPTION  
   
-Get Azure AD MS privileged resource.
+Get Microsoft Entra ID privileged resource.
 
 ## PERMISSIONS
 
