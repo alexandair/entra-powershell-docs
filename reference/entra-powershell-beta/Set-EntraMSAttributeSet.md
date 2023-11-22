@@ -1,13 +1,13 @@
 ---
 title: Set-EntraMSAttributeSet.
-description: This article provides details on the Set-EntraMSAttributeSet command.
+description: This article provides details regarding the Set-EntraMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 11/10/2023
+ms.date: 11/20/2023
 ms.author: eunicewaweru
+ms.reviewer: stevemutungi254
 manager: CelesteDG
-author: msewaweru
 ---
 
 # Set-EntraMSAttributeSet
