@@ -6,7 +6,7 @@ ms.service: active-directory
 ms.topic: reference
 ms.date: 11/20/2023
 ms.author: eunicewaweru
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 manager: CelesteDG
 ---
 
