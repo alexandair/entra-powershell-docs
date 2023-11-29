@@ -46,10 +46,13 @@ The Get-EntraAuditDirectoryLogs cmdlet gets a Microsoft Entra ID audit log.
 ## EXAMPLES
 
 ### Example 1: Get all logs
+
 This command gets all audit logs.
+
 ```powershell
  Get-EntraAuditDirectoryLogs -All $true 
-``` 
+```
+
 ```Output
 Id                                                                      ActivityDateTime       ActivityDisplayName                                             Category              Correla
                                                                                                                                                                                      tionId
@@ -61,34 +64,36 @@ Directory_a8217b8c-0ea9-4f05-aaab-8db30605f091_JAA85_43195118           11/9/202
 Directory_aa14d505-735f-4c2d-a3e5-9f2774b15cbf_AE4VI_41199522           11/9/2023 8:28:00 AM   Update application                                              ApplicationManagement aa14...
 ```
 
-
-
 ### Example 2: Get first n logs
+
 This example returns the first N logs.
+
 ```powershell
  Get-EntraAuditDirectoryLogs -Top 1
 ```
 
-
 ### Example 3: Get audit logs containing a given ActivityDisplayName
+
 This command shows how to get audit logs by ActivityDisplayName.
+
 ```powershell
  Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" 
  Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" -Top 1
 ```
 
-
 ### Example 4: Get all audit logs with a given result
+
 This command shows how to get audit logs by the result.
+
 ```powershell
  Get-EntraAuditDirectoryLogs -Filter "result eq 'success'"
  Get-EntraAuditDirectoryLogs -Filter "result eq 'failure'" -All $true
 ```
 
-
 ## PARAMETERS
 
 ### -All
+
 Boolean to express that return all results from the server for the specific query
 
 ```yaml
@@ -104,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
+
 The maximum number of records to return.
 
 ```yaml
@@ -119,7 +125,8 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The OData v3.0 filter statement. 
+
+The OData v3.0 filter statement.
 Controls which objects are returned.
 
 ```yaml
@@ -135,12 +142,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-
 ## OUTPUTS
-
 
 ## RELATED LINKS

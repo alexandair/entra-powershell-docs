@@ -32,9 +32,9 @@ Set-EntraMSCustomSecurityAttributeDefinition
 [<CommonParameters>]
 ```
 
-## DESCRIPTION 
+## DESCRIPTION
   
-Updates a Microsoft Entra ID custom security attribute definition object identified by ID. 
+Updates a Microsoft Entra ID custom security attribute definition object identified by ID.
 
 ## PERMISSIONS
 
@@ -46,19 +46,18 @@ Updates a Microsoft Entra ID custom security attribute definition object identif
 
 ## EXAMPLES
 
-### Example 1: Update custom security attribute definition.
-
+### Example 1: Update custom security attribute definition
 
 ```powershell
 Set-EntraMSCustomSecurityAttributeDefinition -Id "Engineering_ProjectDate" -Description "Target completion date (YYYY/MM/DD)" -UsePreDefinedValuesOnly $false
-``` 
+```
 
 This example updates a custom security attribute definition.
 
 - Attribute set: `Engineering`
 - Attribute: `ProjectDate`
 
-### Example 2: Deactivate a custom security attribute definition.
+### Example 2: Deactivate a custom security attribute definition
 
 ```powershell
 Set-EntraMSCustomSecurityAttributeDefinition -Id Engineering_Project -Status "Deprecated"
@@ -69,10 +68,10 @@ This example Deactivate a custom security attribute definition.
 - Attribute set: `Engineering`
 - Attribute: `Project`
 
-
 ## PARAMETERS
 
 ### -Description
+
 Description of the custom security attribute definition.
 
 ```yaml
@@ -86,7 +85,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Id
+
 The unique identifier of a custom security attribute definition.
 
 ```yaml
@@ -100,8 +101,10 @@ Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
+
 ### -Status
-Specifies whether the custom security attribute is active or deactivated. Acceptable values are 'Available' and 'Deprecated'.
+
+Specifies whether the custom security attribute is active or deactivated. Acceptable values are 'Available' and 'Deprecated.'
 
 ```yaml
 Type: String
@@ -116,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsePreDefinedValuesOnly
+
 Indicates whether only predefined values can be assigned to the custom security attribute.
 
 ```yaml
@@ -131,6 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
