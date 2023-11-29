@@ -36,7 +36,7 @@ New-EntraMSCustomSecurityAttributeDefinition
  -UsePreDefinedValuesOnly <Boolean>
 ```
 
-## DESCRIPTION 
+## DESCRIPTION
   
 Adds a new Microsoft Entra ID custom security attribute definition object.
 
@@ -50,12 +50,12 @@ Adds a new Microsoft Entra ID custom security attribute definition object.
 
 ## EXAMPLES
 
-### Example 1: Add a custom security attribute definition.
+### Example 1: Add a custom security attribute definition
   
 ```powershell
 New-EntraMSCustomSecurityAttributeDefinition-AttributeSet "Engineering" -Name "ProjectDate" -Description "Target completion date" -Type "String" -Status "Available" -IsCollection $false -IsSearchable $true -UsePreDefinedValuesOnly $true
-``` 
-    
+```
+
 This example adds a custom security attribute definition.
 
 - Attribute set: `Engineering`
@@ -65,7 +65,8 @@ This example adds a custom security attribute definition.
 ## PARAMETERS
 
 ### -AttributeSet
-Name of the attribute set in Azure AD.
+
+Name of the attribute set in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -78,7 +79,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Description
+
 Description for the custom security attribute definition.
 
 ```yaml
@@ -92,7 +95,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -IsCollection
+
 Indicates whether multiple values can be assigned to the custom security attribute.
 
 ```yaml
@@ -106,8 +111,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -IsSearchable
-Indicates whether custom security attribute values will be indexed for searching on objects that are assigned attribute values.
+
+Indicates whether custom security attribute value is indexed for searching on objects that are assigned attribute values.
 
 ```yaml
 Type: Boolean
@@ -120,7 +127,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Name
+
 Name of the custom security attribute. It must be unique within an attribute set.
 
 ```yaml
@@ -134,8 +143,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Status
-Specifies whether the custom security attribute is active or deactivated. Acceptable values are 'Available' and 'Deprecated'.
+
+Specifies whether the custom security attribute is active or deactivated. Acceptable values are 'Available' and 'Deprecated.'
 
 ```yaml
 Type: String
@@ -148,7 +159,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Type
+
 Specifies the data type of the attribute.
 
 ```yaml
@@ -162,7 +175,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -UsePreDefinedValuesOnly
+
 Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed.
 
 ```yaml
@@ -178,6 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

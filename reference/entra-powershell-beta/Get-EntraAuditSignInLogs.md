@@ -51,7 +51,8 @@ This command gets all sign-in logs.
 
 ```powershell
  Get-EntraAuditSignInLogs -All $true 
-``` 
+```
+
 ```Output
 Id                                   AppDisplayName                     AppId                                AppTokenProtectionStatus AuthenticationMethodsUsed AuthenticationProtocol Authe
                                                                                                                                                                                        ntica
@@ -82,7 +83,6 @@ These commands show how to get sign-in logs by ActivityDisplayName.
  Get-EntraAuditSignInLogs -Filter "ActivityDisplayName eq 'Add owner to application'" -Top 1
 ```
 
-
 ### Example 4: Get all sign-in logs with a given result
 
 These commands show how to get sign-in logs by the result.
@@ -92,10 +92,10 @@ These commands show how to get sign-in logs by the result.
  Get-EntraAuditSignInLogs -Filter "result eq 'failure'" -Top 1cls
 ```
 
-
 ## PARAMETERS
 
 ### -All
+
 Boolean to express that return all results from the server for the specific query
 
 ```yaml
@@ -111,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Top
+
 The maximum number of records to return.
 
 ```yaml
@@ -126,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The oData v3.0 filter statement. 
+
+The oData v3.0 filter statement.
 Controls which objects are returned.
 
 ```yaml
@@ -142,12 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-
 ## OUTPUTS
-
 
 ## RELATED LINKS

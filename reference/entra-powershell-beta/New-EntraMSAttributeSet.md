@@ -31,7 +31,7 @@ New-EntraMSAttributeSet
 [<CommonParameters>]
 ```
 
-## DESCRIPTION 
+## DESCRIPTION
   
 The New-EntraMSAttributeSet cmdlet Adds a new Microsoft Entra ID attribute set object.
 
@@ -45,13 +45,12 @@ The New-EntraMSAttributeSet cmdlet Adds a new Microsoft Entra ID attribute set o
 
 ## EXAMPLES
 
-### Example : Create a new attributeSet object.
+### Example: Create a new attributeSet object
   
 ```powershell
  New-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for engineering team" -MaxAttributesPerSet 10
-``` 
-     
-    
+```
+
 ```Output
    Id          OdataType   Description                       MaxAttributesPerSet
    --          ---------   -----------                       -------------------
@@ -65,6 +64,7 @@ This example Add a single attribute set.
 ## PARAMETERS
 
 ### -Description
+
 Description for the attribute set.
 
 ```yaml
@@ -78,7 +78,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Id
+
 Name of the attribute set. Must be unique within a tenant.
 
 ```yaml
@@ -92,7 +94,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -MaxAttributesPerSet
+
 Maximum number of custom security attributes that can be defined in the attribute set.
 
 ```yaml
@@ -106,7 +110,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

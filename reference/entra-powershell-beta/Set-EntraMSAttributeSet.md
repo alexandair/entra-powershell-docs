@@ -30,7 +30,7 @@ Set-EntraMSAttributeSet
 [<CommonParameters>]
 ```
 
-## DESCRIPTION 
+## DESCRIPTION
 
 Updates a Microsoft Entra ID attribute set object identified by ID.
 
@@ -44,17 +44,17 @@ Updates a Microsoft Entra ID attribute set object identified by ID.
 
 ## EXAMPLES
 
-### Example 1: Update an attribute set.
+### Example 1: Update an attribute set
   
 ```powershell
  Set-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
-``` 
+```
 
 This example Update an attribute set.
 
 - Attribute set: `Engineering`
 
-### Example 2: Update a Maximum number of custom security attributes.
+### Example 2: Update a Maximum number of custom security attributes
 
 ```powershell
 Set-EntraMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
@@ -67,6 +67,7 @@ This example updates the maximum number of custom security attributes.
 ## PARAMETERS
 
 ### -Description
+
 Description for the attribute set.
 
 ```yaml
@@ -80,7 +81,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Id
+
 Name of the attribute set.
 
 ```yaml
@@ -94,7 +97,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
+
 ### -MaxAttributesPerSet
+
 Maximum number of custom security attributes that can be defined in the attribute set.
 
 ```yaml
@@ -108,7 +113,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
