@@ -1,6 +1,6 @@
 ---
-title: Get-EntraMSPrivilegedRoleDefinition.
-description: This article provides details on the Get-EntraMSPrivilegedRoleDefinition command.
+title: Get-EntraBetaMSPrivilegedRoleDefinition.
+description: This article provides details on the Get-EntraBetaMSPrivilegedRoleDefinition command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -11,7 +11,7 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Get-EntraMSPrivilegedRoleDefinition
+# Get-EntraBetaMSPrivilegedRoleDefinition
 
 Reference
 
@@ -26,14 +26,14 @@ Get role definitions.
 ### GetQuery (Default)
 
 ```powershell
-Get-EntraMSPrivilegedRoleDefinition -ProviderId <String> -ResourceId <String> [-Top <Int32>]
+Get-EntraBetaMSPrivilegedRoleDefinition -ProviderId <String> -ResourceId <String> [-Top <Int32>]
  [-Filter <String>] [<CommonParameters>]
 ```
 
 ### GetById
 
 ```powershell
-Get-EntraDMSPrivilegedRoleDefinition -ProviderId <String> -ResourceId <String> -Id <String>
+Get-EntraBetaDMSPrivilegedRoleDefinition -ProviderId <String> -ResourceId <String> -Id <String>
  [<CommonParameters>]
 ```
 
@@ -56,7 +56,7 @@ Get role definitions.
 This example demonstrates how to retrieve all the Role definitions.
 
 ```powershell
-Get-EntraMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Top 2
+Get-EntraBetaMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Top 2
 ```
 
 ```output
@@ -73,7 +73,7 @@ Get role definitions for a specific provider and resource.
 This example demonstrates how to  role definitions for a specific provider, resource, and Id.
 
 ```powershell
- Get-EntraMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Id ffd52fa5-98dc-465c-991d-fc073eb59f8f
+ Get-EntraBetaMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Id ffd52fa5-98dc-465c-991d-fc073eb59f8f
 ```
 
 ```output
@@ -89,7 +89,7 @@ Get a role definition for a specific provider, resource, and Id
 This example demonstrates how to  role definitions for a specific provider, resource, and filter
 
 ```powershell
- Get-EntraMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Filter "DisplayName eq 'Device Users'"
+ Get-EntraBetaMSPrivilegedRoleDefinition -ProviderId aadRoles -ResourceId d5aec55f-2d12-4442-8d2f-ccca95d4390e -Filter "DisplayName eq 'Device Users'"
  ```
 
  ```output

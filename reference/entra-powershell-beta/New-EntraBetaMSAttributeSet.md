@@ -1,16 +1,17 @@
 ---
-title: Set-EntraMSAttributeSet.
-description: This article provides details regarding the Set-EntraMSAttributeSet command.
+title: New-EntraBetaMSAttributeSet
+description: This article provides details of New-EntraBetaMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 11/20/2023
+ms.date: 11/10/2023
 ms.author: eunicewaweru
 ms.reviewer: stevemutungi
 manager: CelesteDG
+author: msewaweru
 ---
 
-# Set-EntraMSAttributeSet
+# New-EntraBetaMSAttributeSet
 
 Reference
 
@@ -18,21 +19,21 @@ Module: **Microsoft.Graph.Entra.Beta**
 
 ## SYNOPSIS
 
-Updates an existing attribute set.
+Adds a new attribute set.
 
 ## SYNTAX
 
 ```powershell
-Set-EntraMSAttributeSet 
--Id <String>
+New-EntraBetaMSAttributeSet 
+[-Id <String>]
 [-Description <String>]
 [-MaxAttributesPerSet <Int32>]
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-Updates a Microsoft Entra ID attribute set object identified by ID.
+  
+The New-EntraBetaMSAttributeSet cmdlet Adds a new Microsoft Entra ID attribute set object.
 
 ## PERMISSIONS
 
@@ -44,23 +45,19 @@ Updates a Microsoft Entra ID attribute set object identified by ID.
 
 ## EXAMPLES
 
-### Example 1: Update an attribute set
+### Example: Create a new attributeSet object
   
 ```powershell
- Set-EntraMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
+ New-EntraBetaMSAttributeSet -Id "Engineering" -Description "Attributes for engineering team" -MaxAttributesPerSet 10
 ```
 
-This example Update an attribute set.
-
-- Attribute set: `Engineering`
-
-### Example 2: Update a Maximum number of custom security attributes
-
-```powershell
-Set-EntraMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
+```Output
+   Id          OdataType   Description                       MaxAttributesPerSet
+   --          ---------   -----------                       -------------------
+   Engineering             Attributes for engineering team   10
 ```
 
-This example updates the maximum number of custom security attributes.
+This example Add a single attribute set.
 
 - Attribute set: `Engineering`
 
@@ -84,17 +81,17 @@ Accept wildcard characters: False
 
 ### -Id
 
-Name of the attribute set.
+Name of the attribute set. Must be unique within a tenant.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -120,9 +117,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-## OUTPUTS
+## OUTPUT
 
 ## RELATED LINKS
 
-- Get-EntraMSAttributeSet
-- [New-EntraMSAttributeSet](./New-EntraMSAttributeSet.md)
+- Get-EntraBetaMSAttributeSet
+- Set-EntraBetaMSAttributeSet

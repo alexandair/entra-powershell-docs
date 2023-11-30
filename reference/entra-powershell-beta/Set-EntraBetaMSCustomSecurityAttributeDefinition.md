@@ -1,6 +1,6 @@
 ---
-title: Set-EntraMSCustomSecurityAttributeDefinition.
-description: This article provides details on the Set-EntraMSCustomSecurityAttributeDefinition command.
+title: Set-EntraBetaMSCustomSecurityAttributeDefinition.
+description: This article provides details on the Set-EntraBetaMSCustomSecurityAttributeDefinition command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -11,7 +11,7 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Set-EntraMSCustomSecurityAttributeDefinition
+# Set-EntraBetaMSCustomSecurityAttributeDefinition
 
 Reference
 
@@ -24,7 +24,7 @@ Updates an existing custom security attribute definition.
 ## SYNTAX
 
 ```powershell
-Set-EntraMSCustomSecurityAttributeDefinition
+Set-EntraBetaMSCustomSecurityAttributeDefinition
 -Id <String>
 [-Description <String>]
 [-Status <String>]
@@ -49,7 +49,7 @@ Updates a Microsoft Entra ID custom security attribute definition object identif
 ### Example 1: Update custom security attribute definition
 
 ```powershell
-Set-EntraMSCustomSecurityAttributeDefinition -Id "Engineering_ProjectDate" -Description "Target completion date (YYYY/MM/DD)" -UsePreDefinedValuesOnly $false
+Set-EntraBetaMSCustomSecurityAttributeDefinition -Id "Engineering_ProjectDate" -Description "Target completion date (YYYY/MM/DD)" -UsePreDefinedValuesOnly $false
 ```
 
 This example updates a custom security attribute definition.
@@ -60,7 +60,7 @@ This example updates a custom security attribute definition.
 ### Example 2: Deactivate a custom security attribute definition
 
 ```powershell
-Set-EntraMSCustomSecurityAttributeDefinition -Id Engineering_Project -Status "Deprecated"
+Set-EntraBetaMSCustomSecurityAttributeDefinition -Id Engineering_Project -Status "Deprecated"
 ```
 
 This example Deactivate a custom security attribute definition.
@@ -144,5 +144,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- Get-EntraMSCustomSecurityAttributeDefinition
-- New-EntraMSCustomSecurityAttributeDefinition
+- Get-EntraBetaMSCustomSecurityAttributeDefinition
+- New-EntraBetaMSCustomSecurityAttributeDefinition

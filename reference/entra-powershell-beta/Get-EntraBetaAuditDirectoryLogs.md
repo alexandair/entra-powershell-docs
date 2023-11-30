@@ -1,6 +1,6 @@
 ---
-title: Get-EntraAuditDirectoryLogs.
-description: This article provides details on the Get-EntraAuditDirectoryLogs command.
+title: Get-EntraBetaAuditDirectoryLogs.
+description: This article provides details on the Get-EntraBetaAuditDirectoryLogs command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -11,7 +11,7 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Get-EntraAuditDirectoryLogs
+# Get-EntraBetaAuditDirectoryLogs
 
 Reference
 
@@ -24,7 +24,7 @@ Get directory audit logs.
 ## SYNTAX
 
 ```powershell
-Get-EntraAuditDirectoryLogs 
+Get-EntraBetaAuditDirectoryLogs 
 [-All <Boolean>] 
 [-Top <Int32>] 
 [-Filter <String>] 
@@ -33,7 +33,7 @@ Get-EntraAuditDirectoryLogs
 
 ## DESCRIPTION  
   
-The Get-EntraAuditDirectoryLogs cmdlet gets a Microsoft Entra ID audit log.
+The Get-EntraBetaAuditDirectoryLogs cmdlet gets a Microsoft Entra ID audit log.
 
 ## PERMISSIONS
 
@@ -50,7 +50,7 @@ The Get-EntraAuditDirectoryLogs cmdlet gets a Microsoft Entra ID audit log.
 This command gets all audit logs.
 
 ```powershell
- Get-EntraAuditDirectoryLogs -All $true 
+ Get-EntraBetaAuditDirectoryLogs -All $true 
 ```
 
 ```Output
@@ -69,7 +69,7 @@ Directory_aa14d505-735f-4c2d-a3e5-9f2774b15cbf_AE4VI_41199522           11/9/202
 This example returns the first N logs.
 
 ```powershell
- Get-EntraAuditDirectoryLogs -Top 1
+ Get-EntraBetaAuditDirectoryLogs -Top 1
 ```
 
 ### Example 3: Get audit logs containing a given ActivityDisplayName
@@ -77,8 +77,8 @@ This example returns the first N logs.
 This command shows how to get audit logs by ActivityDisplayName.
 
 ```powershell
- Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" 
- Get-EntraAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" -Top 1
+ Get-EntraBetaAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" 
+ Get-EntraBetaAuditDirectoryLogs -Filter "ActivityDisplayName eq 'Update rollout policy of feature'" -Top 1
 ```
 
 ### Example 4: Get all audit logs with a given result
@@ -86,8 +86,8 @@ This command shows how to get audit logs by ActivityDisplayName.
 This command shows how to get audit logs by the result.
 
 ```powershell
- Get-EntraAuditDirectoryLogs -Filter "result eq 'success'"
- Get-EntraAuditDirectoryLogs -Filter "result eq 'failure'" -All $true
+ Get-EntraBetaAuditDirectoryLogs -Filter "result eq 'success'"
+ Get-EntraBetaAuditDirectoryLogs -Filter "result eq 'failure'" -All $true
 ```
 
 ## PARAMETERS

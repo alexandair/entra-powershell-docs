@@ -1,6 +1,6 @@
 ---
-title: Get-EntraMSPrivilegedResource.
-description: This article provides details on Get-EntraMSPrivilegedResource command.
+title: Get-EntraBetaMSPrivilegedResource.
+description: This article provides details on Get-EntraBetaMSPrivilegedResource command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -11,7 +11,7 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# Get-EntraMSPrivilegedResource
+# Get-EntraBetaMSPrivilegedResource
 
 Reference
 
@@ -24,7 +24,7 @@ Get Microsoft Entra ID privileged resource.
 ## SYNTAX
 
 ```powershell
-Get-EntraMSPrivilegedResource
+Get-EntraBetaMSPrivilegedResource
    -ProviderId <String>
    [-Top <Int32>]
    [-Filter <String>]
@@ -32,7 +32,7 @@ Get-EntraMSPrivilegedResource
 ```
 
 ```powershell
-Get-EntraMSPrivilegedResource
+Get-EntraBetaMSPrivilegedResource
    -ProviderId <String>
    -Id <String>
    [<CommonParameters>]
@@ -57,7 +57,7 @@ Get Microsoft Entra ID privileged resource.
 This example demonstrates how to retrieve all resources from Microsoft Entra ID.
 
 ```powershell
- Get-EntraMSPrivilegedResource -ProviderId aadRoles
+ Get-EntraBetaMSPrivilegedResource -ProviderId aadRoles
 ```
 
 ```Output
@@ -79,7 +79,7 @@ Get all resources for AzureResource provider.
 In this example, we provide the resource ID to retrieve a specific resource.
 
 ```powershell
- Get-EntraMSPrivilegedResource -ProviderId aadRoles -Id 9c8f84d0-3bd6-4ec4-a753-a6990777f438
+ Get-EntraBetaMSPrivilegedResource -ProviderId aadRoles -Id 9c8f84d0-3bd6-4ec4-a753-a6990777f438
 ```
 
 ```Output
@@ -94,7 +94,7 @@ Get a resource for AzureResource provider with Id `9c8f84d0-3bd6-4ec4-a753-a6990
 ### Example 3: Get a specific privileged resource by filter
 
 ```powershell
- Get-EntraMSPrivilegedResource -ProviderId aadRoles -Filter "DisplayName eq 'AdminUnitName1'"
+ Get-EntraBetaMSPrivilegedResource -ProviderId aadRoles -Filter "DisplayName eq 'AdminUnitName1'"
 ```
 
 ```Output
@@ -108,7 +108,7 @@ Get a resource for AzureResource provider by Filter
 ### Example 3: Get top privileged resources
 
 ```powershell
-Get-EntraMSPrivilegedResource -ProviderId aadRoles -Top 1
+Get-EntraBetaMSPrivilegedResource -ProviderId aadRoles -Top 1
 ```
 
 ```output

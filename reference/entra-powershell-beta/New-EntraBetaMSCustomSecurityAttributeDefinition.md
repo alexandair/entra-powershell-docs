@@ -1,7 +1,7 @@
 ---
-title: New-EntraMSCustomSecurityAttributeDefinition
+title: New-EntraBetaMSCustomSecurityAttributeDefinition
 
-description: This article provides details of the New-EntraMSCustomSecurityAttributeDefinition command.
+description: This article provides details of the New-EntraBetaMSCustomSecurityAttributeDefinition command.
 
 ms.service: active-directory
 ms.topic: reference
@@ -12,7 +12,7 @@ manager: CelesteDG
 author: msewaweru
 ---
 
-# New-EntraMSCustomSecurityAttributeDefinition
+# New-EntraBetaMSCustomSecurityAttributeDefinition
 
 Reference
 
@@ -25,7 +25,7 @@ Adds a new custom security attribute definition.
 ## SYNTAX
 
 ```powershell
-New-EntraMSCustomSecurityAttributeDefinition
+New-EntraBetaMSCustomSecurityAttributeDefinition
 -AttributeSet <String>
 [-Description <String>]
 -IsCollection <Boolean>
@@ -53,7 +53,7 @@ Adds a new Microsoft Entra ID custom security attribute definition object.
 ### Example 1: Add a custom security attribute definition
   
 ```powershell
-New-EntraMSCustomSecurityAttributeDefinition-AttributeSet "Engineering" -Name "ProjectDate" -Description "Target completion date" -Type "String" -Status "Available" -IsCollection $false -IsSearchable $true -UsePreDefinedValuesOnly $true
+New-EntraBetaMSCustomSecurityAttributeDefinition-AttributeSet "Engineering" -Name "ProjectDate" -Description "Target completion date" -Type "String" -Status "Available" -IsCollection $false -IsSearchable $true -UsePreDefinedValuesOnly $true
 ```
 
 This example adds a custom security attribute definition.
@@ -202,5 +202,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- Get-EntraMSCustomSecurityAttributeDefinition
-- [Set-EntraMSCustomSecurityAttributeDefinition](./Set-EntraMSCustomSecurityAttributeDefinition.md)
+- Get-EntraBetaMSCustomSecurityAttributeDefinition
+- [Set-EntraBetaMSCustomSecurityAttributeDefinition](./Set-EntraBetaMSCustomSecurityAttributeDefinition.md)
