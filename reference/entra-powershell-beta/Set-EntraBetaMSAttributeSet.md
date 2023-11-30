@@ -1,17 +1,16 @@
 ---
-title: Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue.
-description: This article provides details on the Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue command.
+title: Set-EntraBetaMSAttributeSet.
+description: This article provides details regarding the Set-EntraBetaMSAttributeSet command.
 
 ms.service: active-directory
 ms.topic: reference
-ms.date: 11/10/2023
+ms.date: 11/20/2023
 ms.author: eunicewaweru
 ms.reviewer: stevemutungi
 manager: CelesteDG
-author: msewaweru
 ---
 
-# Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue
+# Set-EntraBetaMSAttributeSet
 
 Reference
 
@@ -19,22 +18,21 @@ Module: **Microsoft.Graph.Entra.Beta**
 
 ## SYNOPSIS
 
-Updates an existing custom security attribute definition predefined value.
+Updates an existing attribute set.
 
 ## SYNTAX
 
 ```powershell
-Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue
--CustomSecurityAttributeDefinitionId <String>
+Set-EntraBetaMSAttributeSet 
 -Id <String>
 [-Description <String>]
-[-IsActive <Boolean>] 
+[-MaxAttributesPerSet <Int32>]
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-  
-Updates a Microsoft Entra ID custom security attribute definition predefined value object identified by ID.
+
+Updates a Microsoft Entra ID attribute set object identified by ID.
 
 ## PERMISSIONS
 
@@ -46,39 +44,47 @@ Updates a Microsoft Entra ID custom security attribute definition predefined val
 
 ## EXAMPLES
 
-### Example 1: Deactivate a predefined value
-
+### Example 1: Update an attribute set
+  
 ```powershell
-Set-EntraMSCustomSecurityAttributeDefinitionAllowedValue -CustomSecurityAttributeDefinitionId "Engineering_Project" -Id "Alpine" -IsActive $false
+ Set-EntraBetaMSAttributeSet -Id "Engineering" -Description "Attributes for cloud engineering team"
 ```
 
-This example deactivates a predefined value.
+This example Update an attribute set.
 
 - Attribute set: `Engineering`
-- Attribute: `Project`
-- Predefined value: `Alpine`
+
+### Example 2: Update a Maximum number of custom security attributes
+
+```powershell
+Set-EntraBetaMSAttributeSet -Id "Engineering" -MaxAttributesPerSet 20
+```
+
+This example updates the maximum number of custom security attributes.
+
+- Attribute set: `Engineering`
 
 ## PARAMETERS
 
-### -CustomSecurityAttributeDefinitionId
+### -Description
 
-The unique identifier of a custom security attribute definition in the Microsoft Entra ID.
+Description for the attribute set.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Id
 
-Predefined value for the custom security attribute.
+Name of the attribute set.
 
 ```yaml
 Type: String
@@ -92,12 +98,12 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -IsActive
+### -MaxAttributesPerSet
 
-Specifies whether the predefined value is active or deactivated. If set to false, this predefined value can't be assigned to any other supported directory objects.
+Maximum number of custom security attributes that can be defined in the attribute set.
 
 ```yaml
-Type: Boolean
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -118,5 +124,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- Get-EntraMSCustomSecurityAttributeDefinitionAllowedValue
-- Add-EntraMSCustomSecurityAttributeDefinitionAllowedValue
+- Get-EntraBetaMSAttributeSet
+- [New-EntraBetaMSAttributeSet](./New-EntraBetaMSAttributeSet.md)
