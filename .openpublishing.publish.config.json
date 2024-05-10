@@ -27,6 +27,8 @@
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/entra-powershell-docs",
+  "git_repository_branch_open_to_public_contributors": "main",
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
@@ -34,17 +36,16 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "main",
       "branch_mapping": {}
-    },
-    {
-      "path_to_root": "graphref",
-      "url": "https://github.com/microsoftgraph/microsoft-graph-docs-contrib",
-      "branch": "main",
-      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},
+  "targets": {},
   "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
+  "monikerPath": [
+    "mapping/monikerMapping.json"
+  ],
+  "need_generate_pdf_url_template": false,
   "dependent_packages": [
     {
       "id": "Microsoft.DocAsCode.MAML2Yaml",
@@ -53,9 +54,5 @@
       "target_framework": "net45",
       "version": "latest-prerelease"
     }
-  ],
-  "monikerPath": [
-    "mapping/monikerMapping.json"
-  ],
-  "need_generate_pdf_url_template": false
+  ]
 }
