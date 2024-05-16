@@ -10,7 +10,7 @@
 
       { "dest": "entra-powershell-beta", "files": [ "**/*.md", "**/*.yml" ], "src": "conceptual/beta", "version": "entra-powershell-beta" },
       { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
-      { "dest": "module", "files": [ "**/About/*.md" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
+      { "dest": "module", "files": [ "**/About/*.md" ], "src": "reference/beta", "version": "entra-powershell-beta" },
       { "dest": "module/entra-powershell-beta", "files": [ "toc.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder" },
