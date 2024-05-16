@@ -1,0 +1,14 @@
+{
+  "entra-powershell": {
+      "packageRoot": "entra-powershell",
+      "conceptualToc": "conceptual/v1.0/toc.yml",
+      "conceptualTocUrl": "/powershell/entra-powershell/toc.json",
+      "referenceTocUrl": "/powershell/module/entra-powershell/toc.json"
+  },
+"entra-powershell-beta": {
+      "packageRoot": "entra-powershell-beta",
+      "conceptualToc": "conceptual/beta/toc.yml",
+      "conceptualTocUrl": "/powershell/entra-powershell/toc.json",
+      "referenceTocUrl": "/powershell/module/entra-powershell-beta/toc.json"
+  }
+}
