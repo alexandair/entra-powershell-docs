@@ -1,1 +1,0 @@
-# Welcome to MAML2Yaml Sample 1.0
