@@ -6,12 +6,10 @@
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "conceptual"},
 	  
       { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "reference/v1.0", "version": "entra-powershell" },
-      { "dest": "module", "files": [ "**/About/*.md" ], "src": "reference/v1.0", "version": "entra-powershell" },
       { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "src": "reference/v1.0", "version": "entra-powershell" },
 
-      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
-      { "dest": "module", "files": [ "**/About/*.md" ], "src": "reference/beta", "version": "entra-powershell-beta" },
-      { "dest": "module/entra-powershell-beta", "files": [ "toc.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "reference/beta", "version": "entra-powershell-beta" },
+      { "dest": "module/entra-powershell-beta", "files": [ "toc.yml" ], "src": "reference/beta", "version": "entra-powershell-beta" },
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder" },
       { "dest": "module", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder-module" }
@@ -24,7 +22,7 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-Entra",
-      "breadcrumb_path": "/powershell/samples/breadcrumb/toc.json",
+      "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
       "extendBreadcrumb": true,
 	  "ms.devlang": "powershell",
       "ms.prod": "powershell",
