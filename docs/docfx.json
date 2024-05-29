@@ -5,11 +5,11 @@
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "conceptual"},
 	  
-      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "entra-powershell", "version": "entra-powershell" },
-      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "src": "entra-powershell", "version": "entra-powershell" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "reference/v1.0", "version": "entra-powershell" },
+      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "src": "reference/v1.0", "version": "entra-powershell" },
 
-      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
-      { "dest": "module/entra-powershell-beta", "files": [ "toc.yml" ], "src": "entra-powershell-beta", "version": "entra-powershell-beta" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "reference/beta", "version": "entra-powershell-beta" },
+      { "dest": "module/entra-powershell-beta", "files": [ "toc.yml" ], "src": "reference/beta", "version": "entra-powershell-beta" },
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder" },
       { "dest": "module", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder-module" }
@@ -30,7 +30,7 @@
       "feedback_system": "Standard"
     },
 	"monikerRange": {
-	  "docs-conceptual/**.*": "entra-powershell || entra-powershell-beta",
+	  "docs-conceptual/**.*": "entra-powershell || entra-powershell-beta"
 	},
     "template": [],
     "markdownEngineName": "markdig",
