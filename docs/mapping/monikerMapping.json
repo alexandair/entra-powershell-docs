@@ -2,13 +2,13 @@
   "entra-powershell": {
       "packageRoot": "reference/v1.0",
       "conceptualToc": "conceptual/toc.yml",
-      "conceptualTocUrl": "/powershell/entra-powershell/toc.json?view=entra-powershell",
+      "conceptualTocUrl": "/powershell/entra-powershell/toc.json",
       "referenceTocUrl": "/powershell/module/entra-powershell/toc.json"
   },
 "entra-powershell-beta": {
       "packageRoot": "reference/beta",
       "conceptualToc": "conceptual/toc.yml",
-      "conceptualTocUrl": "/powershell/entra-powershell/toc.json?view=entra-powershell-beta",
-      "referenceTocUrl": "/powershell/module/entra-powershell-beta/toc.json"
+      "conceptualTocUrl": "/powershell/entra-powershell/toc.json",
+      "referenceTocUrl": "/powershell/module/entra-powershell/toc.json"
   }
 }
