@@ -29,12 +29,9 @@
       "ms.topic": "reference",
       "feedback_system": "Standard"
     },
-    "fileMetadata": {
-      "monikers":
-      {
-        "conceptual/**": [ "entra-powershell", "entra-powershell-beta" ]
-      }
-    },
+	"monikerRange": {
+	  "docs-conceptual/**.*": "entra-powershell || entra-powershell-beta",
+	},
     "template": [],
     "markdownEngineName": "markdig",
     "exportRawModel": true,
