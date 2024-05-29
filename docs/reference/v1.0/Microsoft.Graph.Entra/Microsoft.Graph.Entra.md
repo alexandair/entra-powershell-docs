@@ -12,7 +12,7 @@ title: Microsoft.Graph.Entra
 
 ## Description
 
-This module contains cmdlets that designed to work with DSC Resources. Microsoft.Graph.Entra
+This module contains cmdlets that designed to work with Microsoft.Graph.Entra. 
 
 ## Microsoft.Graph.Entra Cmdlets
 
