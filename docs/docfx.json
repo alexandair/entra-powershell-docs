@@ -5,11 +5,11 @@
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "group": "conceptual", "src": "conceptual"},
 	  
-	  { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "v1.0", "src": "reference/v1.0" },
-      { "dest": "module", "files": [ "**/*.yml", ], "group": "beta", "src": "reference/v1.0" },
+      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "v1.0", "src": "reference/v1.0" },
+      { "dest": "module", "files": [ "**/*.yml" ], "group": "v1.0", "src": "reference/v1.0" },
 	  
-	  { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "beta", "src": "reference/beta" },
-      { "dest": "module", "files": [ "**/*.yml", ], "group": "beta", "src": "reference/beta" },
+      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "beta", "src": "reference/beta" },
+      { "dest": "module", "files": [ "**/*.yml" ], "group": "beta", "src": "reference/beta" },
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder" },
       { "dest": "module", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder-module" }
