@@ -62,7 +62,7 @@ sections:
       - question: |
           I'm new to Microsoft Entra PowerShell; where do I start?
         answer: |
-          You can explore our [public documentation](https://aka.ms/entrapsdocs), to learn how to install, authenticate, discover which cmdlet to use for a particular scenario, read how-to guides, and more. Our [best practice guide](entraps-best-practices.md) helps you start on a secure foundation.
+          You can explore our [public documentation](https://aka.ms/entrapsdocs), to learn how to install, authenticate, discover which cmdlet to use for a particular scenario, read how-to guides, and more. Our [best practice guide](entra-powershell-best-practices.md) helps you start on a secure foundation.
 
       - question: |
           How can I provide feedback on the Microsoft Entra PowerShell Module?
