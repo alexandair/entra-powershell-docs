@@ -19,9 +19,9 @@ This article shares best practices for using the Microsoft Entra PowerShell modu
 
 ## Register an app instead of using a Microsoft Enterprise app
 
-You can create registered applications tailored to different use cases with specific permissions, such as for marketing or help desk teams. This approach allows for more granular permission management and minimizes the security impact if an app is compromised. To create a registered app, see [Create a custom application][create-a-custom-app].
+You can register your own applications tailored to different use cases with specific permissions, such as for marketing or help desk teams. This approach allows for more granular permission management and minimizes the security impact if an app is compromised. To create a registered app, see [Create a custom application][create-a-custom-app].
 
-You can sign in using the registered app by running:
+Sign in using the application you register by running:
 
 ```powershell
 Connect-Entra -ClientId <your-custom-app-id> -TenantId <your-tenant-id> -CertificateName <certificate-subject>
@@ -29,9 +29,9 @@ Connect-Entra -ClientId <your-custom-app-id> -TenantId <your-tenant-id> -Certifi
 
 You can also use the aliases `AppId` or `ApplicationId` instead of `ClientId`.
 
-## Consent and authorization
+## Security
 
-Apply the following best practices for consent and authorization in your app:
+Apply the following consent and authorization best practices in your app to enhance security:
 
 - **Apply least privilege**: Grant users and apps only the lowest privileged permission they require to call the Microsoft Entra resource. Choose the least privileged permissions. For example, if the app reads only the profile of the currently signed-in user, grant `User.Read` instead of `User.ReadBasic.All`. For a full list of permissions, see [permissions reference][permissions-ref].
 
@@ -41,7 +41,7 @@ Apply the following best practices for consent and authorization in your app:
 
 - **Be thoughtful when configuring your app**: This affects end user and admin experiences, along with application adoption and security. For example:
 
-  - Your application's name, logo, domain, publisher verification status, privacy statement, and terms of use show up in consent and other experiences. Configure these settings carefully so they're understood by your end users.
+  - Your application's name, logo, domain, publisher verification status, privacy statement, and terms of use show up in consent and other experiences. Configure these settings carefully so that your end users understand them.
   - Consider who consents to your application - either end users or administrators - and configure your application to [request permissions appropriately](/azure/active-directory/develop/active-directory-v2-scopes).
   - Ensure that you understand the difference between [static, dynamic, and incremental consent](/azure/active-directory/develop/v2-permissions-and-consent#consent-types).
 
@@ -56,6 +56,8 @@ Apply the following best practices for consent and authorization in your app:
 
 ## Performance optimizations
 
+The following practices can help you optimize performance when working with Microsoft Entra PowerShell:
+
 ### Use a filter
 
 Filtering is done on the server side by limiting your selection to retrieve a subset of a collection, which helps reduce unnecessary network traffic and data processing.
@@ -68,7 +70,11 @@ Get-EntraUser -Filter "startswith(DisplayName,'Ada')"
 
 Selecting the required properties by using the `-Property` parameter to only get required properties.
 
-## Keep Microsoft Entra PowerShell module up to date
+## Maintenance
+
+Apply the following maintenance best practices to ensure your Microsoft Entra PowerShell module and scripts are up to date and functioning optimally:
+
+### Keep Microsoft Entra PowerShell module up to date
 
 Keeping your module up to date is crucial for several reasons. Firstly, it allows you to benefit from the latest features and enhancements, ensuring you have access to the most current cmdlets and functionalities. More importantly, regular updates improve your security posture. Our team consistently implements security fixes and patches, helping to protect your systems from vulnerabilities.
 
@@ -81,7 +87,7 @@ Update-Module -Name Microsoft.Graph.Entra
 
 After upgrading your module, remove the older versions.
 
-## Use Get-Help
+### Use Get-Help
 
 `Get-Help` provides immediate access to comprehensive documentation right in the command line. This command offers detailed information about Microsoft Entra PowerShell cmdlets, functions, scripts, and concepts, including examples of how to use them, parameters they accept, and the output they generate. Get-Help promotes more efficient scripting, and helps avoid common mistakes.
 
@@ -89,9 +95,9 @@ After upgrading your module, remove the older versions.
 Get-Help Get-EntraUser -Detailed
 ```
 
-## Use the debug option
+### Use the debug option
 
-`-Debug` helps you in troubleshooting by providing detailed diagnostic information as you interact with Microsoft Entra PowerShell. It can help you understand exactly how your scripts are functioning and where any problems may arise during development and testing phase.
+`-Debug` helps you in troubleshooting by providing detailed diagnostic information as you interact with Microsoft Entra PowerShell. It can help you understand exactly how your scripts are functioning and where any problems might arise during development and testing phase.
 
 ```powershell
 Get-EntraUser -Top 1 -Debug
