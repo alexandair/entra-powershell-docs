@@ -21,9 +21,9 @@ The Microsoft Entra PowerShell module is available in two modules, which can be 
 
 ## Install
 
-- [Install on Windows](install-entraps-windows.md)
-- [Install on Linux](install-entraps-linux.md)
-- [Install on macOS](install-entraps-macos.md)
+- [Install on Windows](install-entra-powershell-windows.md)
+- [Install on Linux](install-entra-powershell-linux.md)
+- [Install on macOS](install-entra-powershell-macos.md)
 
 A supported version of
 [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-windows) is

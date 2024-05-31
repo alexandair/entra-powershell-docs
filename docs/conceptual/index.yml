@@ -26,11 +26,11 @@ landingContent:
           - text: Install
             url: installation.md
           - text: Install - Windows
-            url:  install-entraps-windows.md
+            url:  install-entra-powershell-windows.md
           - text: Install - Linux
-            url: install-entraps-linux.md
+            url: install-entra-powershell-linux.md
           - text: Install - macOS
-            url: install-entraps-macos.md
+            url: install-entra-powershell-macos.md
       - linkListType: quickstart
         links:
           - text: Get started with Microsoft Entra PowerShell
@@ -40,7 +40,9 @@ landingContent:
   - title: Common use cases
     linkLists:
       - linkListType: tutorial
-        links: 
+        links:
+          - text: Manage users
+            url: manage-user.md
           - text: Manage groups
             url: tutorial-groups.md
   - title: Microsoft Entra PowerShell reference
@@ -55,6 +57,10 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
+          - text: Microsoft Entra PowerShell best practices
+            url: entra-powershell-best-practices.md
+          - text: Microsoft Entra PowerShell FAQs
+            url: entra-powershell-faqs.yml
           - text: Troubleshoot common errors
             url: troubleshooting.md
           - text: Microsoft Q&A
