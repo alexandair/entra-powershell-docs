@@ -16,11 +16,11 @@ items:
           - name: Install
             href: installation.md
           - name: Install - Windows
-            href: install-entraps-windows.md
+            href: install-entra-powershell-windows.md
           - name: Install - Linux
-            href: install-entraps-linux.md
+            href: install-entra-powershell-linux.md
           - name: Install - macOS
-            href: install-entraps-macos.md
+            href: install-entra-powershell-macos.md
       - name: Quick Start
         href: quickstart-entra-powershell.md 
       - name: Navigate the module

@@ -1,0 +1,75 @@
+### YamlMime:FAQ
+metadata:
+  title: "Frequently Asked Questions (FAQ) about Microsoft Entra PowerShell"
+  description: "Frequently Asked Questions about Microsoft Entra PowerShell."
+
+  ms.topic: faq
+  ms.date: 05/23/2024
+  ms.service: entra
+  author: omondiatieno
+  manager: CelesteDG
+  ms.author: jomondi
+  ms.reviewer: stevemutungi
+
+#customer intent: As a Microsoft Entra PowerShell user, I want to understand frequently asked questions, so that I can use the Entra PowerShell module efficiently to manage my Microsoft Entra environment.
+
+title: Frequently Asked Questions (FAQ) about Microsoft Entra PowerShell
+
+summary: |  
+  Frequently Asked Questions about Microsoft Entra PowerShell.
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          What is the difference between Microsoft Graph PowerShell SDK and Microsoft Entra PowerShell modules?
+        answer: |
+          Microsoft Entra PowerShell is a part of our increased investment in Microsoft Graph PowerShell SDK. It brings high-quality and scenario-optimized Entra resource management to the Microsoft Graph PowerShell SDK. Still, it keeps all the benefits of Microsoft Graph PowerShell SDK for authorization, connection management, error handling, and (low-level) API coverage. As Entra PowerShell builds on the Microsoft Graph PowerShell SDK, it's interoperable.
+
+      - question: |
+          Is the Microsoft Entra PowerShell module compatible with Microsoft Graph PowerShell?  
+        answer: |
+          Yes. You don't need to switch if you already use the Microsoft Graph PowerShell module. Both modules work together, and whether you use Entra module cmdlets or Microsoft Graph PowerShell SDK cmdlets for Entra resources is a matter of preference.
+
+      - question: |
+          I need to migrate from the deprecated AzureAD or MSOnline modules. Should I wait for Microsoft Entra PowerShell?
+        answer: |
+          One of our goals with Microsoft Entra PowerShell is to help you migrate faster from AzureAD PowerShell. By enabling `Enable-EntraAzureADAlias` setting, Entra PowerShell supports [simplified migration](migration-guide.md) for scripts that previously used AzureAD PowerShell, with over 98% compatibility. However, it’s important to note that the legacy AzureAD and MSOnline PowerShell modules are now deprecated and will be retired (stop working) after March 30, 2025. We recommend that you act now to begin migrating your MSOnline and AzureAD PowerShell scripts. Both Entra PowerShell and the Microsoft Graph PowerShell SDK use the latest Microsoft Graph APIs. 
+          
+          For test environments and nonproduction systems, you can migrate to Entra PowerShell. We recommend migrating to Entra PowerShell for production systems only after it reaches General Availability. If you migrate scripts to Microsoft Graph PowerShell SDK now, there's no need to update them again with Entra PowerShell. Entra PowerShell enhances and doesn't replace Microsoft Graph PowerShell SDK.
+
+      - question: |
+          Should I update Microsoft Graph PowerShell scripts to Microsoft Entra PowerShell?
+        answer: |
+          No. Microsoft Entra PowerShell is part of the Microsoft Graph PowerShell, and the two modules are interoperable. You can install both modules side-by-side.
+
+      - question: |
+          Will Microsoft Entra PowerShell add support for more resources in the future?
+        answer: |
+          Yes. Microsoft Entra PowerShell is a long-term investment. We'll continue to expand support for more resources and scenarios over time. We continue to enhance existing cmdlets with more parameters, detailed help, and intuitive names. Check our [GitHub repo](https://aka.ms/entraps) for ongoing Entra PowerShell updates.
+
+      - question: |
+          Will Microsoft Entra PowerShell use a preconsented app like AzureAD or MSOnline modules?
+        answer: |
+          No. Microsoft Entra PowerShell permissions aren't preauthorized, and users must request the specific app permissions needed. This granularity ensures that the application has only the necessary permissions, providing granular control over resource management. 
+          
+          For maximum flexibility and granularity in application permissions, we recommend using your [own application identity](create-custom-application.md) with Entra PowerShell. By creating different applications for different uses of PowerShell in your tenant, you can have exacting control over application permissions granted for specific scenarios. To use your own application identity with Entra PowerShell, you can use the `Connect-Entra` cmdlet. For example:
+            
+          ```powershell
+          Connect-Entra -ClientId 'YOUR_APP_ID' -TenantId 'YOUR_TENANT_ID' -CertificateName 'YOUR_CERT_SUBJECT'
+          ```
+
+      - question: |
+          I'm new to Microsoft Entra PowerShell; where do I start?
+        answer: |
+          You can explore our [public documentation](https://aka.ms/entrapsdocs), to learn how to install, authenticate, discover which cmdlet to use for a particular scenario, read how-to guides, and more. Our [best practice guide](entraps-best-practices.md) helps you start on a secure foundation.
+
+      - question: |
+          How can I provide feedback on the Microsoft Entra PowerShell Module?
+        answer: |
+          You can provide feedback by visiting our [Entra PowerShell GitHub repository issues](https://github.com/microsoftgraph/entra-powershell/issues) section. Create a new issue with your feedback, suggestions, or any problems you encounter. Our team actively monitors and responds to feedback to improve the module.
+
+      - question: | 
+          How can I contribute to the Microsoft Entra PowerShell Module?
+        answer: |
+          We welcome contributions from the community, whether it's through submitting bug reports, suggesting new features, or contributing scenario and example improvements. To get started, visit the [repository](https://aka.ms/entraps), check out our contribution guidelines, and create a pull request with your changes.
