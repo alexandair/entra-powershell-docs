@@ -26,7 +26,7 @@
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
 	  "ms.devlang": "powershell",
-      "ms.prod": "powershell",
+      "ms.service": "entra-powershell",
       "ms.topic": "reference",
       "feedback_system": "Standard",
 	  "toc_preview": true
