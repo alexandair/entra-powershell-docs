@@ -25,7 +25,6 @@
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
 	  "ms.devlang": "powershell",
       "ms.prod": "powershell",
       "ms.topic": "reference",
