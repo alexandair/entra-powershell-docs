@@ -8,7 +8,7 @@ ms.service: entra
 author: omondiatieno
 manager: CelesteDG
 ms.author: jomondi
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 
 #customer intent: As an IT admin, I want to understand the best practices when interacting with Microsoft Entra PowerShell module for improved performance and security posture.
 ---

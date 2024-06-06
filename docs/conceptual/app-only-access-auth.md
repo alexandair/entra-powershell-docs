@@ -1,5 +1,5 @@
 ---
-title: "Use app-only authentication with Microsoft Entra PowerShell"
+title: "Use app-only authentication"
 description: "Learn how to use app-only authentication to enable non-interactive scenarios with the Microsoft Entra PowerShell module."
 
 author: omondiatieno
@@ -7,12 +7,12 @@ manager: CelesteDG
 ms.topic: how-to
 ms.date: 05/25/2024
 ms.author: jomondi
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 
 #customer intent: As an IT admin, I want to authenticate with Microsoft Entra using app-only access, so that I can perform non-interactive operations, using the Microsoft Entra PowerShell module to manage Microsoft Entra resources.
 ---
 
-# Use app-only authentication with Microsoft Entra PowerShell
+# Use app-only authentication
 
 In this article, you learn how to use app-only access for automation scenarios using the Microsoft Entra PowerShell to manage Microsoft Entra resources.
 
@@ -29,17 +29,10 @@ To use app-only access with the Microsoft Entra PowerShell module, you need:
 - A Microsoft Entra ID account. If you don't already have one, you can
   [Create an account for free][entra-id-account].
 - One of the following roles: Global Administrator, Cloud Application Administrator, or Application.
-- Microsoft Entra PowerShell module installed. Follow the
-  [Install the Microsoft Entra PowerShell module][installation] guide to install
-  the module.
-- A certificate to use as a credential for the application. The certificate can
-  be a self-signed certificate or a certificate from an authority. For more
-  information on how to create a self-signed certificate, see
-  [Create a self-signed public certificate][self-signed-cert]. Self-signed
-  certificates aren't recommended for production scenarios. Obtain a
-  certificate from a certificate authority for production scenarios.
+- Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
+- A certificate to use as a credential for the application. The certificate can be a self-signed certificate or a certificate from an authority. For more information on how to create a self-signed certificate, see [Create a self-signed public certificate][self-signed-cert]. Self-signed certificates aren't recommended for production scenarios. Obtain a certificate from a certificate authority for production scenarios.
 
-## Using certificate-based authentication
+## Use certificate-based authentication
 
 You should have this information to authenticate using a certificate.
 
@@ -47,7 +40,7 @@ You should have this information to authenticate using a certificate.
 - Application ID for your app registration. To get the Application ID, see: [Create a custom application][create-custom-application]
 - Your tenant ID.
 
-### Use Certificate Thumbprint:
+### Use Certificate Thumbprint
 
 ```powershell
 Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateThumbprint "YOUR_CERT_THUMBPRINT"
@@ -59,7 +52,7 @@ You can find the Certificate Thumbprint in [Microsoft Entra admin center][entra-
 Get-ChildItem Cert:\CurrentUser\My
 ```
 
-### Use Certificate name:
+### Use Certificate name
 
 ```powershell
 Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateName "YOUR_CERT_SUBJECT"
@@ -71,7 +64,7 @@ You can find the certificate subject by running the command:
 Get-ChildItem Cert:\CurrentUser\My\$CertThumbprint | Select Subject
 ```
 
-### Use a certificate:
+### Use a certificate
 
 ```powershell
 $Cert = Get-ChildItem Cert:\CurrentUser\My\$CertThumbprint
@@ -99,7 +92,7 @@ ContextScope          : Process
 Environment           : Global
 ```
 
-## Using client secret credentials
+## Use client secret credentials
 
 Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**. See [Get-Credential][get-credential] on how to get or create credentials.
 
@@ -118,21 +111,17 @@ To create or add a client secret, see: [Add a client secret][add-client-secret].
 
 A common challenge when writing automation scripts is the management of secrets, credentials, certificates, and keys used to secure communication between services. Eliminate the need to manage credentials by allowing the module to obtain access tokens for Azure resources that are protected by Microsoft Entra ID. The identity is managed by the Azure platform and doesn't require you to provision or rotate any secrets.
 
-- System-assigned managed identity:
+- **System-assigned managed identity** - Uses an automatically managed identity on a service instance. The identity is tied to the lifecycle of a service instance.
 
-    Uses an automatically managed identity on a service instance. The identity is tied to the lifecycle of a service instance.
+  ```powershell
+  Connect-Entra -Identity
+  ```
 
-```powershell
-Connect-Entra -Identity
-```
+- **User-assigned managed identity** - Uses a user created managed identity as a standalone Azure resource.
 
-- User-assigned managed identity:
-
-    Uses a user created managed identity as a standalone Azure resource.
-
-```powershell
-Connect-Entra -Identity -ClientId "User_Assigned_Managed_identity_Client_Id"
-```
+  ```powershell
+  Connect-Entra -Identity -ClientId "User_Assigned_Managed_identity_Client_Id"
+  ```
 
 ## Next steps
 

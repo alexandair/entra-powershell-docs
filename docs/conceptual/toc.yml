@@ -29,7 +29,7 @@ items:
         href: entra-powershell-best-practices.md
       - name: Authentication methods
         items:
-          - name: Discover authentication methods
+          - name: Authentication methods
             href: authentication-methods.md
           - name: Authenticate with delegated access
             href: delegated-access-auth.md

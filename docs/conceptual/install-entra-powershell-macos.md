@@ -7,7 +7,7 @@ manager: CelesteDG
 ms.topic: how-to
 ms.date: 05/13/2024
 ms.author: jomondi
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 
 #customer intent: As an IT admin, I want to learn how to install Microsoft Entra PowerShell module on macOS so that I can manage Microsoft Entra resources through PowerShell.
 ---

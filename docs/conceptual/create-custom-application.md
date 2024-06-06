@@ -1,18 +1,18 @@
 ---
-title: "Create a custom application to connect to Microsoft Entra PowerShell"
-description: "Learn how to create a custom application to be used authenticate to Microsoft Entra PowerShell."
+title: "Create a custom application"
+description: "Learn how to create a custom application that you can use to authenticate to Microsoft Entra PowerShell."
 
 ms.topic: how-to
 ms.date: 05/23/2024
 author: omondiatieno
 manager: CelesteDG
 ms.author: jomondi
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 
-#customer intent: As a Microsoft Entra PowerShell user, I want to understand how to create a custom application to improve my security posture.
+#customer intent: As an IT admin, I want to create and configure a custom application in the Microsoft Entra ID so that I can manage permissions and access to Microsoft Entra resources securely.
 ---
 
-# Create a custom application to connect to Microsoft Entra PowerShell
+# Create a custom application
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ To create a custom application and grant it permissions, you need:
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - One of the following roles: Cloud Application Administrator, or Application Administrator.
 
-## Use Microsoft Entra admin center
+## Create an application in the Microsoft Entra admin center
 
 To create custom applications for connecting to Microsoft Entra ID using Microsoft Entra PowerShell, follow the steps in the following section. Use the custom application to isolate and limit the permissions granted for a Microsoft Entra resource.
 
@@ -36,11 +36,11 @@ To create custom applications for connecting to Microsoft Entra ID using Microso
 To manage the resources that your application gets access to in your tenant, locate the application's service principal in the **Enterprise applications** pane.
 
 1. Browse to **Identity** > **Applications** > **Enterprise applications** > **All applications** and select the application you created.
-    1. Under **Manage**, select **Properties** and set **Assignment required?** to **Yes**.
-    1. Select **Save**.
-    1. Under **Manage**, select **Users and groups**.
-    1. Select **Add user/group** and add the users and groups permitted to use this application.
-    1. Once you add all the users and groups, select **Assign**.
+1. Under **Manage**, select **Properties** and set **Assignment required?** to **Yes**.
+1. Select **Save**.
+1. Under **Manage**, select **Users and groups**.
+1. Select **Add user/group** and add the users and groups permitted to use this application.
+1. Once you add all the users and groups, select **Assign**.
 
 >[!NOTE]
 > In the app's **Overview** section, copy the Application (client ID) and Directory (tenant) ID. You use the values when connecting to Microsoft Entra ID.
@@ -51,7 +51,7 @@ You need to set up Microsoft Graph permissions for the new application to connec
 
 1. Browse to **Identity** > **Applications** > **Enterprise applications** > **All applications** and select the application you created.
 1. Under **API permissions**, select **Add a permission** > Select Microsoft APIs > Microsoft Graph.
-1. Choose the type of permissions you require, either delegated or application permissions. 
+1. Choose the type of permissions you require, either delegated or application permissions.
     - If you need to sign in to the app to manage your resources in Microsoft Entra ID, select **Delegated permissions**.
     - If you want the app to access Microsoft Entra resources on its own without user interaction, select **Application permissions**
 1. Search for the required permission for example, `User.Read.All`.
