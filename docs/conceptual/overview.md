@@ -63,5 +63,5 @@ The following section outlines the known issues with the Microsoft Entra PowerSh
 [get-started]: quickstart-entra-powershell.md
 [installation]: installation.md
 [powershell-gallery]: installation.md
-[faqs]: entraps-faq.yml
+[faqs]: entra-powershell-faqs.yml
 [best-practices-guide]: installation.md

@@ -104,6 +104,6 @@ Get-EntraUser -Top 1 -Debug
 ```
 
 <!-- link references -->
-[permissions-ref]: entraps-permissions-guide.md
+[permissions-ref]: /graph/permissions-reference
 [entra-recommendations]: /entra/identity/monitoring-health/overview-recommendations
 [create-a-custom-app]: create-custom-application.md
