@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Entra PowerShell versioning, release cadence, and breaking changes"
+title: "Versioning, release cadence, and breaking changes"
 description: "This article describes versioning, release cadence, and breaking change information for the Microsoft Entra PowerShell module."
 
 ms.topic: concept-article
@@ -9,14 +9,14 @@ ms.service: entra
 author: omondiatieno
 manager: CelesteDG
 ms.author: jomondi
-ms.reviewer: stevemutungi254
+ms.reviewer: stevemutungi
 
 #customer intent: As a Microsoft Entra PowerShell user, I want to understand the versioning, release cadence, and breaking changes policies so that I can plan and manage updates to my production environment effectively and minimize the risk of disruptions caused by breaking changes.
 ---
 
-# Microsoft Entra PowerShell versioning, release cadence, and breaking changes
+# Versioning, release cadence, and breaking changes
 
-If you use Microsoft Entra PowerShell modules, it's important to understand the versioning, release cadence, and breaking changes policies to effectively manage updates to your production environment and minimize the risk of disruptions caused by breaking changes. 
+If you use Microsoft Entra PowerShell modules, it's important to understand the versioning, release cadence, and breaking changes policies to effectively manage updates to your production environment and minimize the risk of disruptions caused by breaking changes.
 
 This article covers the versioning scheme used by Microsoft Entra PowerShell modules, the release cadence for planned updates, and the policies for breaking changes.
 

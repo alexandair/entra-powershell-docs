@@ -14,7 +14,7 @@ ms.reviewer: stevemutungi
 
 # Manage users with Microsoft Entra PowerShell
 
-Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra PowerShell. The [user](link-to-cmdlet-for-user) resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
+Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra PowerShell. The user resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
 
 You can use Microsoft Entra PowerShell to access the relationships, documents, contacts, and preferences that are contextually relevant to a user. The user resource provides straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
 
@@ -54,7 +54,7 @@ To manage users, you can perform the following common user management tasks:
     Remove-EntraUser -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
     ```
 
-### List a user's group memberships and determine whether a user is a member of a group
+### List a user's group memberships and check if a user is a member of a group
 
 1. List a user’s group memberships.
 
@@ -175,12 +175,6 @@ This command adds a user to a Microsoft Entra role.
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-   For more information on the template user, see [Set-EntraUserLicense][set-entrauserlicense]
-
-1. Remove a license from a user.
-
-<TBD - Steve to advise on the cmdlets for removing a license from a user>
-
 ## Next steps
 
 [Manage groups][tutorial-groups]
@@ -190,4 +184,3 @@ This command adds a user to a Microsoft Entra role.
 [installation]: installation.md
 [tutorial-groups]: tutorial-groups.md
 [create-acount]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
-[set-entrauserlicense]: set-entrauserlicense.md
