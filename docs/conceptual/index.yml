@@ -44,7 +44,7 @@ landingContent:
           - text: Manage users
             url: manage-user.md
           - text: Manage groups
-            url: tutorial-groups.md
+            url: manage-groups.md
   - title: Microsoft Entra PowerShell reference
     linkLists:
       - linkListType: reference 

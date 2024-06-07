@@ -182,5 +182,5 @@ This command adds a user to a Microsoft Entra role.
 <!-- link references -->
 
 [installation]: installation.md
-[tutorial-groups]: tutorial-groups.md
+[tutorial-groups]: manage-groups.md
 [create-acount]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
