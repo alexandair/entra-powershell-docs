@@ -85,7 +85,7 @@ Least privileged delegated permission: `Application.ReadWrite.All`.
 
 <!--Review / example needed! -->
 ```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -RequiredResourceAccess ??????? 
+Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -RequiredResourceAccess $RequiredResourceAccess 
 ```
 
 ## Create app roles
@@ -94,7 +94,7 @@ To keep any existing app roles, include them in the request. Otherwise, they're 
 
 <!--Review / example needed! -->
 ```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -AppRoles ???????
+Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -AppRoles $AppRoles
 ```
 
 ## Manage owners
