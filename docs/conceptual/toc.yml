@@ -30,7 +30,7 @@ items:
       - name: Authentication methods
         items:
           - name: Authentication methods
-            href: authentication-methods.md
+            href: authentication-scenarios.md
           - name: Authenticate with delegated access
             href: delegated-access-auth.md
           - name: Authenticate with app-only access

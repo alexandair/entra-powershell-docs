@@ -153,7 +153,7 @@ To file an issue about Microsoft Entra PowerShell module, see: [File an issue on
 
 [entra-posh-issues]: https://github.com/microsoftgraph/entra-powershell/issues
 [get-started]: quickstart-entra-powershell.md
-[auth-methods]: authentication-methods.md
+[auth-methods]: authentication-scenarios.md
 [troubleshooting]: troubleshooting.md
 [update-module]: /powershell/module/powershellget/update-module
 [execution-policies]: /powershell/module/microsoft.powershell.core/about/about_execution_policies

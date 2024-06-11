@@ -90,4 +90,4 @@ To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the
 - Get help from the community:
 
 <!-- link references -->
-[auth-methods]: authentication-methods.md
+[auth-methods]: authentication-scenarios.md
