@@ -5,7 +5,7 @@ description: "Learn how to use app-only authentication to enable non-interactive
 author: omondiatieno
 manager: CelesteDG
 ms.topic: how-to
-ms.date: 05/22/2024
+ms.date: 06/11/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 
@@ -14,7 +14,7 @@ ms.reviewer: stevemutungi
 
 # Manage users with Microsoft Entra PowerShell
 
-Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra PowerShell. The user resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
+Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra ID. The user resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
 
 You can use Microsoft Entra PowerShell to access the relationships, documents, contacts, and preferences that are contextually relevant to a user. The user resource provides straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
 
@@ -23,7 +23,7 @@ You can use Microsoft Entra PowerShell to access the relationships, documents, c
 To manage users with Microsoft Entra PowerShell, you need:
 
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][create-acount].
-- One of the following roles: Global Administrator, User Administrator, or Group Administrator.
+- One of the following roles: User Administrator, or Group Administrator.
 - Microsoft Entra PowerShell SDK installed. Follow the [Install the Microsoft Entra PowerShell SDK][installation] guide to install the SDK.
 
 You can access a user's information and manage their data on their behalf or as an app with its own identity.
@@ -38,8 +38,8 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-    $PasswordProfile.Password = "<Password>"
-    New-EntraUser -DisplayName "New User" -PasswordProfile $PasswordProfile -UserPrincipalName "NewUser@contoso.com" -AccountEnabled $true -MailNickName "NewUser"
+    $PasswordProfile.Password = '<Password>'
+    New-EntraUser -DisplayName 'New User' -PasswordProfile $PasswordProfile -UserPrincipalName 'NewUser@contoso.com' -AccountEnabled $true -MailNickName 'NewUser'
     ```
 
     ```output
@@ -51,7 +51,7 @@ To manage users, you can perform the following common user management tasks:
 1. Delete a user.
 
     ```powershell
-    Remove-EntraUser -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
 ### List a user's group memberships and check if a user is a member of a group
@@ -59,7 +59,7 @@ To manage users, you can perform the following common user management tasks:
 1. List a user’s group memberships.
 
     ```powershell
-    Get-EntraUserMembership -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -71,12 +71,12 @@ To manage users, you can perform the following common user management tasks:
     hhhhhhhh-7777-8888-9999-iiiiiiiiiiii
     ```
 
-### List the users who report to a user and assign managers to a user
+### Get a user's manager, direct reports and assign a manager to a user
 
 1. Get a user's manager.
 
     ```powershell
-    Get-EntraUserManager -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -95,7 +95,7 @@ To manage users, you can perform the following common user management tasks:
 1. List the users who report to a specific user.
 
     ```powershell
-    Get-EntraUserDirectReport -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -117,7 +117,7 @@ To manage users, you can perform the following common user management tasks:
 1. Assign a manager to a user.
 
     ```powershell
-    Set-EntraUserManager -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -RefObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
+    Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
 
 ### Upload or retrieve a photo for the user
@@ -125,7 +125,7 @@ To manage users, you can perform the following common user management tasks:
 1. Upload a photo for a user.
 
     ```powershell
-    Set-EntraUserThumbnailPhoto -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -FilePath D:\UserThumbnailPhoto.jpg
+    Set-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -FilePath D:\UserThumbnailPhoto.jpg
     ```
 
 This example sets the thumbnail photo of the user specified with the ObjectId parameter to the image specified with the FilePath parameter.
@@ -133,7 +133,7 @@ This example sets the thumbnail photo of the user specified with the ObjectId pa
 1. Retrieve a user’s photo.
 
     ```powershell
-    Get-EntraUserThumbnailPhoto -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
 This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
@@ -143,17 +143,17 @@ This example demonstrates how to retrieve the thumbnail photo of a user that is 
 Grant a user an administrative role.
 
 ```powershell
-Add-EntraDirectoryRoleMember -ObjectId "cccccccc-2222-3333-4444-dddddddddddd" -RefObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -RefObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
 This command adds a user to a Microsoft Entra role.
 
-### Work with user licenses
+## Work with user licenses
 
 1. Get details of a user's licenses.
 
     ```powershell
-    Get-EntraUserLicenseDetail -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserLicenseDetail -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -166,8 +166,8 @@ This command adds a user to a Microsoft Entra role.
 1. Assign a license to a user based on a template user.
 
     ```powershell
-    $LicensedUser = Get-EntraUser -ObjectId "dddddddd-3333-4444-5555-eeeeeeeeeeee"  
-    $User = Get-EntraUser -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"  
+    $LicensedUser = Get-EntraUser -ObjectId 'dddddddd-3333-4444-5555-eeeeeeeeeeee'  
+    $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
     $License.SkuId = $LicensedUser.AssignedLicenses.SkuId 
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
