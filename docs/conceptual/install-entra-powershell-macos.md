@@ -71,6 +71,12 @@ You need to repeat this step for every new PowerShell session you start.
 For solutions to common installation issues with the Entra PowerShell module, see
 [Troubleshoot installation problems with the Entra PowerShell module](troubleshooting.md#installation-issues).
 
+## Install Dependencies
+
+The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
+
+[!INCLUDE [dependencies](install-entra-powershell-dependencies.md)]
+
 ## Provide feedback
 
 To file an issue about Microsoft Entra PowerShell module, see: [File an issue on GitHub.][entra-posh-issues]
