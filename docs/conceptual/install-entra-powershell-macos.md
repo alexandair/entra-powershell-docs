@@ -75,7 +75,7 @@ For solutions to common installation issues with the Entra PowerShell module, se
 
 The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
 
-[!INCLUDE [dependencies](install-entra-powershell-dependencies.md)]
+[!INCLUDE (install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 
