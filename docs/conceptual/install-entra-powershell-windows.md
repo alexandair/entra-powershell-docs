@@ -48,7 +48,7 @@ The recommended installation method and PowerShell version for the Entra PowerSh
    To update PowerShellGet, launch Windows PowerShell 5.1 elevated as an administrator and run the following command:
 
    ```powershell
-   Install-Module -Name PowerShellGet -Force
+   Install-Module -Name PowerShellGet -Force -AllowClobber
    ```
 
 ---
@@ -75,19 +75,19 @@ The recommended installation method and PowerShell version for the Entra PowerSh
 Use the [Install-Module][install-module] cmdlet to install the Entra PowerShell module:
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Scope CurrentUser
+Install-Module -Name Microsoft.Graph.Entra -Scope CurrentUser -AllowPrerelease
 ```
 
 Optionally, you can change the scope of the installation using the **Scope** parameter. This operation requires admin permissions.
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Scope AllUsers
+Install-Module -Name Microsoft.Graph.Entra -Scope AllUsers -AllowPrerelease
 ```
 
 To install the `Beta` module, run the following command.
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra.Beta
+Install-Module -Name Microsoft.Graph.Entra.Beta -AllowPrerelease
 ```
 
 > [!IMPORTANT]
@@ -115,7 +115,7 @@ Use [Update-Module][update-module] to update to the latest version
 of the Microsoft Entra PowerShell.
 
 ```powershell
-Update-Module -Name Microsoft.Graph.Entra
+Update-Module -Name Microsoft.Graph.Entra -AllowPrerelease
 ```
 
 Updating the Entra PowerShell module using `Update-Module` doesn't remove old versions of the Entra PowerShell module from your system.

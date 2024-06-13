@@ -27,7 +27,7 @@ Open the Terminal or other shell host application and run `pwsh` to start PowerS
 Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet to install the Entra PowerShell module:
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Repository PSGallery -Force
+Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
 ```
 
 ## Update the Entra PowerShell module
@@ -36,7 +36,7 @@ Use [Update-Module](/powershell/module/powershellget/update-module) to update to
 of the Microsoft Entra PowerShell module:
 
 ```powershell
-Update-Module -Name Microsoft.Graph.Entra -Force
+Update-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Force
 ```
 
 Updating the Microsoft Entra PowerShell module using `Update-Module` doesn't remove old versions of the Entra
