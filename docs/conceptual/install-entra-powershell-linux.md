@@ -20,6 +20,8 @@ This article explains how to install the Microsoft Entra PowerShell module on Li
 
 - Install a supported version of [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-linux)
 
+- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
+
 ## Installation
 
 Open the Terminal or other shell host application and run `pwsh` to start PowerShell.
@@ -72,100 +74,7 @@ For solutions to common installation issues with the Microsoft Entra PowerShell 
 
 The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
 
-# [v1.0](#tab/v1)
-
-- Install Microsoft Graph PowerShell SDK `v1.0` dependencies.
-
-```powershell
-$RequiredModules = (@'
-Microsoft.Graph.DirectoryObjects
-Microsoft.Graph.Users
-Microsoft.Graph.Users.Actions
-Microsoft.Graph.Users.Functions
-Microsoft.Graph.Groups
-Microsoft.Graph.Identity.DirectoryManagement
-Microsoft.Graph.Identity.Governance
-Microsoft.Graph.Identity.SignIns
-Microsoft.Graph.Applications
-'@).Split("`n")
-
-# Check if the pre-requisite modules are installed and install them if needed
-foreach ($module in $RequiredModules) {
-    Write-Host -ForegroundColor Yellow -BackgroundColor DarkBlue "Checking for $module"
-    if (!(Get-Module -Name $module -ListAvailable)) {
-        Install-Module -Name $module -Scope CurrentUser
-    }
-}
-
-<# Attribution: https://github.com/SamErde and https://github.com/alexandair #>
-```
-
-# [Beta](#tab/beta)
-
-- Install Microsoft Graph PowerShell SDK `Beta` dependencies.
-
-```powershell
-$RequiredModules = (@'
-Microsoft.Graph.Beta.Applications 
-Microsoft.Graph.Beta.Users
-Microsoft.Graph.Beta.Users.Actions
-Microsoft.Graph.Beta.Users.Functions
-Microsoft.Graph.Beta.Groups
-Microsoft.Graph.Beta.Identity.DirectoryManagement
-Microsoft.Graph.Beta.Identity.Governance
-Microsoft.Graph.Beta.Identity.SignIns
-Microsoft.Graph.Beta.Reports
-'@).Split("`n")
-
-# Check if the pre-requisite modules are installed and install them if needed
-foreach ($module in $RequiredModules) {
-    Write-Host -ForegroundColor Yellow -BackgroundColor DarkBlue "Checking for $module"
-    if (!(Get-Module -Name $module -ListAvailable)) {
-        Install-Module -Name $module -Scope CurrentUser
-    }
-}
-
-<# Attribution: https://github.com/SamErde and https://github.com/alexandair #>
-```
-
-# [Both Beta and v1.0](#tab/both)
-
-- Install `Beta` and `v1.0` dependencies.
-
-```powershell
-$RequiredModules = (@'
-Microsoft.Graph.DirectoryObjects
-Microsoft.Graph.Users
-Microsoft.Graph.Users.Actions
-Microsoft.Graph.Users.Functions
-Microsoft.Graph.Groups
-Microsoft.Graph.Identity.DirectoryManagement
-Microsoft.Graph.Identity.Governance
-Microsoft.Graph.Identity.SignIns
-Microsoft.Graph.Applications
-Microsoft.Graph.Beta.Applications 
-Microsoft.Graph.Beta.Users
-Microsoft.Graph.Beta.Users.Actions
-Microsoft.Graph.Beta.Users.Functions
-Microsoft.Graph.Beta.Groups
-Microsoft.Graph.Beta.Identity.DirectoryManagement
-Microsoft.Graph.Beta.Identity.Governance
-Microsoft.Graph.Beta.Identity.SignIns
-Microsoft.Graph.Beta.Reports
-'@).Split("`n")
-
-# Check if the pre-requisite modules are installed and install them if needed
-foreach ($module in $RequiredModules) {
-    Write-Host -ForegroundColor Yellow -BackgroundColor DarkBlue "Checking for $module"
-    if (!(Get-Module -Name $module -ListAvailable)) {
-        Install-Module -Name $module -Scope CurrentUser
-    }
-}
-
-<# Attribution: https://github.com/SamErde and https://github.com/alexandair #>
-```
-
----
+[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 

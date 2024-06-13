@@ -27,6 +27,8 @@ The recommended installation method and PowerShell version for the Entra PowerSh
   $PSVersionTable.PSVersion
   ```
 
+- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
+
 - Determine if you have the Entra PowerShell module installed:
 
   ```powershell
@@ -141,6 +143,12 @@ See [more authentication][auth-methods] options.
 ## Troubleshooting
 
 For solutions to common installation issues with the Entra PowerShell module, see [Troubleshoot installation problems with the Entra PowerShell module][troubleshooting].
+
+## Install Dependencies
+
+The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
+
+[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 

@@ -22,6 +22,8 @@ This article explains how to install the Entra PowerShell module from
 - Install a supported version of
   [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-macos)
 
+- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
+
 ## Installation
 
 Open the Terminal or other shell host application and run `pwsh` to start PowerShell.
@@ -75,7 +77,7 @@ For solutions to common installation issues with the Entra PowerShell module, se
 
 The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
 
-[!INCLUDE [dependencies](./install-entra-powershell-dependencies.md)]
+[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 
