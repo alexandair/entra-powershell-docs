@@ -32,7 +32,7 @@ Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet
 Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
 ```
 
-## Update the Entra PowerShell module
+## Update the module
 
 Use [Update-Module](/powershell/module/powershellget/update-module) to update to the latest version
 of the Microsoft Entra PowerShell module:
