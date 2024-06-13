@@ -35,7 +35,7 @@ PowerShell module:
 Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
 ```
 
-## Update the Entra PowerShell module
+## Update the module
 
 Use the [Update-Module](/powershell/module/powershellget/update-module) cmdlet to update to the
 latest version of the Entra PowerShell module.
