@@ -37,20 +37,30 @@ To manage users, you can perform the following common user management tasks:
 1. Create a new user using the `UserPrincipalName` parameter.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
     $PasswordProfile.Password = '<Password>'
     New-EntraUser -DisplayName 'New User' -PasswordProfile $PasswordProfile -UserPrincipalName 'NewUser@contoso.com' -AccountEnabled $true -MailNickName 'NewUser'
     ```
 
     ```output
-    ObjectId                             DisplayName UserPrincipalName               UserType
-    --------                             ----------- -----------------               --------
-    aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb New user    NewUser@contoso.com             Member
+    ageGroup                        :
+    onPremisesLastSyncDateTime      :
+    creationType                    :
+    imAddresses                     : {}
+    preferredLanguage               :
+    mail                            :
+    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
+    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=NewUser@contoso.com}}
+    consentProvidedForMinor         :
+    onPremisesUserPrincipalName     :
+    assignedLicenses                : {}
     ```
 
 1. Delete a user.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -59,6 +69,7 @@ To manage users, you can perform the following common user management tasks:
 1. List a user’s group memberships.
 
     ```powershell
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -76,6 +87,7 @@ To manage users, you can perform the following common user management tasks:
 1. Get a user's manager.
 
     ```powershell
+    Connect-Entra -Scopes 'User.All'
     Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -95,6 +107,7 @@ To manage users, you can perform the following common user management tasks:
 1. List the users who report to a specific user.
 
     ```powershell
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -117,6 +130,7 @@ To manage users, you can perform the following common user management tasks:
 1. Assign a manager to a user.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
 
@@ -125,6 +139,7 @@ To manage users, you can perform the following common user management tasks:
 1. Upload a photo for a user.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     Set-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -FilePath D:\UserThumbnailPhoto.jpg
     ```
 
@@ -133,6 +148,7 @@ This example sets the thumbnail photo of the user specified with the ObjectId pa
 1. Retrieve a user’s photo.
 
     ```powershell
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -143,6 +159,7 @@ This example demonstrates how to retrieve the thumbnail photo of a user that is 
 Grant a user an administrative role.
 
 ```powershell
+Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -RefObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
@@ -153,19 +170,20 @@ This command adds a user to a Microsoft Entra role.
 1. Get details of a user's licenses.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     Get-EntraUserLicenseDetail -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
-    ObjectId                                    ServicePlans
-    --------                                    ------------
-    Ab-1cccccccccc-dddddddddddddddddddddddddddd {class ServicePlanInfo {...
-    Bc-1dddddddddd-eeeeeeeeeeeeeeeeeeeeeeeeeeee {class ServicePlanInfo {...
+    Id                                          SkuId                                SkuPartNumber
+    --                                          -----                                -------------
+    ouL7hgqFM0GkdqXrzahI4u7E6wa1G91HgSARMkvFTgY 06ebc4ee-1bb5-47dd-8120-11324bc54e06 SPE_E5
     ```
 
 1. Assign a license to a user based on a template user.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All','AuditLog.Read.all'
     $LicensedUser = Get-EntraUser -ObjectId 'dddddddd-3333-4444-5555-eeeeeeeeeeee'  
     $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
@@ -174,6 +192,22 @@ This command adds a user to a Microsoft Entra role.
     $Licenses.AddLicenses = $License 
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
+
+The first command gets a user by using the Get-EntraUser cmdlet, and then stores it in the $LicensedUser variable.
+
+The second command gets another user by using Get-EntraUser, and then stores it in the $User variable.
+
+The third command creates an AssignedLicense type, and then stores it in the $License variable.
+
+The fourth command set the SkuId property of $License to the same value as the SkuId property of $LicensedUser.
+
+The fifth command creates an AssignedLicenses object, and stores it in the $Licenses variable.
+
+The sixth command adds the license in $License to $Licenses.
+
+The final command assigns the licenses in $Licenses to the user in $User.
+
+The licenses in $Licenses includes $License from the third and fourth commands.
 
 ## Next steps
 
