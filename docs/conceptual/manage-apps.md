@@ -63,8 +63,8 @@ Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -DisplayNa
 The below example shows how to update the sign out url of an application:
 
 ```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -LogoutUrl 'https://contoso.com/Security/ADFS.aspx/logout'
-```
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -LogoutUrl 'https://contoso.com/Security/ADFS.aspx/logout'
 
 For more information, see [Set-EntraApplication](https://review.learn.microsoft.com/powershell/entra-preview/microsoft.graph.entra/set-entraapplication?branch=main&branchFallbackFrom=pr-en-us-86&view=entra-powershell-preview).
 
