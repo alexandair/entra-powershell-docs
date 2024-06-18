@@ -9,7 +9,7 @@ ms.date: 05/24/2024
 ms.author: cmulligan
 ms.reviewer: stevemutungi
 
-#Customer intent: As an IT admin managing apps in Microsoft Entra ID, I want to learn hot to manage apps in Microsoft Entra PowerShell so that I can automate app management tasks.
+#Customer intent: As an IT admin managing apps in Microsoft Entra ID, I want to learn how to manage apps in Microsoft Entra PowerShell so that I can automate app management tasks.
 ---
 
 # Manage apps
