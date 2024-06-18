@@ -116,9 +116,9 @@ Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -AppRoles 
 Least privileged delegated permission: `Application.ReadWrite.All`.
 
 ```powershell
- $ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
- Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
-```
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+$ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
+Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
 
 ### Assign an owner to a service principal
 
