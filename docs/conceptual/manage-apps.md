@@ -54,7 +54,7 @@ New-EntraServicePrincipal  -AppId $MyApp.AppId
 
 Least privileged delegated permission: `Application.ReadWrite.All`.
 
-You can configure multiple properties for your app. The below examples shows how to edit the display name of an application.
+You can configure multiple properties for your app. The below examples shows how to update the display name of an application.
 
 ```powershell
 Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -DisplayName "New Name"
