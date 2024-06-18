@@ -45,8 +45,9 @@ The application is assigned an ID that's unique for apps in the tenant, and an a
 Least privileged delegated permission: `Application.ReadWrite.All`.
 
 ```powershell
-$MyApp=(Get-EntraApplication -Filter "DisplayName eq 'ToGraph_443DEM'")
-New-EntraServicePrincipal  -AppId $MyApp.AppId -Homepage 'https://localhost/home' -LogoutUrl 'htpp://localhost/logout' -ReplyUrls 'https://localhost/redirect'
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+$MyApp=(Get-EntraApplication -Filter "DisplayName eq 'My new application'")
+New-EntraServicePrincipal  -AppId $MyApp.AppId 
 ```
 
 ## Configure basic properties for your app
