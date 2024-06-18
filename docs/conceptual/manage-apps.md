@@ -73,8 +73,8 @@ For more information, see [Set-EntraApplication](https://review.learn.microsoft.
 Least privileged delegated permission: `Application.ReadWrite.All`.
 
 ```powershell
- Set-EntraServicePrincipal -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -ServicePrincipalType "Application" -AppRoleAssignmentRequired $True
-```
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+ Set-EntraServicePrincipal -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  -AppRoleAssignmentRequired $True
 
 ## Assign permissions to an app
 
