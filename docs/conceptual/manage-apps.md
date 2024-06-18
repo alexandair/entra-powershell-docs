@@ -86,8 +86,19 @@ Least privileged delegated permission: `Application.ReadWrite.All`.
 
 <!--Review / example needed! -->
 ```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -RequiredResourceAccess $RequiredResourceAccess 
-```
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+$RequiredResourceAccess = @(
+  @{resourceAppId = '00000003-0000-0000-c000-000000000000'
+      resourceAccess = @(
+           @{
+                 id = 'c79f8feb-a9db-4090-85f9-90d820caa0eb'
+                 type = 'Scope'
+             }
+         @{
+                id = '9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30'
+               type = 'Role'
+           } )})
+ Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RequiredResourceAccess $RequiredResourceAccess 
 
 ## Create app roles
 
