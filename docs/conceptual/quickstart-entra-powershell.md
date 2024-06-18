@@ -82,6 +82,5 @@ Microsoft Entra PowerShell collects telemetry data by default. We collect inform
 To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the:
 
 - [Manage users](manage-user.md)
-- [Manage groups](manage-groups.md)
-- [Manage apps](manage-apps.md)
+
 
