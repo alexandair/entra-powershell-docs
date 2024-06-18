@@ -1,5 +1,5 @@
 ---
-title: Get started with the Microsoft Entra PowerShell module
+title: Get started with the module
 description: Get started with the Microsoft Entra PowerShell module by using it perform some basic tasks.
 
 author: csmulligan
@@ -11,7 +11,7 @@ ms.author: cmulligan
 #customer intent: As an IT admin, I want to learn how to use the Microsoft Entra PowerShell module, so that I can manage Entra resources.
 ---
 
-# Get started with the Microsoft Entra PowerShell module
+# Get started with the module
 
 Microsoft Entra PowerShell provides a command-line interface for managing Microsoft Entra resources. [Explore more about Entra PowerShell](overview.md).
 
@@ -29,7 +29,7 @@ Microsoft Entra PowerShell supports two types of authentication: _delegated acce
 Connect-Entra -Scopes 'User.Read.All' 
 ```
 
-To see all the possible options, refer to the [authentication][auth-methods] options.
+To see all the possible options, refer to the [authentication](authentication-methods.md) article.
 
 ## Find all available commands
 
@@ -59,7 +59,7 @@ Get-EntraUser
 
 This command outputs a list of users in your tenant. 
 
-```output
+```Output
 DisplayName           ID                                     Mail                    UserPrincipalName
 ------------           --                                     ----                    -----------------
 Contoso Demo UserOne   00000000-0000-0000-0000-000000000000   demoone@contoso.com    demoone@contoso.com
@@ -73,21 +73,15 @@ You can run the following command to get the details of one single user.
 Get-EntraUser -ObjectId '00000000-0000-0000-0000-000000000000'
 ```
 
-## Data Collection
+## Data collection
 
-Microsoft Entra PowerShell collects telemetry data by default. We collection information about the `Microsoft Entra PowerShell version` and the `cmdlet` executed. Microsoft aggregates collected data to identify patterns of usage to identify common issues and to improve the experience of Microsoft Entra PowerShell. Microsoft Entra PowerShell doesn't collect any private or personal data. For example, the usage
-data helps identify issues such as cmdlets with low success and helps prioritize our work.
+Microsoft Entra PowerShell collects telemetry data by default. We collect information about the Microsoft Entra PowerShell version and the cmdlet executed. Microsoft aggregates collected data to identify patterns of usage to identify common issues and to improve the experience of Microsoft Entra PowerShell. Microsoft Entra PowerShell doesn't collect any private or personal data. For example, the usage data helps identify issues such as cmdlets with low success and helps prioritize our work.
 
-## Learn Microsoft Entra PowerShell basics with quickstarts and tutorials
+## Learn the basics with quickstarts and tutorials
 
 To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the:
 
-- [Group operations](tutorial-groups.md) (creating a group, updating group properties, adding owners, members, and deleting groups).
+- [Manage users](manage-user.md)
+- [Manage groups](manage-groups.md)
+- [Manage apps](manage-apps.md)
 
-## Related content
-
-- [Sign in with Microsoft Entra PowerShell][auth-methods]
-- Get help from the community:
-
-<!-- link references -->
-[auth-methods]: authentication-methods.md

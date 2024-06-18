@@ -11,7 +11,7 @@ ms.author: cmulligan
 #Customer intent: As a Microsoft Entra PowerShell user, I want to troubleshoot and fix common errors, so that I can ensure the smooth operation of my scripts and commands.
 
 ---
-# Troubleshoot Microsoft Entra PowerShell module
+# Troubleshoot the Microsoft Entra PowerShell module
 
 This article explains how to determine, diagnose, and fix issues that you might encounter when using Microsoft Entra PowerShell.
 
@@ -21,23 +21,15 @@ Before troubleshooting any errors, ensure that you’re running the most recent 
 Get-InstalledModule
 ```
 
-The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery][entraps-gallery]. If your installed module isn’t up to date, update it by running:
+The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.8.0-preview). If your installed module isn’t up to date, update it by running:
 
 ```powershell
 Update-Module Microsoft.Graph.Entra
 ```
 
-<!--Sources: 
-https://review.learn.microsoft.com/en-us/powershell/microsoftgraph/troubleshooting?branch=main&branchFallbackFrom=pr-en-us-36&view=graph-powershell-1.0 
-And AI generated text from Team chats / emails. 
-Question: I haven't added the below issues yet. Will they / are they fixed for PP?
-https://github.com/microsoftgraph/entra-powershell/blob/main/PREREQUISITE.md#known-problems
-https://github.com/microsoftgraph/entra-powershell/blob/main/build/BUILD.md#faqs
--->
-
 ## Installation issues
 
-During installation, you may encounter the error: “Install-Module: A parameter can't be found that matches parameter name ‘AllowPrerelease’.”
+During installation, you may encounter the error: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
 
 You're using an older version of Install-Module. Here’s how to upgrade:
 
@@ -79,7 +71,7 @@ If it’s not listed, install it using `Install-Module Microsoft.Graph.Entra`.
 
 ## Version conflicts
 
-You might encounter errors indicating multiple versions of the module are installed, such as the message `Assembly with the same name is already loaded`.
+You might encounter errors indicating multiple versions of the module are installed, such as the message "Assembly with the same name is already loaded".
 
 **Workaround**: To resolve this, uninstall all conflicting versions of the module and then install the latest version:
 
@@ -124,14 +116,12 @@ $webClient.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCrede
 
 If your operating system credentials are configured correctly, this configuration routes PowerShell
 requests through the proxy. To have this setting persist between sessions, add the commands to your
-[PowerShell profile][posh-profile].
+PowerShell profile.
 
 To install the package, your proxy needs to allow HTTPS connections to [www.powershellgallery.com](https://www.powershellgallery.com).
 
 ## Other issues
 
-If you experience a product issue with Entra PowerShell not listed in this article or require
+If you experience a product issue with Microsoft Entra PowerShell not listed in this article or require
 further assistance, [file an issue on GitHub](https://github.com/microsoftgraph/entra-powershell/issues).
 
-[entraps-gallery]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra
-[posh-profile]: /powershell/module/microsoft.powershell.core/about/about_profiles
