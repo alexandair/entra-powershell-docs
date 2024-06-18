@@ -35,8 +35,8 @@ The following request creates an app by specifying only the required `displayNam
 Least privileged delegated permission: `Application.ReadWrite.All`.
 
 ```powershell
-New-EntraApplication -DisplayName "My new application"
-```
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+New-EntraApplication -DisplayName 'My new application'
 
 The application is assigned an ID that's unique for apps in the tenant, and an appId that's globally unique in the Microsoft Entra ecosystem.
 
