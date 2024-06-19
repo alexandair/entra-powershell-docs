@@ -62,15 +62,15 @@ This command outputs a list of users in your tenant.
 ```Output
 DisplayName           ID                                     Mail                    UserPrincipalName
 ------------           --                                     ----                    -----------------
-Contoso Demo UserOne   00000000-0000-0000-0000-000000000000   demoone@contoso.com    demoone@contoso.com
-Contoso Demo UserTwo   11111111-1111-1111-1111-111111111111   demotwo@contoso.com    demotwo@contoso.com
-Contoso Demo UserFour  55555555-5555-5555-5555-555555555555   demofour@contoso.com   demofour@contoso.com
+Adrian King   00aa00aa-bb11-cc22-dd33-44ee44ee44ee   adrian@contoso.com    adrian@contoso.com
+Quinn Campbell   11bb11bb-cc22-dd33-ee44-55ff55ff55ff   quinn@contoso.com    quinn@contoso.com
+Jayden Phillips  22cc22cc-dd33-ee44-ff55-66aa66aa66aa   jayden@contoso.com   jayden@contoso.com
 ```
 
 You can run the following command to get the details of one single user.
 
 ```powershell
-Get-EntraUser -ObjectId '00000000-0000-0000-0000-000000000000'
+Get-EntraUser -ObjectId '00aa00aa-bb11-cc22-dd33-44ee44ee44ee'
 ```
 
 ## Data collection
@@ -79,8 +79,6 @@ Microsoft Entra PowerShell collects telemetry data by default. We collect inform
 
 ## Learn the basics with quickstarts and tutorials
 
-To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the:
-
-- [Manage users](manage-user.md)
+To get started with Microsoft Entra PowerShell, try an in-depth tutorial on [managing users](manage-user.md).
 
 
