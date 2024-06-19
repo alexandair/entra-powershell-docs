@@ -23,6 +23,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "brand": "entra",
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
 	  "ms.devlang": "powershell",
@@ -34,6 +35,13 @@
     "template": [],
     "markdownEngineName": "markdig",
     "exportRawModel": true,
-    "exportViewModel": true
+    "exportViewModel": true,
+    "fileMetadata": {
+      "titleSuffix": {
+      "*.md": "Microsoft Entra PowerShell",
+      "*.yml": "Microsoft Entra PowerShell"
+      }
+    
+    }
   }
 }
