@@ -17,7 +17,7 @@ This article details the process of running your existing AzureAD PowerShell scr
 
 ## Use compatibility mode with Enable-EntraAzureADAlias
 
-The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias][enable-azuread-alias] reference documentation.
+The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias](/powershell/entra-preview/microsoft.graph.entra/enable-entraazureadalias) reference documentation.
 
 To use Microsoft Entra PowerShell with your existing AzureAD PowerShell scripts, replace the `Connect-AzureAD` command with the three lines provided.
 
@@ -80,9 +80,6 @@ foreach ($app in $Applications) {
     $cert = $AppCreds.KeyCredentials
 ```
 
-> [!IMPORTANT]
-> Although we've aliased the cmdlet names, we might have missed some parameters or return values. If you find any, please report them on our [GitHub issues][github-issues], and we'll update the aliases promptly. We recommend using the [latest version][installation] of the Microsoft Entra PowerShell module.
-
 ## Test compatibility with Test-EntraScript command
 
 The `Test-EntraScript` cmdlet verifies if a script with AzureAD commands works with the Microsoft Entra PowerShell module. If there are compatibility issues, it lists them, including the line number, issue type, incompatible command, and the specific code snippet.
@@ -98,7 +95,7 @@ When migrating from the Azure AD PowerShell module to Microsoft Graph endpoints,
 ## Related content
 
 - [Introducing the Microsoft Entra PowerShell module](quickstart-entra-powershell.md)
-- [Install][installation.md] the Microsoft Entra PowerShell module
+- [Install the Microsoft Entra PowerShell module](installation.md)
 
 <!-- link references -->
 [azuread-ps]: /powershell/module/azuread
