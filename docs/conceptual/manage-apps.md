@@ -26,23 +26,26 @@ To manage apps with Microsoft Entra PowerShell, you need:
 - Grant yourself the least privileged delegated permission indicated for the operation.
 - Microsoft Entra PowerShell module installed. Follow the [Install Microsoft Entra PowerShell module](installation.md) guide to install the module.
 
-<!-- All the below code snippets must be tested! -->
-
 ## Register an application
 
 The following request creates an app by specifying only the required `displayName` property.
 
-Least privileged delegated permission: `Application.ReadWrite.All`.
-
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 New-EntraApplication -DisplayName 'My new application'
+```
+
+```Output
+
+DisplayName        Id                                   AppId                                SignInAudience PublisherDo
+                                                                                                            main
+-----------        --                                   -----                                -------------- -----------
+My new application aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb bbbbbbbb-1111-2222-3333-cccccccccccc MyOrg
+```
 
 The application is assigned an ID that's unique for apps in the tenant, and an appId that's globally unique in the Microsoft Entra ecosystem.
 
 ## Create a service principal for an application
-
-Least privileged delegated permission: `Application.ReadWrite.All`.
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
@@ -50,41 +53,42 @@ $MyApp=(Get-EntraApplication -Filter "DisplayName eq 'My new application'")
 New-EntraServicePrincipal  -AppId $MyApp.AppId 
 ```
 
+```Output
+DisplayName Id                                   AppId                                SignInAudience                     ServicePrincipalType
+----------- --                                   -----                                --------------                     --------------------
+My new application    bbbbbbbb-1111-2222-3333-cccccccccccc 00001111-aaaa-2222-bbbb-3333cccc4444 MyOrg Application
+```
+
 ## Configure basic properties for your app
 
-Least privileged delegated permission: `Application.ReadWrite.All`.
-
-You can configure multiple properties for your app. The below examples shows how to update the display name of an application.
+You can configure multiple properties for your app. The following example shows how to update the display name of an application.
 
 ```powershell
 Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -DisplayName "New Name"
 ```
 
-The below example shows how to update the sign out url of an application:
+The following example shows how to update the sign out url of an application:
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -LogoutUrl 'https://contoso.com/Security/ADFS.aspx/logout'
+```
 
-For more information, see [Set-EntraApplication](https://review.learn.microsoft.com/powershell/entra-preview/microsoft.graph.entra/set-entraapplication?branch=main&branchFallbackFrom=pr-en-us-86&view=entra-powershell-preview).
+For more information, see [Set-EntraApplication](/powershell/entra-preview/microsoft.graph.entra/set-entraapplication).
 
 ## Limit app sign-in to only assigned identities
 
-Least privileged delegated permission: `Application.ReadWrite.All`.
-
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
- Set-EntraServicePrincipal -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  -AppRoleAssignmentRequired $True
+Set-EntraServicePrincipal -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  -AppRoleAssignmentRequired $True
+```
 
 ## Assign permissions to an app
 
-While you can assign permissions to an app through the Microsoft Entra admin center, you also assign permissions through Microsoft Graph by updating the `requiredResourceAccess` property of the app object. You must pass in both existing and new permissions. Passing in only new permissions overwrites and removes the existing permissions that haven't yet been consented to.
+While you can assign permissions to an app through the Microsoft Entra admin center, you also assign permissions through Microsoft Entra PowerShell by updating the `requiredResourceAccess` property of the app object. You must pass in both existing and new permissions. Passing in only new permissions overwrites and removes the existing permissions that haven't yet been consented to.
 
 Assigning permissions doesn't automatically grant them to the app. You must still grant admin consent using the Microsoft Entra admin center. 
 
-Least privileged delegated permission: `Application.ReadWrite.All`.
-
-<!--Review / example needed! -->
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 $RequiredResourceAccess = @(
@@ -96,29 +100,20 @@ $RequiredResourceAccess = @(
              }
          @{
                 id = '9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30'
-               type = 'Role'
+                type = 'Role'
            } )})
  Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RequiredResourceAccess $RequiredResourceAccess 
-
-## Create app roles
-
-To keep any existing app roles, include them in the request. Otherwise, they're replaced with the new object.
-
-<!--Review / example needed! -->
-```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -AppRoles $AppRoles
 ```
 
 ## Manage owners
 
 ### Retrieve the owner of a service principal
 
-Least privileged delegated permission: `Application.ReadWrite.All`.
-
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 $ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
 Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
+```
 
 ### Assign an owner to a service principal
 
@@ -129,14 +124,14 @@ Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
 - The final command adds the user specified by `$OwnerId` as an owner to a service principal specified by `$ServicePrincipalId`.
 
 ```powershell
- $ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
- $OwnerId = (Get-EntraUser -Top 1).ObjectId
- Add-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId -RefObjectId -$OwnerId
+Connect-Entra -Scopes 'Application.ReadWrite.All'
+$ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
+$OwnerId = (Get-EntraUser -Top 1).ObjectId
+Add-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId -RefObjectId -$OwnerId
 ```
 
 ## Related content
 
-- [Manage groups](manage-groups.md)
 - [Manage users](manage-user.md)
 
 <!-- link references -->
