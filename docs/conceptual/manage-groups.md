@@ -17,44 +17,59 @@ In this tutorial, you'll learn how to create, edit, update, and delete a group i
 
 ## Prerequisites
 
- - Install the latest Microsoft Entra PowerShell module. For more information, see [Install the Microsoft Entra PowerShell module](installation.md).
- - Have at least the [Groups Administrator role](/entra/identity/role-based-access-control/permissions-reference#groups-administrator).
+- A Microsoft Entra user account. If you don't already have one, you can [create an account for free](https://azure.microsoft.com/en-us/free/?WT.mc_id=A261C142F).
+- Install the latest Microsoft Entra PowerShell module. For more information, see [Install the Microsoft Entra PowerShell module](installation.md).
+- Have at least the [Groups Administrator role](/entra/identity/role-based-access-control/permissions-reference#groups-administrator).
 
 ## Create and edit a group
 
 1. To create a group, make sure you have the required permissions to create a group.
 
-```powershell
-Connect-MgGraph -Scopes 'Group.ReadWrite.All' 
-```
+    ```powershell
+    Connect-Entra -Scopes 'Group.ReadWrite.All' 
+    ```
 
 1. To create a new group, run the following command.
 
-```powershell
-New-EntraGroup -DisplayName 'My new group' -MailEnabled $false -SecurityEnabled $true -MailNickName 'NotSet'
-```
+    ```powershell
+    New-EntraGroup -DisplayName 'My new group' -MailEnabled $false -SecurityEnabled $true -MailNickName 'NotSet'
+    ```
+
+    ```Output
+    
+    DisplayName  Id                                   MailNickname Description GroupTypes
+    -----------  --                                   ------------ ----------- ----------
+    My new group aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb NotSet                   {}
+    ```
 
 This command creates a new group with the name `My new group`.
 
 1. Search for the created group by using the command below.
 
-```powershell
-Get-EntraGroup -Filter "DisplayName eq 'My new group'" | Format-List
-```
+    ```powershell
+    Get-EntraGroup -Filter "DisplayName eq 'My new group'"
+    ```
+
+    ```Output
+    DisplayName        Id                                   MailNickname     Description        GroupTypes
+    -----------        --                                   ------------     -----------        ----------
+    My new group       aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb mynewgroup       My new group        {Unified}
+    ```
 
 This command returns the details of the newly created group. You can also use the `ObjectId` (GUID) to search, update, or delete the group.
 
 1. Update the group description by running the command below. The `ObjectId` is the Group ID.
 
-```powershell
-Set-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -Description 'This is my new updated group details' 
-```
+    ```powershell
+    Set-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -Description 'This is my new updated group details' 
+    ```
 
 To confirm the updated description, run the `Get-EntraGroup` again.
 
-```powershell
-Get-EntraGroup -Filter "DisplayName eq 'My new group'" | Format-List 
-```
+    ```powershell
+    Get-EntraGroup -Filter "DisplayName eq 'My new group'"  
+    ```
+
 
 ## Add a user to a group
 
@@ -78,13 +93,20 @@ To confirm the updated group owner, run the `Get-EntraGroupOwner` command. This 
 Get-EntraGroupOwner -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
-## Clean up resources
-
-To remove the user from the group, run the following command.
-
-```powershell
-Remove-EntraGroupMember -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -MemberId 'cccccccc-2222-3333-4444-dddddddddddd'
+```Output
+ageGroup                        :
+onPremisesLastSyncDateTime      :
+creationType                    :
+imAddresses                     : {HaydenL@contoso.com}
+preferredLanguage               : en
+mail                            : HaydenL@contoso.com
+securityIdentifier              : B-2-33-4-5555555555-6666666666-7777777-8888888888
+identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=HaydenL@contoso.com}}
+consentProvidedForMinor         :
+onPremisesUserPrincipalName     :
 ```
+
+## Clean up resources
 
 To remove the group, run the following command.
 
@@ -94,7 +116,6 @@ Remove-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 
 ## Related content
 
-- [Manage apps](manage-apps.md)
 - [Manage users](manage-user.md)
 
 <!-- link references -->
