@@ -21,7 +21,7 @@ Before troubleshooting any errors, ensure that you’re running the most recent 
 Get-InstalledModule
 ```
 
-The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.8.0-preview). If your installed module isn’t up to date, update it by running:
+The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery](https://www.powershellgallery.com). If your installed module isn’t up to date, update it by running:
 
 ```powershell
 Update-Module Microsoft.Graph.Entra
