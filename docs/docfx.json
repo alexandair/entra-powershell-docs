@@ -27,7 +27,7 @@
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
 	  "ms.devlang": "powershell",
-      "ms.service": "entra-powershell",
+      "ms.service": "entra",
       "ms.topic": "reference",
       "feedback_system": "Standard",
 	  "toc_preview": true
@@ -39,7 +39,12 @@
     "fileMetadata": {
       "titleSuffix": {
       "*.md": "Microsoft Entra PowerShell",
-      "*.yml": "Microsoft Entra PowerShell"
+      "conceptual/*.md": "Microsoft Entra PowerShell",
+      "conceptual/*.yml": "Microsoft Entra PowerShell",
+      "/reference/beta/Microsoft.Graph.Entra.Beta/*.md": "Microsoft Entra PowerShell",
+      "/reference/beta/Microsoft.Graph.Entra.Beta/*.yml": "Microsoft Entra PowerShell",
+      "/reference/v1.0/Microsoft.Graph.Entra/*.md": "Microsoft Entra PowerShell",
+      "/reference/v1.0/Microsoft.Graph.Entra/*.yml": "Microsoft Entra PowerShell"
       }
     
     }
