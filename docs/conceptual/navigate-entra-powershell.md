@@ -20,38 +20,39 @@ Microsoft Entra PowerShell cmdlets follow a standard naming convention for Power
 
 > [!NOTE]
 > For beta cmdlets, add a Beta prefix to the resource name. For example, use `Get-EntraBetaUser` instead of `Get-EntraUser` for the beta version.
-## Exploring module commands
 
-### Import the Microsoft Entra PowerShell module
+## Explore module commands
+
+### Import the module
 
 Import the Microsoft Entra PowerShell module, if you have not installed it already. 
 
 ```powershell
 Import-Module -Name Microsoft.Graph.Entra
 ```
+
 You can check if the Module is loaded by running the command `Get-Module -Name Microsoft.Graph.Entra`.
 
-### Finding available commands
+### Find available commands
 
 You can use the `Get-Command` command to search for available commands in the module. For instance, to find commands related to applications, run the following command:
 
 ```powershell
 Get-Command -Module Microsoft.Graph.Entra* -Noun *application*
 ```
+
 This command shows all the cmdlets, functions, and aliases included in the module for the `application` resource.
 
-### Listing parameters
+### List parameters
 
 Once you identify the correct command, use the `Get-Help` command to view all its parameters. For example, to see the parameters for the `Get-EntraUser` command, run the following command:
 
 ```powershell
 Get-Help Get-EntraUser -Detailed
 ```
+
 This command gives detailed help documentation, including the cmdlet's description, parameters, usage examples, and related commands, helping you understand how to use it effectively in various scenarios.
 
 > [!TIP]
 > Keep Microsoft Entra PowerShell module updated to ensure access to the latest commands and features by running the command `Update-Module -Name Microsoft.Graph.Entra`
-## Related content
 
-- [Sign in with Microsoft Entra PowerShell]()
-- Get help from the community:
