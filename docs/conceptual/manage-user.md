@@ -24,7 +24,7 @@ To manage users with Microsoft Entra PowerShell, you need:
 
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][create-acount].
 - One of the following roles: User Administrator, or Group Administrator.
-- Microsoft Entra PowerShell SDK installed. Follow the [Install the Microsoft Entra PowerShell SDK][installation] guide to install the SDK.
+- Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
 
 You can access a user's information and manage their data on their behalf or as an app with its own identity.
 
