@@ -80,9 +80,10 @@ data helps identify issues such as cmdlets with low success and helps prioritize
 
 ## Learn Microsoft Entra PowerShell basics with quickstarts and tutorials
 
-To get started with Microsoft Entra PowerShell, try an in-depth how-to for the:
+To get started with Microsoft Entra PowerShell, explore an in-depth how-to guide for the following:
 
-- [Group operations](manage-groups.md) (creating a group, updating group properties, adding owners, members, and deleting groups).
+- [Manage users](manage-user.md)
+- [Group operations](manage-groups.md) include creating a group, updating group properties, adding owners and members, and deleting groups.
 
 ## Related content
 
