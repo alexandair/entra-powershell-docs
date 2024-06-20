@@ -20,6 +20,8 @@ This article explains how to install the Microsoft Entra PowerShell module on Li
 
 - Install a supported version of [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-linux)
 
+- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
+
 ## Installation
 
 Open the Terminal or other shell host application and run `pwsh` to start PowerShell.
@@ -27,16 +29,16 @@ Open the Terminal or other shell host application and run `pwsh` to start PowerS
 Use the [Install-Module](/powershell/module/powershellget/install-module) cmdlet to install the Entra PowerShell module:
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Repository PSGallery -Force
+Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
 ```
 
-## Update the Entra PowerShell module
+## Update the module
 
 Use [Update-Module](/powershell/module/powershellget/update-module) to update to the latest version
 of the Microsoft Entra PowerShell module:
 
 ```powershell
-Update-Module -Name Microsoft.Graph.Entra -Force
+Update-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Force
 ```
 
 Updating the Microsoft Entra PowerShell module using `Update-Module` doesn't remove old versions of the Entra
@@ -67,6 +69,12 @@ You'll need to repeat this step for every new PowerShell session you start.
 
 For solutions to common installation issues with the Microsoft Entra PowerShell module, see
 [Troubleshoot installation problems with the Microsoft Entra PowerShell module](troubleshooting.md#installation-issues).
+
+## Install Dependencies
+
+The Microsoft Entra PowerShell module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they are not already installed.
+
+[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 
