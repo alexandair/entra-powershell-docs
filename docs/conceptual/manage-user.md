@@ -16,7 +16,7 @@ ms.reviewer: stevemutungi
 
 Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra ID. The user resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
 
-You can use Microsoft Entra PowerShell to access the relationships, documents, contacts, and preferences that are contextually relevant to a user. The user resource provides straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
+You can use Microsoft Entra PowerShell to access the relationships, documents, contacts, and preferences that are contextually relevant to a user. The user resource provides a straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
 
 ## Prerequisites
 
