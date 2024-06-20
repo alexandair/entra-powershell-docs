@@ -189,10 +189,9 @@ This command adds a user to a Microsoft Entra role.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All','AuditLog.Read.all'
-    $LicensedUser = Get-EntraUser -ObjectId 'dddddddd-3333-4444-5555-eeeeeeeeeeee'  
     $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
-    $License.SkuId = $LicensedUser.AssignedLicenses.SkuId 
+    $License.SkuId = (Get-EntraSubscribedSku | Where SkuPartNumber -eq 'FLOW_FREE').SkuId
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
     $Licenses.AddLicenses = $License 
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
