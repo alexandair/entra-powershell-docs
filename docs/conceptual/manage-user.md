@@ -64,7 +64,7 @@ To manage users, you can perform the following common user management tasks:
     Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
-### List a user's group memberships and check if a user is a member of a group
+### List a user's group memberships 
 
 1. List a user’s group memberships.
 
