@@ -165,6 +165,11 @@ Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -R
 
 This command adds a user to a Microsoft Entra role.
 
+- `ObjectId` - defines the Id of the Microsoft Entra role.
+
+- `RefObjectId` - defines the objectId of the user you're adding as a role member.
+
+
 ## Work with user licenses
 
 1. Get details of a user's licenses.
