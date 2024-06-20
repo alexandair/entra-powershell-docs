@@ -1,5 +1,5 @@
 ---
-title: Get started with the Microsoft Entra PowerShell module
+title: Get started with the module
 description: Get started with the Microsoft Entra PowerShell module by using it perform some basic tasks.
 
 author: csmulligan
@@ -11,7 +11,7 @@ ms.author: cmulligan
 #customer intent: As an IT admin, I want to learn how to use the Microsoft Entra PowerShell module, so that I can manage Entra resources.
 ---
 
-# Get started with the Microsoft Entra PowerShell module
+# Get started with the module
 
 Microsoft Entra PowerShell provides a command-line interface for managing Microsoft Entra resources. [Explore more about Entra PowerShell](overview.md).
 
@@ -29,7 +29,7 @@ Microsoft Entra PowerShell supports two types of authentication: _delegated acce
 Connect-Entra -Scopes 'User.Read.All' 
 ```
 
-To see all the possible options, refer to the [authentication][auth-methods] options.
+To see all the possible options, refer to the [authentication](authentication-methods.md) article.
 
 ## Find all available commands
 
@@ -59,35 +59,24 @@ Get-EntraUser
 
 This command outputs a list of users in your tenant. 
 
-```output
+```Output
 DisplayName           ID                                     Mail                    UserPrincipalName
 ------------           --                                     ----                    -----------------
-Contoso Demo UserOne   00000000-0000-0000-0000-000000000000   demoone@contoso.com    demoone@contoso.com
-Contoso Demo UserTwo   11111111-1111-1111-1111-111111111111   demotwo@contoso.com    demotwo@contoso.com
-Contoso Demo UserFour  55555555-5555-5555-5555-555555555555   demofour@contoso.com   demofour@contoso.com
+Adrian King   00aa00aa-bb11-cc22-dd33-44ee44ee44ee   adrian@contoso.com    adrian@contoso.com
+Quinn Campbell   11bb11bb-cc22-dd33-ee44-55ff55ff55ff   quinn@contoso.com    quinn@contoso.com
+Jayden Phillips  22cc22cc-dd33-ee44-ff55-66aa66aa66aa   jayden@contoso.com   jayden@contoso.com
 ```
 
 You can run the following command to get the details of one single user.
 
 ```powershell
-Get-EntraUser -ObjectId '00000000-0000-0000-0000-000000000000'
+Get-EntraUser -ObjectId '00aa00aa-bb11-cc22-dd33-44ee44ee44ee'
 ```
 
-## Data Collection
+## Data collection
 
-Microsoft Entra PowerShell collects telemetry data by default. We collection information about the `Microsoft Entra PowerShell version` and the `cmdlet` executed. Microsoft aggregates collected data to identify patterns of usage to identify common issues and to improve the experience of Microsoft Entra PowerShell. Microsoft Entra PowerShell doesn't collect any private or personal data. For example, the usage
-data helps identify issues such as cmdlets with low success and helps prioritize our work.
+Microsoft Entra PowerShell collects telemetry data by default. We collect information about the Microsoft Entra PowerShell version and the cmdlet executed. Microsoft aggregates collected data to identify patterns of usage to identify common issues and to improve the experience of Microsoft Entra PowerShell. Microsoft Entra PowerShell doesn't collect any private or personal data. For example, the usage data helps identify issues such as cmdlets with low success and helps prioritize our work.
 
-## Learn Microsoft Entra PowerShell basics with quickstarts and tutorials
+## Learn the basics with quickstarts and tutorials
 
-To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the:
-
-- [Group operations](tutorial-groups.md) (creating a group, updating group properties, adding owners, members, and deleting groups).
-
-## Related content
-
-- [Sign in with Microsoft Entra PowerShell][auth-methods]
-- Get help from the community:
-
-<!-- link references -->
-[auth-methods]: authentication-scenarios.md
+To get started with Microsoft Entra PowerShell, try an in-depth tutorial on [managing users](manage-user.md).
