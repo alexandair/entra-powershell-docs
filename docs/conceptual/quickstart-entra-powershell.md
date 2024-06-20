@@ -80,7 +80,7 @@ data helps identify issues such as cmdlets with low success and helps prioritize
 
 ## Learn Microsoft Entra PowerShell basics with quickstarts and tutorials
 
-To get started with Microsoft Entra PowerShell, try an in-depth tutorial for the:
+To get started with Microsoft Entra PowerShell, try an in-depth how-to for the:
 
 - [Group operations](manage-groups.md) (creating a group, updating group properties, adding owners, members, and deleting groups).
 
