@@ -41,6 +41,8 @@ items:
         href: manage-user.md
       - name: Manage groups
         href: tutorial-groups.md
+      - name: Manage apps
+        href: manage-apps.md
       - name: Create custom application
         href: create-custom-application.md
       - name: Create a self-signed public certificate
