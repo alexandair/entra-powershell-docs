@@ -4,6 +4,7 @@ description: "Learn how to use app-only authentication to enable non-interactive
 
 author: omondiatieno
 manager: CelesteDG
+ms.service: entra
 ms.topic: how-to
 ms.date: 06/11/2024
 ms.author: jomondi
@@ -64,7 +65,7 @@ To manage users, you can perform the following common user management tasks:
     Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
-### List a user's group memberships 
+### List a user's group memberships
 
 1. List a user’s group memberships.
 
@@ -134,6 +135,8 @@ To manage users, you can perform the following common user management tasks:
     Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
 
+   This example sets the user identified with the `ObjectId` to manager identified by `RefObjectId`.
+
 ### Upload or retrieve a photo for the user
 
 1. Upload a photo for a user.
@@ -143,7 +146,7 @@ To manage users, you can perform the following common user management tasks:
     Set-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -FilePath D:\UserThumbnailPhoto.jpg
     ```
 
-This example sets the thumbnail photo of the user specified with the ObjectId parameter to the image specified with the FilePath parameter.
+    This example sets the thumbnail photo of the user specified with the ObjectId parameter to the image specified with the FilePath parameter.
 
 1. Retrieve a user’s photo.
 
@@ -152,7 +155,7 @@ This example sets the thumbnail photo of the user specified with the ObjectId pa
     Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
-This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
+    This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
 
 ### Grant users administrative roles in your organization
 
@@ -168,7 +171,6 @@ This command adds a user to a Microsoft Entra role.
 - `ObjectId` - defines the Id of the Microsoft Entra role.
 
 - `RefObjectId` - defines the objectId of the user you're adding as a role member.
-
 
 ## Work with user licenses
 
@@ -197,21 +199,21 @@ This command adds a user to a Microsoft Entra role.
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-The first command gets a user by using the Get-EntraUser cmdlet, and then stores it in the $LicensedUser variable.
+    The first command gets a user by using the Get-EntraUser cmdlet, and then stores it in the $LicensedUser variable.
 
-The second command gets another user by using Get-EntraUser, and then stores it in the $User variable.
+    The second command gets another user by using Get-EntraUser, and then stores it in the $User variable.
 
-The third command creates an AssignedLicense type, and then stores it in the $License variable.
+    The third command creates an AssignedLicense type, and then stores it in the $License variable.
 
-The fourth command set the SkuId property of $License to the same value as the SkuId property of $LicensedUser.
+    The fourth command set the SkuId property of $License to the same value as the SkuId property of $LicensedUser.
 
-The fifth command creates an AssignedLicenses object, and stores it in the $Licenses variable.
+    The fifth command creates an AssignedLicenses object, and stores it in the $Licenses variable.
 
-The sixth command adds the license in $License to $Licenses.
+    The sixth command adds the license in $License to $Licenses.
 
-The final command assigns the licenses in $Licenses to the user in $User.
+    The final command assigns the licenses in $Licenses to the user in $User.
 
-The licenses in $Licenses includes $License from the third and fourth commands.
+    The licenses in $Licenses includes $License from the third and fourth commands.
 
 ## Next steps
 
