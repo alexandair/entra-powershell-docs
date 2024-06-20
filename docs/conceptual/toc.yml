@@ -1,59 +1,60 @@
 items:
-- name: Microsoft Entra PowerShell documentation
-  href: index.yml
-- name: Overview
-  items:
-  - name: What is Microsoft Entra PowerShell?
-    href: overview.md
-  - name: What's new
-    href: whats-new-docs.md
-  - name: Module versioning and release cadence
-    href: entraps-versioning-release-cadence.md
-- name: Getting started
-  items:
-  - name: Installation
+  - name: Microsoft Entra PowerShell documentation
+    href: index.yml
+  - name: Overview
     items:
-    - name: Install
-      href: installation.md
-    - name: Install - Windows
-      href: install-entra-powershell-windows.md
-    - name: Install - Linux
-      href: install-entra-powershell-linux.md
-    - name: Install - macOS
-      href: install-entra-powershell-macos.md
-  - name: Quick Start
-    href: quickstart-entra-powershell.md
-  - name: Navigate the module
-    href: navigate-entra-powershell.md
-  - name: Microsoft Entra PowerShell best practices
-    href: entra-powershell-best-practices.md
-  - name: Authentication methods
+      - name: What is Microsoft Entra PowerShell?
+        href: overview.md
+      - name: What's new
+        href: whats-new-docs.md
+      - name: Module versioning and release cadence
+        href: entraps-versioning-release-cadence.md
+  - name: Getting started
     items:
-    - name: Authentication methods
-      href: authentication-scenarios.md
-    - name: Authenticate with delegated access
-      href: delegated-access-auth.md
-    - name: Authenticate with app-only access
-      href: app-only-access-auth.md
-- name: Learn
-  items:
-  - name: Manage users
-    href: manage-user.md
-  - name: Manage groups
-    href: tutorial-groups.md
-  - name: Create custom application
-    href: create-custom-application.md
-  - name: Create a self-signed public certificate
-    href: /entra/identity-platform/howto-create-self-signed-certificate
-  - name: Get a client secret
-    href: /powershell/module/microsoft.powershell.security/get-credential
-  - name: Microsoft Entra PowerShell FAQs
-    href: entra-powershell-faqs.yml
-- name: Migrate to Microsoft Entra PowerShell
-  items:
-  - name: Migration guide
-    href: migration-guide.md
-- name: Troubleshoot common errors
-  href: troubleshooting.md
-metadata:
-  universal_ref_toc: /powershell/module/entra-powershell/toc.json
+      - name: Installation
+        items:
+          - name: Install
+            href: installation.md
+          - name: Install - Windows
+            href: install-entra-powershell-windows.md
+          - name: Install - Linux
+            href: install-entra-powershell-linux.md
+          - name: Install - macOS
+            href: install-entra-powershell-macos.md
+      - name: Quick Start
+        href: quickstart-entra-powershell.md 
+      - name: Navigate the module
+        href: navigate-entra-powershell.md
+      - name: Microsoft Entra PowerShell best practices
+        href: entra-powershell-best-practices.md
+      - name: Authentication methods
+        items:
+          - name: Authentication methods
+            href: authentication-methods.md
+          - name: Authenticate with delegated access
+            href: delegated-access-auth.md
+          - name: Authenticate with app-only access
+            href: app-only-access-auth.md
+  - name: Learn
+    items:
+      - name: Manage users
+        href: manage-user.md
+      - name: Manage groups
+        href: tutorial-groups.md
+      - name: Manage apps
+        href: manage-apps.md
+      - name: Create custom application
+        href: create-custom-application.md
+      - name: Create a self-signed public certificate
+        href: /entra/identity-platform/howto-create-self-signed-certificate
+      - name: Get a client secret
+        href: /powershell/module/microsoft.powershell.security/get-credential
+      - name: Microsoft Entra PowerShell FAQs
+        href: entra-powershell-faqs.yml
+  - name: Migrate to Microsoft Entra PowerShell
+    items:
+      - name: Migration guide
+        href: migration-guide.md
+  - name: Troubleshoot common errors
+    href: troubleshooting.md
+    
