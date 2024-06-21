@@ -9,7 +9,7 @@ ms.date: 05/25/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 
-#customer intent: As an IT admin, I want to authenticate with Microsoft Entra using app-only access, so that I can perform non-interactive operations, using the Microsoft Entra PowerShell module to manage Microsoft Entra resources.
+#customer intent: As an IT admin, I want to authenticate with Microsoft Entra ID using app-only access, so that I can perform non-interactive operations, using the Microsoft Entra PowerShell module to manage Microsoft Entra resources.
 ---
 
 # Use app-only authentication
@@ -28,7 +28,7 @@ To use app-only access with the Microsoft Entra PowerShell module, you need:
 
 - A Microsoft Entra ID account. If you don't already have one, you can
   [Create an account for free][entra-id-account].
-- One of the following roles: Global Administrator, Cloud Application Administrator, or Application.
+- One of the following roles: Privileged Role Administrator, Cloud Application Administrator, or Application Administrator.
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
 - A certificate to use as a credential for the application. The certificate can be a self-signed certificate or a certificate from an authority. For more information on how to create a self-signed certificate, see [Create a self-signed public certificate][self-signed-cert]. Self-signed certificates aren't recommended for production scenarios. Obtain a certificate from a certificate authority for production scenarios.
 
@@ -37,8 +37,10 @@ To use app-only access with the Microsoft Entra PowerShell module, you need:
 You should have this information to authenticate using a certificate.
 
 - Certificate subject or thumbprint of the certificate uploaded to your Microsoft Entra app registration.
-- Application ID for your app registration. To get the Application ID, see: [Create a custom application][create-custom-application]
+- Application ID for your app registration. To get the Application ID, see: [Create a custom application][create-custom-application].
 - Your tenant ID.
+
+In this section, you learn how to use a certificate to authenticate with the Microsoft Entra PowerShell module. You can use the certificate thumbprint, certificate name, or the certificate itself to authenticate. To authenticate using the given examples, you need to sign in with at least a [Privileged Role Administrator](/entra/role-based-access-control/permissions-reference.md#privileged-role-administrator) role.
 
 ### Use Certificate Thumbprint
 
@@ -46,7 +48,9 @@ You should have this information to authenticate using a certificate.
 Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateThumbprint "YOUR_CERT_THUMBPRINT"
 ```
 
-You can find the Certificate Thumbprint in [Microsoft Entra admin center][entra-admin-center] > App Registration > under Certificates of your app. Alternatively, you can use the following PowerShell command to get your self-signed certificate:
+To find the certificate thumbprint in the [Microsoft Entra admin center][entra-admin-center], navigate to **Identity** > **App registrations** > **Certificates & secrets** > **Certificates**. Select the certificate and copy its thumbprint.
+
+Alternatively, you can use the following PowerShell command to get your self-signed certificate:
 
 ```powershell
 Get-ChildItem Cert:\CurrentUser\My
