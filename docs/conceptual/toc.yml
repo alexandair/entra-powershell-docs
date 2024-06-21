@@ -27,10 +27,10 @@ items:
         href: navigate-entra-powershell.md
       - name: Microsoft Entra PowerShell best practices
         href: entra-powershell-best-practices.md
-      - name: Authentication methods
+      - name: Authentication
         items:
-          - name: Authentication methods
-            href: authentication-methods.md
+          - name: Authentication scenarios
+            href: authentication-scenarios.md
           - name: Authenticate with delegated access
             href: delegated-access-auth.md
           - name: Authenticate with app-only access
@@ -57,3 +57,4 @@ items:
         href: migration-guide.md
   - name: Troubleshoot common errors
     href: troubleshooting.md
+    

@@ -1,8 +1,8 @@
 ---
-title: "Microsoft Entra PowerShell authentication methods"
-description: "Learn about Microsoft Entra PowerShell's sign-in methods for various use cases, ensuring secure and efficient authentication."
+title: "Microsoft Entra PowerShell authentication scenarios"
+description: "Learn about Microsoft Entra PowerShell's sign-in scenarios for various use cases, ensuring secure and efficient authentication."
 
-ms.topic: how-to
+ms.topic: concept-article
 ms.date: 05/15/2024
 author: omondiatieno
 manager: CelesteDG
@@ -12,13 +12,15 @@ ms.reviewer: stevemutungi
 #customer intent: As a Microsoft Entra PowerShell user, I want to understand the different authentication options available, so that I can securely connect to Microsoft Graph and manage my Microsoft Entra ID resources.
 ---
 
-# Microsoft Entra PowerShell authentication methods
+# Microsoft Entra PowerShell authentication scenarios
 
-The Microsoft Entra PowerShell module supports several authentication methods. This article describes the authentication methods for signing into Microsoft Entra ID from the module. The method you choose depends on your use case.
+The Microsoft Entra PowerShell module supports several authentication scenarios. This article describes the authentication scenarios for signing into Microsoft Entra ID from the module. The method you choose depends on your use case.
 
 For example, if you're using the module for ad-hoc management of Microsoft Entra resources, you can sign in using an interactive sign-in. If you're writing a script for automation, you can sign in with a service principal. If you're running the module in an Azure resource, you can sign in with a managed identity.
 
-The two common authentication methods are:
+## Common authentication scenarios
+
+The two common authentication scenarios are:
 
 - **Delegated authentication (interactive)** - In this scenario, the application acts on behalf of a signed-in user, accessing resources with the user’s permissions. It requires delegated permissions, which are granted to both the client and the user. The user’s privileges, such as those granted by Microsoft Entra role-based access control (RBAC), determine the extent of access. For more information on delegated authentication, see [Authenticate with delegated access][delegated-authentication].
 - **App-only authentication (noninteractive)** - This scenario allows the application to act solely as itself without a user being signed in. It’s used for scenarios like automation or backup, involving background services or daemons. This scenario utilizes app roles or application permissions, which are granted to the client app to access data associated with the permission. For more information on app-only authentication, see [Authenticate with app-only access][apponly-authentication].
