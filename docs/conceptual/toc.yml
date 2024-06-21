@@ -40,7 +40,7 @@ items:
       - name: Manage users
         href: manage-user.md
       - name: Manage groups
-        href: tutorial-groups.md
+        href: manage-groups.md
       - name: Manage apps
         href: manage-apps.md
       - name: Create custom application

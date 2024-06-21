@@ -136,4 +136,4 @@ A common challenge when writing automation scripts is the management of secrets,
 [get-credential]: /powershell/module/microsoft.powershell.security/get-credential
 [entra-admin-center]: https://entra.microsoft.com
 [add-client-secret]: /entra/identity-platform/quickstart-register-app#add-a-client-secret
-[manage-groups]: tutorial-groups.md
+[manage-groups]: manage-groups.md
