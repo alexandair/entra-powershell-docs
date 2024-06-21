@@ -1,0 +1,14 @@
+### YamlMime:ZonePivotGroups
+groups:
+# Owner: jomondi, eunicewaweru, cmulligan
+## Zone pivot with Windows, Linux, and macOS installation options
+- id: entra-powershell-install-win-linux-macos
+  title: Installation options
+  prompt: Choose an option
+  pivots:
+  - id: windows
+    title: Windows
+  - id: linux
+    title: Linux
+  - id: macos
+    title: macOS
