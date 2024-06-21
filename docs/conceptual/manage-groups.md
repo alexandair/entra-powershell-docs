@@ -13,7 +13,7 @@ ms.reviewer: stevemutungi
 
 # Manage groups
 
-In this tutorial, you'll learn how to create, edit, update, and delete a group in Microsoft Entra PowerShell. You'll also learn how to add and remove users from a group.
+In this tutorial, you learn how to create, edit, update, and delete a group in Microsoft Entra PowerShell. You also learn how to add and remove users from a group.
 
 ## Prerequisites
 
@@ -32,7 +32,14 @@ Connect-Entra -Scopes 'Group.ReadWrite.All'
 To create a new group, run the following command.
 
 ```powershell
-New-EntraGroup -DisplayName 'My new group' -MailEnabled $false -SecurityEnabled $true -MailNickName 'NotSet'
+$groupParams = @{
+    DisplayName = 'My new group'
+    MailEnabled = $false
+    SecurityEnabled = $true
+    MailNickName = 'NotSet'
+}
+
+New-EntraGroup @groupParams
 ```
 
 ```Output
@@ -52,7 +59,7 @@ Get-EntraGroup -Filter "DisplayName eq 'My new group'"
 ```Output
 DisplayName        Id                                   MailNickname     Description        GroupTypes
 -----------        --                                   ------------     -----------        ----------
-My new group       aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb mynewgroup       My new group        {Unified}
+My new group       aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb NotSet       My new group        {Unified}
 ```
 
 This command returns the details of the newly created group. You can also use the `ObjectId` (GUID) to search, update, or delete the group.
@@ -62,7 +69,12 @@ This command returns the details of the newly created group. You can also use th
 Update the group description by running the following command. The `ObjectId` is the Group ID.
 
 ```powershell
-Set-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -Description 'This is my new updated group details' 
+$groupParams = @{
+    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Description = 'This is my new updated group details'
+}
+
+Set-EntraGroup @groupParams
 ```
 
 To confirm the updated description, run the `Get-EntraGroup` again.
@@ -76,15 +88,25 @@ Get-EntraGroup -Filter "DisplayName eq 'My new group'"
 Add a user to the group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID. You can get the User ID from the [Microsoft Entra admin center](https://entra.microsoft.com/) or by running the `Get-EntraUser` command.
 
 ```powershell
-Add-EntraGroupMember -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc' 
+$memberParams = @{
+    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+}
+
+Add-EntraGroupMember @memberParams
 ```
 
 ## Add a user as a group owner
 
-Add a group owner to a group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID. 
+Add a group owner to a group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID.
 
 ```powershell
-Add-EntraGroupOwner -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+$ownerParams = @{
+    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+}
+
+Add-EntraGroupOwner @ownerParams
 ```
 
 To confirm the updated group owner, run the `Get-EntraGroupOwner` command. This command returns the User ID of one or more group owners.
@@ -117,10 +139,3 @@ Remove-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ## Related content
 
 - [Manage users](manage-user.md)
-
-<!-- link references -->
-
-[installation]: installation.md
-[tutorial-groups]: tutorial-groups.md
-[create-acount]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
-[set-entrauserlicense]: set-entrauserlicense.md

@@ -43,7 +43,13 @@ You should have this information to authenticate using a certificate.
 ### Use Certificate Thumbprint
 
 ```powershell
-Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateThumbprint "YOUR_CERT_THUMBPRINT"
+$params = @{
+    ClientId = 'YOUR_APP_ID'
+    TenantId = 'YOUR_TENANT_ID'
+    CertificateThumbprint = 'YOUR_CERT_THUMBPRINT'
+}
+
+Connect-Entra @params
 ```
 
 You can find the Certificate Thumbprint in [Microsoft Entra admin center][entra-admin-center] > App Registration > under Certificates of your app. Alternatively, you can use the following PowerShell command to get your self-signed certificate:
@@ -55,7 +61,13 @@ Get-ChildItem Cert:\CurrentUser\My
 ### Use Certificate name
 
 ```powershell
-Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateName "YOUR_CERT_SUBJECT"
+$params = @{
+    ClientId = 'YOUR_APP_ID'
+    TenantId = 'YOUR_TENANT_ID'
+    CertificateName = 'YOUR_CERT_SUBJECT'
+}
+
+Connect-Entra @params
 ```
 
 You can find the certificate subject by running the command:
@@ -68,7 +80,7 @@ Get-ChildItem Cert:\CurrentUser\My\$CertThumbprint | Select Subject
 
 ```powershell
 $Cert = Get-ChildItem Cert:\CurrentUser\My\$CertThumbprint
-Connect-Entra -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -Certificate $Cert
+Connect-Entra -ClientId 'YOUR_APP_ID' -TenantId 'YOUR_TENANT_ID' -Certificate $Cert
 ```
 
 To use a certificate stored in your machine's certificate store or another
@@ -76,7 +88,7 @@ location when connecting to Microsoft Entra PowerShell, specify the
 certificate's location.
 
 If the authentication succeeds, you see the message
-`Welcome To Microsoft Graph!`. Run `Get-EntraContext` to verify that you've
+`Welcome To Microsoft Graph!`. Run `Get-EntraContext` to verify that you're
 authenticated with app-only method. The output should look like the following.
 
 ```powershell
@@ -97,9 +109,9 @@ Environment           : Global
 Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**. See [Get-Credential][get-credential] on how to get or create credentials.
 
 ```powershell
-$ClientSecretCredential = Get-Credential -Credential "Client_Id"
+$ClientSecretCredential = Get-Credential -Credential 'Client_Id'
 # Enter client_secret in the password prompt.
-Connect-Entra -TenantId "Tenant_Id" -ClientSecretCredential $ClientSecretCredential
+Connect-Entra -TenantId 'Tenant_Id' -ClientSecretCredential $ClientSecretCredential
 ```
 
 To create or add a client secret, see: [Add a client secret][add-client-secret].
@@ -109,7 +121,7 @@ To create or add a client secret, see: [Add a client secret][add-client-secret].
 
 ## Use managed identity
 
-A common challenge when writing automation scripts is the management of secrets, credentials, certificates, and keys used to secure communication between services. Eliminate the need to manage credentials by allowing the module to obtain access tokens for Azure resources that are protected by Microsoft Entra ID. The identity is managed by the Azure platform and doesn't require you to provision or rotate any secrets.
+A common challenge when writing automation scripts is the management of secrets, credentials, certificates, and keys used to secure communication between services. Eliminate the need to manage credentials by allowing the module to obtain access tokens for Azure resources that are protected by Microsoft Entra ID. The Azure platform manages the identity and doesn't require you to create or rotate any secrets.
 
 - **System-assigned managed identity** - Uses an automatically managed identity on a service instance. The identity is tied to the lifecycle of a service instance.
 
@@ -120,7 +132,7 @@ A common challenge when writing automation scripts is the management of secrets,
 - **User-assigned managed identity** - Uses a user created managed identity as a standalone Azure resource.
 
   ```powershell
-  Connect-Entra -Identity -ClientId "User_Assigned_Managed_identity_Client_Id"
+  Connect-Entra -Identity -ClientId 'User_Assigned_Managed_identity_Client_Id'
   ```
 
 ## Next steps

@@ -37,9 +37,19 @@ To manage users, you can perform the following common user management tasks:
 1. Create a new user using the `UserPrincipalName` parameter.
 
     ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
     $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-    $PasswordProfile.Password = "<Password>"
-    New-EntraUser -DisplayName "New User" -PasswordProfile $PasswordProfile -UserPrincipalName "NewUser@contoso.com" -AccountEnabled $true -MailNickName "NewUser"
+    $PasswordProfile.Password = '<Strong-Password>'
+
+    $userParams = @{
+        DisplayName = 'New User'
+        PasswordProfile = $PasswordProfile
+        UserPrincipalName = 'NewUser@contoso.com'
+        AccountEnabled = $true
+        MailNickName = 'NewUser'
+    }
+
+    New-EntraUser @userParams
     ```
 
     ```output
@@ -51,7 +61,7 @@ To manage users, you can perform the following common user management tasks:
 1. Delete a user.
 
     ```powershell
-    Remove-EntraUser -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
 ### List a user's group memberships and check if a user is a member of a group
@@ -59,7 +69,7 @@ To manage users, you can perform the following common user management tasks:
 1. List a user’s group memberships.
 
     ```powershell
-    Get-EntraUserMembership -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -76,7 +86,7 @@ To manage users, you can perform the following common user management tasks:
 1. Get a user's manager.
 
     ```powershell
-    Get-EntraUserManager -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -95,7 +105,7 @@ To manage users, you can perform the following common user management tasks:
 1. List the users who report to a specific user.
 
     ```powershell
-    Get-EntraUserDirectReport -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -117,15 +127,17 @@ To manage users, you can perform the following common user management tasks:
 1. Assign a manager to a user.
 
     ```powershell
-    Set-EntraUserManager -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -RefObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
+    Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
+
+The `-ObjectId` parameter specifies the unique identifier (ID) of the user who have their manager set or updated. The `-RefObjectId` parameter specifies the unique ID of the user who is to be set as the manager.
 
 ### Upload or retrieve a photo for the user
 
 1. Upload a photo for a user.
 
     ```powershell
-    Set-EntraUserThumbnailPhoto -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -FilePath D:\UserThumbnailPhoto.jpg
+    Set-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -FilePath D:\UserThumbnailPhoto.jpg
     ```
 
 This example sets the thumbnail photo of the user specified with the ObjectId parameter to the image specified with the FilePath parameter.
@@ -133,7 +145,8 @@ This example sets the thumbnail photo of the user specified with the ObjectId pa
 1. Retrieve a user’s photo.
 
     ```powershell
-    Get-EntraUserThumbnailPhoto -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Connect-Entra -Scopes 'ProfilePhoto.Read.All'
+    Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
 This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
@@ -143,17 +156,20 @@ This example demonstrates how to retrieve the thumbnail photo of a user that is 
 Grant a user an administrative role.
 
 ```powershell
-Add-EntraDirectoryRoleMember -ObjectId "cccccccc-2222-3333-4444-dddddddddddd" -RefObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+Connect-Entra -Scopes 'RoleManagement.ReadWrite.Directory'
+Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -RefObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
-This command adds a user to a Microsoft Entra role.
+This command adds a user to a Microsoft Entra role. To retrieve roles, use the command `Get-EntraDirectoryRole`.
+
+The parameter `-ObjectId` specifies the unique identifier (ObjectId) of the directory role to which you want to add a member. The `-RefObjectId` specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
 
 ### Work with user licenses
 
 1. Get details of a user's licenses.
 
     ```powershell
-    Get-EntraUserLicenseDetail -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    Get-EntraUserLicenseDetail -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
     ```output
@@ -166,8 +182,8 @@ This command adds a user to a Microsoft Entra role.
 1. Assign a license to a user based on a template user.
 
     ```powershell
-    $LicensedUser = Get-EntraUser -ObjectId "dddddddd-3333-4444-5555-eeeeeeeeeeee"  
-    $User = Get-EntraUser -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"  
+    $LicensedUser = Get-EntraUser -ObjectId 'dddddddd-3333-4444-5555-eeeeeeeeeeee'  
+    $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
     $License.SkuId = $LicensedUser.AssignedLicenses.SkuId 
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
