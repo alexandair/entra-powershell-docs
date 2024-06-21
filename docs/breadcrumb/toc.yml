@@ -1,7 +1,7 @@
 items:
 - name: PowerShell
   tocHref: /powershell/
-  topicHref: powershell/index/
+  topicHref: entra/index/
   items:
     - name: Microsoft Entra PowerShell
       tocHref: /entra/identity/identity-platform/
