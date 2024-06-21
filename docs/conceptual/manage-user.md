@@ -24,7 +24,7 @@ You can use Microsoft Entra PowerShell to access the relationships, documents, c
 To manage users with Microsoft Entra PowerShell, you need:
 
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][create-acount].
-- One of the following roles: User Administrator, or Group Administrator.
+- One of the following roles: [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator), or [Group Administrator](/entra/identity/role-based-access-control/permissions-reference#groups-administrator).
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
 
 You can access a user's information and manage their data on their behalf or as an app with its own identity.
@@ -40,8 +40,17 @@ To manage users, you can perform the following common user management tasks:
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
     $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-    $PasswordProfile.Password = '<Password>'
-    New-EntraUser -DisplayName 'New User' -PasswordProfile $PasswordProfile -UserPrincipalName 'NewUser@contoso.com' -AccountEnabled $true -MailNickName 'NewUser'
+    $PasswordProfile.Password = '<Strong-Password>'
+
+    $userParams = @{
+        DisplayName = 'New User'
+        PasswordProfile = $PasswordProfile
+        UserPrincipalName = 'NewUser@contoso.com'
+        AccountEnabled = $true
+        MailNickName = 'NewUser'
+    }
+
+    New-EntraUser @userParams
     ```
 
     ```output
@@ -135,7 +144,9 @@ To manage users, you can perform the following common user management tasks:
     Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
 
-   This example sets the user identified with the `ObjectId` to manager identified by `RefObjectId`.
+   - `-ObjectId` - specifies the unique identifier (ID) of the user who have their manager set or updated.
+
+   - `-RefObjectId` - specifies the unique ID of the user who is to be set as the manager.
 
 ### Upload or retrieve a photo for the user
 
@@ -151,7 +162,7 @@ To manage users, you can perform the following common user management tasks:
 1. Retrieve a user’s photo.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All'
+    Connect-Entra -Scopes 'ProfilePhoto.Read.All'
     Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -166,11 +177,11 @@ Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
 Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -RefObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
-This command adds a user to a Microsoft Entra role.
+This command adds a user to a Microsoft Entra role. To retrieve roles, use the command `Get-EntraDirectoryRole`.
 
-- `ObjectId` - defines the Id of the Microsoft Entra role.
+- `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
 
-- `RefObjectId` - defines the objectId of the user you're adding as a role member.
+- `-RefObjectId` - specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
 
 ## Work with user licenses
 
@@ -199,21 +210,7 @@ This command adds a user to a Microsoft Entra role.
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-    The first command gets a user by using the Get-EntraUser cmdlet, and then stores it in the $LicensedUser variable.
-
-    The second command gets another user by using Get-EntraUser, and then stores it in the $User variable.
-
-    The third command creates an AssignedLicense type, and then stores it in the $License variable.
-
-    The fourth command set the SkuId property of $License to the same value as the SkuId property of $LicensedUser.
-
-    The fifth command creates an AssignedLicenses object, and stores it in the $Licenses variable.
-
-    The sixth command adds the license in $License to $Licenses.
-
-    The final command assigns the licenses in $Licenses to the user in $User.
-
-    The licenses in $Licenses includes $License from the third and fourth commands.
+    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
 
 ## Next steps
 
