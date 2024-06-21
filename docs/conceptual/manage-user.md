@@ -24,7 +24,7 @@ You can use Microsoft Entra PowerShell to access the relationships, documents, c
 To manage users with Microsoft Entra PowerShell, you need:
 
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][create-acount].
-- One of the following roles: User Administrator, or Group Administrator.
+- One of the following roles: [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator), or [Group Administrator](/entra/identity/role-based-access-control/permissions-reference#groups-administrator).
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
 
 You can access a user's information and manage their data on their behalf or as an app with its own identity.
@@ -144,7 +144,9 @@ To manage users, you can perform the following common user management tasks:
     Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
     ```
 
-   The `-ObjectId` parameter specifies the unique identifier (ID) of the user who have their manager set or updated. The `-RefObjectId` parameter specifies the unique ID of the user who is to be set as the manager.
+   - `-ObjectId` - specifies the unique identifier (ID) of the user who have their manager set or updated.
+
+   - `-RefObjectId` - specifies the unique ID of the user who is to be set as the manager.
 
 ### Upload or retrieve a photo for the user
 
@@ -177,11 +179,9 @@ Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -R
 
 This command adds a user to a Microsoft Entra role. To retrieve roles, use the command `Get-EntraDirectoryRole`.
 
-The parameter `-ObjectId` specifies the unique identifier (ObjectId) of the directory role to which you want to add a member. The `-RefObjectId` specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
+- `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
 
-- `ObjectId` - defines the Id of the Microsoft Entra role.
-
-- `RefObjectId` - defines the objectId of the user you're adding as a role member.
+- `-RefObjectId` - specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
 
 ## Work with user licenses
 
