@@ -48,7 +48,7 @@ items:
       - name: Create a self-signed public certificate
         href: /entra/identity-platform/howto-create-self-signed-certificate?toc=/powershell/entra-powershell/toc.json&bc=/powershell/entra-powershell/breadcrumb/toc.json
       - name: Get a client secret
-        href: powershell/module/microsoft.powershell.security/get-credential?toc=/powershell/entra-powershell/toc.json&bc=/powershell/entra-powershell/breadcrumb/toc.json
+        href: /powershell/module/microsoft.powershell.security/get-credential?toc=/powershell/entra-powershell/toc.json&bc=/powershell/entra-powershell/breadcrumb/toc.json
       - name: Microsoft Entra PowerShell FAQs
         href: entra-powershell-faqs.yml
   - name: Migrate to Microsoft Entra PowerShell
@@ -57,4 +57,3 @@ items:
         href: migration-guide.md
   - name: Troubleshoot common errors
     href: troubleshooting.md
-    
