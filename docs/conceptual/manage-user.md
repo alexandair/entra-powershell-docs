@@ -210,6 +210,8 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
+    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
+
 ## Next steps
 
 [Manage groups][tutorial-groups]
