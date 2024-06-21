@@ -9,7 +9,7 @@ ms.date: 05/07/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 zone_pivot_groups: entra-powershell-install-win-linux-macos
-zone_pivot_group_filename: powershell/entra-powershell/zone-pivot-groups.json
+zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 
 
 #customer intent: As an IT admin, I want to learn how to install Microsoft Entra PowerShell module so that I can manage Microsoft Entra resources through PowerShell.
