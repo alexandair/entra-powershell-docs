@@ -2,6 +2,7 @@
   "build": {
     "content": [
       { "dest": "entra-powershell", "files": [ "breadcrumb/toc.yml" ]},
+      { "dest": "entra-powershell", "files": [ "zone-pivot-groups.yml" ]},
 
       { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "group": "conceptual", "src": "conceptual"},
 	  
