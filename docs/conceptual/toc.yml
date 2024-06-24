@@ -11,22 +11,13 @@ items:
         href: entraps-versioning-release-cadence.md
   - name: Getting started
     items:
-      - name: Installation
-        items:
-          - name: Install
-            href: installation.md
-          - name: Install - Windows
-            href: install-entra-powershell-windows.md
-          - name: Install - Linux
-            href: install-entra-powershell-linux.md
-          - name: Install - macOS
-            href: install-entra-powershell-macos.md
+
+      - name: Install the module
+        href: installation.md
       - name: Quick Start
         href: quickstart-entra-powershell.md 
       - name: Navigate the module
         href: navigate-entra-powershell.md
-      - name: Microsoft Entra PowerShell best practices
-        href: entra-powershell-best-practices.md
       - name: Authentication
         items:
           - name: Authentication scenarios
@@ -57,3 +48,9 @@ items:
         href: migration-guide.md
   - name: Troubleshoot common errors
     href: troubleshooting.md
+  - name: resources
+    items:
+      - name: Microsoft Entra PowerShell best practices
+        href: entra-powershell-best-practices.md
+      - name: Microsoft Entra PowerShell FAQs
+        href: entra-powershell-faqs.yml
