@@ -23,14 +23,8 @@ landingContent:
     linkLists:
       - linkListType: download
         links:
-          - text: Install
+          - text: Install the module
             url: installation.md
-          - text: Install - Windows
-            url:  install-entra-powershell-windows.md
-          - text: Install - Linux
-            url: install-entra-powershell-linux.md
-          - text: Install - macOS
-            url: install-entra-powershell-macos.md
       - linkListType: quickstart
         links:
           - text: Get started with Microsoft Entra PowerShell
