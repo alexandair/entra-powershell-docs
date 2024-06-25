@@ -3,7 +3,7 @@ title: "Microsoft Entra PowerShell best practices"
 description: "Learn how to optimize performance, enhance security, and ensure scalability when working with Microsoft Entra PowerShell."
 
 ms.topic: concept-article
-ms.date: 05/23/2024
+ms.date: 06/26/2024
 ms.service: entra
 author: omondiatieno
 manager: CelesteDG
@@ -103,7 +103,18 @@ Get-Help Get-EntraUser -Detailed
 Get-EntraUser -Top 1 -Debug
 ```
 
+To send debug output stream to a log file, use:
+
+```powershell
+Get-EntraUser -Top 1 -Debug 5>> <your-log-filepath>
+```
+
+- `5` - represents the stream number, `Debug Stream`. For more information about streams, see [Output Streams][outputStreamLink].
+- `>>` - represents the redirection operator. For more information about redirection operators, see [Redirection Operators][redirectOperatorLink].
+
 <!-- link references -->
 [permissions-ref]: /graph/permissions-reference
 [entra-recommendations]: /entra/identity/monitoring-health/overview-recommendations
 [create-a-custom-app]: create-custom-application.md
+[outputStreamLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#redirectable-output-streams
+[redirectOperatorLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#powershell-redirection-operators
