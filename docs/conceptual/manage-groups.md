@@ -139,3 +139,4 @@ Remove-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ## Related content
 
 - [Manage users](manage-user.md)
+- [Manage apps](manage-apps.md)

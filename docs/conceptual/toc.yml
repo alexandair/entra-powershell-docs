@@ -47,7 +47,7 @@ items:
     href: migration-guide.md
 - name: Troubleshoot common errors
   href: troubleshooting.md
-- name: resources
+- name: Resources
   items:
   - name: Microsoft Entra PowerShell best practices
     href: entra-powershell-best-practices.md

@@ -111,8 +111,9 @@ For a detailed guide on troubleshooting common errors, see:
 
 ## Next steps
 
-- [Using Find-EntraCommand cmdlet](installation.md)
-- [Using Find-EntraPermission cmdlet](installation.md)
+- [Manage groups with Microsoft Entra PowerShell][manage-groups]
+- [Manage users with Microsoft Entra PowerShell][manage-users]
+- [Manage apps with Microsoft Entra PowerShell][manage-apps]
 
 <!-- link references -->
 [cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
@@ -127,3 +128,6 @@ For a detailed guide on troubleshooting common errors, see:
 [troubleshooting-guide]: troubleshooting.md#authentication-issues
 [token-endpoint]: /graph/auth-v2-user#3-request-an-access-token
 [passwordless-auth]: /azure/active-directory/authentication/concept-authentication-passwordless
+[manage-groups]: manage-groups.md
+[manage-users]: manage-user.md
+[manage-apps]: manage-apps.md

@@ -64,14 +64,19 @@ My new application    bbbbbbbb-1111-2222-3333-cccccccccccc 00001111-aaaa-2222-bb
 You can configure multiple properties for your app. The following example shows how to update the display name of an application.
 
 ```powershell
-Set-EntraApplication -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -DisplayName "New Name"
+Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -DisplayName 'New Name'
 ```
 
 The following example shows how to update the sign out url of an application:
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -LogoutUrl 'https://contoso.com/Security/ADFS.aspx/logout'
+$appParams = @{
+    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    LogoutUrl = 'https://contoso.com/Security/ADFS.aspx/logout'
+}
+
+Set-EntraApplication @appParams
 ```
 
 For more information, see [Set-EntraApplication](/powershell/entra-preview/microsoft.graph.entra/set-entraapplication).
@@ -80,7 +85,12 @@ For more information, see [Set-EntraApplication](/powershell/entra-preview/micro
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-Set-EntraServicePrincipal -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  -AppRoleAssignmentRequired $True
+$servicePrincipalParams = @{
+    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    AppRoleAssignmentRequired = $True
+}
+
+Set-EntraServicePrincipal @servicePrincipalParams
 ```
 
 ## Assign permissions to an app
@@ -117,26 +127,30 @@ Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
 
 ### Assign an owner to a service principal
 
-- The first command gets the object ID of a service principal by using the `Get-EntraServicePrincipal` cmdlet, and then stores it in the `$ServicePrincipalId` variable.
-
-- The second command gets the object ID a user by using the `Get-EntraUser` (./Get-EntraUser.md) cmdlet, and then stores it in the `$OwnerId` variable.
-
-- The final command adds the user specified by `$OwnerId` as an owner to a service principal specified by `$ServicePrincipalId`.
-
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 $ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
 $OwnerId = (Get-EntraUser -Top 1).ObjectId
-Add-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId -RefObjectId -$OwnerId
+
+$params = @{
+    ObjectId = $ServicePrincipalId
+    RefObjectId = $OwnerId
+}
+
+Add-EntraServicePrincipalOwner @params
 ```
+
+This example shows how to add an owner to a service principal.
+
+- `-ObjectId` - specifies the unique identifier (ObjectId) of the service principal to which you want to add an owner.
+
+- `-RefObjectId` - specifies the unique identifier (ObjectId) of the user or group that you want to add as an owner of the specified service principal.
 
 ## Related content
 
 - [Manage users](manage-user.md)
+- [Manage groups][manage-groups]
 
 <!-- link references -->
 
-[installation]: installation.md
-[tutorial-groups]: tutorial-groups.md
-[create-acount]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
-[set-entrauserlicense]: set-entrauserlicense.md
+[manage-groups]: manage-groups.md

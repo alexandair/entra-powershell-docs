@@ -94,19 +94,19 @@ The recommended installation method and PowerShell version for the module:
 Use the [Install-Module][install-module] cmdlet to install the module:
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Scope CurrentUser -AllowPrerelease
+Install-Module -Name Microsoft.Graph.Entra -Repository PSGallery -Scope CurrentUser -AllowPrerelease -Force
 ```
 
 Optionally, you can change the scope of the installation using the **Scope** parameter. This operation requires admin permissions.
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra -Scope AllUsers -AllowPrerelease
+Install-Module -Name Microsoft.Graph.Entra -Repository PSGallery -Scope AllUsers -AllowPrerelease
 ```
 
 To install the `Beta` module, run the following command.
 
 ```powershell
-Install-Module -Name Microsoft.Graph.Entra.Beta -AllowPrerelease
+Install-Module -Name Microsoft.Graph.Entra.Beta -Repository PSGallery -AllowPrerelease
 ```
 
 > [!IMPORTANT]
@@ -215,7 +215,10 @@ For more information on other authentication scenarios, see [more authentication
 
 ## Troubleshoot installation issues
 
-For solutions to common installation issues with the Microsoft Entra PowerShell module, see [Troubleshoot installation problems with the Microsoft Entra PowerShell module][troubleshooting].
+- `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow this [Upgrade guide][upgrade-install-module-version]. This applies to Windows platform only.
+- `Dependent module '<module-name>' is not installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies are not installed. To install, use [this script](#install-dependencies).
+
+For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting].
 
 ## Install Dependencies
 
@@ -241,3 +244,4 @@ To file an issue about Microsoft Entra PowerShell module, see: [File an issue on
 [posh-5.1]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [install-windows]: /powershell/scripting/install/installing-powershell-on-windows
 [posh-gallery]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra
+[upgrade-install-module-version]: troubleshooting#installation-issues

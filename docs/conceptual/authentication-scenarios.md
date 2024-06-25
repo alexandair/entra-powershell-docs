@@ -51,7 +51,7 @@ Get-EntraEnvironment
 To connect as a different identity other than CurrentUser, specify the `-ContextScope` parameter with the value `Process`.
 
 ```powershell
-Connect-Entra -ContextScope "Process"
+Connect-Entra -ContextScope 'Process'
 ```
 
 ### Set HTTP client timeout

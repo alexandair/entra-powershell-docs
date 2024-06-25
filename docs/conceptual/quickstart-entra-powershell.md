@@ -57,20 +57,20 @@ To retrieve the list of users in Microsoft Entra ID, run the following command.
 Get-EntraUser
 ```
 
-This command outputs a list of users in your tenant. 
+This command outputs a list of users in your tenant.
 
 ```output
 DisplayName           ID                                     Mail                    UserPrincipalName
 ------------           --                                     ----                    -----------------
-Contoso Demo UserOne   00000000-0000-0000-0000-000000000000   demoone@contoso.com    demoone@contoso.com
-Contoso Demo UserTwo   11111111-1111-1111-1111-111111111111   demotwo@contoso.com    demotwo@contoso.com
-Contoso Demo UserFour  55555555-5555-5555-5555-555555555555   demofour@contoso.com   demofour@contoso.com
+Contoso Demo UserOne   aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb   demoone@contoso.com    demoone@contoso.com
+Contoso Demo UserTwo   bbbbbbbb-1111-2222-3333-cccccccccccc   demotwo@contoso.com    demotwo@contoso.com
+Contoso Demo UserFour  cccccccc-2222-3333-4444-dddddddddddd   demofour@contoso.com   demofour@contoso.com
 ```
 
 You can run the following command to get the details of one single user.
 
 ```powershell
-Get-EntraUser -ObjectId '00000000-0000-0000-0000-000000000000'
+Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
 ```
 
 ## Data Collection
@@ -82,7 +82,8 @@ Microsoft Entra PowerShell collects telemetry data by default. We collection inf
 To get started with Microsoft Entra PowerShell, explore an in-depth how-to guide for the following:
 
 - [Manage users](manage-user.md)
-- [Group operations](manage-groups.md) include creating a group, updating group properties, adding owners and members, and deleting groups.
+- [Manage groups](manage-groups.md)
+- [Manage apps](manage-apps.md)
 
 ## Related content
 
@@ -90,4 +91,3 @@ To get started with Microsoft Entra PowerShell, explore an in-depth how-to guide
 
 <!-- link references -->
 [auth-scenarios]: authentication-scenarios.md
-

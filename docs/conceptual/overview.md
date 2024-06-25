@@ -28,7 +28,7 @@ Microsoft Entra PowerShell provides the following benefits:
 
 ## Migrate from Azure AD PowerShell module
 
-Microsoft Entra PowerShell is over 98% compatible with the AzureAD module and selected MSOnline cmdlets. By using the `Enable-EntraAzureADAlias` command, you only need to update one or two lines in your existing scripts, making migration to Microsoft Graph PowerShell quick and effortless. For more information on how to migrate from the legacy modules to Microsoft Entra PowerShell, see [Migration guide][migration-guide].
+Microsoft Entra PowerShell is over 98% compatible with the AzureAD module and selected MSOnline cmdlets. By using the [Enable-EntraAzureADAlias][enable-entraazureadalis] command, you only need to update one or two lines in your existing scripts, making migration to Microsoft Graph PowerShell quick and effortless. For more information on how to migrate from the legacy modules to Microsoft Entra PowerShell, see [Migration guide][migration-guide].
 
 ## Installation and get started
 
@@ -63,3 +63,4 @@ The following section outlines the known issues with the Microsoft Entra PowerSh
 [best-practices-guide]: entra-powershell-best-practices.md
 [azureAdModuleDeprecationLink]: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-update-deprecation-of-azure-ad-powershell-and-msonline/ba-p/4094536
 [powershellInstallLink]: /powershell/scripting/install/installing-powershell
+[enable-entraazureadalis]: /powershell/entra-preview/microsoft.graph.entra/enable-entraazureadalias
