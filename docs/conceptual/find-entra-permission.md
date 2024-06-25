@@ -1,162 +1,74 @@
 ---
-title: Use Find-EntraCommand cmdlet 
-description: Learn how to use the Find-EntraCommand to find cmdlets.
+title: "Use Find-EntraPermission cmdlet"
+description: "Learn how to use the Find-EntraPermission to discover permissions related to a domain."
 
-author: csmulligan
-manager: CelesteDG
 ms.topic: how-to
-ms.date: 05/01/2024
-ms.author: cmulligan
+ms.date: 01/31/2024
+author: omondiatieno
+manager: CelesteDG
+ms.author: jomondi
+reviewer: stevemutungi
 
-#customer intent: As a PowerShell user, I want to use the Find-EntraCommand cmdlet to easily discover the API path that a command calls, so that I can efficiently work with Microsoft Entra PowerShell commands and understand the permissions required for each command.
+#customer intent: As a Microsoft Entra PowerShell user, I want to find the identifier for a specific permission, so that I can accurately supply the permission-related parameters of commands like New-MgApplication and other application and consent related commands.
 ---
 
-# Use Find-EntraCommand cmdlet 
+# Using Find-EntraPermission cmdlet
 
-Find-EntraCommand aims to make it easier for you to discover which API path a command calls, by providing a URI or a command name.
+The Microsoft Entra PowerShell module requires users to have domain knowledge of both the semantics and syntax of Microsoft Graph API permissions used to authorize access to the API. This cmdlet helps to answer the following questions:
 
-The Find-EntraCommand allows to:
+- How do I find the values to supply to the permission-related parameters of commands like New-MgApplication and other application and consent related commands?
+- What permissions are applicable to a certain domain, for example, application, directory? To use Microsoft Entra PowerShell module to access Microsoft Graph, users must sign in to a Microsoft Entra application using the `Connect-Entra` command.
 
-- Pass a Microsoft Graph URL (relative and absolute) and get an equivalent Microsoft Entra PowerShell command.
-- Pass a command and get the URL it calls.
-- Pass a command or URI wildcard (.*) to find all commands that match it.
+Currently, PowerShell commands and scripts have no way of validating user input that refers to permissions or providing an ‘auto-complete’ user experience to help users accurately supply input to commands. This also affects commands or scripts implemented with the module itself.
 
-The output of this cmdlet also includes the permissions required to authenticate the specified cmdlet. For more information on cmdlet permissions, see  [Use  Find-EntraPermission](find-entra-permission.md). Not all cmdlets have the permissions available on running this command. This is an ongoing feature, and permissions will continue to be added.
-
-The permissions displayed don't show the privilege levels. To learn more, including how to choose permissions, permission type and what is the most privileged/least privileged permission, use the corresponding API page doc.
-
-## Find Microsoft Entra PowerShell commands by URI
-
-### Syntax
+## Find permissions related to a given domain
 
 ```powershell
-Find-EntraCommand -Uri <String[]> [-Method <String>] [-ApiVersion <String>] [<CommonParameters>]
-```
-
-### Examples
-
-#### Example 1: Use a URI to get all related cmdlets
-
-```powershell
-Find-EntraCommand -Uri '/users/{id}'
+Find-EntraPermission application
 ```
 
 ```Output
- APIVersion: v1.0
-Command       Module Method URI              OutputType           Permissions                                                                                                                                                    Variants
--------       ------ ------ ---              ----------           -----------                                                                                                                                                    --------
-Get-EntraUser    Users  GET    /users/{user-id} IMicrosoftGraphUser1 {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...}  {Get1, GetViaIdentity1}
-Remove-EntraUser Users  DELETE /users/{user-id}                      {DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All}    {Delete, DeleteViaIdentity}
-Update-EntraUser Users  PATCH  /users/{user-id}                      {DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All...} {Update, UpdateExpanded, UpdateViaIdentity, UpdateViaIdentityExpanded}
-   APIVersion: beta
-Command       Module Method URI              OutputType          Permissions                                                                                                                                                    Variants
--------       ------ ------ ---              ----------          -----------                                                                                                                                                    --------
-Get-EntraUser    Users  GET    /users/{user-id} IMicrosoftGraphUser {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...}  {Get, GetViaIdentity}
-Remove-EntraUser Users  DELETE /users/{user-id}                     {DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All}    {Delete1, DeleteViaIdentity1}
-Update-EntraUser Users  PATCH  /users/{user-id}                     {DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, Directory.AccessAsUser.All...} {Update1, UpdateExpanded1, UpdateViaIdentity1, UpdateViaIdentityExpanded1}
+PermissionType: Delegated
+
+Id                                   Consent Name                                      Description
+--                                   ------- ----                                      -----------
+c79f8feb-a9db-4090-85f9-90d820caa0eb Admin   Application.Read.All                      Allows the app to read applications and service principals on behalf of the signed-in user.
+bdfbf15f-ee85-4955-8675-146e8e5296b5 Admin   Application.ReadWrite.All                 Allows the app to create, read, update and delete applications and service principals on behalf of the signed-in user. Does not allow management of consent grants.
+b27add92-efb2-4f16-84f5-8108ba77985c Admin   Policy.ReadWrite.ApplicationConfiguration Allows the app to read and write your organization's application configuration policies on behalf of the signed-in user.  This includes policies such as activityBasedTimeoutPolicy, claimsMappingPolicy, homeRealmDiscoveryPolicy,  tokenIssuancePolicy and tokenLifetimePolicy.
+
+
+   PermissionType: Application
+
+Id                                   Consent Name                                      Description
+--                                   ------- ----                                      -----------
+9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30 Admin   Application.Read.All                      Allows the app to read all applications and service principals without a signed-in user.
+1bfefb4e-e0b5-418b-a88f-73c46d2cc8e9 Admin   Application.ReadWrite.All                 Allows the app to create, read, update and delete applications and service principals without a signed-in user.  Does not allow management of consent grants.
+18a4783c-866b-4cc7-a460-3d5e5662c884 Admin   Application.ReadWrite.OwnedBy             Allows the app to create other applications, and fully manage those applications (read, update, update application secrets and delete), without a signed-in user. Â It cannot update any apps that it is not an owner of.
+be74164b-cff1-491c-8741-e671cb536e13 Admin   Policy.ReadWrite.ApplicationConfiguration Allows the app to read and write your organization's application configuration policies, without a signed-in user.  This includes policies such as activityBasedTimeoutPolicy, claimsMappingPolicy, homeRealmDiscoveryPolicy, tokenIssuancePolicy  and tokenLifetimePolicy.
 ```
 
->[!Note]
->1. For **-ApiVersion** parameter, there are two possible values: `v1.0` and `Beta`.
->1. The **-Method** parameter is only available when using URI to find commands and allows the HTTPs methods such as GET, POST, PUT, PATCH and DELETE.
->1. The output shown in this article has been shortened for readability.
-## Find Microsoft Entra PowerShell commands by command name
-
-### Syntax
+## Find the identifier for a specific permission
 
 ```powershell
-Find-EntraCommand -Command <String[]> [-ApiVersion <String>] [<CommonParameters>]
-```
-
-### Examples
-
-#### Example 1: Pass a command and get the URI it calls
-
-```powershell
-Find-EntraCommand -Command 'Get-EntraUser'
+Find-EntraPermission application.Read | Format-List
 ```
 
 ```Output
-APIVersion: v1.0
-Command    Module Method URI              OutputType           Permissions                                                                                                                                                   Variants
--------    ------ ------ ---              ----------           -----------                                                                                                                                                   --------
-Get-EntraUser Users  GET    /users           IMicrosoftGraphUser1 {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...} {List1}
-Get-EntraUser Users  GET    /users/{user-id} IMicrosoftGraphUser1 {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...} {Get1, GetViaIdentity1}
-   APIVersion: beta
-Command    Module Method URI              OutputType          Permissions                                                                                                                                                   Variants
--------    ------ ------ ---              ----------          -----------                                                                                                                                                   --------
-Get-EntraUser Users  GET    /users/{user-id} IMicrosoftGraphUser {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...} {Get, GetViaIdentity}
-Get-EntraUser Users  GET    /users           IMicrosoftGraphUser {DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All, DeviceManagementManagedDevices.Read.All, DeviceManagementManagedDevices.ReadWrite.All...} {List}
-```
+Id             : c79f8feb-a9db-4090-85f9-90d820caa0eb
+PermissionType : Delegated
+Consent        : Admin
+Name           : Application.Read.All
+Description    : Allows the app to read applications and service principals on behalf of the signed-in user.
 
-#### Example 2: Pass a command and get the permissions required
+Id             : bdfbf15f-ee85-4955-8675-146e8e5296b5
+PermissionType : Delegated
+Consent        : Admin
+Name           : Application.ReadWrite.All
+Description    : Allows the app to create, read, update and delete applications and service principals on behalf of the signed-in user. Does not allow management of consent grants.
 
-```powershell
-Find-EntraCommand -command Get-EntraUser | Select -First 1 -ExpandProperty Permissions 
-```
-
-```Output
-Name                                         IsAdmin Description                                   FullDescription
-----                                         ------- -----------                                   ---------------
-Directory.AccessAsUser.All                   True    Access the directory as you                   Allows the app to have the same access to information in your work or school directory as you do.
-Directory.Read.All                           True    Read directory data                           Allows the app to read data in your organization's directory.
-Directory.ReadWrite.All                      True    Read and write directory data                 Allows the app to read and write data in your organization's directory, such as other users, groups.  It does not allow the app to delete users or groups, or reset user...
-User.Read.All                                True    Read all users' full profiles                 Allows the app to read the full set of profile properties, reports, and managers of other users in your organization, on your behalf.
-User.ReadBasic.All                           False   Read all users' basic profiles                Allows the app to read a basic set of profile properties of other users in your organization on your behalf. Includes display name, first and last name, email address a...
-User.ReadWrite.All                           True    Read and write all users' full profiles       Allows the app to read and write the full set of profile properties, reports, and managers of other users in your organization, on your behalf.
-```
-
-## Find Microsoft Entra PowerShell commands using a command wildcard
-
-### Syntax
-
-```powershell
-Find-EntraCommand -Command .*searchstring.* [-ApiVersion <String>] [<CommonParameters>]
-```
-
-### Examples
-
-#### Example 1: Search for commands using a command wildcard
-
-```powershell
-Find-EntraCommand -Command .*UserToDo.* -APIVersion 'v1.0'
-```
-
-```Output
-   APIVersion: v1.0
-Command                                        Module          Method URI
--------                                        ------          ------ ---
-Get-EntraUserTodoList                             Users           GET    /users/{user-id}/todo/lists
-Get-EntraUserTodoList                             Users           GET    /users/{user-id}/todo/lists/{todoTaskList-id}
-Get-EntraUserTodoListDelta                        Users.Functions GET    /users/{user-id}/todo/lists/delta
-Get-EntraUserTodoListExtension                    Users           GET    /users/{user-id}/todo/lists/{todoTaskList-id}/extensions
-Get-EntraUserTodoListExtension                    Users           GET    /users/{user-id}/todo/lists/{todoTaskList-id}/extensions/{extension-id}
-Get-EntraUserTodoListTask                         Users           GET    /users/{user-id}/todo/lists/{todoTaskList-id}/tasks
-Get-EntraUserTodoListTask                         Users           GET    /users/{user-id}/todo/lists/{todoTaskList-id}/tasks/{todoTask-id}
-```
-
-## Find Microsoft Entra PowerShell commands using a URI wildcard
-
-### Syntax
-
-```powershell
-Find-EntraCommand -Uri .*searchstring.* [-ApiVersion <String>] [<CommonParameters>] [-Method <String>]
-```
-
-### Examples
-
-#### Example 1: Search for commands using URI wildcard
-
-```powershell
-Find-EntraCommand -Uri ".*users.*" -Method 'Get' -ApiVersion 'v1.0'
-```
-
-```Output
-Command                               Module                       Method URI
--------                               ------                       ------ ---
-Get-EntraUser                            Users                        GET    /users/{user-id}
-Get-EntraUser                            Users                        GET    /users
-Get-EntraUserActivity                    CrossDeviceExperiences       GET    /users/{user-id}/activities/{userActivity-id}
-Get-EntraUserActivity                    CrossDeviceExperiences       GET    /users/{user-id}/activities
-Get-EntraUserActivityHistoryItem         CrossDeviceExperiences       GET    /users/{user-id}/activities/{userActivity-id}/historyItems/{activityHistoryItem-id}
+Id             : 9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30
+PermissionType : Application
+Consent        : Admin
+Name           : Application.Read.All
+Description    : Allows the app to read all applications and service principals without a signed-in user.
 ```

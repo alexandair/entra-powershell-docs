@@ -29,14 +29,14 @@ In this article, you learn the various ways of signing into Microsoft Entra Powe
 To connect to Microsoft Entra PowerShell with delegated access, you need:
 
 - A Microsoft Entra ID account. If you don't already have one, you can [Create an account for free][entra-id-account].
-- One of the following roles: Cloud Application Administrator, or Application Administrator.
+- One of the following roles: [Cloud Application Administrator][cloud-app-admin], or [Application Administrator][app-admin].
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Graph PowerShell module][install] guide to install the module.
 
 ## Use delegated access with a custom application (Recommended)
 
 In this section, you learn how to use delegated access with a custom application to connect to module. You can tailor the custom application to your specific needs to isolate and limit the permissions granted for the module's usage.
 
-Run the following command to connect to the module with delegated access using a custom application. You need to sign in with at least a [Cloud Application Administrator](~/identity/role-based-access-control/permissions-reference.md#cloud-application-administrator) role.
+Run the following command to connect to the module with delegated access using a custom application. You need to sign in with at least a [Cloud Application Administrator][cloud-app-admin] role.
 
 ```powershell
 Connect-Entra -Scopes 'User.Read.All', 'Group.ReadWrite.All' -ClientId <your-custom-app-id> -TenantId <your-tenant-id>
@@ -115,6 +115,8 @@ For a detailed guide on troubleshooting common errors, see:
 - [Using Find-EntraPermission cmdlet](installation.md)
 
 <!-- link references -->
+[cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
+[app-admin]: /entra/identity/role-based-access-control/permissions-reference#application-administrator
 [entra-id-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
 [install]: installation.md
 [authorization-code-flow]: /entra/identity-platform/v2-oauth2-auth-code-flow

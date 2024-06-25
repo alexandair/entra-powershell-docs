@@ -28,7 +28,7 @@ To use app-only access with the Microsoft Entra PowerShell module, you need:
 
 - A Microsoft Entra ID account. If you don't already have one, you can
   [Create an account for free][entra-id-account].
-- One of the following roles: Privileged Role Administrator, Cloud Application Administrator, or Application Administrator.
+- One of the following roles: [Privileged Role Administrator][privileged-role-admin], [Cloud Application Administrator][cloud-app-admin], or [Application Administrator][app-admin].
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Entra PowerShell module][installation] guide to install the module.
 - A certificate to use as a credential for the application. The certificate can be a self-signed certificate or a certificate from an authority. For more information on how to create a self-signed certificate, see [Create a self-signed public certificate][self-signed-cert]. Self-signed certificates aren't recommended for production scenarios. Obtain a certificate from a certificate authority for production scenarios.
 
@@ -132,6 +132,9 @@ A common challenge when writing automation scripts is the management of secrets,
 - [Manage groups with Microsoft Entra PowerShell][manage-groups]
 
 <!-- link references -->
+[privileged-role-admin]: /entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator
+[cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
+[app-admin]: /entra/identity/role-based-access-control/permissions-reference#application-administrator
 [client-cred-flow]: /entra/identity-platform/v2-oauth2-client-creds-grant-flow
 [entra-id-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
 [installation]: installation.md
