@@ -82,7 +82,7 @@ Set-EntraApplication @appParams
 For more information, see [Set-EntraApplication](/powershell/entra-preview/microsoft.graph.entra/set-entraapplication).
 
 ## Limit app sign-in to only assigned identities
-
+Limiting app sign-ins to only assigned identities using Microsoft Entra PowerShell ensures that only authorized users can access your applications, thereby enhancing security and control.
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
 $servicePrincipalParams = @{
