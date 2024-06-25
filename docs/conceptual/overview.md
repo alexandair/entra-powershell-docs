@@ -22,7 +22,7 @@ Microsoft Entra PowerShell is a part of our increased investment in Microsoft Gr
 Microsoft Entra PowerShell provides the following benefits:
 
 - **Focus on usability and quality**: Microsoft Entra PowerShell offers human-readable parameters, deliberate parameter set specification, inline documentation, and core PowerShell fundamentals like pipelining.
-- **Backward compatibility with AzureAD module**: Microsoft Entra PowerShell accelerates migration from the recently [announced AzureAD module deprecation][azureAdModuleDeprecationLink].
+- **Backward compatibility with Azure AD PowerShell module**: Microsoft Entra PowerShell accelerates migration from the recently [announced Azure AD PowerShell module deprecation][azureAdModuleDeprecationLink].
 - **Flexible and granular authorization**: Consistent with Microsoft Graph PowerShell SDK, Microsoft Entra PowerShell enables administrative consent for the permissions you want to grant to the application and supports specifying your own application identity for maximum granularity in app permission assignment. You can also use certificate, Service Principal, or Managed Identity authentication patterns.
 - **Open source**: The Microsoft Entra PowerShell module is open source, allowing contributions from the community to create great PowerShell experiences and share them with everyone. Open source promotes collaboration and facilitates the development of innovative business solutions. You can view Microsoft's customizations and adapt them to meet your needs.
 
