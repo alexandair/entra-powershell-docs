@@ -82,7 +82,7 @@ foreach ($app in $Applications) {
 
 ## Test compatibility with Test-EntraScript command
 
-The [Test-EntraScript][testEntrascriptDefinition] cmdlet verifies if a script with AzureAD commands works with the Microsoft Entra PowerShell module. If there are compatibility issues, it lists them, including the line number, issue type, incompatible command, and the specific code snippet.
+The [Test-EntraScript][testEntrascriptDefinition] cmdlet verifies if a script with Azure AD PowerShell commands works with the Microsoft Entra PowerShell module. If there are compatibility issues, it lists them, including the line number, issue type, incompatible command, and the specific code snippet.
 
 ## Known issues
 
