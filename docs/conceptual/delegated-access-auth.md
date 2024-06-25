@@ -111,9 +111,9 @@ For a detailed guide on troubleshooting common errors, see:
 
 ## Next steps
 
-- [Manage groups with Microsoft Entra PowerShell][manage-groups]
-- [Manage users with Microsoft Entra PowerShell][manage-users]
-- [Manage apps with Microsoft Entra PowerShell][manage-apps]
+- [Manage groups][manage-groups]
+- [Manage users][manage-users]
+- [Manage apps][manage-apps]
 
 <!-- link references -->
 [cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator

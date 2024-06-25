@@ -141,9 +141,9 @@ A common challenge when writing automation scripts is the management of secrets,
 
 ## Next steps
 
-- [Manage groups with Microsoft Entra PowerShell][manage-groups]
-- [Manage users with Microsoft Entra PowerShell][manage-users]
-- [Manage apps with Microsoft Entra PowerShell][manage-apps]
+- [Manage groups][manage-groups]
+- [Manage users][manage-users]
+- [Manage apps][manage-apps]
 
 <!-- link references -->
 [privileged-role-admin]: /entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator
