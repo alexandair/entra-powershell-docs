@@ -40,7 +40,7 @@ There are two Microsoft Entra PowerShell modules:
 Planned updates to the Microsoft Entra PowerShell module are released on the first Wednesday of each month. These
 12 planned updates per calendar year are in two categories:
 
-- **Major versions**: In the event that a breaking change is necessary, a major version increment will be released. For example, version 1.6.0 to version 2.0.0. Major version updates will be released no more often than two times per year.
+- **Major versions**: In the event that a breaking change is necessary, a major version increment is released. For example, version 1.6.0 to version 2.0.0. Major version updates are released no more often than two times per year.
 
 > We may make exceptions to this policy for security or reliability issues.
 
