@@ -39,6 +39,8 @@ landingContent:
             url: manage-user.md
           - text: Manage groups
             url: manage-groups.md
+          - text: Manage apps
+            url: manage-apps.md
   - title: Microsoft Entra PowerShell reference
     linkLists:
       - linkListType: reference 
