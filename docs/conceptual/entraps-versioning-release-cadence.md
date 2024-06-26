@@ -24,7 +24,7 @@ This article covers the versioning scheme used by Microsoft Entra PowerShell mod
 
 The Microsoft Entra PowerShell modules follow [Semantic Versioning](https://semver.org/) for version numbering. Versions of the  modules fall into one of the following three categories:
 
-- **Generally available (v1.0)**: Module versions 1.0.0 and higher without _preview_ in the version are Generally Available, and any breaking changes will correspond to a major version increment.
+- **Generally available (v1.0)**: Module versions 1.0.0 and higher without _preview_ in the version are Generally Available, and any breaking changes correspond to a major version increment.
 - **Beta**: Module versions less than 1.0.0 correspond to beta Microsoft Graph APIs. Generally, new resource capabilities will debut in the Beta version. You can expect breaking changes and deprecations in the Beta module from time to time. Use of Beta in production environments is not supported, and we make no guarantees that a beta feature will be promoted to the current version.
 - **Feature Preview**: Module versions with preview in the version are feature previews for Microsoft Entra PowerShell. You can expect breaking changes and deprecations in preview versions, and use in production environments is not supported.
 
