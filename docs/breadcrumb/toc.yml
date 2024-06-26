@@ -6,7 +6,7 @@ items:
       - name: PowerShell
         tocHref: /powershell/
         topicHref: /powershell/index
-     - name: Microsoft Entra PowerShell
+      - name: Microsoft Entra PowerShell
         tocHref: /entra/identity/identity-platform/
         topicHref: /powershell/docs/conceptual/
       - name: Microsoft Entra PowerShell
