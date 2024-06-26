@@ -1,0 +1,54 @@
+{
+  "build": {
+    "content": [
+      { "dest": "entra-powershell", "files": [ "breadcrumb/toc.yml" ]},
+      { "dest": "entra-powershell", "files": [ "zone-pivot-groups.yml" ]},
+
+      { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "group": "conceptual", "src": "conceptual"},
+	  
+      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "v1.0", "src": "reference/v1.0" },
+      { "dest": "module", "files": [ "**/*.yml" ], "group": "v1.0", "src": "reference/v1.0" },
+	  
+      { "dest": "module/entra-powershell", "files": [ "toc.yml" ], "group": "beta", "src": "reference/beta" },
+      { "dest": "module", "files": [ "**/*.yml" ], "group": "beta", "src": "reference/beta" },
+
+      { "dest": "entra-powershell", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder" },
+      { "dest": "module", "files": [ "**/*.md", "**/*.yml" ], "src": "virtual-folder-module" }
+    ],
+    "dest": "entra-powershell-reference",
+    "groups": {
+      "conceptual": { "moniker_range": "entra-powershell || entra-powershell-beta" },
+      "v1.0": { "moniker_range": "entra-powershell" },
+      "beta": { "moniker_range": "entra-powershell-beta" }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "brand": "entra",
+      "uhfHeaderId": "MSDocsHeader-Entra",
+      "breadcrumb_path": "/powershell/entra-powershell/breadcrumb/toc.json",
+      "ms.devlang": "powershell",
+      "ms.service": "entra",
+      "ms.topic": "reference",
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://github.com/microsoftgraph/entra-powershell/issues/new/choose",
+      "toc_preview": true
+    },
+    "template": [],
+    "markdownEngineName": "markdig",
+    "exportRawModel": true,
+    "exportViewModel": true,
+    "fileMetadata": {
+      "titleSuffix": {
+      "*.md": "Microsoft Entra PowerShell",
+      "conceptual/*.md": "Microsoft Entra PowerShell",
+      "conceptual/*.yml": "Microsoft Entra PowerShell",
+      "/reference/beta/Microsoft.Graph.Entra.Beta/*.md": "Microsoft Entra PowerShell",
+      "/reference/beta/Microsoft.Graph.Entra.Beta/*.yml": "Microsoft Entra PowerShell",
+      "/reference/v1.0/Microsoft.Graph.Entra/*.md": "Microsoft Entra PowerShell",
+      "/reference/v1.0/Microsoft.Graph.Entra/*.yml": "Microsoft Entra PowerShell"
+      }
+    
+    }
+  }
+}

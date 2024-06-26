@@ -1,0 +1,73 @@
+### YamlMime:Landing
+
+title: Microsoft Entra PowerShell documentation
+summary: Microsoft Entra PowerShell is a scenario-focused module designed for managing Microsoft Entra resources in PowerShell. It offers rich documentation and supports essential PowerShell features like pipelining. # < 160 chars
+
+metadata:
+  title: Microsoft Entra PowerShell documentation
+  description: Learn about Microsoft Entra PowerShell and how you can use it to manage identities at scale and automate bulk administrative tasks in Microsoft Entra.
+  ms.topic: landing-page
+  author: omondiatieno
+  ms.author: jomondi
+  ms.date: 06/26/2024
+  ms.reviewer: stevemutungi254
+
+landingContent:
+  - title: About Microsoft Entra PowerShell
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview of Microsoft Entra PowerShell
+            url: overview.md
+  - title: Installation
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Install the module
+            url: installation.md
+      - linkListType: quickstart
+        links:
+          - text: Get started with Microsoft Entra PowerShell
+            url:  quickstart-entra-powershell.md
+          - text: Navigate the module
+            url: navigate-entra-powershell.md
+  - title: Common use cases
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Manage users
+            url: manage-user.md
+          - text: Manage groups
+            url: manage-groups.md
+  - title: Microsoft Entra PowerShell reference
+    linkLists:
+      - linkListType: reference 
+        links:
+          - text: v1.0 cmdlet reference
+            url: installation.md
+          - text: Beta cmdlet reference
+            url: installation.md
+  - title: Help & support
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Entra PowerShell best practices
+            url: entra-powershell-best-practices.md
+          - text: Microsoft Entra PowerShell FAQs
+            url: entra-powershell-faqs.yml
+          - text: Troubleshoot common errors
+            url: troubleshooting.md
+          - text: Microsoft Q&A
+            url: /answers/questions/
+  - title: What's new?
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Discover what's new in Microsoft Entra PowerShell
+            url: whats-new-docs.md
+  - title: Migrate from Azure AD PowerShell
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Migration steps
+            url: migration-guide.md
