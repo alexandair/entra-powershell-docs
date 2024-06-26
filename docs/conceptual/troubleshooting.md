@@ -3,7 +3,7 @@ title: Troubleshoot the Microsoft Entra PowerShell module
 description: Learn how to fix common errors in Microsoft Entra PowerShell.
 
 ms.topic: troubleshooting
-ms.date: 04/25/2024
+ms.date: 06/26/2024
 author: csmulligan
 manager: CelesteDG
 ms.author: cmulligan

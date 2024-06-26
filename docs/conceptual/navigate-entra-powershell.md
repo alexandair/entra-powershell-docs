@@ -5,7 +5,7 @@ description: Learn about the cmdlet structure and how to find the right commands
 author: csmulligan
 manager: CelesteDG
 ms.topic: concept-article
-ms.date: 04/05/2024
+ms.date: 06/26/2024
 ms.author: cmulligan
 
 #Customer intent: As a new user of the Microsoft Entra PowerShell module, I want to easily find the command I need for a specific task, so that I can manage Microsoft Entra ID resources effectively.
