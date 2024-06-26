@@ -5,7 +5,7 @@ description: Learn how to register, configure and update apps in Microsoft Entra
 author: csmulligan
 manager: CelesteDG
 ms.topic: how-to
-ms.date: 05/24/2024
+ms.date: 06/26/2024
 ms.author: cmulligan
 ms.reviewer: stevemutungi
 

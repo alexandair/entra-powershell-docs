@@ -3,7 +3,7 @@ title: "Versioning, release cadence, and breaking changes"
 description: "This article describes versioning, release cadence, and breaking change information for the Microsoft Entra PowerShell module."
 
 ms.topic: concept-article
-ms.date: 05/21/2024
+ms.date: 06/26/2024
 ms.service: entra
 
 author: omondiatieno

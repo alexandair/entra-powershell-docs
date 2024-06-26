@@ -3,7 +3,7 @@ title: "Microsoft Entra PowerShell authentication scenarios"
 description: "Learn about Microsoft Entra PowerShell's sign-in scenarios for various use cases, ensuring secure and efficient authentication."
 
 ms.topic: concept-article
-ms.date: 05/15/2024
+ms.date: 06/26/2024
 author: omondiatieno
 manager: CelesteDG
 ms.author: jomondi

@@ -5,7 +5,7 @@ description: "Learn how to install the Microsoft Entra PowerShell module."
 author: omondiatieno
 manager: CelesteDG
 ms.topic: how-to
-ms.date: 06/24/2024
+ms.date: 06/26/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 zone_pivot_groups: entra-powershell-install-win-linux-macos
