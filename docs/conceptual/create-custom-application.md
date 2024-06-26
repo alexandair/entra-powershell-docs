@@ -49,7 +49,7 @@ To manage the resources that your application gets access to in your tenant, loc
 
 You need to set up Microsoft Graph permissions for the new application to connect to Microsoft Entra ID and manage Microsoft Entra resources.
 
-1. Browse to **Identity** > **Applications** > **Enterprise applications** > **All applications** and select the application you created.
+1. Browse to **Identity** > **Applications** > **App Registrations** > **All applications** and select the application you created.
 1. Under **API permissions**, select **Add a permission** > Select Microsoft APIs > Microsoft Graph.
 1. Choose the type of permissions you require, either delegated or application permissions.
     - If you need to sign in to the app to manage your resources in Microsoft Entra ID, select **Delegated permissions**.
