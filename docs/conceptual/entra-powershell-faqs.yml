@@ -62,7 +62,7 @@ sections:
       - question: |
           How can I provide feedback on the Microsoft Entra PowerShell Module?
         answer: |
-          You can provide feedback by visiting our [Entra PowerShell GitHub repository issues](https://github.com/microsoftgraph/entra-powershell/issues) section. Create a new issue with your feedback, suggestions, or any problems you encounter. Our team actively monitors and responds to feedback to improve the module.
+          You can provide feedback by visiting our [GitHub repository issues](https://github.com/microsoftgraph/entra-powershell/issues) section. Create a new issue with your feedback, suggestions, or any problems you encounter. Our team actively monitors and responds to feedback to improve the module.
 
       - question: | 
           How can I contribute to the Microsoft Entra PowerShell Module?

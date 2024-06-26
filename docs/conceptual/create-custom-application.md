@@ -3,7 +3,7 @@ title: "Create a custom application"
 description: "Learn how to create a custom application that you can use to authenticate to Microsoft Entra PowerShell."
 
 ms.topic: how-to
-ms.date: 05/23/2024
+ms.date: 06/26/2024
 author: omondiatieno
 manager: CelesteDG
 ms.author: jomondi
@@ -18,7 +18,7 @@ ms.reviewer: stevemutungi
 
 To create a custom application and grant it permissions, you need:
 
-- A Microsoft Entra user account. If you don't already have one, you can [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+- A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][entraid-account].
 - One of the following roles: Cloud Application Administrator, or Application Administrator.
 
 ## Create an application in the Microsoft Entra admin center
@@ -60,12 +60,13 @@ You need to set up Microsoft Graph permissions for the new application to connec
 You can now use the newly created app by connecting with:
 
 ```powershell
-Connect-Entra -ClientId <YOUR_NEW_APP_ID> -TenantId <YOUR_TENANT_ID>
+Connect-Entra -ClientId <your-new-app-id> -TenantId <your-tenant-id>
 ```
 
 For more connection options, see the [Connect-Entra][connect-entra-command] command details.
 
 <!-- link references -->
-[entra-admin-portal]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
+[entra-admin-portal]: https://entra.microsoft.com/
 [cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
-[connect-entra-command]: installation.md
+[connect-entra-command]: /powershell/entra-preview/microsoft.graph.entra/connect-entra
+[entraid-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F

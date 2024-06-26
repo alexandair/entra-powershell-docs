@@ -3,7 +3,7 @@ title: "Microsoft Entra PowerShell best practices"
 description: "Learn how to optimize performance, enhance security, and ensure scalability when working with Microsoft Entra PowerShell."
 
 ms.topic: concept-article
-ms.date: 05/23/2024
+ms.date: 06/26/2024
 ms.service: entra
 author: omondiatieno
 manager: CelesteDG
@@ -24,10 +24,10 @@ You can register your own applications tailored to different use cases with spec
 Sign in using the application you register by running:
 
 ```powershell
-Connect-Entra -ClientId <your-custom-app-id> -TenantId <your-tenant-id> -CertificateName <certificate-subject>
+Connect-Entra -ClientId <your-custom-app-id> -TenantId <your-tenant-id>
 ```
 
-You can also use the aliases `AppId` or `ApplicationId` instead of `ClientId`.
+You can also use the aliases `AppId` or `ApplicationId` in place of `ClientId`.
 
 ## Security
 
@@ -45,14 +45,18 @@ Apply the following consent and authorization best practices in your app to enha
   - Consider who consents to your application - either end users or administrators - and configure your application to [request permissions appropriately](/azure/active-directory/develop/active-directory-v2-scopes).
   - Ensure that you understand the difference between [static, dynamic, and incremental consent](/azure/active-directory/develop/v2-permissions-and-consent#consent-types).
 
-- **Consider multi-tenant applications**. Expect customers to have various application and consent controls in different states. For example:
-
-  - Tenant administrators can disable the ability for end users to consent to applications. In this case, an administrator would need to consent on behalf of their users.
-  - Tenant administrators can set custom authorization policies such as blocking users from reading other user's profiles, or limiting self-service group creation to a limited set of users. In this case, your application should expect to handle `403 Forbidden` error response when acting on behalf of a user.
-
 - **Watch out for permission creep** - Keep an eye on the permissions that accrue for the registered app over time.
 
+- **Leverage Security defaults and Conditional Access** - protect users with Microsoft Entra Multifactor authentication using Conditional Access (for licensed organizations) and security defaults (for unlicensed organizations).
+
 - **Leverage Microsoft Entra recommendations** - [Microsoft Entra recommendations][entra-recommendations] feature diligently monitor your tenant’s status, ensuring it remains secure and healthy. You have visibility into used apps, expiring credentials, over-privileged applications among others.
+
+- **Limit app sign-in to only assigned identities** - The `Assignment Required` property helps manage access to applications by ensuring only assigned users can sign in.
+
+    ```powershell
+    Connect-Entra -Scopes 'Application.ReadWrite.All'
+    Set-EntraServicePrincipal -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -AppRoleAssignmentRequired $True
+    ```
 
 ## Performance optimizations
 
@@ -63,7 +67,7 @@ The following practices can help you optimize performance when working with Micr
 Filtering is done on the server side by limiting your selection to retrieve a subset of a collection, which helps reduce unnecessary network traffic and data processing.
 
 ```powershell
-Get-EntraUser -Filter "startswith(DisplayName,'Ada')"
+Get-EntraUser -Filter "startsWith(DisplayName,'Ada')"
 ```
 
 ### Select only required properties
@@ -103,7 +107,18 @@ Get-Help Get-EntraUser -Detailed
 Get-EntraUser -Top 1 -Debug
 ```
 
+To send debug output stream to a log file, use:
+
+```powershell
+Get-EntraUser -Top 1 -Debug 5>> <your-log-filepath>
+```
+
+- `5` - represents the stream number, `Debug Stream`. For more information about streams, see [Output Streams][outputStreamLink].
+- `>>` - represents the redirection operator. For more information about redirection operators, see [Redirection Operators][redirectOperatorLink].
+
 <!-- link references -->
 [permissions-ref]: /graph/permissions-reference
 [entra-recommendations]: /entra/identity/monitoring-health/overview-recommendations
 [create-a-custom-app]: create-custom-application.md
+[outputStreamLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#redirectable-output-streams
+[redirectOperatorLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#powershell-redirection-operators

@@ -17,7 +17,7 @@ ms.reviewer: stevemutungi
 
 Users are the representation of a Microsoft Entra work or school user account or a personal Microsoft account in Microsoft Entra ID. The user resource in Microsoft Entra PowerShell is the representation of a user, and includes relationships and resources that are relevant to the user.
 
-You can use Microsoft Entra PowerShell to access the relationships, documents, contacts, and preferences that are contextually relevant to a user. The user resource provides a straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
+The user resource provides a straightforward way for you to access and manipulate user resources without having to perform extra calls, look up specific authentication information, and directly issue queries against other Microsoft Entra PowerShell objects.
 
 ## Prerequisites
 
@@ -141,7 +141,12 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Set-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RefObjectId 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+    $params = @{
+        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+        RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+    }
+
+    Set-EntraUserManager @params
     ```
 
    - `-ObjectId` - specifies the unique identifier (ID) of the user who have their manager set or updated.
@@ -154,7 +159,12 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Set-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -FilePath D:\UserThumbnailPhoto.jpg
+    $photoParams = @{
+        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+        FilePath = 'D:\UserThumbnailPhoto.jpg'
+    }
+    
+    Set-EntraUserThumbnailPhoto @photoParams
     ```
 
     This example sets the thumbnail photo of the user specified with the ObjectId parameter to the image specified with the FilePath parameter.
@@ -174,7 +184,12 @@ Grant a user an administrative role.
 
 ```powershell
 Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
-Add-EntraDirectoryRoleMember -ObjectId 'cccccccc-2222-3333-4444-dddddddddddd' -RefObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+$roleMemberParams = @{
+    ObjectId = 'cccccccc-2222-3333-4444-dddddddddddd'
+    RefObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+}
+
+Add-EntraDirectoryRoleMember @roleMemberParams
 ```
 
 This command adds a user to a Microsoft Entra role. To retrieve roles, use the command `Get-EntraDirectoryRole`.
@@ -214,10 +229,12 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
 
 ## Next steps
 
-[Manage groups][tutorial-groups]
+- [Manage groups][tutorial-groups]
+- [Manage apps][manage-apps]
 
 <!-- link references -->
 
 [installation]: installation.md
 [tutorial-groups]: manage-groups.md
 [create-acount]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
+[manage-apps]: manage-apps.md

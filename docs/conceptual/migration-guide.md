@@ -82,7 +82,7 @@ foreach ($app in $Applications) {
 
 ## Test compatibility with Test-EntraScript command
 
-The `Test-EntraScript` cmdlet verifies if a script with AzureAD commands works with the Microsoft Entra PowerShell module. If there are compatibility issues, it lists them, including the line number, issue type, incompatible command, and the specific code snippet.
+The [Test-EntraScript][testEntrascriptDefinition] cmdlet verifies if a script with Azure AD PowerShell commands works with the Microsoft Entra PowerShell module. If there are compatibility issues, it lists them, including the line number, issue type, incompatible command, and the specific code snippet.
 
 ## Known issues
 
@@ -99,7 +99,5 @@ When migrating from the Azure AD PowerShell module to Microsoft Graph endpoints,
 
 <!-- link references -->
 [azuread-ps]: /powershell/module/azuread
-[enable-azuread-alias]: installation.md
-[known-issues]: known-issues.md
-[github-issues]: https://github.com/microsoftgraph/entra-powershell/issues
 [installation]: installation.md
+[testEntrascriptDefinition]: /powershell/entra-preview/microsoft.graph.entra/test-entrascript
