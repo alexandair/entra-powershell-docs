@@ -47,6 +47,8 @@ Apply the following consent and authorization best practices in your app to enha
 
 - **Watch out for permission creep** - Keep an eye on the permissions that accrue for the registered app over time.
 
+- **Leverage Security defaults and Conditional Access** - protect users with Microsoft Entra Multifactor authentication using Conditional Access (for licensed organizations) and security defaults (for unlicensed organizations).
+
 - **Leverage Microsoft Entra recommendations** - [Microsoft Entra recommendations][entra-recommendations] feature diligently monitor your tenant’s status, ensuring it remains secure and healthy. You have visibility into used apps, expiring credentials, over-privileged applications among others.
 
 - **Limit app sign-in to only assigned identities** - The `Assignment Required` property helps manage access to applications by ensuring only assigned users can sign in.
