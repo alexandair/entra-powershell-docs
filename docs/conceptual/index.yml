@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Entra PowerShell documentation
-summary: Microsoft Entra PowerShell is a scenario-focused module designed for managing Microsoft Entra resources in PowerShell. It offers rich documentation and supports essential PowerShell features like pipelining. # < 160 chars
+summary: Microsoft Entra PowerShell is a scenario-focused preview module designed for managing Microsoft Entra resources in PowerShell. # < 160 chars
 
 metadata:
   title: Microsoft Entra PowerShell documentation
