@@ -48,7 +48,7 @@ landingContent:
           - text: v1.0 cmdlet reference
             url: https://learn.microsoft.com/powershell/module/microsoft.graph.entra/?view=entra-powershell
           - text: Beta cmdlet reference
-            url: https://learn.microsoft.com/en-us/powershell/entra-powershell/?view=entra-powershell-beta
+            url: https://learn.microsoft.com/powershell/module/microsoft.graph.entra.beta/?view=entra-powershell-beta
   - title: Help & support
     linkLists:
       - linkListType: reference
