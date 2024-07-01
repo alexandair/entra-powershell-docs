@@ -44,8 +44,6 @@ The recommended installation method and PowerShell version for the module:
   $PSVersionTable.PSVersion
   ```
 
-- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
-
 - Determine if you have the module installed:
 
   ```powershell
@@ -150,8 +148,6 @@ This article explains how to install the module from
 - Install a supported version of
   [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-macos)
 
-- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
-
 ## Installation on macOS
 
 Open the Terminal or other shell host application and run `pwsh` to start PowerShell.
@@ -201,7 +197,7 @@ Uninstall-Module -Name Microsoft.Graph.Entra -AllVersions
 
 ## Sign in
 
-To start managing your Microsoft Entra resources with the Microsoft Entra PowerShell module, launch a PowerShell session and run `Connect-Entra` to sign in to Microsoft Entra ID:
+To start managing your Microsoft Entra resources with the Microsoft Entra PowerShell module, launch a PowerShell session and run [Connect-Entra][Connect-Entra] to sign in to Microsoft Entra ID:
 
 ```powershell
 Connect-Entra
@@ -216,15 +212,10 @@ For more information on other authentication scenarios, see [more authentication
 ## Troubleshoot installation issues
 
 - `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow see [guide](troubleshooting.md#installation-issues). This applies to Windows platform only.
-- `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies aren't installed. To install, use [this script](#install-dependencies).
+- `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies aren't installed. To install, use [this script](troubleshooting.md#missing-dependencies).
+- `Cmdlets already exist on the system` - Add `-AllowClobber` parameter i.e. `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`.
 
 For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting-guide].
-
-## Install Dependencies
-
-The module requires certain Microsoft Graph PowerShell SDK modules. The following snippet installs these dependencies if they aren't already installed.
-
-[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Provide feedback
 
@@ -244,3 +235,4 @@ To file an issue about Microsoft Entra PowerShell module, see: [File an issue on
 [posh-5.1]: /powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell
 [install-windows]: /powershell/scripting/install/installing-powershell-on-windows
 [posh-gallery]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra
+[Connect-Entra]: /powershell/module/microsoft.graph.entra/connect-entra

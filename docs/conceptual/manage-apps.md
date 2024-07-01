@@ -79,7 +79,7 @@ $appParams = @{
 Set-EntraApplication @appParams
 ```
 
-For more information, see [Set-EntraApplication](/powershell/entra-preview/microsoft.graph.entra/set-entraapplication).
+For more information, see [Set-EntraApplication][set-entraapplication].
 
 ## Limit app sign-in to only assigned identities
 Limiting app sign-ins to only assigned identities using Microsoft Entra PowerShell ensures that only authorized users can access your applications, thereby enhancing security and control.
@@ -154,3 +154,4 @@ This example shows how to add an owner to a service principal.
 <!-- link references -->
 
 [manage-groups]: manage-groups.md
+[set-entraapplication]: /powershell/module/microsoft.graph.entra/set-entraapplication

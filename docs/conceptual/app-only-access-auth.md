@@ -92,7 +92,7 @@ location when connecting to Microsoft Entra PowerShell, specify the
 certificate's location.
 
 If the authentication succeeds, you see the message
-`Welcome To Microsoft Graph!`. Run `Get-EntraContext` to verify that you're
+`Welcome To Microsoft Graph!`. Run [Get-EntraContext][get-entracontext] to verify that you're
 authenticated with app-only method. The output should look like the following.
 
 ```powershell
@@ -160,3 +160,4 @@ A common challenge when writing automation scripts is the management of secrets,
 [manage-groups]: manage-groups.md
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
+[get-entracontext]: /powershell/module/microsoft.graph.entra/get-entracontext

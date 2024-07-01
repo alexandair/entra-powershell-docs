@@ -72,9 +72,11 @@ We recommend the use of a custom application to help isolate and limit the permi
 
 - [Authenticate with delegated access][delegated-authentication]
 - [Authenticate with app-only access][apponly-authentication]
+- [Best Practices][best-practices]
 
 <!-- link references -->
 [delegated-authentication]: delegated-access-auth.md
 [apponly-authentication]: app-only-access-auth.md
 [principle-of-least-privilege]: /entra/identity-platform/secure-least-privileged-access
 [create-custom-app]: create-custom-application.md
+[best-practices]: entra-powershell-best-practices.md

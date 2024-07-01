@@ -14,12 +14,14 @@ keywords: Microsoft Entra powershell, entra-powershell, manage entra resources u
 
 # What's new in the Entra PowerShell module
 
-This article lists new features in the Entra PowerShell module to manage Microsoft Entra resources. Features that are currently in preview are denoted with **(Beta)**.
+This article lists new features in the Microsoft Entra PowerShell module to manage Microsoft Entra resources, currently in public preview.
 
-## 2024 May
+## 2024 June
 
-- [Version 0.7.2][posh-0.7.2]
+- [Version 0.10.0-preview][posh-0.10.0]
 
-  Added App proxy cmdlets.
+  - Added the ability to auto-install module dependencies.
+  - Official public preview release version.
+  - Added Connect-Entra examples.
 
-[posh-0.7.2]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.7.2
+[posh-0.10.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.10.0-preview

@@ -29,7 +29,7 @@ Microsoft Entra PowerShell supports two types of authentication: _delegated acce
 Connect-Entra -Scopes 'User.Read.All' 
 ```
 
-To see all the possible options, refer to the [authentication][auth-scenarios] options.
+To see all the possible options, refer to the [authentication][auth-scenarios] scenarios.
 
 ## Find all available commands
 
