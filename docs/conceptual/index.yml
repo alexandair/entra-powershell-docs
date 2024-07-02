@@ -1,221 +1,131 @@
 ### YamlMime:Hub
 
 #root section (Required)
-title: Microsoft Entra PowerShell documentation
-summary: Microsoft Entra PowerShell is a scenario-focused module designed for managing Microsoft Entra resources in PowerShell. It offers rich documentation and supports essential PowerShell features like pipelining.
+title: Microsoft Entra PowerShell documentation # < 60 chars
+summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully interoperable with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
 brand: azure
 
 metadata:
   title: Microsoft Entra PowerShell documentation
-  description: Microsoft Entra PowerShell is a scenario-focused module designed for managing Microsoft Entra resources in PowerShell. It offers rich documentation and supports essential PowerShell features like pipelining. # Required; article description that is displayed in search results. < 165 chars.
-  ms.service: service #Required; use service/product value per approved list. 
+  description: Learn about Microsoft Entra PowerShell and how you can use it to manage identities at scale and automate bulk administrative tasks in Microsoft Entra. # Required; article description that is displayed in search results. < 165 chars.
+  ms.service: entra-powershell #Required; use service/product value per approved list. 
   ms.topic: hub-page 
   author: csmulligan
   ms.author: cmulligan
-  ms.date: 06/26/2024 
+  ms.date: 06/26/2024
 
 ## BAND 1 - HIGHLIGHTED CONTENT START #############################################################################################################################
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
   items:
     # Card
-    - title: cardtitle1
-      itemType: itemType
-      url: ./file1.md OR /file1
+    - title: What is Microsoft Entra PowerShell? 
+      itemType: overview
+      url: /powershell/entra-powershell/overview
     # Card
-    - title: cardtitle2
-      itemType: itemType
-      url: ./file2.md OR /file2
+    - title: Best practices
+      itemType: concept
+      url: /powershell/entra-powershell/entra-powershell-best-practices
     # Card
-    - title: cardtitle3
-      itemType: itemType
-      url: ./file3.md OR /file3
+    - title: What's new?
+      itemType: whats-new
+      url: /powershell/entra-powershell/whats-new-docs
 ## BAND 1 - HIGHLIGHTED CONTENT END #############################################################################################################################
 
-# productDirectory section (Optional; Remove if not applicable.)
-productDirectory:
-  title: sectiontitle # Optional but good for SEO. Remove if not applicable.
-  summary: sectionsummary # Optional but good for SEO. Remove if not applicable.
-  items:
-    # Card
-    - title: cardtitle1
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/index/image1.svg OR /media/logos/image1.svg
-      links:
-        - url: ./file1a.md OR /file1a
-          text: linktext1a
-        - url: ./file1b.md OR /file1b
-          text: linktext1b
-    # Card
-    - title: cardtitle2
-      imageSrc: ./media/index/image2.svg OR /media/logos/image2.svg
-      links:
-        - url: ./file2a.md OR /file2a
-          text: linktext2a
-        - url: ./file2b.md OR /file2b
-          text: linktext2b
-    # Card
-    - title: cardtitle3
-      imageSrc: ./media/index/image3.svg OR /media/logos/image3.svg
-      links:
-        - url: ./file3a.md OR /file3a
-          text: linktext3a
-        - url: ./file3b.md OR /file3b
-          text: linktext3b
 
+## BAND 2 - CONCEPTUAL CONTENT START #############################################################################################################################
 # conceptualContent section (Optional; Remove if not applicable.)
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
   # Supports up to 3 subsections
   sections:
-    - title: subsectiontitle1 # Optional but good for SEO. Remove if not applicable.
-      summary: subsectionsummary1 # Optional but good for SEO. Remove if not applicable.
+    - title: Get started # Optional but good for SEO. Remove if not applicable.
+      summary: Quick access to guidance on core Microsoft Entra PowerShell features and setup. # Optional but good for SEO. Remove if not applicable.
       items:
         # Card
-        - title: cardtitle1
+        - title: Set up Microsoft Entra PowerShell
           summary: # Optional but good for SEO. Remove if not applicable.
           links:
-            - url: ./file1.md OR /file1
-              itemType: itemType
-              text: linktext1
-            - url: ./file2.md OR /file2
-              itemType: itemType
-              text: linktext2
-            - url: ./file3.md OR /file3
-              itemType: itemType
-              text: linktext3
-          # footerLink (Optional; Remove if not applicable.)
-          footerLink:
-            url: ./filefooter.md OR /filefooter
-            text: See more
+            - url: /powershell/entra-powershell/installation
+              itemType: how-to-guide
+              text: Install the module
+            - url: /powershell/entra-powershell/quickstart-entra-powershell
+              itemType: quickstart
+              text: Quickstart guide
+            - url: /powershell/entra-powershell/quickstart-entra-powershell
+              itemType: concept
+              text: Authentication scenarios
         # Card
-        - title: cardtitle2
+        - title: Common use cases
           summary: # Optional but good for SEO. Remove if not applicable.
           links:
-            - url: ./file1.md OR /file1
-              itemType: itemType
-              text: linktext1
-            - url: ./file2.md OR /file2
-              itemType: itemType
-              text: linktext2
-            - url: ./file3.md OR /file3
-              itemType: itemType
-              text: linktext3
-          # footerLink (Optional; Remove if not applicable.)
-          footerLink:
-            url: ./filefooter.md OR /filefooter
-            text: See more
-    - title: subsectiontitle2 # Optional but good for SEO. Remove if not applicable.
-      summary: subsectionsummary2 # Optional but good for SEO. Remove if not applicable.
-      items:
+            - url: /powershell/entra-powershell/manage-user
+              itemType: how-to-guide
+              text: Manage users
+            - url: /powershell/entra-powershell/manage-groups
+              itemType: how-to-guide
+              text: Manage groups
+            - url: /powershell/entra-powershell/manage-apps
+              itemType: how-to-guide
+              text: Manage apps
         # Card
-        - title: cardtitle1
+        - title: Migrate from Azure AD PowerShell
           summary: # Optional but good for SEO. Remove if not applicable.
           links:
-            - url: ./file1.md OR /file1
-              itemType: itemType
-              text: linktext1
-            - url: ./file2.md OR /file2
-              itemType: itemType
-              text: linktext2
-            - url: ./file3.md OR /file3
-              itemType: itemType
-              text: linktext3
-          # footerLink (Optional; Remove if not applicable.)
-          footerLink:
-            url: ./filefooter.md OR /filefooter
-            text: See more
-        # Card
-        - title: cardtitle2
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - url: ./file1.md OR /file1
-              itemType: itemType
-              text: linktext1
-            - url: ./file2.md OR /file2
-              itemType: itemType
-              text: linktext2
-            - url: ./file3.md OR /file3
-              itemType: itemType
-              text: linktext3
-          # footerLink (Optional; Remove if not applicable.)
-          footerLink:
-            url: ./filefooter.md OR /filefooter
-            text: See more
+            - url: /powershell/entra-powershell/migration-guide
+              itemType: concept
+              text: Migrate to Microsoft Entra PowerShell
+            - url: /powershell/entra-powershell/migration-guide
+              itemType: reference
+              text: Cmdlet map
+## BAND 2 - CONCEPTUAL CONTENT END #############################################################################################################################
 
+## BAND 3 - TOOLS CONTENT START #############################################################################################################################
 # tools section (Optional; Remove if not applicable.)
 tools:
-  title: sectiontitle # Optional but good for SEO. Remove if not applicable.
+  title: Microsoft Entra PowerShell reference # Optional but good for SEO. Remove if not applicable.
   summary: sectionsummary # Optional but good for SEO. Remove if not applicable.
   items:
     # Card
-    - title: cardtitle1
+    - title: v1.0 cmdlet reference
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/index/image1.svg OR /media/logos/image1.svg
-      url: ./file1.md
+      imageSrc: ./media/ps_black_128.svg
+      url: /powershell/module/microsoft.graph.entra
     # Card
-    - title: cardtitle2
-      imageSrc: ./media/index/image2.svg OR /media/logos/image2.svg
-      url: ./file2.md
+    - title: Beta cmdlet reference
+      imageSrc: ./media/construction-sign-1f6a7.svg
+      url: /powershell/module/microsoft.graph.entra.beta
     # Card
-    - title: cardtitle3
-      imageSrc: ./media/index/image3.svg OR /media/logos/image3.svg
-      url: ./file3.md
+    - title: PowerShell Gallery
+      imageSrc: .media/avatar_128.svg
+      url: https://www.powershellgallery.com/
+## BAND 3 - TOOLS CONTENT END #############################################################################################################################
 
+## BAND 4 - ADDITIONAL CONTENT START #############################################################################################################################
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: subsectiontitle1 # Optional but good for SEO. Remove if not applicable.
-      summary: subsectionsummary1 # Optional but good for SEO. Remove if not applicable.
+    - title: Resources # Optional but good for SEO. Remove if not applicable.
+      summary: Explore additional Microsoft Entra PowerShell documentation and resources. # Optional but good for SEO. Remove if not applicable.
       items:
         # Card
-        - title: cardtitle1
-          summary: cardsummary1
-          url: ./file1.md OR /file1
+        - title: Microsoft Entra PowerShell FAQs
+          summary: Frequently Asked Questions about Microsoft Entra PowerShell.
+          url: /powershell/entra-powershell/entra-powershell-faqs
         # Card
-        - title: cardtitle2
-          summary: cardsummary2
-          url: ./file1.md OR /file2
+        - title: Microsoft Q&A
+          summary: Discover questions that will help you on every step of your technical journey.
+          url: https://learn.microsoft.com/en-us/answers/questions/
         # Card
-        - title: cardtitle3
-          summary: cardsummary3
-          url: ./file1.md OR /file3
+        - title: Blog
+          summary: Read about updates on Entra identity and access management.
+          url: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/bg-p/Identity
+        # Card
+        - title: Community
+          summary: Connect with other Microsoft Entra PowerShell users. 
+          url: https://techcommunity.microsoft.com/t5/forums/searchpage/
   # footer (Optional; Remove if not applicable.)
-  footer: "footertext [linktext](/footerfile)"
-
-# additionalContent section (Optional; Remove if not applicable.)
-# Card with links style
-additionalContent:
-  # Supports up to 4 subsections
-  sections:
-    - title: subsectiontitle1 # Optional but good for SEO. Remove if not applicable.
-      summary: subsectionsummary1 # Optional but good for SEO. Remove if not applicable.
-      items:
-        # Card
-        - title: cardtitle1
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - text: link1a
-              url: ./file1a.md OR /file1a
-            - text: link1b
-              url: ./file1b.md OR /file1b
-        # Card
-        - title: cardtitle2
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - text: link2a
-              url: ./file2a.md OR /file2a
-            - text: link2b
-              url: ./file2b.md OR /file2b
-        # Card
-        - title: cardtitle3
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - text: link3a
-              url: ./file3a.md OR /file3a
-            - text: link3b
-              url: ./file3b.md OR /file3b
-  # footer (Optional; Remove if not applicable.)
-  footer: "footertext [linktext](/footerfile)"
+  footer: "[Provide product feedback](https://github.com/microsoftgraph/entra-powershell/issues/new/choose)"
+## BAND 4 - ADDITIONAL CONTENT END #############################################################################################################################
