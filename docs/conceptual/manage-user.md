@@ -192,7 +192,7 @@ $roleMemberParams = @{
 Add-EntraDirectoryRoleMember @roleMemberParams
 ```
 
-This command adds a user to a Microsoft Entra role. To retrieve roles, use the command `Get-EntraDirectoryRole`.
+This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
 
 - `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
 

@@ -39,10 +39,10 @@ In this section, you learn how to use delegated access with a custom application
 Run the following command to connect to the module with delegated access using a custom application. You need to sign in with at least a [Cloud Application Administrator][cloud-app-admin] role.
 
 ```powershell
-Connect-Entra -Scopes 'User.Read.All', 'Group.ReadWrite.All' -ClientId <your-custom-app-id> -TenantId <your-tenant-id>
+Connect-Entra -Scopes 'User.Read.All', 'Group.ReadWrite.All' -ClientId <your-custom-app-id>
 ```
 
-To get the `-ClientId` value, referred to as `your-custom-app-id` in the example, follow the steps in the [Create a custom application][create-custom-app] guide. You can find the `TenantId` value by running the `Get-EntraTenantDetail` command or find it in the app's **Overview** section of the [Microsoft Entra admin center][entra-admin-center].
+To get the `-ClientId` value, referred to as `your-custom-app-id` in the example, follow the steps in the [Create a custom application][create-custom-app] guide.
 
 ## Other sign-in methods
 
@@ -50,7 +50,7 @@ In this section, you learn how to use other sign-in methods to connect to Micros
 
 ### Use authorization code flow
 
-The module's default sign-in authentication method uses a web browser and access token to sign in. To sign in interactively, use the `Connect-Entra` cmdlet, which uses an interactive browser-based sign-in prompt by default.
+The module's default sign-in authentication method uses a web browser and access token to sign in. To sign in interactively, use the [Connect-Entra][Connect-Entra] cmdlet, which uses an interactive browser-based sign-in prompt by default.
 
 ```powershell
 Connect-Entra
@@ -69,7 +69,7 @@ Connect-Entra -Scopes 'User.Read.All', 'Group.ReadWrite.All'
 The [device code flow][device-code-flow] instructs you to open a browser page at [microsoft.com/devicelogin][ms-devicelogin] and enter the code displayed in your PowerShell session.
 
 ```powershell
-Connect-MgGraph -Scopes 'User.Read.All', 'Group.ReadWrite.All' -UseDeviceAuthentication
+Connect-MgGraph -Scopes 'User.Read.All', 'Group.ReadWrite.All' -UseDeviceCode
 ```
 
 ### Use your access token
@@ -131,3 +131,4 @@ For a detailed guide on troubleshooting common errors, see:
 [manage-groups]: manage-groups.md
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
+[Connect-Entra]: /powershell/module/microsoft.graph.entra/connect-entra

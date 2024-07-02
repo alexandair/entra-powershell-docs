@@ -40,7 +40,7 @@ You should have this information to authenticate using a certificate.
 - Application ID for your app registration. To get the Application ID, see: [Create a custom application][create-custom-application].
 - Your tenant ID.
 
-In this section, you learn how to use a certificate to authenticate with the Microsoft Entra PowerShell module. You can use the certificate thumbprint, certificate name, or the certificate itself to authenticate. To authenticate using the given examples, you need to sign in with at least a [Privileged Role Administrator](/entra/role-based-access-control/permissions-reference.md#privileged-role-administrator) role.
+In this section, you learn how to use a certificate to authenticate with the Microsoft Entra PowerShell module. You can use the certificate thumbprint, certificate name, or the certificate itself to authenticate. To authenticate using the given examples, you need to sign in with at least a [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) role.
 
 ### Use Certificate Thumbprint
 
@@ -92,7 +92,7 @@ location when connecting to Microsoft Entra PowerShell, specify the
 certificate's location.
 
 If the authentication succeeds, you see the message
-`Welcome To Microsoft Graph!`. Run `Get-EntraContext` to verify that you're
+`Welcome To Microsoft Graph!`. Run [Get-EntraContext][get-entracontext] to verify that you're
 authenticated with app-only method. The output should look like the following.
 
 ```powershell
@@ -160,3 +160,4 @@ A common challenge when writing automation scripts is the management of secrets,
 [manage-groups]: manage-groups.md
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
+[get-entracontext]: /powershell/module/microsoft.graph.entra/get-entracontext
