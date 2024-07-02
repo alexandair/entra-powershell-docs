@@ -53,7 +53,7 @@ conceptualContent:
     - title: Common use cases
       links:
         - text: Manage users
-          url: powershell/entra-powershell/manage-user
+          url: /powershell/entra-powershell/manage-user
           itemType: how-to-guide
         - text: Manage groups
           url: /powershell/entra-powershell/manage-groups
@@ -81,15 +81,15 @@ tools:
     # Card
     - title: v1.0 cmdlet reference
       # imageSrc should be square in ratio with no white space
-      imageSrc: /media/ps_black_128.svg
+      imageSrc: ./media/ps_black_128.svg
       url: /powershell/module/microsoft.graph.entra
     # Card
     - title: Beta cmdlet reference
-      imageSrc: /media/construction-sign-1f6a7.svg
+      imageSrc: ./media/construction-sign-1f6a7.svg
       url: /powershell/module/microsoft.graph.entra.beta
     # Card
     - title: PowerShell Gallery
-      imageSrc: /media/avatar_128.svg
+      imageSrc: ./media/avatar_128.svg
       url: https://www.powershellgallery.com/
 ## BAND 3 - TOOLS CONTENT END #############################################################################################################################
 
