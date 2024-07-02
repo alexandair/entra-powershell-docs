@@ -122,7 +122,7 @@ This article explains how to install the module on Linux.
 
 - Install a supported version of [PowerShell version 7 or higher](/powershell/scripting/install/installing-powershell-on-linux)
 
-- Install [Microsoft Graph PowerShell SDK module dependencies](#install-dependencies) if not installed.
+- Install [Microsoft Graph PowerShell SDK module dependencies](troubleshooting.md#missing-dependencies) if not installed.
 
 ## Installation on Linux
 

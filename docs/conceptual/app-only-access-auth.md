@@ -40,7 +40,7 @@ You should have this information to authenticate using a certificate.
 - Application ID for your app registration. To get the Application ID, see: [Create a custom application][create-custom-application].
 - Your tenant ID.
 
-In this section, you learn how to use a certificate to authenticate with the Microsoft Entra PowerShell module. You can use the certificate thumbprint, certificate name, or the certificate itself to authenticate. To authenticate using the given examples, you need to sign in with at least a [Privileged Role Administrator](/entra/role-based-access-control/permissions-reference.md#privileged-role-administrator) role.
+In this section, you learn how to use a certificate to authenticate with the Microsoft Entra PowerShell module. You can use the certificate thumbprint, certificate name, or the certificate itself to authenticate. To authenticate using the given examples, you need to sign in with at least a [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator) role.
 
 ### Use Certificate Thumbprint
 
