@@ -1,6 +1,4 @@
 ### YamlMime:Hub
-
-
 #root section (Required)
 title: Microsoft Entra PowerShell documentation # < 60 chars
 summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully interoperable with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
@@ -35,50 +33,43 @@ highlightedContent:
 
 
 ## BAND 2 - CONCEPTUAL CONTENT START #############################################################################################################################
-# conceptualContent section (Optional; Remove if not applicable.)
 conceptualContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
-  # Supports up to 3 subsections
-  sections:
-    - title: Get started # Optional but good for SEO. Remove if not applicable.
-      summary: Quick access to guidance on core Microsoft Entra PowerShell features and setup. # Optional but good for SEO. Remove if not applicable.
-      items:
-        # Card
-        - title: Set up Microsoft Entra PowerShell
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - url: /powershell/entra-powershell/installation
-              itemType: how-to-guide
-              text: Install the module
-            - url: /powershell/entra-powershell/quickstart-entra-powershell
-              itemType: quickstart
-              text: Quickstart guide
-            - url: /powershell/entra-powershell/quickstart-entra-powershell
-              itemType: concept
-              text: Authentication scenarios
-        # Card
-        - title: Common use cases
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - url: /powershell/entra-powershell/manage-user
-              itemType: how-to-guide
-              text: Manage users
-            - url: /powershell/entra-powershell/manage-groups
-              itemType: how-to-guide
-              text: Manage groups
-            - url: /powershell/entra-powershell/manage-apps
-              itemType: how-to-guide
-              text: Manage apps
-        # Card
-        - title: Migrate from Azure AD PowerShell
-          summary: # Optional but good for SEO. Remove if not applicable.
-          links:
-            - url: /powershell/entra-powershell/migration-guide
-              itemType: concept
-              text: Migrate to Microsoft Entra PowerShell
-            - url: /powershell/entra-powershell/migration-guide
-              itemType: reference
-              text: Cmdlet map
+  title: Get started
+  summary:  Quick access to guidance on core Microsoft Entra PowerShell features and setup.
+  items:
+    ## CARD 1 ######################
+    - title: Set up Microsoft Entra PowerShell
+      links:
+        - text: Install the module
+          url: /powershell/entra-powershell/installation
+          itemType: how-to-guide
+        - text: Quickstart guide
+          url: /powershell/entra-powershell/quickstart-entra-powershell
+          itemType: quickstart
+        - text: Authentication scenarios
+          url: /powershell/entra-powershell/quickstart-entra-powershell
+          itemType: concept
+    ## CARD 2 ######################
+    - title: Common use cases
+      links:
+        - text: Manage users
+          url: powershell/entra-powershell/manage-user
+          itemType: how-to-guide
+        - text: Manage groups
+          url: /powershell/entra-powershell/manage-groups
+          itemType: how-to-guide
+        - text: Manage apps
+          url: /powershell/entra-powershell/manage-apps
+          itemType: how-to-guide
+    ## CARD 3 ######################
+    - title: Migrate from Azure AD PowerShell
+      links:
+        - text: Migrate to Microsoft Entra PowerShell
+          url: /powershell/entra-powershell/migration-guide
+          itemType: concept
+        - text: Cmdlet map
+          url: /powershell/entra-powershell/migration-guide
+          itemType: reference
 ## BAND 2 - CONCEPTUAL CONTENT END #############################################################################################################################
 
 ## BAND 3 - TOOLS CONTENT START #############################################################################################################################
@@ -90,15 +81,15 @@ tools:
     # Card
     - title: v1.0 cmdlet reference
       # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/ps_black_128.svg
+      imageSrc: /media/ps_black_128.svg
       url: /powershell/module/microsoft.graph.entra
     # Card
     - title: Beta cmdlet reference
-      imageSrc: ./media/construction-sign-1f6a7.svg
+      imageSrc: /media/construction-sign-1f6a7.svg
       url: /powershell/module/microsoft.graph.entra.beta
     # Card
     - title: PowerShell Gallery
-      imageSrc: .media/avatar_128.svg
+      imageSrc: /media/avatar_128.svg
       url: https://www.powershellgallery.com/
 ## BAND 3 - TOOLS CONTENT END #############################################################################################################################
 
