@@ -1,5 +1,6 @@
 ### YamlMime:Hub
 
+
 #root section (Required)
 title: Microsoft Entra PowerShell documentation # < 60 chars
 summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully interoperable with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
@@ -129,3 +130,4 @@ additionalContent:
   # footer (Optional; Remove if not applicable.)
   footer: "[Provide product feedback](https://github.com/microsoftgraph/entra-powershell/issues/new/choose)"
 ## BAND 4 - ADDITIONAL CONTENT END #############################################################################################################################
+
