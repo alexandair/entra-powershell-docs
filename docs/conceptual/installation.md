@@ -217,9 +217,6 @@ For more information on other authentication scenarios, see [more authentication
 
 For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting-guide].
 
-## Provide feedback
-
-To file an issue about Microsoft Entra PowerShell module, see: [File an issue on GitHub.][entra-posh-issues]
 
 ## Next steps
 
