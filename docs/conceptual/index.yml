@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 #root section (Required)
 title: Microsoft Entra PowerShell documentation # < 60 chars
-summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully interoperable with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
+summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully compatible with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
 brand: azure
 
 metadata:
@@ -47,7 +47,7 @@ conceptualContent:
           url: /powershell/entra-powershell/quickstart-entra-powershell
           itemType: quickstart
         - text: Authentication scenarios
-          url: /powershell/entra-powershell/quickstart-entra-powershell
+          url: /powershell/entra-powershell/authentication-scenarios
           itemType: concept
     ## CARD 2 ######################
     - title: Common use cases
@@ -76,20 +76,20 @@ conceptualContent:
 # tools section (Optional; Remove if not applicable.)
 tools:
   title: Microsoft Entra PowerShell reference # Optional but good for SEO. Remove if not applicable.
-  summary: sectionsummary # Optional but good for SEO. Remove if not applicable.
+  summary: Comprehensive cmdlet reference and PowerShell gallery references. # Optional but good for SEO. Remove if not applicable.
   items:
     # Card
     - title: v1.0 cmdlet reference
       # imageSrc should be square in ratio with no white space
-      imageSrc: ../media/ps_black_128.svg
+      imageSrc: ./media/blackps.svg
       url: /powershell/module/microsoft.graph.entra
     # Card
     - title: Beta cmdlet reference
-      imageSrc: ../media/construction-sign-1f6a7.svg
+      imageSrc: ./media/construction.svg
       url: /powershell/module/microsoft.graph.entra.beta
     # Card
     - title: PowerShell Gallery
-      imageSrc: ../media/avatar_128.svg
+      imageSrc: ./media/avatar.svg
       url: https://www.powershellgallery.com/
 ## BAND 3 - TOOLS CONTENT END #############################################################################################################################
 
