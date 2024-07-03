@@ -10,5 +10,5 @@ groups:
     title: Windows
   - id: linux
     title: Linux
-  - id: macos
+  - id: macOS
     title: macOS
