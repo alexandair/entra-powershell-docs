@@ -136,7 +136,7 @@ Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGaller
 
 :::zone-end
 
-:::zone pivot="macOS"
+:::zone pivot="macos"
 
 ## Install Microsoft Entra PowerShell on macOS
 
