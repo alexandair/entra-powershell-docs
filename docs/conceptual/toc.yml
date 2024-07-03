@@ -13,7 +13,7 @@ items:
   items:
   - name: Install the module
     href: installation.md
-  - name: Quick Start
+  - name: Quick start
     href: quickstart-entra-powershell.md
   - name: Navigate the module
     href: navigate-entra-powershell.md
