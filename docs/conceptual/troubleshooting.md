@@ -33,7 +33,7 @@ During installation, you may encounter some errors:
 
 ### AllowPrerelease parameter cannot be found
 
-**Error **: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
+**Error**: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
 
 This means that you're using an older version of Install-Module. Here’s how to upgrade:
 
@@ -55,9 +55,17 @@ Import-Module PowerShellGet -MinimumVersion 2.0 -Force
 Import-PackageProvider PowerShellGet -MinimumVersion 2.0 -Force 
 ```
 
+### Commands already available in the module
+
+**Error**: `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'`.
+
+This means that there is a conflict when either `beta` or `v1.0` is already installed.
+
+**Workaround**: [Uninstall](installation.md#uninstall-the-module) the problematic module version, launched new powershell and install the desired one.
+
 ### Missing dependencies
 
-**Error **: `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.`
+**Error**: `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.`
 
 This means that Microsoft Entra PowerShell dependencies aren't installed. To install, use:
 
@@ -79,7 +87,11 @@ PowerShell doesn't recognize the cmdlet that you're trying to run.
 Get-Module -Name Microsoft.Graph.Entra -ListAvailable
 ```
 
-If it’s not listed, install it using `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force`.
+If it’s not listed, install it using:
+
+```powershell
+Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
+```
 
 ## Version conflicts
 
@@ -101,7 +113,11 @@ Receiving errors related to insufficient permissions when attempting to execute 
 
 You might run into issues when trying to update the Microsoft Entra PowerShell module.
 
-**Workaround**: Use the cmdlet `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force` to get the latest version. If there are errors, try uninstalling and then reinstalling the module.
+**Workaround**: Use the snippet below to install the latest version. If there are errors, try [uninstalling](installation.md#uninstall-the-module) and then reinstalling the module.
+
+```powershell
+Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
+```
 
 ## Performance issues
 

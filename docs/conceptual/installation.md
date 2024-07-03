@@ -195,6 +195,12 @@ To remove the module, run the command:
 Uninstall-Module -Name Microsoft.Graph.Entra -AllVersions
 ```
 
+To remove the `beta` module, run the command:
+
+```powershell
+Uninstall-Module -Name Microsoft.Graph.Entra.Beta -AllVersions
+```
+
 ## Sign in
 
 To start managing your Microsoft Entra resources with the Microsoft Entra PowerShell module, launch a PowerShell session and run [Connect-Entra][Connect-Entra] to sign in to Microsoft Entra ID:
@@ -207,13 +213,14 @@ Use your Microsoft Entra sign-in credentials to log into the sign-in window that
 
 You need to repeat this step for every new PowerShell session you start.
 
-For more information on other authentication scenarios, see [more authentication][auth-methods] options.
+For more information on other authentication scenarios, see [more authentication][auth-methods] scenarios.
 
 ## Troubleshoot installation issues
 
 - `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow see [guide](troubleshooting.md#installation-issues). This applies to Windows platform only.
 - `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies aren't installed. To install, use [this script](troubleshooting.md#missing-dependencies).
 - `Cmdlets already exist on the system` - Add `-AllowClobber` parameter i.e. `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`.
+- `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'` - means that there is a conflict when either `beta` or `v1.0` is already installed. To resolve this, [uninstall](installation.md#uninstall-the-module) the offending module version.
 
 For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting-guide].
 
