@@ -77,7 +77,7 @@ $groupParams = @{
 Set-EntraGroup @groupParams
 ```
 
-To confirm the updated description, run the `Get-EntraGroup` again.
+To confirm the updated description, run the [Get-EntraGroup](/powershell/module/microsoft.graph.entra/get-entragroup) again.
 
 ```powershell
 Get-EntraGroup -Filter "DisplayName eq 'My new group'"  
@@ -85,7 +85,7 @@ Get-EntraGroup -Filter "DisplayName eq 'My new group'"
 
 ## Add a user to a group
 
-Add a user to the group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID. You can get the User ID from the [Microsoft Entra admin center](https://entra.microsoft.com/) or by running the `Get-EntraUser` command.
+Add a user to the group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID. You can get the User ID from the [Microsoft Entra admin center](https://entra.microsoft.com/) or by running the [Get-EntraUser](/powershell/module/microsoft.graph.entra/get-entrauser) command.
 
 ```powershell
 $memberParams = @{
@@ -109,7 +109,7 @@ $ownerParams = @{
 Add-EntraGroupOwner @ownerParams
 ```
 
-To confirm the updated group owner, run the `Get-EntraGroupOwner` command. This command returns the User ID of one or more group owners.
+To confirm the updated group owner, run the [Get-EntraGroupOwner](/powershell/module/microsoft.graph.entra/get-entragroupowner) command. This command returns the User ID of one or more group owners.
 
 ```powershell
 Get-EntraGroupOwner -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'

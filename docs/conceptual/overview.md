@@ -63,4 +63,4 @@ The following section outlines the known issues with the Microsoft Entra PowerSh
 [best-practices-guide]: entra-powershell-best-practices.md
 [azureAdModuleDeprecationLink]: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-update-deprecation-of-azure-ad-powershell-and-msonline/ba-p/4094536
 [powershellInstallLink]: /powershell/scripting/install/installing-powershell
-[enable-entraazureadalis]: /powershell/entra-preview/microsoft.graph.entra/enable-entraazureadalias
+[enable-entraazureadalis]: /powershell/module/microsoft.graph.entra/enable-entraazureadalias

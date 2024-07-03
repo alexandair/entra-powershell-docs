@@ -17,7 +17,7 @@ This article details the process of running your existing AzureAD PowerShell scr
 
 ## Use compatibility mode with Enable-EntraAzureADAlias
 
-The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias](/powershell/entra-preview/microsoft.graph.entra/enable-entraazureadalias) reference documentation.
+The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias][enable-entraazureadalias] reference documentation.
 
 To use Microsoft Entra PowerShell with your existing AzureAD PowerShell scripts, replace the `Connect-AzureAD` command with the three lines provided.
 
@@ -94,10 +94,13 @@ When migrating from the Azure AD PowerShell module to Microsoft Graph endpoints,
 
 ## Related content
 
-- [Introducing the Microsoft Entra PowerShell module](quickstart-entra-powershell.md)
-- [Install the Microsoft Entra PowerShell module](installation.md)
+- [Introducing the Microsoft Entra PowerShell module][quickstart]
+- [Install the Microsoft Entra PowerShell module][installation]
 
 <!-- link references -->
 [azuread-ps]: /powershell/module/azuread
 [installation]: installation.md
-[testEntrascriptDefinition]: /powershell/entra-preview/microsoft.graph.entra/test-entrascript
+[testEntrascriptDefinition]: /powershell/module/microsoft.graph.entra/test-entrascript
+[enable-entraazureadalias]: /powershell/module/microsoft.graph.entra/enable-entraazureadalias
+[quickstart]: quickstart-entra-powershell.md
+[installation]: installation.md

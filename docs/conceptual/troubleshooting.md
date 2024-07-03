@@ -18,20 +18,24 @@ This article explains how to determine, diagnose, and fix issues that you might 
 Before troubleshooting any errors, ensure that you’re running the most recent version of the Microsoft Entra PowerShell. To check the version of your installed module, run:
 
 ```powershell
-Get-InstalledModule
+Get-InstalledModule -Name Microsoft.Graph.Entra
 ```
 
-The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery](https://www.powershellgallery.com). If your installed module isn’t up to date, update it by running:
+The version of the Microsoft.Graph.Entra module should be the most recent compared to the latest release in the [PowerShell Gallery](https://aka.ms/EntraPSGallery). If your installed module isn’t up to date, update it by running:
 
 ```powershell
-Update-Module Microsoft.Graph.Entra
+Update-Module -Name Microsoft.Graph.Entra -AllowPrerelease
 ```
 
 ## Installation issues
 
-During installation, you may encounter the error: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
+During installation, you may encounter some errors: 
 
-You're using an older version of Install-Module. Here’s how to upgrade:
+### AllowPrerelease parameter cannot be found
+
+**Error **: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
+
+This means that you're using an older version of Install-Module. Here’s how to upgrade:
 
 ```powershell
 ## Update Nuget Package and PowerShellGet Module 
@@ -51,6 +55,14 @@ Import-Module PowerShellGet -MinimumVersion 2.0 -Force
 Import-PackageProvider PowerShellGet -MinimumVersion 2.0 -Force 
 ```
 
+### Missing dependencies
+
+**Error **: `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.`
+
+This means that Microsoft Entra PowerShell dependencies aren't installed. To install, use:
+
+[!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
+
 ## Authentication issues
 
 Failure to authenticate or receive tokens can result in a **401 Unauthorized** response. This error can occur for several reasons. 
@@ -64,10 +76,10 @@ PowerShell doesn't recognize the cmdlet that you're trying to run.
 **Workaround**:  Ensure the Microsoft Entra PowerShell module is installed correctly using:
 
 ```powershell
-Get-Module -ListAvailable
+Get-Module -Name Microsoft.Graph.Entra -ListAvailable
 ```
 
-If it’s not listed, install it using `Install-Module Microsoft.Graph.Entra`.
+If it’s not listed, install it using `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force`.
 
 ## Version conflicts
 
@@ -89,7 +101,7 @@ Receiving errors related to insufficient permissions when attempting to execute 
 
 You might run into issues when trying to update the Microsoft Entra PowerShell module.
 
-**Workaround**: Use the cmdlet `Install-Module Microsoft.Graph.Entra` to get the latest version. If there are errors, try uninstalling and then reinstalling the module.
+**Workaround**: Use the cmdlet `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force` to get the latest version. If there are errors, try uninstalling and then reinstalling the module.
 
 ## Performance issues
 

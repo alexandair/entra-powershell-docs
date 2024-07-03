@@ -34,7 +34,7 @@ sections:
       - question: |
           I need to migrate from the deprecated modules. Should I wait for Microsoft Entra PowerShell?
         answer: |
-          One of our goals with Microsoft Entra PowerShell is to help you migrate faster from AzureAD PowerShell. The module supports [simplified migration](migration-guide.md) for scripts that previously used AzureAD PowerShell, with over 98% compatibility by enabling the `Enable-EntraAzureADAlias` setting. However, it’s important to note that the legacy modules are now deprecated and will be retired (stop working) after March 30, 2025. We recommend that you act now to begin migrating your MSOnline and AzureAD PowerShell scripts. Both Microsoft Entra PowerShell and the Microsoft Graph PowerShell SDK use the latest Microsoft Graph APIs. 
+          One of our goals with Microsoft Entra PowerShell is to help you migrate faster from AzureAD PowerShell. The module supports [simplified migration](migration-guide.md) for scripts that previously used AzureAD PowerShell, with over 98% compatibility by enabling the [Enable-EntraAzureADAlias](/powershell/module/microsoft.graph.entra/enable-entraazureadalias) setting. However, it’s important to note that the legacy modules are now deprecated and will be retired (stop working) after March 30, 2025. We recommend that you act now to begin migrating your MSOnline and AzureAD PowerShell scripts. Both Microsoft Entra PowerShell and the Microsoft Graph PowerShell SDK use the latest Microsoft Graph APIs. 
           
           For test environments and nonproduction systems, you can migrate to Microsoft Entra PowerShell. We recommend migrating to the module for production systems only after it reaches General Availability. If you migrate scripts to Microsoft Graph PowerShell SDK now, there's no need to update them again with Microsoft Entra PowerShell. The module enhances without replacing Microsoft Graph PowerShell SDK.
 
@@ -48,10 +48,10 @@ sections:
         answer: |
           No, Microsoft Entra PowerShell permissions aren't preauthorized, and users must request the specific app permissions needed. This granularity ensures that the application has only the necessary permissions, providing granular control over resource management. 
           
-          For maximum flexibility and granularity in application permissions, we recommend creating a [custom application](create-custom-application.md) with Microsoft Entra PowerShell. By creating different applications for different uses of PowerShell in your tenant, you can have control over application permissions granted for specific scenarios. To use your own application identity with Microsoft Entra PowerShell, you can use the `Connect-Entra` cmdlet. For example:
+          For maximum flexibility and granularity in application permissions, we recommend creating a [custom application](create-custom-application.md) with Microsoft Entra PowerShell. By creating different applications for different uses of PowerShell in your tenant, you can have control over application permissions granted for specific scenarios. To use your own application identity with Microsoft Entra PowerShell, you can use the [Connect-Entra](/powershell/module/microsoft.graph.entra/connect-entra) cmdlet. For example:
             
           ```powershell
-          Connect-Entra -ClientId 'YOUR_APP_ID' -TenantId 'YOUR_TENANT_ID' -CertificateName 'YOUR_CERT_SUBJECT'
+          Connect-Entra -ClientId 'YOUR_APP_ID'
           ```
 
       - question: |
