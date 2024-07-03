@@ -217,10 +217,12 @@ For more information on other authentication scenarios, see [more authentication
 
 ## Troubleshoot installation issues
 
-- `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow this [guide](troubleshooting.md#installation-issues). The issue applies to Windows platform only.
-- `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies aren't installed. To install, use [this script](troubleshooting.md#missing-dependencies).
-- `Cmdlets already exist on the system` - Add `-AllowClobber` parameter that is, `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`.
-- `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'` - means that there's a conflict when either `beta` or `v1.0` is already installed. To resolve the issue, [uninstall](installation.md#uninstall-the-module) the offending module version.
+| Error             | Cause                     | Workaround                      |
+|-------------------|---------------------------|---------------------------------|
+| `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.`   | you're using an older version of Install-Module.  | To upgrade, follow this [guide](troubleshooting.md#installation-issues). The issue applies to Windows platform only.  |
+| `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` | Microsoft Entra PowerShell dependencies aren't installed  | To install, use [this script](troubleshooting.md#missing-dependencies) |
+| `Cmdlets already exist on the system`  |        | Add `-AllowClobber` parameter that is, `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`  |
+| `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'`  | There's a conflict when either `beta` or `v1.0` is already installed  | To resolve the issue, [uninstall](installation.md#uninstall-the-module) the offending module version.  |
 
 For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting-guide].
 
