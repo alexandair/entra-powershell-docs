@@ -136,7 +136,7 @@ Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGaller
 
 :::zone-end
 
-:::zone pivot="macos"
+:::zone pivot="macOS"
 
 ## Install Microsoft Entra PowerShell on macOS
 
@@ -217,19 +217,17 @@ For more information on other authentication scenarios, see [more authentication
 
 ## Troubleshoot installation issues
 
-- `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow see [guide](troubleshooting.md#installation-issues). This applies to Windows platform only.
+- `Install-Module: A parameter can't be found that matches parameter name AllowPrerelease.` - means you're using an older version of Install-Module. To upgrade, follow this [guide](troubleshooting.md#installation-issues). The issue applies to Windows platform only.
 - `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.` - means that Microsoft Entra PowerShell dependencies aren't installed. To install, use [this script](troubleshooting.md#missing-dependencies).
-- `Cmdlets already exist on the system` - Add `-AllowClobber` parameter i.e. `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`.
-- `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'` - means that there is a conflict when either `beta` or `v1.0` is already installed. To resolve this, [uninstall](installation.md#uninstall-the-module) the offending module version.
+- `Cmdlets already exist on the system` - Add `-AllowClobber` parameter that is, `Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force -AllowClobber`.
+- `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'` - means that there's a conflict when either `beta` or `v1.0` is already installed. To resolve the issue, [uninstall](installation.md#uninstall-the-module) the offending module version.
 
 For solutions to other common installation and other general issues, see [Troubleshoot module installation problems][troubleshooting-guide].
-
 
 ## Next steps
 
 - To learn more about managing Entra resources with the Microsoft Entra PowerShell module, see [Get started][get-started] article.
 
-[entra-posh-issues]: https://github.com/microsoftgraph/entra-powershell/issues
 [get-started]: quickstart-entra-powershell.md
 [auth-methods]: authentication-scenarios.md
 [troubleshooting-guide]: troubleshooting.md

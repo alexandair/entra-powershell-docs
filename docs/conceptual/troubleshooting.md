@@ -29,9 +29,9 @@ Update-Module -Name Microsoft.Graph.Entra -AllowPrerelease
 
 ## Installation issues
 
-During installation, you may encounter some errors: 
+During installation, you can encounter some errors:
 
-### AllowPrerelease parameter cannot be found
+### AllowPrerelease parameter can't be found
 
 **Error**: “Install-Module: A parameter can't be found that matches parameter name `AllowPrerelease`.”
 
@@ -59,21 +59,21 @@ Import-PackageProvider PowerShellGet -MinimumVersion 2.0 -Force
 
 **Error**: `The following commands are already available on this system:'Enable-EntraAzureADAlias,Get-EntraUnsupportedCommand,Test-EntraScript'`.
 
-This means that there is a conflict when either `beta` or `v1.0` is already installed.
+This means that there's a conflict when either `beta` or `v1.0` is already installed.
 
-**Workaround**: [Uninstall](installation.md#uninstall-the-module) the problematic module version, launched new powershell and install the desired one.
+**Workaround**: [Uninstall](installation.md#uninstall-the-module) the problematic module version, launch a new PowerShell window, and install the desired one.
 
 ### Missing dependencies
 
 **Error**: `Dependent module '<module-name>' isn't installed on this computer. To use the current module 'Microsoft.Graph.Entra', ensure that its dependent module '<module-name>' is installed.`
 
-This means that Microsoft Entra PowerShell dependencies aren't installed. To install, use:
+It means that Microsoft Entra PowerShell dependencies aren't installed. To install, use:
 
 [!INCLUDE [dependencies](../includes/install-entra-powershell-dependencies.md)]
 
 ## Authentication issues
 
-Failure to authenticate or receive tokens can result in a **401 Unauthorized** response. This error can occur for several reasons. 
+Failure to authenticate or receive tokens can result in a **401 Unauthorized** response. This error can occur for several reasons.
 
 **Workaround**: Ensure that you're using the correct credentials and have sufficient permissions. Check that your app registrations (if applicable) are configured correctly with the necessary API permissions in Microsoft Entra ID.
 
@@ -87,7 +87,7 @@ PowerShell doesn't recognize the cmdlet that you're trying to run.
 Get-Module -Name Microsoft.Graph.Entra -ListAvailable
 ```
 
-If it’s not listed, install it using:
+If the module isn't listed, install it using:
 
 ```powershell
 Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
@@ -95,9 +95,9 @@ Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGaller
 
 ## Version conflicts
 
-You might encounter errors indicating multiple versions of the module are installed, such as the message "Assembly with the same name is already loaded".
+You might encounter errors indicating multiple versions of the module are installed, such as the message "Assembly with the same name is already loaded."
 
-**Workaround**: To resolve this, uninstall all conflicting versions of the module and then install the latest version:
+**Workaround**: To resolve the error, uninstall all conflicting versions of the module and then install the latest version:
 
 ```powershell
 Install-Module <Module-Name> -Required Version x.x
@@ -113,7 +113,7 @@ Receiving errors related to insufficient permissions when attempting to execute 
 
 You might run into issues when trying to update the Microsoft Entra PowerShell module.
 
-**Workaround**: Use the snippet below to install the latest version. If there are errors, try [uninstalling](installation.md#uninstall-the-module) and then reinstalling the module.
+**Workaround**: Use the snippet to install the latest version. If there are errors, try [uninstalling](installation.md#uninstall-the-module) and then reinstalling the module.
 
 ```powershell
 Install-Module -Name Microsoft.Graph.Entra -AllowPrerelease -Repository PSGallery -Force
@@ -129,7 +129,7 @@ Your scripts or commands might be running slowly or not completing as expected.
 
 You might receive errors from the Microsoft Entra PowerShell module that are hard to understand or manage.
 
-**Workaround**: Use `$Error[0].Exception | Format-List -Force` to get detailed error information. This can help in understanding the API response and troubleshooting further. <!--Is this script correct?-->
+**Workaround**: Use `$Error[0].Exception | Format-List -Force` to get detailed error information. The information can help in understanding the API response and troubleshooting further. <!--Is this script correct?-->
 
 ## Proxy blocks connection
 
@@ -152,4 +152,3 @@ To install the package, your proxy needs to allow HTTPS connections to [www.powe
 
 If you experience a product issue with Microsoft Entra PowerShell not listed in this article or require
 further assistance, [file an issue on GitHub](https://github.com/microsoftgraph/entra-powershell/issues).
-
