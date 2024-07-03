@@ -22,11 +22,11 @@ highlightedContent:
       itemType: overview
       url: /powershell/entra-powershell/overview
     # Card
-    - title: Best practices
+    - title: Security and usage best practices
       itemType: concept
       url: /powershell/entra-powershell/entra-powershell-best-practices
     # Card
-    - title: What's new?
+    - title: What's new in docs?
       itemType: whats-new
       url: /powershell/entra-powershell/whats-new-docs
 ## BAND 1 - HIGHLIGHTED CONTENT END #############################################################################################################################
@@ -76,7 +76,7 @@ conceptualContent:
 # tools section (Optional; Remove if not applicable.)
 tools:
   title: Microsoft Entra PowerShell reference # Optional but good for SEO. Remove if not applicable.
-  summary: Comprehensive cmdlet reference and PowerShell gallery references. # Optional but good for SEO. Remove if not applicable.
+  summary: Comprehensive cmdlet and PowerShell gallery references. # Optional but good for SEO. Remove if not applicable.
   items:
     # Card
     - title: v1.0 cmdlet reference
