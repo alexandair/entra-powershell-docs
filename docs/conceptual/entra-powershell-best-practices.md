@@ -35,7 +35,7 @@ Apply the following consent and authorization best practices in your app to enha
 
 - **Apply least privilege**: Grant users and apps only the lowest privileged permission they require to call the Microsoft Entra resource. Choose the least privileged permissions. For example, if the app reads only the profile of the currently signed-in user, grant `User.Read` instead of `User.ReadBasic.All`. For a full list of permissions, see [permissions reference][permissions-ref].
 
-- **Disconnect Session**: Always run [Disconnect-Entra][disconnect-entra] to remove all credentials and contexts associated with an account. This properly cleans up and closes connections when they're no longer needed, reducing the risk of unauthorized access if the session is left open or someone else accesses your PowerShell environment.
+- **Use Disconnect-Entra**: Always run [Disconnect-Entra][disconnect-entra] to remove all credentials and contexts associated with an account. This properly cleans up and closes connections when they're no longer needed, reducing the risk of unauthorized access if the session is left open or someone else accesses your PowerShell environment.
 
 - **Use the correct permission type based on scenarios**: Avoid using both application and delegated permissions in the same app. If you're building an interactive application where a signed-in user is present, your application should use *delegated permissions*. If, however, your application runs without a signed-in user, such as a background service or daemon, your application should use *application permissions*.
 
