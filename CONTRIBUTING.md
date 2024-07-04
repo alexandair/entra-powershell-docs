@@ -12,7 +12,7 @@ For more information, see the [Code of Conduct FAQ][code-conduct-faq] or contact
 
 ## How can I contribute?
 
-You can contribute to [Microsoft Entra PowerShell documentation][overview-page] in a number of ways. Review the following sections to find out which one is right for you.
+You can contribute to [Microsoft Entra PowerShell documentation][overview-page] in many ways. Review the following sections to find out which one is right for you.
 
 ### Report bugs and suggest enhancements
 
@@ -24,11 +24,10 @@ Follow the guidance for [editing documentation in the browser][quick-edits]in ou
 
 ## Pull requests
 
-Review the guidance for [pull request processing][pull-request-processing] in our contributor guide. Afterwards, contribute to articles b creating a pull request in the [public Microsoft Entra PowerShell docs repository][entra-public-docs].
-
+Review the guidance for [pull request processing][pull-request-processing] in our contributor guide. Afterwards, contribute to articles by creating a pull request in the [public Microsoft Entra PowerShell docs repository][entra-public-docs].
 
  <!-- link references -->
-[overview-page]: https://learn.microsoft.com/en-us/powershell/entra-powershell/overview?view=entra-powershell
+[overview-page]: https://learn.microsoft.com/powershell/entra-powershell/overview
 [entra-public-docs]: https://github.com/MicrosoftDocs/entra-powershell-docs
 [contibutor-guide]: https://learn.microsoft.com/contribute/content
 [quick-edits]: https://learn.microsoft.com/contribute/content/how-to-write-quick-edits
