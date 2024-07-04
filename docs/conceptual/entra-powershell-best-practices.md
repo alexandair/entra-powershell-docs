@@ -35,6 +35,8 @@ Apply the following consent and authorization best practices in your app to enha
 
 - **Apply least privilege**: Grant users and apps only the lowest privileged permission they require to call the Microsoft Entra resource. Choose the least privileged permissions. For example, if the app reads only the profile of the currently signed-in user, grant `User.Read` instead of `User.ReadBasic.All`. For a full list of permissions, see [permissions reference][permissions-ref].
 
+- **Use Disconnect-Entra**: Always run [Disconnect-Entra][disconnect-entra] to remove all credentials and contexts associated with an account. This properly cleans up and closes connections when they're no longer needed, reducing the risk of unauthorized access if the session is left open or someone else accesses your PowerShell environment.
+
 - **Use the correct permission type based on scenarios**: Avoid using both application and delegated permissions in the same app. If you're building an interactive application where a signed-in user is present, your application should use *delegated permissions*. If, however, your application runs without a signed-in user, such as a background service or daemon, your application should use *application permissions*.
 
 - **Be thoughtful with application permissions**: Avoid using application permissions for interactive scenarios to prevent security and compliance risks, as this can unintentionally elevate a user's privileges and bypass administrator policies.
@@ -42,12 +44,12 @@ Apply the following consent and authorization best practices in your app to enha
 - **Be thoughtful when configuring your app**: This affects end user and admin experiences, along with application adoption and security. For example:
 
   - Your application's name, logo, domain, publisher verification status, privacy statement, and terms of use show up in consent and other experiences. Configure these settings carefully so that your end users understand them.
-  - Consider who consents to your application - either end users or administrators - and configure your application to [request permissions appropriately](/azure/active-directory/develop/active-directory-v2-scopes).
-  - Ensure that you understand the difference between [static, dynamic, and incremental consent](/azure/active-directory/develop/v2-permissions-and-consent#consent-types).
+  - Consider who consents to your application - either end users or administrators - and configure your application to [request permissions appropriately][request-permissions].
+  - Ensure that you understand the difference between [static, dynamic, and incremental consent][consent-types].
 
 - **Watch out for permission creep** - Keep an eye on the permissions that accrue for the registered app over time.
 
-- **Leverage Security defaults and Conditional Access** - protect users with Microsoft Entra Multifactor authentication using Conditional Access (for licensed organizations) and security defaults (for unlicensed organizations).
+- **Leverage Security defaults and Conditional Access** - protect users with Microsoft Entra multifactor authentication using Conditional Access (for licensed organizations) and security defaults (for unlicensed organizations).
 
 - **Leverage Microsoft Entra recommendations** - [Microsoft Entra recommendations][entra-recommendations] feature diligently monitor your tenant’s status, ensuring it remains secure and healthy. You have visibility into used apps, expiring credentials, over-privileged applications among others.
 
@@ -93,7 +95,7 @@ After upgrading your module, remove the older versions.
 
 ### Use Get-Help
 
-`Get-Help` provides immediate access to comprehensive documentation right in the command line. This command offers detailed information about Microsoft Entra PowerShell cmdlets, functions, scripts, and concepts, including examples of how to use them, parameters they accept, and the output they generate. Get-Help promotes more efficient scripting, and helps avoid common mistakes.
+`Get-Help` provides comprehensive documentation directly in the command line. It offers detailed information about Microsoft Entra PowerShell cmdlets, functions, scripts, and concepts, including usage examples, accepted parameters, and output. Get-Help promotes efficient scripting and helps avoid common mistakes.
 
 ```powershell
 Get-Help Get-EntraUser -Detailed
@@ -122,3 +124,6 @@ Get-EntraUser -Top 1 -Debug 5>> <your-log-filepath>
 [create-a-custom-app]: create-custom-application.md
 [outputStreamLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#redirectable-output-streams
 [redirectOperatorLink]: /powershell/module/microsoft.powershell.core/about/about_redirection#powershell-redirection-operators
+[disconnect-entra]: /powershell/module/microsoft.graph.entra/disconnect-entra
+[request-permissions]: /azure/active-directory/develop/active-directory-v2-scopes
+[consent-types]: /azure/active-directory/develop/v2-permissions-and-consent#consent-types
