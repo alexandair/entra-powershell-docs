@@ -76,7 +76,7 @@ Selecting the required properties by using the `-Property` parameter to only get
 
 ### Define the page size
 
-For requests that return many objects, increase the page size to its maximum value of 999 using `-top` parameter.
+For requests that return many objects, increase the page size to its maximum value of **999** using `-top` parameter.
 
 ```powershell
 Get-EntraUser -All -Top 999
