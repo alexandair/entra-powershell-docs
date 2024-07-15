@@ -79,7 +79,7 @@ To manage users, you can perform the following common user management tasks:
 1. List a user’s group memberships.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All'
+    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
     Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -97,7 +97,7 @@ To manage users, you can perform the following common user management tasks:
 1. Get a user's manager.
 
     ```powershell
-    Connect-Entra -Scopes 'User.All'
+    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
     Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
@@ -117,7 +117,7 @@ To manage users, you can perform the following common user management tasks:
 1. List the users who report to a specific user.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All'
+    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
     Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
     ```
 
