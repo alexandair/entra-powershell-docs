@@ -12,11 +12,11 @@ ms.author: cmulligan
 ---
 # Navigate the Microsoft Entra PowerShell module
 
-This guide shows you how to effectively use the Microsoft Entra PowerShell module. It explains command naming conventions, demonstrates how to find and use Microsoft Entra PowerShell commands and features. Before you can navigate a module, you need to ensure it's [installed](installation.md) and available in your PowerShell session.
+This guide shows you how to effectively use the Microsoft Entra PowerShell module. It explains command naming conventions, demonstrates how to find and use Microsoft Entra PowerShell commands and features. Before you can navigate a module, you need to ensure it's [installed][installation] and available in your PowerShell session.
 
 ## Command naming conventions
 
-Microsoft Entra PowerShell cmdlets follow a standard naming convention for PowerShell, `Verb-Noun`. The verb describes the action (examples include `New`, `Get`, `Set`, `Remove`) and the noun describes the resource type (examples include `User`, `Group`, `ServicePrincipal`, `Device`). Nouns in Microsoft Entra PowerShell always start with the prefix `Entra`. For the full list of standard verbs, see [Approved verbs for PowerShell Commands](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
+Microsoft Entra PowerShell cmdlets follow a standard naming convention for PowerShell, `Verb-Noun`. The verb describes the action (examples include `New`, `Get`, `Set`, `Remove`) and the noun describes the resource type (examples include `User`, `Group`, `ServicePrincipal`, `Device`). Nouns in Microsoft Entra PowerShell always start with the prefix `Entra`. For the full list of standard verbs, see [Approved verbs for PowerShell Commands][approved-verbs].
 
 > [!NOTE]
 > For beta cmdlets, add a Beta prefix to the resource name. For example, use `Get-EntraBetaUser` instead of `Get-EntraUser` for the beta version.
@@ -55,3 +55,7 @@ This command gives detailed help documentation, including the cmdlet's descripti
 
 > [!TIP]
 > Keep Microsoft Entra PowerShell module updated to ensure access to the latest commands and features by running the command `Update-Module -Name Microsoft.Graph.Entra`
+
+
+[approved-verbs]: /powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands
+[installation]: installation.md

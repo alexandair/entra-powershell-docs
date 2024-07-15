@@ -5,15 +5,15 @@ items:
   items:
   - name: What is Microsoft Entra PowerShell?
     href: overview.md
-  - name: What's new
-    href: whats-new-docs.md
   - name: Module versioning and release cadence
     href: entraps-versioning-release-cadence.md
+  - name: What's new?
+    href: whats-new-docs.md
 - name: Getting started
   items:
   - name: Install the module
     href: installation.md
-  - name: Quick Start
+  - name: Quick start
     href: quickstart-entra-powershell.md
   - name: Navigate the module
     href: navigate-entra-powershell.md

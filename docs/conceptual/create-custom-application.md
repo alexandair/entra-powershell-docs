@@ -60,7 +60,7 @@ You need to set up Microsoft Graph permissions for the new application to connec
 You can now use the newly created app by connecting with:
 
 ```powershell
-Connect-Entra -ClientId <your-new-app-id> -TenantId <your-tenant-id>
+Connect-Entra -ClientId <your-new-app-id>
 ```
 
 For more connection options, see the [Connect-Entra][connect-entra-command] command details.
@@ -68,5 +68,5 @@ For more connection options, see the [Connect-Entra][connect-entra-command] comm
 <!-- link references -->
 [entra-admin-portal]: https://entra.microsoft.com/
 [cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
-[connect-entra-command]: /powershell/entra-preview/microsoft.graph.entra/connect-entra
+[connect-entra-command]: /powershell/module/microsoft.graph.entra/connect-entra
 [entraid-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
