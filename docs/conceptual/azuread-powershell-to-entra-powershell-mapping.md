@@ -13,7 +13,7 @@ zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 
 #customer intent: As a Microsoft Entra PowerShell user, I want to find the equivalents of Azure AD PowerShell cmdlets in Microsoft Entra PowerShell.
 ---
-# Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell
+# Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Entra PowerShell
 
 Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and Azure AD Preview PowerShell modules. The module has also provided parity for MSOnline cmdlets that were never migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for the cmdlet you used in Azure AD, Azure AD Preview, and MSOnline PowerShell modules.
 
