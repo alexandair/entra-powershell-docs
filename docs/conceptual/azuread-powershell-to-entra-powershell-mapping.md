@@ -241,7 +241,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 
 :::zone-end
 
-:::zone-pivot= "msonline"
+:::zone-pivot="msonline"
 
 ## MSOnline to Microsoft Entra PowerShell cmdlet map
 
