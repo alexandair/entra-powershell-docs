@@ -64,7 +64,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 | Get-AzureADContactMembership | [Get-EntraContactMembership](/powershell/module/microsoft.graph.entra/Get-EntraContactMembership)|
 | Get-AzureADContactThumbnailPhoto | [Get-EntraContactThumbnailPhoto](/powershell/module/microsoft.graph.entra/Get-EntraContactThumbnailPhoto)|
 | Get-AzureADContract | [Get-EntraContract](/powershell/module/microsoft.graph.entra/Get-EntraContract)|
-| Get-AzureADCurrentSessionInfo | [Get-EntraCurrentSessionInfo](/powershell/module/microsoft.graph.entra/Get-EntraCurrentSessionInfo)|
+| Get-AzureADCurrentSessionInfo | |
 | Get-AzureADDeletedApplication | [Get-EntraDeletedApplication](/powershell/module/microsoft.graph.entra/Get-EntraDeletedApplication)|
 | Get-AzureADMSDeletedDirectoryObject | [Get-EntraDeletedDirectoryObject](/powershell/module/microsoft.graph.entra/Get-EntraDeletedDirectoryObject)|
 | Get-AzureADMSDeletedGroup | [Get-EntraDeletedGroup](/powershell/module/microsoft.graph.entra/Get-EntraDeletedGroup)|
@@ -260,6 +260,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 | Set-MSOLDirSyncFeature | [Set-EntraDirSyncFeature](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncFeature)|
 | Set-MSOLDomainFederationSettings | [Set-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Set-EntraDomainFederationSettings)|
 | Set-MSOLPartnerInformation | [Set-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Set-EntraPartnerInformation)|
+
 :::zone-end
 
 :::zone pivot="azure-ad-preview"
@@ -272,7 +273,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 | Add-AzureADApplicationPolicy | [Add-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaApplicationPolicy)|
 | Add-AzureADMScustomSecurityAttributeDefinitionAllowedValues | [Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues)|
 | Add-AzureADMSFeatureRolloutPolicyDirectoryObject | [Add-EntraBetaLifecyclePolicyGroup](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaLifecyclePolicyGroup)|
-| Add-AzureADMSPrivilegedResource | Deprecated
+| Add-AzureADMSPrivilegedResource | Deprecated|
 | Add-AzureADScopedRoleMembership | [Add-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaScopedRoleMembership)|
 | Add-AzureADServicePrincipalPolicy | [Add-EntraBetaServicePrincipalPolicy](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaServicePrincipalPolicy)|
 | Close-AzureADMSPrivilegedRoleAssignmentRequest | Deprecated|
@@ -351,4 +352,5 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 | Set-AzureADMSUser | [Set-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaUser)|
 | Set-AzureADObjectSetting | [Set-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaObjectSetting)|
 | Set-AzureADPolicy | [Set-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPolicy)|
+
 :::zone-end
