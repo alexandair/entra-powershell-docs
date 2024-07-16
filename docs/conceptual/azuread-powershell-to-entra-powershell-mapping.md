@@ -3,7 +3,7 @@ title: "Azure AD PowerShell to Microsoft Entra PowerShell cmdlet map"
 description: "Find the equivalents of Azure AD PowerShell cmdlets in Microsoft Entra PowerShell."
 
 ms.topic: reference
-ms.date: 07/10/2024
+ms.date: 07/16/2024
 author: msewaweru
 manager: CelesteDG
 ms.author: eunicewaweru
@@ -15,11 +15,11 @@ zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 ---
 # Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell
 
-Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azure AD Preview, and MSOnline PowerShell modules. Use this page to find the equivalent cmdlet in Microsoft Entra PowerShell for the cmdlet you used in Azure AD, Azure AD Preview, and MSOnline PowerShell modules .
+Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and Azure AD Preview PowerShell modules. The module has also provided parity for MSOnline cmdlets that were never migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for the cmdlet you used in Azure AD, Azure AD Preview, and MSOnline PowerShell modules.
 
 :::zone pivot="azure-ad-powershell"
 
-## Azure AD PowerShell to Microsoft Entra PowerShell cmdlet map
+## Azure AD PowerShell to Microsoft Entra PowerShell
 
 |Azure AD PowerShell cmdlet|Microsoft Entra PowerShell cmdlet|
 |--------------------------|---------------------------------|
@@ -243,7 +243,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 
 :::zone pivot="msonline"
 
-## MSOnline to Microsoft Entra PowerShell cmdlet map
+## MSOnline to Microsoft Entra PowerShell
 
 |MSOline cmdlet|Microsoft Entra PowerShell cmdlet|
 |--------------------------|---------------------------------|
@@ -265,7 +265,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD, Azur
 
 :::zone pivot="azure-ad-preview"
 
-## Azure AD Preview to Microsoft Entra PowerShell cmdlet map
+## Azure AD Preview to Microsoft Entra PowerShell
 
 |Azure AD Preview cmdlet|Microsoft Entra PowerShell cmdlet|
 |--------------------------|---------------------------------|
