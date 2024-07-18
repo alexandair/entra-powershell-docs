@@ -64,9 +64,6 @@ conceptualContent:
         - text: Migrate to Microsoft Entra PowerShell
           url: /powershell/entra-powershell/migration-guide
           itemType: concept
-        - text: Cmdlet map
-          url: /powershell/entra-powershell/migration-guide
-          itemType: reference
 ## BAND 2 - CONCEPTUAL CONTENT END #############################################################################################################################
 
 ## BAND 3 - TOOLS CONTENT START #############################################################################################################################
