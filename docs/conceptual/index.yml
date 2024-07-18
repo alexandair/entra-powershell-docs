@@ -46,9 +46,6 @@ conceptualContent:
         - text: Quickstart guide
           url: /powershell/entra-powershell/quickstart-entra-powershell
           itemType: quickstart
-        - text: Authentication scenarios
-          url: /powershell/entra-powershell/authentication-scenarios
-          itemType: concept
     ## CARD 2 ######################
     - title: Common use cases
       links:
