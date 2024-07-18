@@ -22,21 +22,10 @@ In this article, you learn how to connect to Microsoft Entra PowerShell in the d
 To assign app roles to a service principal, you need:
 
 - A Microsoft Entra user account. If you don't already have one, you can [Create an account for free][entra-id-account].
-- One of the following roles: [Privileged Role Administrator][privileged-role-admin], [Application Administrator][app-admin] or [Cloud Application Administrator][cloud-app-admin].
+- A [Privileged Role Administrator][privileged-role-admin] role.
 - Microsoft Entra PowerShell module installed. Follow the [Install the Microsoft Graph PowerShell module][install] guide to install the module.
 
 ## Connect to Microsoft Entra PowerShell
-
-Because this is a delegated scenario, you need to grant consent to the above permissions using the interactive consent experience as at least a **Privileged Role Administrator**. Once consent is granted, any of the following Microsoft Entra roles can be assigned to the calling user:
-
-- Directory Synchronization Accounts
-- Directory Writer
-- Hybrid Identity Administrator
-- Identity Governance Administrator
-- Privileged Role Administrator
-- User Administrator
-- Application Administrator
-- Cloud Application Administrator
 
 To connect to Microsoft Entra PowerShell with the necessary least privileged permissions, run the following command: Sign in with at least a **Privileged Role Administrator** role.
 
@@ -92,8 +81,6 @@ Principal author:
 - [Daniel Bradley](https://www.linkedin.com/in/danielbradley2/) | Microsoft MVP
 
 [privileged-role-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
-[app-admin]: /entra/identity/role-based-access-control/permissions-reference#application-administrator
-[cloud-app-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
 [install]: installation.md
 [entra-id-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
 [custom-app]: create-custom-app.md
