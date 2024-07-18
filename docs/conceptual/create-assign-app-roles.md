@@ -83,4 +83,4 @@ Principal author:
 [privileged-role-admin]: /entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator
 [install]: installation.md
 [entra-id-account]: https://azure.microsoft.com/free/?WT.mc_id=A261C142F
-[custom-app]: create-custom-app.md
+[custom-app]: create-custom-application.md
