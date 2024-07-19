@@ -1,75 +1,110 @@
-### YamlMime:Landing
-
-title: Microsoft Entra PowerShell documentation
-summary: Microsoft Entra PowerShell is a scenario-focused preview module designed for managing Microsoft Entra resources in PowerShell. # < 160 chars
+### YamlMime:Hub
+#root section (Required)
+title: Microsoft Entra PowerShell documentation # < 60 chars
+summary: Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra resources. The module is part of the Microsoft Graph PowerShell SDK, enabling you to perform complex operations using simple commands.
+brand: azure
 
 metadata:
   title: Microsoft Entra PowerShell documentation
-  description: Learn about Microsoft Entra PowerShell and how you can use it to manage identities at scale and automate bulk administrative tasks in Microsoft Entra.
-  ms.topic: landing-page
-  author: omondiatieno
-  ms.author: jomondi
-  ms.date: 06/26/2024
-  ms.reviewer: stevemutungi254
+  description: Learn about Microsoft Entra PowerShell and how you can use it to manage identities at scale and automate bulk administrative tasks in Microsoft Entra. # Required; article description that is displayed in search results. < 165 chars.
+  ms.service: entra-powershell #Required; use service/product value per approved list. 
+  ms.topic: hub-page 
+  author: csmulligan
+  ms.author: cmulligan
+  ms.date: 07/19/2024
 
-landingContent:
-  - title: About Microsoft Entra PowerShell
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Overview of Microsoft Entra PowerShell
-            url: overview.md
-  - title: Installation
-    linkLists:
-      - linkListType: download
-        links:
-          - text: Install the module
-            url: installation.md
-      - linkListType: quickstart
-        links:
-          - text: Get started with Microsoft Entra PowerShell
-            url:  quickstart-entra-powershell.md
-          - text: Navigate the module
-            url: navigate-entra-powershell.md
-  - title: Common use cases
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Manage users
-            url: manage-user.md
-          - text: Manage groups
-            url: manage-groups.md
-          - text: Manage apps
-            url: manage-apps.md
-  - title: Microsoft Entra PowerShell reference
-    linkLists:
-      - linkListType: reference 
-        links:
-          - text: v1.0 cmdlet reference
-            url: https://learn.microsoft.com/powershell/module/microsoft.graph.entra/?view=entra-powershell
-          - text: Beta cmdlet reference
-            url: https://learn.microsoft.com/powershell/module/microsoft.graph.entra.beta/?view=entra-powershell-beta
-  - title: Help & support
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Microsoft Entra PowerShell best practices
-            url: entra-powershell-best-practices.md
-          - text: Microsoft Entra PowerShell FAQs
-            url: entra-powershell-faqs.yml
-          - text: Troubleshoot common errors
-            url: troubleshooting.md
-          - text: Microsoft Q&A
-            url: /answers/questions/
-  - title: What's new?
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: Discover what's new in Microsoft Entra PowerShell
-            url: whats-new-docs.md
-  - title: Migrate from Azure AD PowerShell
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: Migration steps
-            url: migration-guide.md
+## BAND 1 - HIGHLIGHTED CONTENT START #############################################################################################################################
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: What is Microsoft Entra PowerShell? 
+      itemType: overview
+      url: /powershell/entra-powershell/overview
+    # Card
+    - title: Security and usage best practices
+      itemType: concept
+      url: /powershell/entra-powershell/entra-powershell-best-practices
+    # Card
+    - title: What's new in docs?
+      itemType: whats-new
+      url: /powershell/entra-powershell/whats-new-docs
+## BAND 1 - HIGHLIGHTED CONTENT END #############################################################################################################################
+
+
+## BAND 2 - CONCEPTUAL CONTENT START #############################################################################################################################
+conceptualContent:
+  title: Get started
+  summary:  Quick access to guidance on core Microsoft Entra PowerShell features and setup.
+  items:
+    ## CARD 1 ######################
+    - title: Set up
+      links:
+        - text: Install the module
+          url: /powershell/entra-powershell/installation
+          itemType: how-to-guide
+        - text: Quickstart guide
+          url: /powershell/entra-powershell/quickstart-entra-powershell
+          itemType: quickstart
+    ## CARD 2 ######################
+    - title: Common use cases
+      links:
+        - text: Manage users
+          url: /powershell/entra-powershell/manage-user
+          itemType: how-to-guide
+        - text: Manage groups
+          url: /powershell/entra-powershell/manage-groups
+          itemType: how-to-guide
+        - text: Manage apps
+          url: /powershell/entra-powershell/manage-apps
+          itemType: how-to-guide
+    ## CARD 3 ######################
+    - title: Migrate
+      links:
+        - text: Migrate to Microsoft Entra PowerShell
+          url: /powershell/entra-powershell/migration-guide
+          itemType: concept
+    ## CARD 4 ######################
+    - title: Reference
+      links:
+        - text: v1.0 cmdlet reference
+          url: /powershell/module/microsoft.graph.entra
+          itemType: reference
+        - text: Beta cmdlet reference
+          url: /powershell/module/microsoft.graph.entra.beta
+          itemType: reference
+        - text: PowerShell Gallery
+          url: https://www.powershellgallery.com/packages?q=Microsoft.Graph.Entra
+          itemType: reference
+    
+## BAND 2 - CONCEPTUAL CONTENT END #############################################################################################################################
+
+## BAND 3 - ADDITIONAL CONTENT START #############################################################################################################################
+# additionalContent section (Optional; Remove if not applicable.)
+# Card with summary style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: Resources # Optional but good for SEO. Remove if not applicable.
+      summary: Explore additional Microsoft Entra PowerShell documentation and resources. # Optional but good for SEO. Remove if not applicable.
+      items:
+        # Card
+        - title: Microsoft Entra PowerShell FAQs
+          summary: Frequently Asked Questions about Microsoft Entra PowerShell.
+          url: /powershell/entra-powershell/entra-powershell-faqs
+        # Card
+        - title: Microsoft Q&A
+          summary: Discover questions that will help you on every step of your technical journey.
+          url: https://learn.microsoft.com/en-us/answers/questions/
+        # Card
+        - title: Blog
+          summary: Read about updates on Entra identity and access management.
+          url: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/bg-p/Identity
+        # Card
+        - title: Community
+          summary: Connect with other Microsoft Entra PowerShell users. 
+          url: https://techcommunity.microsoft.com/t5/forums/searchpage/
+  # footer (Optional; Remove if not applicable.)
+  footer: "[Provide product feedback](https://github.com/microsoftgraph/entra-powershell/issues/new/choose)"
+## BAND 3 - ADDITIONAL CONTENT END #############################################################################################################################
+
