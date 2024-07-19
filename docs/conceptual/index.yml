@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 #root section (Required)
 title: Microsoft Entra PowerShell documentation # < 60 chars
-summary: The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully compatible with all cmdlets, enabling you to perform complex operations with simple, well documented commands.  # < 400 chars
+summary: Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra resources. The module is part of the Microsoft Graph PowerShell SDK, enabling you to perform complex operations using simple commands.
 brand: azure
 
 metadata:
@@ -11,7 +11,7 @@ metadata:
   ms.topic: hub-page 
   author: csmulligan
   ms.author: cmulligan
-  ms.date: 06/26/2024
+  ms.date: 07/19/2024
 
 ## BAND 1 - HIGHLIGHTED CONTENT START #############################################################################################################################
 highlightedContent:
@@ -38,7 +38,7 @@ conceptualContent:
   summary:  Quick access to guidance on core Microsoft Entra PowerShell features and setup.
   items:
     ## CARD 1 ######################
-    - title: Set up Microsoft Entra PowerShell
+    - title: Set up
       links:
         - text: Install the module
           url: /powershell/entra-powershell/installation
@@ -59,35 +59,27 @@ conceptualContent:
           url: /powershell/entra-powershell/manage-apps
           itemType: how-to-guide
     ## CARD 3 ######################
-    - title: Migrate from Azure AD PowerShell
+    - title: Migrate
       links:
         - text: Migrate to Microsoft Entra PowerShell
           url: /powershell/entra-powershell/migration-guide
           itemType: concept
+    ## CARD 4 ######################
+    - title: Reference
+      links:
+        - text: v1.0 cmdlet reference
+          url: /powershell/module/microsoft.graph.entra
+          itemType: reference
+        - text: Beta cmdlet reference
+          url: /powershell/module/microsoft.graph.entra.beta
+          itemType: reference
+        - text: PowerShell Gallery
+          url: https://www.powershellgallery.com/packages?q=Microsoft.Graph.Entra
+          itemType: reference
+    
 ## BAND 2 - CONCEPTUAL CONTENT END #############################################################################################################################
 
-## BAND 3 - TOOLS CONTENT START #############################################################################################################################
-# tools section (Optional; Remove if not applicable.)
-tools:
-  title: Microsoft Entra PowerShell reference # Optional but good for SEO. Remove if not applicable.
-  summary: Comprehensive cmdlet and PowerShell gallery references. # Optional but good for SEO. Remove if not applicable.
-  items:
-    # Card
-    - title: v1.0 cmdlet reference
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/blackps.svg
-      url: /powershell/module/microsoft.graph.entra
-    # Card
-    - title: Beta cmdlet reference
-      imageSrc: ./media/construction.svg
-      url: /powershell/module/microsoft.graph.entra.beta
-    # Card
-    - title: PowerShell Gallery
-      imageSrc: ./media/avatar.svg
-      url: https://www.powershellgallery.com/
-## BAND 3 - TOOLS CONTENT END #############################################################################################################################
-
-## BAND 4 - ADDITIONAL CONTENT START #############################################################################################################################
+## BAND 3 - ADDITIONAL CONTENT START #############################################################################################################################
 # additionalContent section (Optional; Remove if not applicable.)
 # Card with summary style
 additionalContent:
@@ -114,5 +106,5 @@ additionalContent:
           url: https://techcommunity.microsoft.com/t5/forums/searchpage/
   # footer (Optional; Remove if not applicable.)
   footer: "[Provide product feedback](https://github.com/microsoftgraph/entra-powershell/issues/new/choose)"
-## BAND 4 - ADDITIONAL CONTENT END #############################################################################################################################
+## BAND 3 - ADDITIONAL CONTENT END #############################################################################################################################
 
