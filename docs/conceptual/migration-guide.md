@@ -16,7 +16,7 @@ Microsoft Entra PowerShell has over _98%_ compatibility with [Azure AD PowerShel
 This article details the process of running your existing AzureAD PowerShell scripts with minimal modifications using Microsoft Entra PowerShell by using the `Enable-EntraAzureADAlias` command.
 
 > [!IMPORTANT]
-> Cmdlets in Microsoft Entra PowerShell are in preview and are subject to change. We don't support use of these cmdlets in production applications.
+> Microsoft Entra PowerShell cmdlets are currently in preview and might change. We recommend using these cmdlets for testing and development purposes only, and not in production applications at this time.
 
 ## Use compatibility mode with Enable-EntraAzureADAlias
 
