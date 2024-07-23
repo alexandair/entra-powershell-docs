@@ -15,7 +15,7 @@ zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 ---
 # Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Entra PowerShell
 
-Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and Azure AD Preview PowerShell modules. The module has also provided parity for MSOnline cmdlets that were never migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for the cmdlet you used in Azure AD, Azure AD Preview, and MSOnline PowerShell modules.
+The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD and Azure AD Preview PowerShell modules. Additionally, it provides parity for MSOnline cmdlets that were not migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for those you used in the Azure AD, Azure AD Preview, and MSOnline PowerShell modules
 
 :::zone pivot="azure-ad-powershell"
 
@@ -64,7 +64,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and A
 | Get-AzureADContactMembership | [Get-EntraContactMembership](/powershell/module/microsoft.graph.entra/Get-EntraContactMembership)|
 | Get-AzureADContactThumbnailPhoto | [Get-EntraContactThumbnailPhoto](/powershell/module/microsoft.graph.entra/Get-EntraContactThumbnailPhoto)|
 | Get-AzureADContract | [Get-EntraContract](/powershell/module/microsoft.graph.entra/Get-EntraContract)|
-| Get-AzureADCurrentSessionInfo | |
+| Get-AzureADCurrentSessionInfo | [Get-EntraContext](/powershell/module/microsoft.graph.entra/get-entracontext)|
 | Get-AzureADDeletedApplication | [Get-EntraDeletedApplication](/powershell/module/microsoft.graph.entra/Get-EntraDeletedApplication)|
 | Get-AzureADMSDeletedDirectoryObject | [Get-EntraDeletedDirectoryObject](/powershell/module/microsoft.graph.entra/Get-EntraDeletedDirectoryObject)|
 | Get-AzureADMSDeletedGroup | [Get-EntraDeletedGroup](/powershell/module/microsoft.graph.entra/Get-EntraDeletedGroup)|
@@ -245,21 +245,21 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and A
 
 ## MSOnline to Microsoft Entra PowerShell
 
-|MSOline cmdlet|Microsoft Entra PowerShell cmdlet|
+|MSOnline cmdlet|Microsoft Entra PowerShell cmdlet|
 |--------------------------|---------------------------------|
-| Convert-MSOLFederatedUser | [Convert-EntraFederatedUser](/powershell/module/microsoft.graph.entra/Convert-EntraFederatedUser)|
-| Get-MSOLAccountSku | [Get-EntraAccountSku](/powershell/module/microsoft.graph.entra/Get-EntraAccountSku)|
-| Get-MSOLDirSyncConfiguration | [Get-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncConfiguration)|
-| Get-MSOLDirSyncfeature | [Get-EntraDirSyncfeature](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncfeature)|
-| Get-MSOLDomainFederationSettings | [Get-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Get-EntraDomainFederationSettings)|
-| Get-MSOLFederationProperty | [Get-EntraFederationProperty](/powershell/module/microsoft.graph.entra/Get-EntraFederationProperty)|
-| Get-MSOLHasObjectsWithDirSyncProvisioningError | [Get-EntraHasObjectsWithDirSyncProvisioningError](/powershell/module/microsoft.graph.entra/Get-EntraHasObjectsWithDirSyncProvisioningError)|
-| Get-MSOLPartnerInformation | [Get-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Get-EntraPartnerInformation)|
-| Get-MSOLPasswordPolicy | [Get-EntraPasswordPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPasswordPolicy)|
-| Set-MSOLDirSyncConfiguration | [Set-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncConfiguration)|
-| Set-MSOLDirSyncFeature | [Set-EntraDirSyncFeature](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncFeature)|
-| Set-MSOLDomainFederationSettings | [Set-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Set-EntraDomainFederationSettings)|
-| Set-MSOLPartnerInformation | [Set-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Set-EntraPartnerInformation)|
+| Convert-MsolFederatedUser | [Convert-EntraFederatedUser](/powershell/module/microsoft.graph.entra/Convert-EntraFederatedUser)|
+| Get-MsolAccountSku | [Get-EntraAccountSku](/powershell/module/microsoft.graph.entra/Get-EntraAccountSku)|
+| Get-MsolDirSyncConfiguration | [Get-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncConfiguration)|
+| Get-MsolDirSyncfeature | [Get-EntraDirSyncfeature](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncfeature)|
+| Get-MsolDomainFederationSettings | [Get-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Get-EntraDomainFederationSettings)|
+| Get-MsolFederationProperty | [Get-EntraFederationProperty](/powershell/module/microsoft.graph.entra/Get-EntraFederationProperty)|
+| Get-MsolHasObjectsWithDirSyncProvisioningError | [Get-EntraHasObjectsWithDirSyncProvisioningError](/powershell/module/microsoft.graph.entra/Get-EntraHasObjectsWithDirSyncProvisioningError)|
+| Get-MsolPartnerInformation | [Get-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Get-EntraPartnerInformation)|
+| Get-MsolPasswordPolicy | [Get-EntraPasswordPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPasswordPolicy)|
+| Set-MsolDirSyncConfiguration | [Set-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncConfiguration)|
+| Set-MsolDirSyncFeature | [Set-EntraDirSyncFeature](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncFeature)|
+| Set-MsolDomainFederationSettings | [Set-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Set-EntraDomainFederationSettings)|
+| Set-MsolPartnerInformation | [Set-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Set-EntraPartnerInformation)|
 
 :::zone-end
 
@@ -348,7 +348,7 @@ Microsoft Entra PowerShell module has over 98% compatibility with Azure AD and A
 | Set-AzureADMSPrivilegedRoleAssignmentRequest | [Set-EntraBetaPrivilegedRoleSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPrivilegedRoleSetting)|
 | Set-AzureADMSPrivilegedRoleSetting | [Set-EntraBetaRoleDefinition](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaRoleDefinition)|
 | Set-AzureADMSServicePrincipal | [Set-EntraBetaServicePrincipal](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaServicePrincipal)|
-| Set-AzureADMSTrustFrameworkPolicy | |
+| Set-AzureADMSTrustFrameworkPolicy | [Set-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/set-entrabetatrustframeworkpolicy)|
 | Set-AzureADMSUser | [Set-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaUser)|
 | Set-AzureADObjectSetting | [Set-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaObjectSetting)|
 | Set-AzureADPolicy | [Set-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPolicy)|

@@ -17,9 +17,10 @@ groups:
   title: Legacy PowerShell modules
   prompt: Choose the module
   pivots:
+  pivots:
   - id: azure-ad-powershell
     title: Azure AD PowerShell
-  - id: msonline
-    title: MSOnline
   - id: azure-ad-preview
     title: Azure AD Preview
+  - id: msonline
+    title: MSOnline
