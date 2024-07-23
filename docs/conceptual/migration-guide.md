@@ -15,6 +15,9 @@ ms.author: cmulligan
 Microsoft Entra PowerShell has over _98%_ compatibility with [Azure AD PowerShell][azuread-ps] module.
 This article details the process of running your existing AzureAD PowerShell scripts with minimal modifications using Microsoft Entra PowerShell by using the `Enable-EntraAzureADAlias` command.
 
+> [!IMPORTANT]
+> Cmdlets in Microsoft Entra PowerShell are in preview and are subject to change. We don't support use of these cmdlets in production applications.
+
 ## Use compatibility mode with Enable-EntraAzureADAlias
 
 The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias][enable-entraazureadalias] reference documentation.

@@ -11,7 +11,10 @@ ms.reviewer: stevemutungi
 
 #customer intent: As an IT admin, I want to learn about Microsoft Entra PowerShell, so that I can get started with using the module.
 ---
-# Microsoft Entra PowerShell overview
+# Microsoft Entra PowerShell overview (preview)
+
+> [!IMPORTANT]
+> Cmdlets in Microsoft Entra PowerShell are in preview and are subject to change. We don't support use of these cmdlets in production applications.
 
 The Microsoft Entra PowerShell module is a scenario-focused command-line tool that allows administrators to manage and automate Microsoft Entra product family resources programmatically. Its key capabilities include efficiently managing users, groups, applications, service principals, policies, and more. The module builds upon and is part of the Microsoft Graph PowerShell SDK and is fully interoperable with all cmdlets in the Microsoft Graph PowerShell SDK, enabling you to perform complex operations with simple, well documented commands. The module also offers a backward compatibility option with the [deprecated Azure AD PowerShell Module][azureAdModuleDeprecationLink] to accelerate migration. We recommend using [PowerShell version 7 or higher][powershellInstallLink] with the module on all platforms, including Windows, Linux, and macOS.
 
