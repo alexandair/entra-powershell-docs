@@ -241,28 +241,6 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 
 :::zone-end
 
-:::zone pivot="msonline"
-
-## MSOnline to Microsoft Entra PowerShell
-
-|MSOnline cmdlet|Microsoft Entra PowerShell cmdlet|
-|--------------------------|---------------------------------|
-| Convert-MsolFederatedUser | [Convert-EntraFederatedUser](/powershell/module/microsoft.graph.entra/Convert-EntraFederatedUser)|
-| Get-MsolAccountSku | [Get-EntraAccountSku](/powershell/module/microsoft.graph.entra/Get-EntraAccountSku)|
-| Get-MsolDirSyncConfiguration | [Get-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncConfiguration)|
-| Get-MsolDirSyncfeature | [Get-EntraDirSyncfeature](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncfeature)|
-| Get-MsolDomainFederationSettings | [Get-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Get-EntraDomainFederationSettings)|
-| Get-MsolFederationProperty | [Get-EntraFederationProperty](/powershell/module/microsoft.graph.entra/Get-EntraFederationProperty)|
-| Get-MsolHasObjectsWithDirSyncProvisioningError | [Get-EntraHasObjectsWithDirSyncProvisioningError](/powershell/module/microsoft.graph.entra/Get-EntraHasObjectsWithDirSyncProvisioningError)|
-| Get-MsolPartnerInformation | [Get-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Get-EntraPartnerInformation)|
-| Get-MsolPasswordPolicy | [Get-EntraPasswordPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPasswordPolicy)|
-| Set-MsolDirSyncConfiguration | [Set-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncConfiguration)|
-| Set-MsolDirSyncFeature | [Set-EntraDirSyncFeature](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncFeature)|
-| Set-MsolDomainFederationSettings | [Set-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Set-EntraDomainFederationSettings)|
-| Set-MsolPartnerInformation | [Set-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Set-EntraPartnerInformation)|
-
-:::zone-end
-
 :::zone pivot="azure-ad-preview"
 
 ## Azure AD Preview to Microsoft Entra PowerShell
@@ -354,3 +332,26 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Set-AzureADPolicy | [Set-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPolicy)|
 
 :::zone-end
+
+:::zone pivot="msonline"
+
+## MSOnline to Microsoft Entra PowerShell
+
+|MSOnline cmdlet|Microsoft Entra PowerShell cmdlet|
+|--------------------------|---------------------------------|
+| Convert-MsolFederatedUser | [Convert-EntraFederatedUser](/powershell/module/microsoft.graph.entra/Convert-EntraFederatedUser)|
+| Get-MsolAccountSku | [Get-EntraAccountSku](/powershell/module/microsoft.graph.entra/Get-EntraAccountSku)|
+| Get-MsolDirSyncConfiguration | [Get-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncConfiguration)|
+| Get-MsolDirSyncfeature | [Get-EntraDirSyncfeature](/powershell/module/microsoft.graph.entra/Get-EntraDirSyncfeature)|
+| Get-MsolDomainFederationSettings | [Get-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Get-EntraDomainFederationSettings)|
+| Get-MsolFederationProperty | [Get-EntraFederationProperty](/powershell/module/microsoft.graph.entra/Get-EntraFederationProperty)|
+| Get-MsolHasObjectsWithDirSyncProvisioningError | [Get-EntraHasObjectsWithDirSyncProvisioningError](/powershell/module/microsoft.graph.entra/Get-EntraHasObjectsWithDirSyncProvisioningError)|
+| Get-MsolPartnerInformation | [Get-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Get-EntraPartnerInformation)|
+| Get-MsolPasswordPolicy | [Get-EntraPasswordPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPasswordPolicy)|
+| Set-MsolDirSyncConfiguration | [Set-EntraDirSyncConfiguration](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncConfiguration)|
+| Set-MsolDirSyncFeature | [Set-EntraDirSyncFeature](/powershell/module/microsoft.graph.entra/Set-EntraDirSyncFeature)|
+| Set-MsolDomainFederationSettings | [Set-EntraDomainFederationSettings](/powershell/module/microsoft.graph.entra/Set-EntraDomainFederationSettings)|
+| Set-MsolPartnerInformation | [Set-EntraPartnerInformation](/powershell/module/microsoft.graph.entra/Set-EntraPartnerInformation)|
+
+:::zone-end
+
