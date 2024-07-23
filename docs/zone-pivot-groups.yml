@@ -12,3 +12,14 @@ groups:
     title: Linux
   - id: macos
     title: macOS
+## Zone pivot with Azure AD, MSonline, and Azure AD Preview module options
+- id: entra-powershell-legacy-modules
+  title: Legacy PowerShell modules
+  prompt: Choose the module
+  pivots:
+  - id: azure-ad-powershell
+    title: Azure AD PowerShell
+  - id: azure-ad-preview
+    title: Azure AD Preview
+  - id: msonline
+    title: MSOnline
