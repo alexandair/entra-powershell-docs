@@ -1,19 +1,19 @@
 ---
-title: Assign app Roles
+title: Assign app Roles to a service principal
 description: Learn how to assign application permissions to a service principal in Microsoft Entra PowerShell.
 author: omondiatieno
 manager: CelesteDG
 ms.topic: how-to
-ms.date: 07/18/2024
+ms.date: 07/24/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 
 #Customer intent: As an IT admin managing server principal permissions in Microsoft Entra ID, I want to learn how to assign new permissions in Microsoft Entra PowerShell so that I can automate application consent.
 ---
 
-# Assign app roles
+# Assign app roles to a service principal
 
-Application permissions in Microsoft Graph assigned to service principals are also known as App Roles. App Roles allow the application to access data on its own, without a signed in user. This is useful for implementing automation when using Microsoft Entra PowerShell.
+Application permissions in Microsoft Graph assigned to service principals are also known as app roles. App roles allow the application to access data on its own, without a signed in user. This is useful for implementing automation when using Microsoft Entra PowerShell.
 
 In this article, you learn how to connect to Microsoft Entra PowerShell in the delegated context and assign application permissions to a service principal to support an automation scenario.
 
@@ -43,13 +43,28 @@ Use the following example to assign the `User.Read.All` permission to your servi
 
 ```powershell
 #Get service principal
-$sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
+$sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'Contos App 1'"
 #Get Graph App Id
 $graphid = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").id
 #Get permission Id
 $permission = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").approles | ` Where {$_.Value -eq ‘User.Read.All’}
 #Assign the permission
-New-EntraServiceAppRoleAssignment -PrincipalId $sp.id -ResourceId $graphid -Id $permissions.id -ObjectId $sp.id
+New-EntraServiceAppRoleAssignment -PrincipalId $sp.id -ResourceId $graphid -Id $permission.id -ObjectId $sp.id | fl
+```
+
+```output
+ObjectId             : Aa11Ba22Cc33Dd44Ee55Ff66Aa77Bb88Cc99Dd00Ee1                   
+AppRoleId            : df021288-bdef-4463-88db-98f22de89214
+CreatedDateTime      : 7/24/2024 12:11:32 PM
+DeletedDateTime      :
+Id                   : AAa11Ba22Cc33Dd44Ee55Ff66Aa77Bb88Cc99Dd00Ee1 
+PrincipalDisplayName : Contos App 1
+PrincipalId          : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+PrincipalType        : ServicePrincipal
+ResourceDisplayName  : Microsoft Graph
+ResourceId           : bbbbbbbb-1111-2222-3333-cccccccccccc
+AdditionalProperties : {[@odata.context,
+                       https://graph.microsoft.com/v1.0/$metadata#servicePrincipals('aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb')/appRoleAssignments/$entity]}
 ```
 
 ## Assign multiple permissions
@@ -62,12 +77,42 @@ $sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
 #Get Graph App Id
 $graphappid = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").id
 #Get permission Id
-$permissions = (Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").approles | `
-Where {$_.Value -in $GetPermissions}
+$permissions = (Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").approles | ` Where {$_.Value -in $GetPermissions}
 #Assign the permission
 Foreach ($perm in $permissions){
     New-EntraServiceAppRoleAssignment -PrincipalId $sp.id -ResourceId $graphid -Id $perm.id -ObjectId $sp.id
 }
+```
+
+```output
+ObjectId             : OPjyvJFY2EiTO8q3lAe1O2fUYYvw-GlIn-RvMs-7Jrs
+                       Bb22Cc33Dd44Ee55Ff66Aa77Bb88-9999-0000-1111
+AppRoleId            : b0afded3-3588-46d8-8b3d-9842eff778da
+CreatedDateTime      : 7/24/2024 12:53:59 PM
+DeletedDateTime      :
+Id                   : Bb22Cc33Dd44Ee55Ff66Aa77Bb88-9999-0000-1111
+PrincipalDisplayName : Contos App 1
+PrincipalId          : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+PrincipalType        : ServicePrincipal
+ResourceDisplayName  : Microsoft Graph
+ResourceId           : bbbbbbbb-1111-2222-3333-cccccccccccc
+AdditionalProperties : {[@odata.context,
+                       https://graph.microsoft.com/v1.0/$metadata#servicePrincipals('aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb')/appRoleAssignments/$entity]}
+
+
+ObjectId             : Aa11Ba22Cc33Dd44Ee55Ff66Aa77Bb88Cc99Dd00Ee1 
+AppRoleId            : df021288-bdef-4463-88db-98f22de89214
+CreatedDateTime      : 7/24/2024 12:54:00 PM
+DeletedDateTime      :
+Id                   : Aa11Ba22Cc33Dd44Ee55Ff66Aa77Bb88Cc99Dd00Ee1 
+PrincipalDisplayName : Contos App 1
+PrincipalId          : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+PrincipalType        : ServicePrincipal
+ResourceDisplayName  : Microsoft Graph
+ResourceId           : bbbbbbbb-1111-2222-3333-cccccccccccc
+AdditionalProperties : {[@odata.context,
+                       https://graph.microsoft.com/v1.0/$metadata#servicePrincipals('aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb')/appRoleAssignments/$entity]}
+ 
 ```
 
 Use the [Microsoft Graph permissions reference](https://learn.microsoft.com/graph/permissions-reference) for guidance on selecting the correct permission for your application.
