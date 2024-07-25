@@ -44,12 +44,23 @@ Use the following example to assign the `User.Read.All` permission to your servi
 ```powershell
 #Get service principal
 $sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'Contos App 1'"
+
+$filterParams = @{
+    Filter = "AppId eq '00000003-0000-0000-c000-000000000000'"
+}
 #Get Graph App Id
-$graphid = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").id
+$graphId = (Get-EntraServicePrincipal @filterParams).Id
 #Get permission Id
-$permission = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").approles | ` Where {$_.Value -eq ‘User.Read.All’}
+$permission = (Get-EntraServicePrincipal @filterParams).AppRoles | Where-Object {$_.Value -eq 'User.Read.All'}
 #Assign the permission
-New-EntraServiceAppRoleAssignment -PrincipalId $sp.id -ResourceId $graphid -Id $permission.id -ObjectId $sp.id | fl
+$params = @{
+    PrincipalId = $sp.Id
+    ResourceId  = $graphId
+    Id          = $permission.Id
+    ObjectId    = $sp.Id
+}
+
+New-EntraServiceAppRoleAssignment @params | Format-List
 ```
 
 ```output
