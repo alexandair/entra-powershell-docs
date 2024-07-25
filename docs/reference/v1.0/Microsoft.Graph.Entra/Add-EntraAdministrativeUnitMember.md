@@ -13,6 +13,7 @@ author: msewaweru
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
 online version:
+
 schema: 2.0.0
 ---
 
