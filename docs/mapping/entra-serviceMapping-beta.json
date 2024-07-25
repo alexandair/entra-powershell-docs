@@ -47,7 +47,7 @@
     "Get-EntraBetaContract": "Contracts",
     "Get-EntraBetaCurrentSessionInfo": "Session",
     "Get-EntraBetaDeletedApplication": "Applications",
-    "Get-EntraBetaDeletedDirectoryObject": "",
+    "Get-EntraBetaDeletedDirectoryObject": "Directory",
     "Get-EntraBetaDeletedGroup": "Groups",
     "Get-EntraBetaDevice": "Devices",
     "Get-EntraBetaDomainFedrationSettings":"Domains",
