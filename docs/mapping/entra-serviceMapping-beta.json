@@ -152,7 +152,7 @@
     "New-EntraBetaGroupAppRoleAssignment": "Groups",
     "New-EntraBetaGroupLifecyclePolicy": "Groups",
     "New-EntraBetaIdentityProvider": "Identity and Access",
-    "New-EntraBetaInvitation": "Invitation",
+    "New-EntraBetaInvitation": "Identity and Access",
     "New-EntraBetaPolicy":"Utility",
     "New-EntraBetaObjectSetting":"Utility",
     "New-EntraBetaOauth2PermissionGrant":"Identity and Access",

@@ -130,7 +130,7 @@
   "New-EntraGroupAppRoleAssignment": "Groups",
   "New-EntraGroupLifecyclePolicy": "Groups",
   "New-EntraIdentityProvider": "Identity and Access",
-  "New-EntraInvitation": "Invitation",
+  "New-EntraInvitation": "Identity and Access",
   "New-EntraNamedLocationPolicy": "Locations",
   "New-EntraPermissionGrantConditionSet": "Identity and Access",
   "New-EntraPermissionGrantPolicy": "Identity and Access",
