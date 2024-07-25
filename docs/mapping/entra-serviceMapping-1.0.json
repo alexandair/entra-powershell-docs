@@ -29,7 +29,7 @@
   "Get-EntraApplicationOwner": "Applications",
   "Get-EntraApplicationPasswordCredential": "Applications",
   "Get-EntraApplicationProxyApplication": "Application Proxy Application Management",
-  "Get-EntraApplicationProxyApplicationConnectorGroup": "Application Proxy Connect Management",
+  "Get-EntraApplicationProxyApplicationConnectorGroup": "Application Proxy Connector Management",
   "Get-EntraApplicationProxyConnector": "Application Proxy Connector Management",
   "Get-EntraApplicationProxyConnectorGroup": "Application Proxy Connector Management",
   "Get-EntraApplicationProxyConnectorGroupMember": "Application Proxy Connector Management",

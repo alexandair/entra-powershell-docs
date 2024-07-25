@@ -29,7 +29,7 @@
     "Get-EntraBetaApplicationOwner": "Applications",
     "Get-EntraBetaApplicationPasswordCredential": "Applications",
     "Get-EntraBetaApplicationProxyApplication": "Application Proxy Application Management",
-    "Get-EntraBetaApplicationProxyApplicationConnectorGroup": "Application Proxy Connect Management",
+    "Get-EntraBetaApplicationProxyApplicationConnectorGroup": "Application Proxy Connector Management",
     "Get-EntraBetaApplicationProxyConnector": "Application Proxy Connector Management",
     "Get-EntraBetaApplicationProxyConnectorGroup": "Application Proxy Connector Management",
     "Get-EntraBetaApplicationProxyConnectorGroupMember": "Application Proxy Connector Management",
