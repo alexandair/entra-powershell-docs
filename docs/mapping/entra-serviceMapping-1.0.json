@@ -114,7 +114,7 @@
   "Get-EntraUserRegisteredDevice": "Users",
   "Get-EntraUserThumbnailPhoto": "Users",
   "New-EntraAdministrativeUnit": "Administrative Units",
-  "New-EntraOAuth2PermissionGrant":"Identity and Access",
+  "New-EntraOauth2PermissionGrant":"Identity and Access",
   "New-EntraApplication": "Applications",
   "New-EntraApplicationExtensionProperty": "Applications",
   "New-EntraApplicationKey": "Applications",
