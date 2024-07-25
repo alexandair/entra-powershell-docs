@@ -63,7 +63,7 @@ $params = @{
 New-EntraServiceAppRoleAssignment @params | Format-List
 ```
 
-```output
+```Output
 ObjectId             : Aa11Ba22Cc33Dd44Ee55Ff66Aa77Bb88Cc99Dd00Ee1                   
 AppRoleId            : df021288-bdef-4463-88db-98f22de89214
 CreatedDateTime      : 7/24/2024 12:11:32 PM
