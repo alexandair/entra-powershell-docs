@@ -81,17 +81,32 @@ AdditionalProperties : {[@odata.context,
 ## Assign multiple permissions
 
 ```powershell
-#Define your required permissions
-$GetPermissions = "User.Read.All", "AuditLog.Read.All"
-#Get service principal
-$sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
-#Get Graph App Id
-$graphappid = (Get-EntraServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").id
-#Get permission Id
-$permissions = (Get-MgServicePrincipal -Filter "AppId eq '00000003-0000-0000-c000-000000000000'").approles | ` Where {$_.Value -in $GetPermissions}
-#Assign the permission
-Foreach ($perm in $permissions){
-    New-EntraServiceAppRoleAssignment -PrincipalId $sp.id -ResourceId $graphid -Id $perm.id -ObjectId $sp.id
+# Define your required permissions
+$GetPermissions = 'Application.Read.All', 'User.Read.All'
+
+# Get service principal
+$Sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
+
+# Get Graph App Id
+$GraphAppFilterParams = @{
+    Filter = "AppId eq '00000003-0000-0000-c000-000000000000'"
+}
+
+$GraphAppId = (Get-EntraServicePrincipal @GraphAppFilterParams).Id
+
+# Get permission Id
+$Permissions = (Get-MgServicePrincipal @GraphAppFilterParams).AppRoles | Where-Object { $_.Value -in $GetPermissions }
+
+# Assign the permission
+foreach ($Perm in $Permissions) {
+    $Params = @{
+        PrincipalId = $Sp.Id
+        ResourceId  = $GraphAppId
+        Id          = $Perm.Id
+        ObjectId    = $Sp.Id
+    }
+    
+    New-EntraServiceAppRoleAssignment @Params
 }
 ```
 
