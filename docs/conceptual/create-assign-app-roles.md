@@ -106,7 +106,7 @@ foreach ($Perm in $Permissions) {
         ObjectId    = $Sp.Id
     }
     
-    New-EntraServiceAppRoleAssignment @Params
+    New-EntraServiceAppRoleAssignment @Params | Format-List
 }
 ```
 
