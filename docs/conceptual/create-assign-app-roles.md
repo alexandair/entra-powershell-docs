@@ -141,7 +141,7 @@ AdditionalProperties : {[@odata.context,
  
 ```
 
-Use the [Microsoft Graph permissions reference](/graph/permissions-reference) for guidance on selecting the correct permission for your application.
+Refer to the [Microsoft Graph permissions reference](/graph/permissions-reference) to help you select the appropriate permission for your application.
 
 ## Contributors
 
