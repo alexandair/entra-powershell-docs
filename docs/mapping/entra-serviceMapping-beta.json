@@ -1,4 +1,4 @@
-{ "Add-EntraBetaAdministrativeUnitMember": "Users",
+{ "Add-EntraBetaAdministrativeUnitMember": "Administrative Units",
     "Add-EntraBetaApplicationOwner": "Applications",
     "Add-EntraBetaApplicationPolicy":"Applications",
     "Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues":"Identity and Access",
