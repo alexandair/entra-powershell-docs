@@ -1,5 +1,5 @@
 ---
-title: Select-EntraGroupIdsUserIsMemberOf.
+title: Select-EntraGroupIdsUserIsMemberOf
 description: This article provides details on the Select-EntraGroupIdsUserIsMemberOf command.
 
 
@@ -11,7 +11,8 @@ manager: CelesteDG
 author: msewaweru
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
-online version:
+online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Select-EntraGroupIdsUserIsMemberOf
+
 schema: 2.0.0
 ---
 

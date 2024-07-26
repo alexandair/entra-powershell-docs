@@ -32,7 +32,7 @@ foreach ($module in $RequiredModules) {
 
 ```powershell
 $RequiredModules = (@'
-Microsoft.Graph.Beta.Applications 
+Microsoft.Graph.Beta.Applications
 Microsoft.Graph.Beta.Users
 Microsoft.Graph.Beta.Users.Actions
 Microsoft.Graph.Beta.Users.Functions
@@ -42,7 +42,6 @@ Microsoft.Graph.Beta.Identity.Governance
 Microsoft.Graph.Beta.Identity.SignIns
 Microsoft.Graph.Beta.Reports
 '@).Split("`n")
-
 # Check if the pre-requisite modules are installed and install them if needed
 foreach ($module in $RequiredModules) {
     Write-Host -ForegroundColor Yellow -BackgroundColor DarkBlue "Checking for $module"
@@ -79,7 +78,6 @@ Microsoft.Graph.Beta.Identity.Governance
 Microsoft.Graph.Beta.Identity.SignIns
 Microsoft.Graph.Beta.Reports
 '@).Split("`n")
-
 # Check if the pre-requisite modules are installed and install them if needed
 foreach ($module in $RequiredModules) {
     Write-Host -ForegroundColor Yellow -BackgroundColor DarkBlue "Checking for $module"

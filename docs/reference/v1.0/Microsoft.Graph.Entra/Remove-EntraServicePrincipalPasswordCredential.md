@@ -1,6 +1,6 @@
 ---
-title: Get-EntraBetaAuditSignInLogs.
-description: This article provides details on the Get-EntraBetaAuditSignInLogs command.
+title: Remove-EntraServicePrincipalPasswordCredential
+description: This article provides details on the Remove-EntraServicePrincipalPasswordCredential command.
 
 
 ms.topic: reference
@@ -11,7 +11,8 @@ manager: CelesteDG
 author: msewaweru
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
-online version:
+online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Remove-EntraServicePrincipalPasswordCredential
+
 schema: 2.0.0
 ---
 

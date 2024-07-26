@@ -1,5 +1,5 @@
 ---
-title: Get-EntraServiceAppRoleAssignedTo.
+title: Get-EntraServiceAppRoleAssignedTo
 description: This article provides details on the Get-EntraServiceAppRoleAssignedTo command.
 
 
@@ -11,7 +11,8 @@ manager: CelesteDG
 author: msewaweru
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
-online version:
+online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Get-EntraServiceAppRoleAssignedTo
+
 schema: 2.0.0
 ---
 
