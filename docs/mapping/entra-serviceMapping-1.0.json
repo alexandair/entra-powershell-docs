@@ -163,7 +163,7 @@
   "New-EntraOauth2PermissionGrant": "Identity and Access",
   "New-EntraConditionalAccessPolicy": "Identity and Access",
   "New-EntraIdentityProvider": "Identity and Access",
-  "New-EntraInvitation":"Identity and Access",
+  "New-EntraInvitation":"Test Group",
   "New-EntraPermissionGrantConditionSet": "Identity and Access",
   "New-EntraPermissionGrantPolicy": "Identity and Access",
   "New-EntraRoleAssignment": "Identity and Access",
