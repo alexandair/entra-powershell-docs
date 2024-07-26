@@ -40,11 +40,12 @@ This cmdlet is used to invite a new external user to your directory.
 
 ## Examples
 
-### Example 1: Invite a new external user to your directory.
+### Example 1: Invite a new external user to your directory
 
 ```powershell
 New-EntraInvitation -InvitedUserEmailAddress someexternaluser@externaldomain.com -SendInvitationMessage $True -InviteRedirectUrl "https://myapps.onmicrosoft.com"
 ```
+
 ```output
 Id                      : 3d8a715c-d652-4f28-80ed-8cc58bf4dbb9
 InviteRedeemUrl         : https://login.microsoftonline.com/redeem?rd=https%3a%2f%2finvitations.microsoft.com%2fredeem%2f%3ftenant%3dd5aec55f-2d12-4442-8d2f
@@ -79,14 +80,16 @@ Status                  : PendingAcceptance
 ObjectId                : 3d8a715c-d652-4f28-80ed-8cc58bf4dbb9
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
+
 This example sent an email to the user who's email address is in the -InvitedUserEmailAddress parameter.
 When the user accepts the invitation, they're forwarded to the url as specified in the -InviteRedirectUrl parameter.
 
-### Example 2: Invite a new external user to your directory with InvitedUserDisplayName parameter.
+### Example 2: Invite a new external user to your directory with InvitedUserDisplayName parameter
 
 ```powershell
 New-EntraInvitation -InvitedUserEmailAddress someexternaluser@externaldomain.com -SendInvitationMessage $True -InviteRedirectUrl "https://myapps.onmicrosoft.com" -InvitedUserDisplayName "microsoftuser"
 ```
+
 ```output
 Id                      : 3d8a715c-d652-4f28-80ed-8cc58bf4dbb9
 InviteRedeemUrl         : https://login.microsoftonline.com/redeem?rd=https%3a%2f%2finvitations.microsoft.com%2fredeem%2f%3ftenant%3dd5aec55f-2d12-4442-8d2f
@@ -122,9 +125,10 @@ ObjectId                : 3d8a715c-d652-4f28-80ed-8cc58bf4dbb9
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 
 ```
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserDisplayName parameter.
 
-### Example 3: Invite a new external user to your directory with InvitedUserMessageInfo parameter.
+### Example 3: Invite a new external user to your directory with InvitedUserMessageInfo parameter
 
 ```powershell
 $a= New-Object Microsoft.Open.MSGraph.Model.InvitedUserMessageInfo
@@ -132,6 +136,7 @@ $a= New-Object Microsoft.Open.MSGraph.Model.InvitedUserMessageInfo
 >> $a.MessageLanguage = "EN"
 >> New-EntraInvitation -InvitedUserEmailAddress "someexternaluser@externaldomain.com" -SendInvitationMessage $True -InviteRedirectUrl "https://myapps.microsoft.com" -InvitedUserMessageInfo $a
 ```
+
 ```output
 Id                      : b47dfdd8-727e-46ae-8f72-807166f09e6c
 InviteRedeemUrl         : https://login.microsoftonline.com/redeem?rd=https%3a%2f%2finvitations.microsoft.com%2fredeem%2f%3ftenant%3dd5aec55f-2d12-4442-8d2f
@@ -166,9 +171,10 @@ Status                  : PendingAcceptance
 ObjectId                : b47dfdd8-727e-46ae-8f72-807166f09e6c
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserMessageInfo parameter.
 
-### Example 4: Invite a new external user to your directory with InvitedUserType parameter.
+### Example 4: Invite a new external user to your directory with InvitedUserType parameter
 
 ```powershell
  New-EntraInvitation -InvitedUserEmailAddress "someexternaluser@externaldomain.com" -SendInvitationMessage $True -InviteRedirectUrl "https://myapps.microsoft.com"  -InvitedUserType Guest
@@ -208,6 +214,7 @@ Status                  : PendingAcceptance
 ObjectId                : b47dfdd8-727e-46ae-8f72-807166f09e6c
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserType parameter.
 
 ## Parameters
