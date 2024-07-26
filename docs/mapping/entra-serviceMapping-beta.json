@@ -8,7 +8,6 @@
   "Remove-EntraBetaAdministrativeUnit": "Administrative Units",
   "Remove-EntraBetaAdministrativeUnitMember": "Administrative Units",
   "Set-EntraBetaAdministrativeUnit": "Administrative Units",
-
   "Get-EntraBetaApplicationProxyApplication": "Application Proxy Application Management",
   "New-EntraBetaApplicationProxyApplication": "Application Proxy Application Management",
   "Remove-EntraBetaApplicationProxyApplication": "Application Proxy Application Management",
@@ -25,7 +24,6 @@
   "Remove-EntraBetaApplicationProxyConnectorGroup": "Application Proxy Connector Management",
   "Set-EntraBetaApplicationProxyConnector": "Application Proxy Connector Management",
   "Set-EntraBetaApplicationProxyConnectorGroup": "Application Proxy Connector Management",
-
   "Add-EntraBetaApplicationOwner": "Applications",
   "Add-EntraBetaApplicationPolicy": "Applications",
   "Get-EntraBetaApplication": "Applications",
@@ -61,7 +59,6 @@
   "Set-EntraBetaApplication": "Applications",
   "Set-EntraBetaApplicationLogo": "Applications",
   "Set-EntraBetaApplicationVerifiedPublisher": "Applications",
-
   "Get-EntraBetaTrustedCertificateAuthority": "Certificate Authorities",
   "Get-EntraBetaTrustFrameworkPolicy": "Certificate Authorities",
   "New-EntraBetaTrustedCertificateAuthority": "Certificate Authorities",
@@ -70,7 +67,6 @@
   "Remove-EntraBetaTrustFrameworkPolicy": "Certificate Authorities",
   "Set-EntraBetaTrustedCertificateAuthority": "Certificate Authorities",
   "Set-EntraBetaTrustFrameworkPolicy": "Certificate Authorities",
-
   "Get-EntraBetaContact": "Contacts",
   "Get-EntraBetaContactDirectReport": "Contacts",
   "Get-EntraBetaContactManager": "Contacts",
@@ -78,7 +74,6 @@
   "Get-EntraBetaContactThumbnailPhoto": "Contacts",
   "Remove-EntraBetaContact": "Contacts",
   "Get-EntraBetaContract": "Contracts",
-  
   "Add-EntraBetaDeviceRegisteredOwner": "Devices",
   "Add-EntraBetaDeviceRegisteredUser": "Devices",
   "Get-EntraBetaDevice": "Devices",
@@ -89,7 +84,6 @@
   "Remove-EntraBetaDeviceRegisteredOwner": "Devices",
   "Remove-EntraBetaDeviceRegisteredUser": "Devices",
   "Set-EntraBetaDevice": "Devices",
-
   "Add-EntraBetaFeatureRolloutPolicyDirectoryObject": "Directory",
   "Add-EntraBetaDirectoryRoleMember": "Directory",
   "Enable-EntraBetaDirectoryRole": "Directory",
@@ -110,7 +104,6 @@
   "Set-EntraBetaDirectorySetting": "Directory",
   "Set-EntraBetaDirSyncConfiguration": "Directory",
   "Set-EntraBetaDirSyncFeature": "Directory",
-
   "Get-EntraBetaDomainFedrationSettings": "Domains",
   "Get-EntraBetaDomain": "Domains",
   "Get-EntraBetaDomainFederationSettings": "Domains",
@@ -121,10 +114,8 @@
   "Remove-EntraBetaDomain": "Domains",
   "Set-EntraBetaDomain": "Domains",
   "Set-EntraBetaDomainFederationSettings": "Domains",
-
   "Get-EntraBetaExtensionProperty": "Extension Properties",
   "Get-EntraBetaFederationProperty": "Extension Properties",
-
   "Add-EntraBetaGroupMember": "Groups",
   "Add-EntraBetaGroupOwner": "Groups",
   "Add-EntraBetaLifecyclePolicyGroup": "Groups",
@@ -152,7 +143,6 @@
   "Select-EntraBetaGroupIdsUserIsMemberOf": "Groups",
   "Set-EntraBetaGroup": "Groups",
   "Set-EntraBetaGroupLifecyclePolicy": "Groups",
-
   "Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues": "Identity and Access",
   "Add-EntraBetaServicePrincipalDelegatedPermissionClassification": "Identity and Access",
   "Add-EntraBetaServicePrincipalOwner": "Identity and Access",
@@ -233,21 +223,16 @@
   "Set-EntraBetaPrivilegedRoleSetting": "Identity and Access",
   "Set-EntraBetaRoleDefinition": "Identity and Access",
   "Set-EntraBetaServicePrincipal": "Identity and Access",
-
   "Get-EntraBetaNamedLocationPolicy": "Locations",
   "New-EntraBetaNamedLocationPolicy": "Locations",
   "Remove-EntraBetaNamedLocationPolicy": "Locations",
   "Set-EntraBetaNamedLocationPolicy": "Locations",
-
   "Get-EntraBetaPartnerInformation": "Partner Information",
   "Set-EntraBetaPartnerInformation": "Partner Information",
-
   "Get-EntraBetaCurrentSessionInfo": "Session",
-
   "Get-EntraBetaSubscribedSku": "Tenancy",
   "Get-EntraBetaTenantDetail": "Tenancy",
   "Set-EntraBetaTenantDetail": "Tenancy",
-
   "Add-EntraBetaScopedRoleMembership": "Users",
   "Convert-EntraBetaFederatedUser": "Users",
   "Get-EntraBetaUser": "Users",
@@ -276,7 +261,6 @@
   "Set-EntraBetaUserPassword": "Users",
   "Set-EntraBetaUserThumbnailPhoto": "Users",
   "Update-EntraBetaSignedInUserPassword": "Users",
-  
   "Add-EntraBetaEnvironment": "Utility",
   "Confirm-EntraBetaDomain": "Utility",
   "Disconnect-EntraBeta": "Utility",

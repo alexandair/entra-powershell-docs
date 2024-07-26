@@ -7,7 +7,6 @@
   "Remove-EntraAdministrativeUnit": "Administrative Units",
   "Remove-EntraAdministrativeUnitMember": "Administrative Units",
   "Set-EntraAdministrativeUnit": "Administrative Units",
-
   "Get-EntraApplicationProxyApplication": "Application Proxy Application Management",
   "New-EntraApplicationProxyApplication": "Application Proxy Application Management",
   "Remove-EntraApplicationProxyApplication": "Application Proxy Application Management",
@@ -25,7 +24,6 @@
   "Remove-EntraApplicationProxyConnectorGroup": "Application Proxy Connector Management",
   "Set-EntraApplicationProxyConnector": "Application Proxy Connector Management",
   "Set-EntraApplicationProxyConnectorGroup": "Application Proxy Connector Management",
-
   "Add-EntraApplicationOwner": "Applications",
   "Get-EntraApplication": "Applications",
   "Get-EntraApplicationExtensionProperty": "Applications",
@@ -55,21 +53,17 @@
   "Set-EntraApplication": "Applications",
   "Set-EntraApplicationLogo": "Applications",
   "Set-EntraApplicationVerifiedPublisher": "Applications",
-
   "Get-EntraTrustedCertificateAuthority": "Certificate Authorities",
   "New-EntraTrustedCertificateAuthority": "Certificate Authorities",
   "Remove-EntraTrustedCertificateAuthority": "Certificate Authorities",
   "Set-EntraTrustedCertificateAuthority": "Certificate Authorities",
-
   "Get-EntraContact": "Contacts",
   "Get-EntraContactDirectReport": "Contacts",
   "Get-EntraContactManager": "Contacts",
   "Get-EntraContactMembership": "Contacts",
   "Get-EntraContactThumbnailPhoto": "Contacts",
   "Remove-EntraContact": "Contacts",
-
   "Get-EntraContract": "Contracts",
-
   "Add-EntraDeviceRegisteredOwner": "Devices",
   "Add-EntraDeviceRegisteredUser": "Devices",
   "Get-EntraDevice": "Devices",
@@ -80,7 +74,6 @@
   "Remove-EntraDeviceRegisteredOwner": "Devices",
   "Remove-EntraDeviceRegisteredUser": "Devices",
   "Set-EntraDevice": "Devices",
-
   "Add-EntraDirectoryRoleMember": "Directory",
   "Enable-EntraDirectoryRole": "Directory",
   "Get-EntraDeletedDirectoryObject": "Directory",
@@ -94,7 +87,6 @@
   "Restore-EntraDeletedDirectoryObject": "Directory",
   "Set-EntraDirSyncConfiguration": "Directory",
   "Set-EntraDirSyncFeature": "Directory",
-
   "Get-EntraDomainFedrationSettings": "Domains",
   "Get-EntraDomain": "Domains",
   "Get-EntraDomainFederationSettings": "Domains",
@@ -105,10 +97,8 @@
   "Remove-EntraDomain": "Domains",
   "Set-EntraDomain": "Domains",
   "Set-EntraDomainFederationSettings": "Domains",
-
   "Get-EntraExtensionProperty": "Extension Properties",
   "Get-EntraFederationProperty": "Extension Properties",
-
   "Add-EntraGroupMember": "Groups",
   "Add-EntraGroupOwner": "Groups",
   "Add-EntraLifecyclePolicyGroup": "Groups",
@@ -136,7 +126,6 @@
   "Select-EntraGroupIdsUserIsMemberOf": "Groups",
   "Set-EntraGroup": "Groups",
   "Set-EntraGroupLifecyclePolicy": "Groups",
-
   "Add-EntraServicePrincipalDelegatedPermissionClassification": "Identity and Access",
   "Add-EntraServicePrincipalOwner": "Identity and Access",
   "Get-EntraAuthorizationPolicy": "Identity and Access",
@@ -194,22 +183,17 @@
   "Set-EntraPermissionGrantConditionSet": "Identity and Access",
   "Set-EntraPermissionGrantPolicy": "Identity and Access",
   "Set-EntraRoleDefinition": "Identity and Access",
-  "Set-EntraServicePrincipal": "Test Grouping",
-
+  "Set-EntraServicePrincipal": "Identity and Access",
   "Get-EntraNamedLocationPolicy": "Locations",
   "New-EntraNamedLocationPolicy": "Locations",
   "Remove-EntraNamedLocationPolicy": "Locations",
   "Set-EntraNamedLocationPolicy": "Locations",
-
   "Get-EntraPartnerInformation": "Partner Information",
   "Set-EntraPartnerInformation": "Partner Information",
-
   "Get-EntraCurrentSessionInfo": "Session",
-
   "Get-EntraSubscribedSku": "Tenancy",
   "Get-EntraTenantDetail": "Tenancy",
   "Set-EntraTenantDetail": "Tenancy",
-
   "Add-EntraScopedRoleMembership": "Users",
   "Convert-EntraFederatedUser": "Users",
   "Get-EntraUser": "Users",
@@ -238,7 +222,6 @@
   "Set-EntraUserPassword": "Users",
   "Set-EntraUserThumbnailPhoto": "Users",
   "Update-EntraSignedInUserPassword": "Users",
-
   "Add-EntraEnvironment": "Utility",
   "Confirm-EntraDomain": "Utility",
   "Connect-Entra": "Utility",
