@@ -25,9 +25,9 @@ To assign app roles to a service principal, you need:
 
 ## Scenario description
 
-You're an IT admin at Contoso and your manager has task you with producing a daily report of all role activations in Privileged Identity Management to be delivered via email. You decide to use Microsoft Entra PowerShell and Azure Automation to automate this task.
+You're an IT admin at Contoso, and your manager has tasked you with producing a daily report of all role activations in Privileged Identity Management, to be delivered via email. You decide to use Microsoft Entra PowerShell and Azure Automation to automate this task.
 
-In this article, you will learn how to connect to Microsoft Entra PowerShell in the delegated context and assign application permissions to a service principal to support your automation scenario. This process enables you to streamline the permission assignment process, saving time and reducing the potential for errors.
+In this article, you will learn how to connect to Microsoft Entra PowerShell in a delegated context and assign application permissions to a service principal to support your automation scenario. This process enables you to streamline the permission assignment, saving time and reducing the potential for errors.
 
 ## Connect to Microsoft Entra PowerShell
 
