@@ -130,7 +130,7 @@
   "Get-EntraGroupOwner": "Groups",
   "Get-EntraGroupPermissionGrant": "Groups",
   "Get-EntraLifecyclePolicyGroup": "Groups",
-  "Get-EntraPolicy": "Groups",
+  "Get-EntraPolicy": "Applications",
   "New-EntraGroup": "Groups",
   "New-EntraGroupAppRoleAssignment": "Groups",
   "New-EntraGroupLifecyclePolicy": "Groups",

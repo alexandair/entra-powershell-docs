@@ -177,9 +177,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 ## NOTES
 
 ## RELATED LINKS
-
-[New-EntraPolicy](New-EntraPolicy.md)
-
-[Remove-EntraPolicy](Remove-EntraPolicy.md)
-
-[Set-EntraPolicy](Set-EntraPolicy.md)
