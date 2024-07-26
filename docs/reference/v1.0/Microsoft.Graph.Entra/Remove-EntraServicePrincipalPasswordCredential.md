@@ -1,6 +1,6 @@
 ---
-title: Get-EntraBetaAuditSignInLogs.
-description: This article provides details on the Get-EntraBetaAuditSignInLogs command.
+title: Remove-EntraServicePrincipalPasswordCredential
+description: This article provides details on the Remove-EntraServicePrincipalPasswordCredential command.
 
 
 ms.topic: reference
