@@ -92,25 +92,24 @@ AdditionalProperties : {[@odata.context,
 $GetPermissions = 'Application.Read.All', 'User.Read.All'
 
 # Get service principal
-$Sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
+$ServicePrincipal = Get-EntraServicePrincipal -Filter "DisplayName eq 'My Service Principal'"
 
 # Get Graph App Id
 $GraphAppFilterParams = @{
     Filter = "AppId eq '00000003-0000-0000-c000-000000000000'"
 }
+$GraphApp = (Get-EntraServicePrincipal @GraphAppFilterParams)
 
-$GraphAppId = (Get-EntraServicePrincipal @GraphAppFilterParams).Id
+# Get App Roles
+$GraphAppRoles = $GraphApp.AppRoles | Where-Object { $_.Value -in $GetPermissions }
 
-# Get permission Id
-$Permissions = (Get-MgServicePrincipal @GraphAppFilterParams).AppRoles | Where-Object { $_.Value -in $GetPermissions }
-
-# Assign the permission
-foreach ($Perm in $Permissions) {
+# Assign the permission to App
+foreach ($AppRole in $GraphAppRoles) {
     $Params = @{
-        PrincipalId = $Sp.Id
-        ResourceId  = $GraphAppId
-        Id          = $Perm.Id
-        ObjectId    = $Sp.Id
+        PrincipalId = $ServicePrincipal.Id
+        ResourceId  = $GraphApp.Id
+        Id          = $AppRole.Id
+        ObjectId    = $ServicePrincipal.Id
     }
     
     New-EntraServiceAppRoleAssignment @Params | Format-List
