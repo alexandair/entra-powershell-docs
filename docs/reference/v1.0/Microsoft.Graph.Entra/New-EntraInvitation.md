@@ -1,5 +1,5 @@
 ---
-title: New-EntraInvitation.
+title: New-EntraInvitation
 description: This article provides details on the New-EntraInvitation command.
 
 ms.topic: reference
@@ -8,6 +8,7 @@ ms.author: eunicewaweru
 ms.reviewer: stevemutungi
 manager: CelesteDG
 author: msewaweru
+
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
 online version:
@@ -34,6 +35,7 @@ New-EntraInvitation
 ```
 
 ## Description
+
 This cmdlet is used to invite a new external user to your directory.
 
 ## Examples
@@ -211,6 +213,7 @@ This example demonstrates how to invite a new external user to your directory wi
 ## Parameters
 
 ### -InvitedUserDisplayName
+
 The display name of the user as it appears in your directory.
 
 ```yaml
@@ -226,6 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvitedUserEmailAddress
+
 The Email address to which the invitation is sent.
 
 ```yaml
@@ -241,6 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvitedUserMessageInfo
+
 Addition information to specify how the invitation message is sent.
 
 ```yaml
@@ -256,6 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvitedUser
+
 An existing user object in the directory that you want to add or update the B2B credentials for.
 
 ```yaml
@@ -271,6 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvitedUserType
+
 The userType of the user being invited.
 By default, userType is Guest.
 You can invite as Member of your company administrator.
@@ -288,6 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -InviteRedirectUrl
+
 The URL that the invited user is forwarded after accepting the invitation.
 
 ```yaml
@@ -303,6 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendInvitationMessage
+
 A Boolean parameter that indicates whether or not an invitation message sent to the invited user.
 
 ```yaml
@@ -318,14 +327,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## Inputs
 
 ### None
+
 ## Outputs
 
 ### System.Object
+
 ## Notes
 
 ## Related Links
