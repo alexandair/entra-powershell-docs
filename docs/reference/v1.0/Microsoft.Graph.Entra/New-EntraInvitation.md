@@ -1,7 +1,7 @@
 ---
 title: New-EntraInvitation
+title: New-EntraInvitation
 description: This article provides details on the New-EntraInvitation command.
-
 
 ms.topic: reference
 ms.date: 06/26/2024
@@ -9,6 +9,7 @@ ms.author: eunicewaweru
 ms.reviewer: stevemutungi
 manager: CelesteDG
 author: msewaweru
+
 external help file: Microsoft.Graph.Entra-Help.xml
 Module Name: Microsoft.Graph.Entra
 online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/New-EntraInvitation
@@ -19,6 +20,7 @@ schema: 2.0.0
 # New-EntraInvitation
 
 ## Synopsis
+
 
 This cmdlet is used to invite a new external user to your directory.
 
@@ -37,6 +39,7 @@ New-EntraInvitation
 
 ## Description
 
+
 This cmdlet is used to invite a new external user to your directory.
 
 Invitation adds an external user to the organization. When creating a new invitation, you have several options available:
@@ -50,6 +53,7 @@ For delegated scenarios, the signed-in user must have at least one of the follow
 
 ## Examples
 
+### Example 1: Invite a new external user to your directory
 ### Example 1: Invite a new external user to your directory
 
 ```powershell
@@ -80,10 +84,12 @@ ObjectId                : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
 
+
 This example sent an email to the user who's email address is in the -InvitedUserEmailAddress parameter.
 
 When the user accepts the invitation, they're forwarded to the url as specified in the -InviteRedirectUrl parameter.
 
+### Example 2: Invite a new external user to your directory with InvitedUserDisplayName parameter
 ### Example 2: Invite a new external user to your directory with InvitedUserDisplayName parameter
 
 ```powershell
@@ -116,8 +122,10 @@ AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$met
 
 ```
 
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserDisplayName parameter.
 
+### Example 3: Invite a new external user to your directory with InvitedUserMessageInfo parameter
 ### Example 3: Invite a new external user to your directory with InvitedUserMessageInfo parameter
 
 ```powershell
@@ -152,8 +160,10 @@ ObjectId                : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
 
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserMessageInfo parameter.
 
+### Example 4: Invite a new external user to your directory with InvitedUserType parameter
 ### Example 4: Invite a new external user to your directory with InvitedUserType parameter
 
 ```powershell
@@ -185,11 +195,13 @@ ObjectId                : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 AdditionalProperties    : @{@odata.context=https://graph.microsoft.com/v1.0/$metadata#invitations/$entity}
 ```
 
+
 This example demonstrates how to invite a new external user to your directory with InvitedUserType parameter.
 
 ## Parameters
 
 ### -InvitedUserDisplayName
+
 
 The display name of the user as it appears in your directory.
 
@@ -207,6 +219,7 @@ Accept wildcard characters: False
 
 ### -InvitedUserEmailAddress
 
+
 The Email address to which the invitation is sent.
 
 ```yaml
@@ -223,6 +236,7 @@ Accept wildcard characters: False
 
 ### -InvitedUserMessageInfo
 
+
 Addition information to specify how the invitation message is sent.
 
 ```yaml
@@ -238,6 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -InvitedUser
+
 
 An existing user object in the directory that you want to add or update the B2B credentials for.
 
@@ -273,6 +288,7 @@ Accept wildcard characters: False
 
 ### -InviteRedirectUrl
 
+
 The URL that the invited user is forwarded after accepting the invitation.
 
 ```yaml
@@ -288,6 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendInvitationMessage
+
 
 A Boolean parameter that indicates whether or not an invitation message sent to the invited user.
 
@@ -311,9 +328,11 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ### None
 
+
 ## Outputs
 
 ### System.Object
+
 
 ## Notes
 
