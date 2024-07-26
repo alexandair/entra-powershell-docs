@@ -194,7 +194,7 @@
   "Set-EntraPermissionGrantConditionSet": "Identity and Access",
   "Set-EntraPermissionGrantPolicy": "Identity and Access",
   "Set-EntraRoleDefinition": "Identity and Access",
-  "Set-EntraServicePrincipal": "Identity and Access",
+  "Set-EntraServicePrincipal": "Test Grouping",
 
   "Get-EntraNamedLocationPolicy": "Locations",
   "New-EntraNamedLocationPolicy": "Locations",
