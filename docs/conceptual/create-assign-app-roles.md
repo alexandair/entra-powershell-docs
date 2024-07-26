@@ -46,25 +46,28 @@ If you haven't created a service principal for your scenario, see [Create a cust
 Use the following example to assign the `User.Read.All` permission to your service principal:
 
 ```powershell
-#Get service principal
-$sp = Get-EntraServicePrincipal -Filter "DisplayName eq 'Contos App 1'"
+# Get service principal
+$ServicePrincipal = Get-EntraServicePrincipal -Filter "DisplayName eq 'Contos App 1'"
 
-$filterParams = @{
+$FilterParams = @{
     Filter = "AppId eq '00000003-0000-0000-c000-000000000000'"
 }
-#Get Graph App Id
-$graphId = (Get-EntraServicePrincipal @filterParams).Id
-#Get permission Id
-$permission = (Get-EntraServicePrincipal @filterParams).AppRoles | Where-Object {$_.Value -eq 'User.Read.All'}
-#Assign the permission
-$params = @{
-    PrincipalId = $sp.Id
-    ResourceId  = $graphId
-    Id          = $permission.Id
-    ObjectId    = $sp.Id
+
+# Get Graph App
+$GraphApp = Get-EntraServicePrincipal @FilterParams
+
+# Get App Role
+$AppRole = $GraphApp.AppRoles | Where-Object { $_.Value -eq 'User.Read.All' }
+
+# Assign the permission
+$Params = @{
+    PrincipalId = $ServicePrincipal.Id
+    ResourceId  = $GraphApp.Id
+    Id          = $AppRole.Id
+    ObjectId    = $ServicePrincipal.Id
 }
 
-New-EntraServiceAppRoleAssignment @params | Format-List
+New-EntraServiceAppRoleAssignment @Params | Format-List
 ```
 
 ```Output
