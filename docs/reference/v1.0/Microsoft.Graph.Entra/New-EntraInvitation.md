@@ -18,6 +18,7 @@ schema: 2.0.0
 # New-EntraInvitation
 
 ## Synopsis
+
 This cmdlet is used to invite a new external user to your directory.
 
 ## Syntax
