@@ -114,7 +114,7 @@ foreach ($Perm in $Permissions) {
 }
 ```
 
-```output
+```Output
 ObjectId             : OPjyvJFY2EiTO8q3lAe1O2fUYYvw-GlIn-RvMs-7Jrs
                        Bb22Cc33Dd44Ee55Ff66Aa77Bb88-9999-0000-1111
 AppRoleId            : b0afded3-3588-46d8-8b3d-9842eff778da
