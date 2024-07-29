@@ -64,6 +64,9 @@ conceptualContent:
         - text: Migrate to Microsoft Entra PowerShell
           url: /powershell/entra-powershell/migration-guide
           itemType: concept
+        - text: Cmdlet map
+          url: /powershell/entra-powershell/azuread-powershell-to-entra-powershell-mapping
+          itemType: reference  
     ## CARD 4 ######################
     - title: Reference
       links:
