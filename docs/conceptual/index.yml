@@ -58,6 +58,9 @@ conceptualContent:
         - text: Manage apps
           url: /powershell/entra-powershell/manage-apps
           itemType: how-to-guide
+        - text: Assign app roles to a service principal
+          url: /powershell/entra-powershell/create-assign-app-roles
+          itemType: how-to-guide  
     ## CARD 3 ######################
     - title: Migrate
       links:
