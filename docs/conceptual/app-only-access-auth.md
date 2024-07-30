@@ -128,7 +128,7 @@ $ClientSecretCredential = New-Object -TypeName System.Management.Automation.PSCr
 Connect-Entra -TenantId $TenantId -ClientSecretCredential $ClientSecretCredential
 ```
 
-To create or add a client secret, see: [Add a client secret][add-client-secret].
+To create or add a client secret, use the command [New-EntraServicePrincipalPasswordCredential][new-entraserviceprincipalpasswordcredential] or see: [Add a client secret][add-client-secret] in Microsoft Entra admin center.
 
 >[!NOTE]
 >It's recommended to use PowerShell 7 or higher when using client secret credentials authentication method.
@@ -170,3 +170,4 @@ A common challenge when writing automation scripts is the management of secrets,
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
 [get-entracontext]: /powershell/module/microsoft.graph.entra/get-entracontext
+[new-entraserviceprincipalpasswordcredential]: /powershell/module/microsoft.graph.entra/new-entraserviceprincipalpasswordcredential
