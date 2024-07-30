@@ -100,7 +100,7 @@ additionalContent:
           url: /powershell/entra-powershell/entra-powershell-faqs
         # Card
         - title: Microsoft Q&A
-          summary: Discover questions that will help you on every step of your technical journey.
+          summary: Discover questions that help you on every step of your technical journey.
           url: https://learn.microsoft.com/en-us/answers/questions/
         # Card
         - title: Blog
