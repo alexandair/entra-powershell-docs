@@ -110,7 +110,7 @@ Environment           : Global
 
 ## Use client secret credentials
 
-Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**. See [Get-Credential][get-credential] on how to get or create credentials.
+Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**.
 
 ```powershell
 # Define the Application (Client) ID and Secret
@@ -164,9 +164,8 @@ A common challenge when writing automation scripts is the management of secrets,
 [installation]: installation.md
 [self-signed-cert]: /entra/identity-platform/howto-create-self-signed-certificate
 [create-custom-application]: create-custom-application.md
-[get-credential]: /powershell/module/microsoft.powershell.security/get-credential
 [entra-admin-center]: https://entra.microsoft.com
-[add-client-secret]: /entra/identity-platform/quickstart-register-app#add-a-client-secret
+[add-client-secret]: /entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials
 [manage-groups]: manage-groups.md
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
