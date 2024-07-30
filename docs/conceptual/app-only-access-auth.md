@@ -110,15 +110,25 @@ Environment           : Global
 
 ## Use client secret credentials
 
-Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**. See [Get-Credential][get-credential] on how to get or create credentials.
+Client credentials grant is used to authenticate and authorize the app to access resources on its own behalf. Support for client secret credentials is added by adding **-ClientSecretCredential** parameter to **Connect-Entra**.
 
 ```powershell
-$ClientSecretCredential = Get-Credential -Credential 'Client_Id'
-# Enter client_secret in the password prompt.
-Connect-Entra -TenantId 'Tenant_Id' -ClientSecretCredential $ClientSecretCredential
+# Define the Application (Client) ID and Secret
+$ApplicationClientId = '<application(client)ID>' # Application (Client) ID
+$ApplicationClientSecret = '<secret.value>' # Application Secret Value
+$TenantId = 'Tenant_Id' # Tenant ID
+
+# Convert the Client Secret to a Secure String
+$SecureClientSecret = ConvertTo-SecureString -String $ApplicationClientSecret -AsPlainText -Force
+
+# Create a PSCredential Object Using the Client ID and Secure Client Secret
+$ClientSecretCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $ApplicationClientId, $SecureClientSecret
+
+# Connect to Microsoft Graph Using the Tenant ID and Client Secret Credential
+Connect-Entra -TenantId $TenantId -ClientSecretCredential $ClientSecretCredential
 ```
 
-To create or add a client secret, see: [Add a client secret][add-client-secret].
+To create or add a client secret, use the command [New-EntraServicePrincipalPasswordCredential][new-entraserviceprincipalpasswordcredential] or see: [Add a client secret][add-client-secret] in Microsoft Entra admin center.
 
 >[!NOTE]
 >It's recommended to use PowerShell 7 or higher when using client secret credentials authentication method.
@@ -154,10 +164,10 @@ A common challenge when writing automation scripts is the management of secrets,
 [installation]: installation.md
 [self-signed-cert]: /entra/identity-platform/howto-create-self-signed-certificate
 [create-custom-application]: create-custom-application.md
-[get-credential]: /powershell/module/microsoft.powershell.security/get-credential
 [entra-admin-center]: https://entra.microsoft.com
-[add-client-secret]: /entra/identity-platform/quickstart-register-app#add-a-client-secret
+[add-client-secret]: /entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials
 [manage-groups]: manage-groups.md
 [manage-users]: manage-user.md
 [manage-apps]: manage-apps.md
 [get-entracontext]: /powershell/module/microsoft.graph.entra/get-entracontext
+[new-entraserviceprincipalpasswordcredential]: /powershell/module/microsoft.graph.entra/new-entraserviceprincipalpasswordcredential
