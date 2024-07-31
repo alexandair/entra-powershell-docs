@@ -44,9 +44,7 @@ When prompted to **Consent on behalf of your organization** select **Accept**.
 If you haven't created a service principal for your scenario, see [Create a custom application][custom-app].
 
 > [!WARNING]
-> When assigning app roles to an application, follow the principle of least privilege. Only request roles necessary for your application's functionality. Over-assigning roles can increase security risks if the application is compromised.
-
-> Additionally, assigning roles programmatically takes effect immediately, so exercise caution to ensure only appropriate roles are assigned. Always ensure the roles are justified to minimize potential vulnerabilities. For more information on the principle of least privilege, see [Least privilege][least-privilege].
+> When assigning app roles to an application, follow the principle of least privilege. Only request roles necessary for your application's functionality. Over-assigning roles can increase security risks if the application is compromised. Additionally, assigning roles programmatically takes effect immediately, so exercise caution to ensure only appropriate roles are assigned. Always ensure the roles are justified to minimize potential vulnerabilities. For more information on the principle of least privilege, see [Least privilege][least-privilege].
 
 Use the following example to assign the `User.Read.All` permission to your service principal:
 
