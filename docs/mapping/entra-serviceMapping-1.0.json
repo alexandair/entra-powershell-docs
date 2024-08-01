@@ -98,6 +98,7 @@
   "Add-EntraDirectoryRoleMember": "Directory",
   "Get-EntraDeletedDirectoryObject": "Directory",
   "Get-EntraDirectoryRole": "Directory",
+  "Enable-EntraDirectoryRole": "Directory",
   "Get-EntraDirectoryRoleMember": "Directory",
   "Get-EntraDirectoryRoleTemplate": "Directory",
   "Get-EntraDirSyncConfiguration": "Directory",
