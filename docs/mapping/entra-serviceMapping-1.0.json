@@ -234,7 +234,7 @@
   "Get-CrossCloudVerificationCode": "Domains",
   "Get-EntraContext": "Authentication",
   "Get-EntraEnvironment": "Authentication",
-  "Get-EntraObjectByObjectId": "Groups",
+  "Get-EntraObjectByObjectId": "Directory",
   "Get-EntraUnsupportedCommand": "Migration",
   "Test-EntraScript": "Migration"
 }
