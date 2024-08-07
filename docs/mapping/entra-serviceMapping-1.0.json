@@ -235,6 +235,6 @@
   "Get-EntraContext": "Authentication",
   "Get-EntraEnvironment": "Authentication",
   "Get-EntraObjectByObjectId": "Groups",
-  "Get-EntraUnsupportedCommand": "Utility",
-  "Test-EntraScript": "Utility"
+  "Get-EntraUnsupportedCommand": "Migration",
+  "Test-EntraScript": "Migration"
 }
