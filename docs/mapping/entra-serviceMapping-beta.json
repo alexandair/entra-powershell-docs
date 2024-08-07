@@ -279,7 +279,7 @@
   "Get-EntraBetaObjectSetting": "Groups",
   "Get-EntraBetaScopedRoleMembership": "Role management",
   "Get-EntraBetaServicePrincipalPolicy": "Policies",
-  "Get-EntraBetaSubscribedSku": "Directory",
+  "Get-EntraBetaSubscribedSku": "Licenses and subscriptions",
   "Get-EntraUnsupportedCommand": "Reports",
   "New-EntraBetaAttributeSet": "Custom security attributes",
   "New-EntraBetaConditionalAccessPolicy": "Policies",
