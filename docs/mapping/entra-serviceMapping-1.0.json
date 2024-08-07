@@ -191,7 +191,7 @@
   "Get-EntraNamedLocationPolicy": "Policies",
   "Get-EntraPartnerInformation": "Partner information",
   "Set-EntraPartnerInformation": "Partner information",
-  "Get-EntraSubscribedSku": "Directory",
+  "Get-EntraSubscribedSku": "Licenses and subscriptions",
   "Get-EntraTenantDetail": "Directory",
   "Set-EntraTenantDetail": "Directory",
   "Add-EntraScopedRoleMembership": "Role management",
@@ -235,6 +235,5 @@
   "Get-EntraContext": "Authentication",
   "Get-EntraEnvironment": "Authentication",
   "Get-EntraObjectByObjectId": "Directory",
-  "Get-EntraUnsupportedCommand": "Migration",
   "Test-EntraScript": "Migration"
 }
