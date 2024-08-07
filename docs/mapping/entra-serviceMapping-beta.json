@@ -280,7 +280,7 @@
   "Get-EntraBetaScopedRoleMembership": "Role management",
   "Get-EntraBetaServicePrincipalPolicy": "Policies",
   "Get-EntraBetaSubscribedSku": "Directory",
-  "Get-EntraUnsupportedCommand": "",
+  "Get-EntraUnsupportedCommand": "Reports",
   "New-EntraBetaAttributeSet": "Custom security attributes",
   "New-EntraBetaConditionalAccessPolicy": "Policies",
   "New-EntraBetaInvitation": "Invitations",
