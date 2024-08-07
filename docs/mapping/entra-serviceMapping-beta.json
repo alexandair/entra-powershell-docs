@@ -275,7 +275,7 @@
   "Confirm-EntraBetaDomain": "Domains",
   "Get-EntraBetaAuditDirectoryLogs": "Reports",
   "Get-EntraBetaConditionalAccessPolicy": "Policies",
-  "Get-EntraBetaObjectByObjectId": "Directory",
+  "Get-EntraBetaObjectByObjectId": "Groups",
   "Get-EntraBetaObjectSetting": "Groups",
   "Get-EntraBetaScopedRoleMembership": "Role management",
   "Get-EntraBetaServicePrincipalPolicy": "Policies",
