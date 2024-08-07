@@ -276,7 +276,7 @@
   "Get-EntraBetaAuditDirectoryLogs": "Reports",
   "Get-EntraBetaConditionalAccessPolicy": "Policies",
   "Get-EntraBetaObjectByObjectId": "Directory",
-  "Get-EntraBetaObjectSetting": "Directory",
+  "Get-EntraBetaObjectSetting": "Groups",
   "Get-EntraBetaScopedRoleMembership": "Role management",
   "Get-EntraBetaServicePrincipalPolicy": "Policies",
   "Get-EntraBetaSubscribedSku": "Directory",
@@ -284,14 +284,14 @@
   "New-EntraBetaAttributeSet": "Custom security attributes",
   "New-EntraBetaConditionalAccessPolicy": "Policies",
   "New-EntraBetaInvitation": "Invitations",
-  "New-EntraBetaObjectSetting": "Directory",
+  "New-EntraBetaObjectSetting": "Groups",
   "New-EntraBetaServiceAppRoleAssignment": "Role management",
   "Remove-EntraBetaConditionalAccessPolicy": "Policies",
   "Remove-EntraBetaFeatureRolloutPolicy": "Policies",
-  "Remove-EntraBetaObjectSetting": "Directory",
+  "Remove-EntraBetaObjectSetting": "Groups",
   "Remove-EntraBetaScopedRoleMembership": "Role management",
   "Remove-EntraBetaServiceAppRoleAssignment": "Role management",
   "Set-EntraBetaAttributeSet": "Custom security attributes",
   "Set-EntraBetaConditionalAccessPolicy": "Policies",
-  "Set-EntraBetaObjectSetting": "Directory"
+  "Set-EntraBetaObjectSetting": "Groups"
 }
