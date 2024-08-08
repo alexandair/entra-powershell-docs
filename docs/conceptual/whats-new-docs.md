@@ -45,7 +45,7 @@ This article lists all new articles that were added or had significant updates i
   - Added missing types that were throwing warnings on missing types for Get-EntraApplication and Get-EntraBetaApplication commands.
   - Documentation improvements - Added Beta documentation for over 50 cmdlets
   - Added required permissions for 34 additional commands.
-  - Resolve broken link in New-EntraRoleDefinition.
+  - Resolve broken link in `New-EntraRoleDefinition`.
 
 - [Version 0.11.0-preview][posh-0.11.0]
 
