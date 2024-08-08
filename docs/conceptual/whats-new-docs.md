@@ -53,7 +53,7 @@ This article lists all new articles that were added or had significant updates i
   - Added Connect-Entra examples.
 
 [assign-app-roles]: create-assign-app-roles.md
-[cmdlet-map]: azuread-powershell-to-entra-powershell-cmdlet-mapping.md
+[cmdlet-map]: azuread-powershell-to-entra-powershell-mapping.md
 [posh-0.12.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.12.0-preview
 [posh-0.11.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.11.0-preview
 [posh-0.10.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.10.0-preview
