@@ -22,14 +22,22 @@ This article lists all new articles that were added or had significant updates i
 
 #### New articles
 
-- [Azure AD  PowerShell cmdlet map][cmdlet-map] -  Find the cmdlets equivalents for Azure AD, Azure AD Preview, and MSOnline PowerShell modules in Microsoft Entra PowerShell.
+- [Azure AD  PowerShell cmdlet map][cmdlet-map] -  Find the equivalent cmdlets in Microsoft Entra PowerShell for deprecated Azure AD, Azure AD Preview, and MSOnline PowerShell modules to accelerate migration. 
 - [Assign app roles to a service principal][assign-app-roles] - Assign app roles in Microsoft Entra PowerShell to automate application consent.
 
 #### Updated articles
 
-- The reference TOC has been updated to group cmdlets for easier navigation.
+- The [reference TOC](/powershell/module/microsoft.graph.entra) has been updated to group cmdlets for easier navigation.
 
 ## Module version history
+
+- [Version 0.13.0-preview][posh-0.13.0]
+
+  - Added 5 net new cmdlets (Entra Policy, Application Password, Application Service Endpoints)
+  - Documentation improvements for over 25 existing cmdlet references documentation.
+  - Added over 50 Beta cmdlet references documentation.
+  - Bug fix for `Get-EntraGroupMember` to return Service Principal as a member
+  - Bug fix to decouple SignInActivity with additional examples
 
 - [Version 0.12.0-preview][posh-0.12.0]
 
@@ -54,6 +62,7 @@ This article lists all new articles that were added or had significant updates i
 
 [assign-app-roles]: create-assign-app-roles.md
 [cmdlet-map]: azuread-powershell-to-entra-powershell-mapping.md
+[posh-0.13.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.13.0-preview
 [posh-0.12.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.12.0-preview
 [posh-0.11.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.11.0-preview
 [posh-0.10.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.10.0-preview
