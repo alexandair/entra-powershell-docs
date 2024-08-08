@@ -27,31 +27,31 @@ This article lists all new articles that were added or had significant updates i
 
 #### Updated articles
 
-- The [reference TOC](/powershell/module/microsoft.graph.entra) has been updated to group cmdlets for easier navigation.
+- The [reference TOC](/powershell/module/microsoft.graph.entra) is updated to group cmdlets for easier navigation.
 
 ## Module version history
 
 - [Version 0.13.0-preview][posh-0.13.0]
 
-  - Added 5 net new cmdlets (Entra Policy, Application Password, Application Service Endpoints)
+  - Added five net new cmdlets (Entra Policy, Application Password, Application Service Endpoints)
   - Documentation improvements for over 25 existing cmdlet references documentation.
   - Added over 50 Beta cmdlet references documentation.
-  - Bug fix for `Get-EntraGroupMember` to return Service Principal as a member
-  - Bug fix to decouple SignInActivity with additional examples
+  - Bug fix for `Get-EntraGroupMember` to return Service Principal as a member.
+  - Bug fix to decouple SignInActivity with more examples.
 
 - [Version 0.12.0-preview][posh-0.12.0]
 
-  - Added 3 new cmdlets for Global Secure Access - Private Access App segment management (preview)
+  - Added three new cmdlets for Global Secure Access - Private Access App segment management (preview)
   - Added missing types that were throwing warnings on missing types for Get-EntraApplication and Get-EntraBetaApplication commands.
   - Documentation improvements - Added Beta documentation for over 50 cmdlets
   - Added required permissions for 34 additional commands.
-  - Resolve broken link in `New-EntraRoleDefinition`.
+  - Resolved broken link in `New-EntraRoleDefinition`.
 
 - [Version 0.11.0-preview][posh-0.11.0]
 
-  - We have added the required scopes in the examples for top cmdlets.
-  - We have resolved local build issue for PowerShell 7.x.
-  - Additional bug fixes from GitHub issues.
+  - Added the required scopes in the examples for top cmdlets.
+  - Resolved local build issue for PowerShell 7.x.
+  - Bug fixes from GitHub issues.
 
 
 - [Version 0.10.0-preview][posh-0.10.0]
