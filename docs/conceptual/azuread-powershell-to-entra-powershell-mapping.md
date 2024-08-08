@@ -257,7 +257,9 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Close-AzureADMSPrivilegedRoleAssignmentRequest | Deprecated|
 | Get-AzureADAdministrativeUnit | [Get-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAdministrativeUnit)|
 | Get-AzureADAdministrativeUnitMember | [Get-EntraBetaAdministrativeUnitMember](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAdministrativeUnitMember)|
+|Get-AzureADApplicationPasswordCredential|[Get-EntraBetaApplicationPasswordCredential](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationPasswordCredential)|
 | Get-AzureADApplicationPolicy | [Get-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationPolicy)|
+|Get-AzureADApplicationServiceEndpoint|[Get-EntraBetaApplicationServiceEndpoint](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationServiceEndpoint)|
 | Get-AzureADApplicationSignInDetailedSummary | [Get-EntraBetaApplicationSignInDetailedSummary](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationSignInDetailedSummary)|
 | Get-AzureADApplicationSignInSummary | [Get-EntraBetaApplicationSignInSummary](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationSignInSummary)|
 | Get-AzureADAuditDirectoryLogs | [Get-EntraBetaAuditDirectoryLogs](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAuditDirectoryLogs)|
