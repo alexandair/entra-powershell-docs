@@ -238,5 +238,7 @@
   "Get-EntraContext": "Authentication",
   "Get-EntraEnvironment": "Authentication",
   "Get-EntraObjectByObjectId": "Directory",
-  "Test-EntraScript": "Migration"
+  "Test-EntraScript": "Migration",
+  "Get-EntraUnsupportedCommand": "Migration",
+  "Get-EntraBetaAuditSignInLogs": "Reports"
 }
