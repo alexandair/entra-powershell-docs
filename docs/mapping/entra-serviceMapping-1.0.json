@@ -131,10 +131,10 @@
   "Get-EntraGroupOwner": "Groups",
   "Get-EntraGroupPermissionGrant": "Groups",
   "Get-EntraLifecyclePolicyGroup": "Groups",
-  "Get-EntraPolicy": "Applications",
-  "New-EntraPolicy": "Applications",
-  "Remove-EntraPolicy": "Applications",
-  "Set-EntraPolicy": "Applications",
+  "Get-EntraPolicy": "Policies",
+  "New-EntraPolicy": "Policies",
+  "Remove-EntraPolicy": "Policies",
+  "Set-EntraPolicy": "Policies",
   "New-EntraGroup": "Groups",
   "New-EntraGroupAppRoleAssignment": "Groups",
   "New-EntraGroupLifecyclePolicy": "Groups",
@@ -238,5 +238,7 @@
   "Get-EntraContext": "Authentication",
   "Get-EntraEnvironment": "Authentication",
   "Get-EntraObjectByObjectId": "Directory",
-  "Test-EntraScript": "Migration"
+  "Test-EntraScript": "Migration",
+  "Get-EntraUnsupportedCommand": "Migration",
+  "Get-EntraBetaAuditSignInLogs": "Reports"
 }
