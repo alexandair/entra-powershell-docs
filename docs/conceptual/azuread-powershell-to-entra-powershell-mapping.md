@@ -283,7 +283,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Get-AzureADMSTrustFrameworkPolicy | [Get-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/get-entrabetatrustframeworkpolicy)|
 | Get-AzureADMSUser | [Get-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaUser)|
 | Get-AzureADObjectSetting | [Get-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaObjectSetting)|
-| Get-AzureADPolicy | [Get-EntraPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPolicy)|
+| Get-AzureADPolicy | [Get-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPolicy)|
 | Get-AzureADPolicyAppliedObject | [Get-EntraBetaPolicyAppliedObject](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPolicyAppliedObject)|
 | Get-AzureADPrivilegedRole | [Get-EntraBetaPrivilegedRole](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRole)|
 | Get-AzureADPrivilegedRoleAssignment |  Deprecated|
@@ -302,7 +302,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | New-AzureADMSTrustFrameworkPolicy | [New-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/new-entrabetatrustframeworkpolicy)|
 | New-AzureADMSUser | [New-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaUser)|
 | New-AzureADObjectSetting | [New-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaObjectSetting)|
-| New-AzureADPolicy | [New-EntraPolicy](/powershell/module/microsoft.graph.entra/New-EntraPolicy)|
+| New-AzureADPolicy | [New-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPolicy)|
 | New-AzureADPrivilegedRoleAssignment | [New-EntraBetaPrivilegedRoleAssignment](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPrivilegedRoleAssignment)|
 | Open-AzureADMSPrivilegedRoleAssignmentRequest |  Deprecated|
 | Remove-AzureADAdministrativeUnit | [Remove-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaAdministrativeUnit)|
@@ -315,7 +315,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Remove-AzureADMSPasswordSingleSignOnCredential | [Remove-EntraBetaPasswordSingleSignOnCredential](/powershell/module/microsoft.graph.entra.beta/remove-entrabetapasswordsinglesignoncredential)|
 | Remove-AzureADMSTrustFrameworkPolicy | [Remove-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/remove-entrabetatrustframeworkpolicy)|
 | Remove-AzureADObjectSetting | [Remove-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaObjectSetting)|
-| Remove-AzureADPolicy | [Remove-EntraPolicy](/powershell/module/microsoft.graph.entra/Remove-EntraPolicy)|
+| Remove-AzureADPolicy | [Remove-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaPolicy)|
 | Remove-AzureADScopedRoleMembership | [Remove-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaScopedRoleMembership)|
 | Remove-AzureADServicePrincipalPolicy | [Remove-EntraBetaServicePrincipalPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaServicePrincipalPolicy)|
 | Set-AzureADAdministrativeUnit | [Set-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaAdministrativeUnit)|
@@ -331,7 +331,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Set-AzureADMSTrustFrameworkPolicy | [Set-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/set-entrabetatrustframeworkpolicy)|
 | Set-AzureADMSUser | [Set-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaUser)|
 | Set-AzureADObjectSetting | [Set-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaObjectSetting)|
-| Set-AzureADPolicy | [Set-EntraPolicy](/powershell/module/microsoft.graph.entra/Set-EntraPolicy)|
+| Set-AzureADPolicy | [Set-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPolicy)|
 
 :::zone-end
 
