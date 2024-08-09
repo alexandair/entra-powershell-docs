@@ -15,7 +15,7 @@ zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 ---
 # Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Entra PowerShell
 
-The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD and Azure AD Preview PowerShell modules. Additionally, it provides parity for MSOnline cmdlets that were not migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for those you used in the Azure AD, Azure AD Preview, and MSOnline PowerShell modules
+The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD and Azure AD Preview PowerShell modules. Additionally, it provides parity for MSOnline cmdlets that were not migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for those you used in the Azure AD, Azure AD Preview, and MSOnline PowerShell modules.
 
 :::zone pivot="azure-ad-powershell"
 
@@ -250,14 +250,16 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Add-AzureADAdministrativeUnitMember | [Add-EntraBetaAdministrativeUnitMember](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaAdministrativeUnitMember)|
 | Add-AzureADApplicationPolicy | [Add-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaApplicationPolicy)|
 | Add-AzureADMScustomSecurityAttributeDefinitionAllowedValues | [Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues)|
-| Add-AzureADMSFeatureRolloutPolicyDirectoryObject | [Add-EntraBetaLifecyclePolicyGroup](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaLifecyclePolicyGroup)|
+| Add-AzureADMSFeatureRolloutPolicyDirectoryObject | [Add-EntraBetaFeatureRolloutPolicyDirectoryObject](/powershell/module/microsoft.graph.entra.beta/add-entrabetafeaturerolloutpolicydirectoryobject)|
 | Add-AzureADMSPrivilegedResource | Deprecated|
 | Add-AzureADScopedRoleMembership | [Add-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaScopedRoleMembership)|
 | Add-AzureADServicePrincipalPolicy | [Add-EntraBetaServicePrincipalPolicy](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaServicePrincipalPolicy)|
 | Close-AzureADMSPrivilegedRoleAssignmentRequest | Deprecated|
 | Get-AzureADAdministrativeUnit | [Get-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAdministrativeUnit)|
 | Get-AzureADAdministrativeUnitMember | [Get-EntraBetaAdministrativeUnitMember](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAdministrativeUnitMember)|
+|Get-AzureADApplicationPasswordCredential|[Get-EntraBetaApplicationPasswordCredential](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationPasswordCredential)|
 | Get-AzureADApplicationPolicy | [Get-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationPolicy)|
+|Get-AzureADApplicationServiceEndpoint|[Get-EntraBetaApplicationServiceEndpoint](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationServiceEndpoint)|
 | Get-AzureADApplicationSignInDetailedSummary | [Get-EntraBetaApplicationSignInDetailedSummary](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationSignInDetailedSummary)|
 | Get-AzureADApplicationSignInSummary | [Get-EntraBetaApplicationSignInSummary](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaApplicationSignInSummary)|
 | Get-AzureADAuditDirectoryLogs | [Get-EntraBetaAuditDirectoryLogs](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAuditDirectoryLogs)|
@@ -265,20 +267,20 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Get-AzureADDirectorySetting | [Get-EntraBetaDirectorySetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaDirectorySetting)|
 | Get-AzureADDirectorySettingTemplate | [Get-EntraBetaDirectorySettingTemplate](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaDirectorySettingTemplate)|
 | Get-AzureADExternalDomainFederation | |
-| Get-AzureADMSApplicationTemplate | [Get-EntraBetaAttributeSet](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAttributeSet)|
-| Get-AzureADMSAttributeSet | [Get-EntraBetaAuthorizationPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAuthorizationPolicy)|
-| Get-AzureADMSCustomSecurityAttributeDefinition | [Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue)|
-| Get-AzureADMSCustomSecurityAttributeDefinitionAllowedValue | [Get-EntraBetaDeletedDirectoryObject](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaDeletedDirectoryObject)|
-| Get-AzureADMSFeatureRolloutPolicy | [Get-EntraBetaGroupLifecyclePolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaGroupLifecyclePolicy)|
-| Get-AzureADMSGroupPermissionGrant | [Get-EntraBetaIdentityProvider](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaIdentityProvider)|
-| Get-AzureADMSPasswordSingleSignOnCredential | [Get-EntraBetaPermissionGrantConditionSet](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPermissionGrantConditionSet)|
-| Get-AzureADMSPrivilegedResource | [Get-EntraBetaPrivilegedRoleAssignmentRequest](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleAssignmentRequest)|
+| Get-AzureADMSApplicationTemplate | [Get-EntraBetaApplicationTemplate](/powershell/module/microsoft.graph.entra.beta/get-entrabetaapplicationtemplate)|
+| Get-AzureADMSAttributeSet | [Get-EntraBetaAttributeSet](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaAttributeSet)|
+| Get-AzureADMSCustomSecurityAttributeDefinition | [Get-EntraBetaCustomSecurityAttributeDefinition](/powershell/module/microsoft.graph.entra.beta/get-entrabetacustomsecurityattributedefinition)|
+| Get-AzureADMSCustomSecurityAttributeDefinitionAllowedValue | [Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue)|
+| Get-AzureADMSFeatureRolloutPolicy | [Get-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/get-entrabetafeaturerolloutpolicy)|
+| Get-AzureADMSGroupPermissionGrant | [Get-EntraBetaGroupPermissionGrant](/powershell/module/microsoft.graph.entra.beta/get-entrabetagrouppermissiongrant)|
+| Get-AzureADMSPasswordSingleSignOnCredential | [Get-EntraBetaPasswordSingleSignOnCredential](/powershell/module/microsoft.graph.entra.beta/get-entrabetapasswordsinglesignoncredential)|
+| Get-AzureADMSPrivilegedResource | [Get-EntraBetaPrivilegedResource](/powershell/module/microsoft.graph.entra.beta/get-entrabetaprivilegedresource)|
 | Get-AzureADMSPrivilegedRoleAssignment |  Deprecated|
-| Get-AzureADMSPrivilegedRoleAssignmentRequest | [Get-EntraBetaPrivilegedRoleDefinition](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleDefinition)|
-| Get-AzureADMSPrivilegedRoleDefinition | [Get-EntraBetaPrivilegedRoleSetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleSetting)|
-| Get-AzureADMSPrivilegedRoleSetting | [Get-EntraBetaRoleAssignment](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaRoleAssignment)|
+| Get-AzureADMSPrivilegedRoleAssignmentRequest | [Get-EntraBetaPrivilegedRoleAssignmentRequest](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleAssignmentRequest)|
+| Get-AzureADMSPrivilegedRoleDefinition | [Get-EntraBetaPrivilegedRoleDefinition](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleDefinition)|
+| Get-AzureADMSPrivilegedRoleSetting | [Get-EntraBetaPrivilegedRoleSetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRoleSetting)|
 | Get-AzureADMSServicePrincipal | [Get-EntraBetaServicePrincipal](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaServicePrincipal)|
-| Get-AzureADMSTrustFrameworkPolicy | [Get-EntraUnsupportedCommand](/powershell/module/microsoft.graph.entra.beta/Get-EntraUnsupportedCommand)|
+| Get-AzureADMSTrustFrameworkPolicy | [Get-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/get-entrabetatrustframeworkpolicy)|
 | Get-AzureADMSUser | [Get-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaUser)|
 | Get-AzureADObjectSetting | [Get-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaObjectSetting)|
 | Get-AzureADPolicy | [Get-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPolicy)|
@@ -290,14 +292,14 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | New-AzureADAdministrativeUnit | [New-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaAdministrativeUnit)|
 | New-AzureADDirectorySetting | [New-EntraBetaDirectorySetting](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaDirectorySetting)|
 | New-AzureADExternalDomainFederation | |
-| New-AzureADMSAdministrativeUnitMember | [New-EntraBetaApplicationFromApplicationTemplate](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaApplicationFromApplicationTemplate)|
-| New-AzureADMSApplicationFromApplicationTemplate | [New-EntraBetaApplicationKey](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaApplicationKey)|
-| New-AzureADMSAttributeSet | [New-EntraBetaConditionalAccessPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaConditionalAccessPolicy)|
-| New-AzureADMSCustomSecurityAttributeDefinition | [New-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaFeatureRolloutPolicy)|
-| New-AzureADMSFeatureRolloutPolicy | [New-EntraBetaGroupLifecyclePolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaGroupLifecyclePolicy)|
-| New-AzureADMSPasswordSingleSignOnCredential | [New-EntraBetaPermissionGrantConditionSet](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPermissionGrantConditionSet)|
+| New-AzureADMSAdministrativeUnitMember | [New-EntraBetaAdministrativeUnitMember](/powershell/module/microsoft.graph.entra.beta/new-entrabetaadministrativeunitmember)|
+| New-AzureADMSApplicationFromApplicationTemplate | [New-EntraBetaApplicationFromApplicationTemplate](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaApplicationFromApplicationTemplate)|
+| New-AzureADMSAttributeSet | [New-EntraBetaAttributeSet](/powershell/module/microsoft.graph.entra.beta/new-entrabetaattributeset)|
+| New-AzureADMSCustomSecurityAttributeDefinition | [New-EntraBetaCustomSecurityAttributeDefinition](/powershell/module/microsoft.graph.entra.beta/new-entrabetacustomsecurityattributedefinition)|
+| New-AzureADMSFeatureRolloutPolicy | [New-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaFeatureRolloutPolicy)|
+| New-AzureADMSPasswordSingleSignOnCredential | [New-EntraBetaPasswordSingleSignOnCredential](/powershell/module/microsoft.graph.entra.beta/new-entrabetapasswordsinglesignoncredential)|
 | New-AzureADMSServicePrincipal | [New-EntraBetaServicePrincipal](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaServicePrincipal)|
-| New-AzureADMSTrustFrameworkPolicy | [Remove-EntraBetaApplicationKey](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaApplicationKey)|
+| New-AzureADMSTrustFrameworkPolicy | [New-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/new-entrabetatrustframeworkpolicy)|
 | New-AzureADMSUser | [New-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaUser)|
 | New-AzureADObjectSetting | [New-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaObjectSetting)|
 | New-AzureADPolicy | [New-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPolicy)|
@@ -308,23 +310,23 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Remove-AzureADApplicationPolicy | [Remove-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaApplicationPolicy)|
 | Remove-AzureADDirectorySetting | [Remove-EntraBetaDirectorySetting](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaDirectorySetting)|
 | Remove-AzureADExternalDomainFederation | |
-| Remove-AzureADMSFeatureRolloutPolicy | [Remove-EntraBetaFeatureRolloutPolicyDirectoryObject](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaFeatureRolloutPolicyDirectoryObject)|
-| Remove-AzureADMSFeatureRolloutPolicyDirectoryObject | [Remove-EntraBetaGroupLifecyclePolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaGroupLifecyclePolicy)|
-| Remove-AzureADMSPasswordSingleSignOnCredential | [Remove-EntraBetaPermissionGrantConditionSet](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaPermissionGrantConditionSet)|
-| Remove-AzureADMSTrustFrameworkPolicy | [Reset-EntraBetaLifeCycleGroup](/powershell/module/microsoft.graph.entra.beta/Reset-EntraBetaLifeCycleGroup)|
+| Remove-AzureADMSFeatureRolloutPolicy | [Remove-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/remove-entrabetafeaturerolloutpolicy)|
+| Remove-AzureADMSFeatureRolloutPolicyDirectoryObject | [Remove-EntraBetaFeatureRolloutPolicyDirectoryObject](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaFeatureRolloutPolicyDirectoryObject)|
+| Remove-AzureADMSPasswordSingleSignOnCredential | [Remove-EntraBetaPasswordSingleSignOnCredential](/powershell/module/microsoft.graph.entra.beta/remove-entrabetapasswordsinglesignoncredential)|
+| Remove-AzureADMSTrustFrameworkPolicy | [Remove-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/remove-entrabetatrustframeworkpolicy)|
 | Remove-AzureADObjectSetting | [Remove-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaObjectSetting)|
 | Remove-AzureADPolicy | [Remove-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaPolicy)|
 | Remove-AzureADScopedRoleMembership | [Remove-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaScopedRoleMembership)|
 | Remove-AzureADServicePrincipalPolicy | [Remove-EntraBetaServicePrincipalPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaServicePrincipalPolicy)|
 | Set-AzureADAdministrativeUnit | [Set-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaAdministrativeUnit)|
 | Set-AzureADDirectorySetting | [Set-EntraBetaDirectorySetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaDirectorySetting)|
-| Set-AzureADMSAttributeSet | [Set-EntraBetaAuthorizationPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaAuthorizationPolicy)|
-| Set-AzureADMSCustomSecurityAttributeDefinition | [Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue)|
-| Set-AzureADMSCustomSecurityAttributeDefinitionAllowedValue | [Set-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaFeatureRolloutPolicy)|
-| Set-AzureADMSFeatureRolloutPolicy | [Set-EntraBetaGroupLifecyclePolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaGroupLifecyclePolicy)|
-| Set-AzureADMSPasswordSingleSignOnCredential | [Set-EntraBetaPermissionGrantConditionSet](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPermissionGrantConditionSet)|
-| Set-AzureADMSPrivilegedRoleAssignmentRequest | [Set-EntraBetaPrivilegedRoleSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPrivilegedRoleSetting)|
-| Set-AzureADMSPrivilegedRoleSetting | [Set-EntraBetaRoleDefinition](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaRoleDefinition)|
+| Set-AzureADMSAttributeSet | [Set-EntraBetaAttributeSet](/powershell/module/microsoft.graph.entra.beta/set-entrabetaattributeset)|
+| Set-AzureADMSCustomSecurityAttributeDefinition | [Set-EntraBetaCustomSecurityAttributeDefinition](/powershell/module/microsoft.graph.entra.beta/set-entrabetacustomsecurityattributedefinition)|
+| Set-AzureADMSCustomSecurityAttributeDefinitionAllowedValue | [Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue)|
+| Set-AzureADMSFeatureRolloutPolicy | [Set-EntraBetaFeatureRolloutPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaFeatureRolloutPolicy)|
+| Set-AzureADMSPasswordSingleSignOnCredential | [Set-EntraBetaPasswordSingleSignOnCredential](/powershell/module/microsoft.graph.entra.beta/set-entrabetapasswordsinglesignoncredential)|
+| Set-AzureADMSPrivilegedRoleAssignmentRequest | [Set-EntraBetaPrivilegedRoleAssignmentRequest](/powershell/module/microsoft.graph.entra.beta/set-entrabetaprivilegedroleassignmentrequest)|
+| Set-AzureADMSPrivilegedRoleSetting | [Set-EntraBetaPrivilegedRoleSetting](/powershell/module/microsoft.graph.entra.beta/set-entrabetaprivilegedrolesetting)|
 | Set-AzureADMSServicePrincipal | [Set-EntraBetaServicePrincipal](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaServicePrincipal)|
 | Set-AzureADMSTrustFrameworkPolicy | [Set-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/set-entrabetatrustframeworkpolicy)|
 | Set-AzureADMSUser | [Set-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaUser)|
