@@ -15,7 +15,7 @@ zone_pivot_group_filename: entra-powershell/zone-pivot-groups.json
 ---
 # Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Entra PowerShell
 
-The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD and Azure AD Preview PowerShell modules. Additionally, it provides parity for MSOnline cmdlets that were not migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for those you used in the Azure AD, Azure AD Preview, and MSOnline PowerShell modules
+The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD and Azure AD Preview PowerShell modules. Additionally, it provides parity for MSOnline cmdlets that were not migrated to Azure AD PowerShell. Use this page to find the equivalent cmdlets in Microsoft Entra PowerShell for those you used in the Azure AD, Azure AD Preview, and MSOnline PowerShell modules.
 
 :::zone pivot="azure-ad-powershell"
 
@@ -283,7 +283,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Get-AzureADMSTrustFrameworkPolicy | [Get-EntraUnsupportedCommand](/powershell/module/microsoft.graph.entra.beta/Get-EntraUnsupportedCommand)|
 | Get-AzureADMSUser | [Get-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaUser)|
 | Get-AzureADObjectSetting | [Get-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaObjectSetting)|
-| Get-AzureADPolicy | [Get-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPolicy)|
+| Get-AzureADPolicy | [Get-EntraPolicy](/powershell/module/microsoft.graph.entra/Get-EntraPolicy)|
 | Get-AzureADPolicyAppliedObject | [Get-EntraBetaPolicyAppliedObject](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPolicyAppliedObject)|
 | Get-AzureADPrivilegedRole | [Get-EntraBetaPrivilegedRole](/powershell/module/microsoft.graph.entra.beta/Get-EntraBetaPrivilegedRole)|
 | Get-AzureADPrivilegedRoleAssignment |  Deprecated|
@@ -302,7 +302,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | New-AzureADMSTrustFrameworkPolicy | [Remove-EntraBetaApplicationKey](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaApplicationKey)|
 | New-AzureADMSUser | [New-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaUser)|
 | New-AzureADObjectSetting | [New-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaObjectSetting)|
-| New-AzureADPolicy | [New-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPolicy)|
+| New-AzureADPolicy | [New-EntraPolicy](/powershell/module/microsoft.graph.entra/New-EntraPolicy)|
 | New-AzureADPrivilegedRoleAssignment | [New-EntraBetaPrivilegedRoleAssignment](/powershell/module/microsoft.graph.entra.beta/New-EntraBetaPrivilegedRoleAssignment)|
 | Open-AzureADMSPrivilegedRoleAssignmentRequest |  Deprecated|
 | Remove-AzureADAdministrativeUnit | [Remove-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaAdministrativeUnit)|
@@ -315,7 +315,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Remove-AzureADMSPasswordSingleSignOnCredential | [Remove-EntraBetaPermissionGrantConditionSet](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaPermissionGrantConditionSet)|
 | Remove-AzureADMSTrustFrameworkPolicy | [Reset-EntraBetaLifeCycleGroup](/powershell/module/microsoft.graph.entra.beta/Reset-EntraBetaLifeCycleGroup)|
 | Remove-AzureADObjectSetting | [Remove-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaObjectSetting)|
-| Remove-AzureADPolicy | [Remove-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaPolicy)|
+| Remove-AzureADPolicy | [Remove-EntraPolicy](/powershell/module/microsoft.graph.entra/Remove-EntraPolicy)|
 | Remove-AzureADScopedRoleMembership | [Remove-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaScopedRoleMembership)|
 | Remove-AzureADServicePrincipalPolicy | [Remove-EntraBetaServicePrincipalPolicy](/powershell/module/microsoft.graph.entra.beta/Remove-EntraBetaServicePrincipalPolicy)|
 | Set-AzureADAdministrativeUnit | [Set-EntraBetaAdministrativeUnit](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaAdministrativeUnit)|
@@ -331,7 +331,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 | Set-AzureADMSTrustFrameworkPolicy | [Set-EntraBetaTrustFrameworkPolicy](/powershell/module/microsoft.graph.entra.beta/set-entrabetatrustframeworkpolicy)|
 | Set-AzureADMSUser | [Set-EntraBetaUser](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaUser)|
 | Set-AzureADObjectSetting | [Set-EntraBetaObjectSetting](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaObjectSetting)|
-| Set-AzureADPolicy | [Set-EntraBetaPolicy](/powershell/module/microsoft.graph.entra.beta/Set-EntraBetaPolicy)|
+| Set-AzureADPolicy | [Set-EntraPolicy](/powershell/module/microsoft.graph.entra/Set-EntraPolicy)|
 
 :::zone-end
 
