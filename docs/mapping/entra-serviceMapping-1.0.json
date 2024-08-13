@@ -154,7 +154,7 @@
   "Get-EntraConditionalAccessPolicy": "Policies",
   "Get-EntraIdentityProvider": "Identity provider",
   "Get-EntraOAuth2PermissionGrant": "Identity and access",
-  "Get-EntraPasswordPolicy": "Identity and access",
+  "Get-EntraPasswordPolicy": "Domains",
   "Get-EntraPermissionGrantConditionSet": "Policies",
   "Get-EntraPermissionGrantPolicy": "Policies",
   "Get-EntraRoleAssignment": "Role management",

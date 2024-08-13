@@ -164,7 +164,7 @@
   "Get-EntraBetaPermissionGrantConditionSet": "Policies",
   "Get-EntraBetaPermissionGrantPolicy": "Policies",
   "Get-EntraBetaPolicyAppliedObject": "Policies",
-  "Get-EntraBetaPasswordPolicy": "Policies",
+  "Get-EntraBetaPasswordPolicy": "Domains",
   "New-EntraBetaNamedLocationPolicy": "Policies",
   "New-EntraBetaFeatureRolloutPolicy": "Policies",
   "New-EntraBetaPermissionGrantConditionSet": "Policies",
