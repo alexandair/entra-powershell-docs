@@ -33,6 +33,7 @@
   "Get-EntraApplicationPasswordCredential": "Applications",
   "Get-EntraApplicationServiceEndpoint": "Applications",
   "Get-EntraDeletedApplication": "Applications",
+  "Get-EntraApplicationTemplate": "Applications",
   "Add-EntraServicePrincipalDelegatedPermissionClassification": "Service principal",
   "Add-EntraServicePrincipalOwner": "Service principal",
   "Get-EntraServicePrincipal": "Service principal",
@@ -228,6 +229,11 @@
   "Get-EntraAttributeSet": "Custom security attributes",
   "New-EntraAttributeSet": "Custom security attributes",
   "Set-EntraAttributeSet": "Custom security attributes",
+  "Add-EntraCustomSecurityAttributeDefinitionAllowedValues": "Custom security attributes",
+  "Set-EntraCustomSecurityAttributeDefinitionAllowedValues": "Custom security attributes",
+  "Get-EntraCustomSecurityAttributeDefinition": "Custom security attributes",
+  "New-EntraCustomSecurityAttributeDefinition": "Custom security attributes",
+  "Set-EntraCustomSecurityAttributeDefinition": "Custom security attributes",
   "Add-EntraEnvironment": "Authentication",
   "Confirm-EntraDomain": "Domains",
   "Connect-Entra": "Authentication",
@@ -240,5 +246,10 @@
   "Get-EntraObjectByObjectId": "Directory",
   "Test-EntraScript": "Migration",
   "Get-EntraUnsupportedCommand": "Migration",
-  "Get-EntraBetaAuditSignInLogs": "Reports"
+  "Get-EntraAuditSignInLogs": "Reports",
+  "Get-EntraAuditDirectoryLogs": "Reports",
+  "Get-EntraObjectSetting": "Groups",
+  "New-EntraApplicationFromApplicationTemplate": "Applications",
+  "New-EntraFeatureRolloutPolicy": "Policies",
+  "Remove-EntraExternalDomainFederation": "Domains"
 }
