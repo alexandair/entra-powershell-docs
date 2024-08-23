@@ -261,7 +261,6 @@
   "Get-EntraBetaApplicationProxyApplicationConnectorGroup": "Application proxy",
   "Get-EntraBetaApplicationProxyConnector": "Application proxy",
   "Get-EntraBetaApplicationProxyConnectorGroup": "Application proxy",
-  "Get-EntraBetaApplicationProxyConnectorGroupMember": "Application proxy",
   "Get-EntraBetaApplicationProxyConnectorGroupMembers": "Application proxy",
   "Get-EntraBetaApplicationProxyConnectorMemberOf": "Application proxy",
   "New-EntraBetaApplicationProxyConnectorGroup": "Application proxy",
