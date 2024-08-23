@@ -1,6 +1,6 @@
 ---
-title: Set-EntraCustomSecurityAttributeDefinitionAllowedValue
-description: This article provides details on the Set-EntraCustomSecurityAttributeDefinitionAllowedValue command.
+title: Set-EntraCustomSecurityAttributeDefinitionAllowedValues
+description: This article provides details on the Set-EntraCustomSecurityAttributeDefinitionAllowedValues command.
 
 
 ms.topic: reference
@@ -12,12 +12,12 @@ author: msewaweru
 
 external help file: Microsoft.Graph.Entra-help.xml
 Module Name: Microsoft.Graph.Entra
-online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Set-EntraCustomSecurityAttributeDefinitionAllowedValue
+online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Set-EntraCustomSecurityAttributeDefinitionAllowedValues
 
 schema: 2.0.0
 ---
 
-# Set-EntraCustomSecurityAttributeDefinitionAllowedValue
+# Set-EntraCustomSecurityAttributeDefinitionAllowedValues
 
 ## Synopsis
 
@@ -26,7 +26,7 @@ Updates an existing custom security attribute definition predefined value.
 ## Syntax
 
 ```powershell
-Set-EntraCustomSecurityAttributeDefinitionAllowedValue 
+Set-EntraCustomSecurityAttributeDefinitionAllowedValues
  [-IsActive <Boolean>]
  -CustomSecurityAttributeDefinitionId <String> 
  -Id <String> [<CommonParameters>]
@@ -34,7 +34,7 @@ Set-EntraCustomSecurityAttributeDefinitionAllowedValue
 
 ## Description
 
-The `Set-EntraCustomSecurityAttributeDefinitionAllowedValue` cmdlet update a Microsoft Entra ID custom security attribute definition predefined value object identified by ID. Specify `CustomSecurityAttributeDefinitionId` and `Id` parameter to update a Microsoft Entra ID custom security attribute definition predefined value.
+The `Set-EntraCustomSecurityAttributeDefinitionAllowedValues` cmdlet update a Microsoft Entra ID custom security attribute definition predefined value object identified by ID. Specify `CustomSecurityAttributeDefinitionId` and `Id` parameter to update a Microsoft Entra ID custom security attribute definition predefined value.
 
 ## Examples
 
@@ -47,7 +47,7 @@ $params = @{
     Id = 'Alpine'
     IsActive = $true
 }
-Set-EntraCustomSecurityAttributeDefinitionAllowedValue @params
+Set-EntraCustomSecurityAttributeDefinitionAllowedValues @params
 ```
 
 This example update a custom security attribute definition predefined value.
