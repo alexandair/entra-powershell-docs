@@ -75,6 +75,7 @@
   "Set-EntraApplicationLogo": "Applications",
   "Set-EntraApplicationVerifiedPublisher": "Applications",
   "Set-EntraServicePrincipal": "Service principal",
+  "Set-EntraCustomSecurityAttributeDefinitionAllowedValue":"Service principal",
   "Get-EntraTrustedCertificateAuthority": "Certificate authorities",
   "New-EntraTrustedCertificateAuthority": "Certificate authorities",
   "Remove-EntraTrustedCertificateAuthority": "Certificate authorities",
