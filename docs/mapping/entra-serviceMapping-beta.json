@@ -149,7 +149,6 @@
   "Set-EntraBetaDirectorySetting": "Directory",
   "Set-EntraBetaDirSyncConfiguration": "Directory",
   "Set-EntraBetaDirSyncFeature": "Directory",
-  "Get-EntraBetaDomainFedrationSettings": "Domains",
   "Get-EntraBetaDomain": "Domains",
   "Get-EntraBetaDomainFederationSettings": "Domains",
   "Get-EntraBetaDomainNameReference": "Domains",

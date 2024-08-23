@@ -110,7 +110,6 @@
   "Restore-EntraDeletedDirectoryObject": "Directory",
   "Set-EntraDirSyncConfiguration": "Directory",
   "Set-EntraDirSyncFeature": "Directory",
-  "Get-EntraDomainFedrationSettings": "Domains",
   "Get-EntraDomain": "Domains",
   "Get-EntraDomainFederationSettings": "Domains",
   "Get-EntraDomainNameReference": "Domains",
