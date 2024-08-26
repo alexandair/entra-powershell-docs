@@ -22,7 +22,7 @@ This article lists all new articles that were added or had significant updates i
 
 #### New articles
 
-- [Azure AD  PowerShell cmdlet map][cmdlet-map] -  Find the equivalent cmdlets in Microsoft Entra PowerShell for deprecated Azure AD, Azure AD Preview, and MSOnline PowerShell modules to accelerate migration. 
+- [Azure AD  PowerShell cmdlet map][cmdlet-map] -  Find the equivalent cmdlets in Microsoft Entra PowerShell for deprecated Azure AD, Azure AD Preview, and MSOnline PowerShell modules to accelerate migration.
 - [Assign app roles to a service principal][assign-app-roles] - Assign app roles in Microsoft Entra PowerShell to automate application consent.
 
 #### Updated articles
@@ -33,7 +33,7 @@ This article lists all new articles that were added or had significant updates i
 
 - [Version 0.14.0-preview][posh-0.14.0]
 
-  - Added 17 net new cmdlets (Custom Security attributes, Application template, Feature Rollout policy, Audit Directory logs, Audit SignIn Logs, Administrative Unit)
+  - Added 17 net new cmdlets (Custom Security attributes, Application template, Feature Rollout policy, Audit Directory logs, Audit sign in Logs, Administrative Unit)
   - Improved documentation for over 25 existing cmdlets.
   - Added documentation for more than 20 v1.0 cmdlets.
   - Added documentation for over 50 Beta cmdlets.
@@ -54,7 +54,7 @@ This article lists all new articles that were added or had significant updates i
   - Added three new cmdlets for Global Secure Access - Private Access App segment management (preview)
   - Added missing types that were throwing warnings on missing types for Get-EntraApplication and Get-EntraBetaApplication commands.
   - Documentation improvements - Added Beta documentation for over 50 cmdlets
-  - Added required permissions for 34 additional commands.
+  - Added required permissions for 34 more commands.
   - Resolved broken link in `New-EntraRoleDefinition`.
 
 - [Version 0.11.0-preview][posh-0.11.0]
@@ -63,10 +63,9 @@ This article lists all new articles that were added or had significant updates i
   - Resolved local build issue for PowerShell 7.x.
   - Bug fixes from GitHub issues.
 
-
 - [Version 0.10.0-preview][posh-0.10.0]
 
-  - Added the ability to auto-install module dependencies.
+  - Added the ability to autoinstall module dependencies.
   - Official public preview release version.
   - Added Connect-Entra examples.
 
