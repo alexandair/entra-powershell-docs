@@ -249,7 +249,7 @@ The Microsoft Entra PowerShell module is over 98% compatible with the Azure AD a
 |--------------------------|---------------------------------|
 | Add-AzureADAdministrativeUnitMember | [Add-EntraBetaAdministrativeUnitMember](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaAdministrativeUnitMember)|
 | Add-AzureADApplicationPolicy | [Add-EntraBetaApplicationPolicy](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaApplicationPolicy)|
-| Add-AzureADMScustomSecurityAttributeDefinitionAllowedValues | [Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues)|
+| Add-AzureADMScustomSecurityAttributeDefinitionAllowedValues | [Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue)|
 | Add-AzureADMSFeatureRolloutPolicyDirectoryObject | [Add-EntraBetaFeatureRolloutPolicyDirectoryObject](/powershell/module/microsoft.graph.entra.beta/add-entrabetafeaturerolloutpolicydirectoryobject)|
 | Add-AzureADMSPrivilegedResource | Deprecated|
 | Add-AzureADScopedRoleMembership | [Add-EntraBetaScopedRoleMembership](/powershell/module/microsoft.graph.entra.beta/Add-EntraBetaScopedRoleMembership)|
