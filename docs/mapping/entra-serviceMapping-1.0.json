@@ -123,6 +123,7 @@
   "Add-EntraGroupMember": "Groups",
   "Add-EntraGroupOwner": "Groups",
   "Add-EntraLifecyclePolicyGroup": "Groups",
+  "Set-EntraFeatureRolloutPolicy":"Policies",
   "Get-EntraDeletedGroup": "Groups",
   "Get-EntraGroup": "Groups",
   "Get-EntraGroupAppRoleAssignment": "Groups",
@@ -250,5 +251,8 @@
   "Get-EntraObjectSetting": "Groups",
   "New-EntraApplicationFromApplicationTemplate": "Applications",
   "New-EntraFeatureRolloutPolicy": "Policies",
-  "Remove-EntraExternalDomainFederation": "Domains"
+  "Remove-EntraFeatureRolloutPolicyDirectoryObject":"Policies",
+  "Remove-EntraFeatureRolloutPolicy":"Policies",
+  "Remove-EntraExternalDomainFederation": "Domains",
+  "Get-EntraDirSyncFeature":"Directory"
 }
