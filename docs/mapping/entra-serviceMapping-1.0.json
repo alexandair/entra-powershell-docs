@@ -270,6 +270,5 @@
   "Remove-EntraDirectoryRoleDefinition": "Directory",
   "Remove-EntraServicePrincipalAppRoleAssignment": "Service principal",
   "Set-EntraDirectoryRoleDefinition": "Directory",
-  "Update-EntraUserFromFederated": "Users",
-  "Get-EntraAuditDirectoryLogs": "Reports"
+  "Update-EntraUserFromFederated": "Users"
 }

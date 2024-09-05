@@ -301,6 +301,5 @@
   "Remove-EntraBetaDirectoryRoleDefinition": "Directory",
   "Remove-EntraBetaServicePrincipalAppRoleAssignment": "Service princiapl",
   "Set-EntraBetaDirectoryRoleDefinition": "Directory",
-  "Update-EntraBetaUserFromFederated": "Users",
-  "Get-EntraBetaAuditSignInLogs": "Reports"
+  "Update-EntraBetaUserFromFederated": "Users"
 }
