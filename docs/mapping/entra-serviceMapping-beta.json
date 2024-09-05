@@ -263,7 +263,7 @@
   "Remove-EntraBetaApplicationProxyConnectorGroup": "Application proxy",
   "Set-EntraBetaApplicationProxyConnector": "Application proxy",
   "Set-EntraBetaApplicationProxyConnectorGroup": "Application proxy",
-  "Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValues": "Custom security attributes",
+  "Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue": "Custom security attributes",
   "Add-EntraBetaFeatureRolloutPolicyDirectoryObject": "Policies",
   "Add-EntraBetaScopedRoleMembership": "Administrative units",
   "Confirm-EntraBetaDomain": "Domains",
