@@ -297,7 +297,7 @@
   "New-EntraBetaServicePrincipalAppRoleAssignment": "Service principal",
   "Remove-EntraBetaDirectoryRoleAssignment": "Directory",
   "Remove-EntraBetaDirectoryRoleDefinition": "Directory",
-  "Remove-EntraBetaServicePrincipalAppRoleAssignment": "Service princiapl",
+  "Remove-EntraBetaServicePrincipalAppRoleAssignment": "Service principal",
   "Set-EntraBetaDirectoryRoleDefinition": "Directory",
   "Update-EntraBetaUserFromFederated": "Users"
 }
