@@ -60,7 +60,7 @@ version 1.2.1.
 
 ### Use latest version
 
-Only the latest major version is fully supported and updated with new features, bug fixes, and workarounds. The preceding major version is supported for 12 months from the release of the latest version, but only for security fixes. We strongly recommend upgrading to the latest version of the SDKs whenever possible to ensure you have the most current improvements and security updates.
+Only the latest major version receives full support, including new features, bug fixes, and updates. We strongly recommend upgrading to the [latest version](https://aka.ms/entrapsgallery) of the Entra PowerShell module to get the latest improvements and security updates.
 
 ## See Also
 
