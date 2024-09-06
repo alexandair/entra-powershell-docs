@@ -118,8 +118,8 @@ To manage users, you can perform the following common user management tasks:
     Connect-Entra -Scopes 'User.ReadWrite.All'
     $manager = Get-EntraUser -Filter "UserPrincipalName eq 'AdeleV@contoso.com'"
     $params = @{
-     ObjectId = 'SawyerM@contoso.com'
-     RefObjectId = $manager.ObjectId
+         ObjectId = 'SawyerM@contoso.com'
+         RefObjectId = $manager.ObjectId
     }
     
     Set-EntraUserManager @params
@@ -158,19 +158,19 @@ To manage users, you can perform the following common user management tasks:
 
 Grant a user an administrative role.
 
-```powershell
-Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
-$directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
-$user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
-$roleMemberParams = @{
-    ObjectId = $directoryRole.ObjectId
-    RefObjectId = $user.ObjectId
-}
+   ```powershell
+   Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
+   $directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
+   $user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
+   $roleMemberParams = @{
+        ObjectId = $directoryRole.ObjectId
+        RefObjectId = $user.ObjectId
+   }
 
-Add-EntraDirectoryRoleMember @roleMemberParams
+   Add-EntraDirectoryRoleMember @roleMemberParams
 ```
 
-This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
+   This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
 
 - `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
 
