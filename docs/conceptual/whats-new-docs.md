@@ -33,6 +33,14 @@ This article lists all new articles that were added or had significant updates i
 
 - [Version 0.15.0-preview][posh-0.15.0]
 
+  - Added six new cmdlets for these nouns: **FeatureRolloutPolicy**, **TrustedCertificateAuthority**, and **CustomSecurityAttributeDefinitionAllowedValue**.
+  - Renamed over 40 cmdlets to follow [PowerShell cmdlet naming best practices](/powershell/scripting/developer/cmdlet/strongly-encouraged-development-guidelines#use-a-specific-noun-for-a-cmdlet-name-sd01), ensuring singular nouns are used.
+  - Removed unused variables as part of code clean-up efforts.
+  - Added a [developer documentation guide](https://github.com/microsoftgraph/entra-powershell/tree/main/development-docs) that covers development workflow, cmdlet best practices, pipeline best practices, and parameter best practices.
+  - Updated configuration to manage the **required version** for dependent modules.
+  - Enabled **PSScriptAnalyzer** for code analysis.
+  - Housekeeping tasks, including improvements to the build and release pipelines.
+
 - [Version 0.14.0-preview][posh-0.14.0]
 
   - Added 17 net new cmdlets (Custom Security attributes, Application template, Feature Rollout policy, Audit Directory logs, Audit sign in Logs, Administrative Unit)
@@ -73,6 +81,7 @@ This article lists all new articles that were added or had significant updates i
 
 [assign-app-roles]: create-assign-app-roles.md
 [cmdlet-map]: azuread-powershell-to-entra-powershell-mapping.md
+[posh-0.15.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.15.0-preview
 [posh-0.14.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.14.0-preview
 [posh-0.13.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.13.0-preview
 [posh-0.12.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.12.0-preview
