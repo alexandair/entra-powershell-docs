@@ -53,25 +53,17 @@ To manage users, you can perform the following common user management tasks:
     New-EntraUser @userParams
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {}
-    preferredLanguage               :
-    mail                            :
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=NewUser@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
-    assignedLicenses                : {}
+    ```Output
+    DisplayName    Id                                   Mail UserPrincipalName
+    -----------    --                                   ---- -----------------
+    New User aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb      NewUser@contoso.com
     ```
 
 1. Delete a user.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
     ```
 
 ### List a user's group memberships
@@ -80,10 +72,10 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserMembership -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
+    ```Output
     Id                                   DeletedDateTime
     --                                   ---------------
     eeeeeeee-4444-5555-6666-ffffffffffff
@@ -98,43 +90,26 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserManager -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {UserManager@contoso.com}
-    preferredLanguage               :
-    mail                            : UserManager@contoso.com
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=UserManager@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
+    ```Output
+     Id                                   DeletedDateTime
+    --                                   ---------------
+    eeeeeeee-4444-5555-6666-ffffffffffff
     ```
 
 1. List the users who report to a specific user.
 
     ```powershell
     Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserDirectReport -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {User@contoso.com}
-    preferredLanguage               :
-    mail                            : User@contoso.com
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-                                      S-1-12-1-3333333333-4444444444-5555555555-6666666666
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=User@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
-    assignedLicenses                : {@{disabledPlans=System.Object[]; skuId=0a0a0a0a-1111-bbbb-2222-3c3c3c3c3c3c}, @{disabledPlans=System.Object[]; skuId=1b1b1b1b-2222-cccc-3333-4d4d4d4d4d4d},
-                                    @{disabledPlans=System.Object[]; skuId=2c2c2c2c-3333-dddd-4444-5e5e5e5e5e5e}}
+    ```Output
+     Id                                   DeletedDateTime
+    --                                   ---------------
+    eeeeeeee-4444-5555-6666-ffffffffffff
     ```
 
 1. Assign a manager to a user.
