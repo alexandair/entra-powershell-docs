@@ -116,17 +116,18 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
+    $manager = Get-EntraUser -Filter "UserPrincipalName eq 'AdeleV@contoso.com'"
     $params = @{
-        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
-        RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+     ObjectId = 'SawyerM@contoso.com'
+     RefObjectId = $manager.ObjectId
     }
-
+    
     Set-EntraUserManager @params
     ```
 
-   - `-ObjectId` - specifies the unique identifier (ID) of the user who have their manager set or updated.
+   - `-ObjectId` - specifies the ID (as a UserPrincipalName or ObjectId) of a user in Microsoft Entra ID.
 
-   - `-RefObjectId` - specifies the unique ID of the user who is to be set as the manager.
+   - `-RefObjectId` - specifies the ID of the Microsoft Entra ID object to assign as a manager.
 
 ### Upload or retrieve a photo for the user
 
@@ -135,7 +136,7 @@ To manage users, you can perform the following common user management tasks:
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
     $photoParams = @{
-        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+        ObjectId = 'SawyerM@contoso.com'
         FilePath = 'D:\UserThumbnailPhoto.jpg'
     }
     
@@ -148,7 +149,7 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'ProfilePhoto.Read.All'
-    Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserThumbnailPhoto -ObjectId 'SawyerM@contoso.com'
     ```
 
     This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
@@ -159,9 +160,11 @@ Grant a user an administrative role.
 
 ```powershell
 Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
+$directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
+$user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
 $roleMemberParams = @{
-    ObjectId = 'cccccccc-2222-3333-4444-dddddddddddd'
-    RefObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    ObjectId = $directoryRole.ObjectId
+    RefObjectId = $user.ObjectId
 }
 
 Add-EntraDirectoryRoleMember @roleMemberParams
@@ -179,10 +182,10 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Get-EntraUserLicenseDetail -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserLicenseDetail -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
+    ```Output
     Id                                          SkuId                                SkuPartNumber
     --                                          -----                                -------------
     ouL7hgqFM0GkdqXrzahI4u7E6wa1G91HgSARMkvFTgY 06ebc4ee-1bb5-47dd-8120-11324bc54e06 SPE_E5
@@ -192,7 +195,7 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All','AuditLog.Read.all'
-    $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
+    $User = Get-EntraUser -ObjectId 'SawyerM@contoso.com'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
     $License.SkuId = (Get-EntraSubscribedSku | Where SkuPartNumber -eq 'FLOW_FREE').SkuId
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
@@ -200,7 +203,7 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
+    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
 
 ## Next steps
 
