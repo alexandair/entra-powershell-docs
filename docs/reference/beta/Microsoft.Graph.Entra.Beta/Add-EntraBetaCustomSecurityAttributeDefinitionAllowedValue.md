@@ -1,22 +1,22 @@
 ---
-title: Add-EntraCustomSecurityAttributeDefinitionAllowedValues
-description: This article provides details on the Add-EntraCustomSecurityAttributeDefinitionAllowedValues command.
-
+title: Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue
+description: This article provides details on the Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue command.
 
 ms.topic: reference
-ms.date: 06/26/2024
+ms.date: 07/12/2024
 ms.author: eunicewaweru
 ms.reviewer: stevemutungi
 manager: CelesteDG
 author: msewaweru
 
-external help file: Microsoft.Graph.Entra-Help.xml
-Module Name: Microsoft.Graph.Entra
-online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra/Add-EntraCustomSecurityAttributeDefinitionAllowedValues
+external help file: Microsoft.Graph.Entra.Beta-help.xml
+Module Name: Microsoft.Graph.Entra.Beta
+online version: https://learn.microsoft.com/powershell/module/Microsoft.Graph.Entra.Beta/Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue
+
 schema: 2.0.0
 ---
 
-# Add-EntraCustomSecurityAttributeDefinitionAllowedValues
+# Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue
 
 ## Synopsis
 
@@ -25,16 +25,16 @@ Adds a predefined value for a custom security attribute definition.
 ## Syntax
 
 ```powershell
-Add-EntraCustomSecurityAttributeDefinitionAllowedValues 
- -CustomSecurityAttributeDefinitionId <String>
+Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue 
+ -IsActive <Boolean>
+ -CustomSecurityAttributeDefinitionId <String> 
  -Id <String> 
- -IsActive <Boolean> 
  [<CommonParameters>]
 ```
 
 ## Description
 
-The `Add-EntraCustomSecurityAttributeDefinitionAllowedValues` adds a predefined value for a Microsoft Entra ID custom security attribute definition.
+The `Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue` adds a predefined value for a Microsoft Entra ID custom security attribute definition.
 
 In delegated scenarios with work or school accounts, the signed-in user must be assigned a supported Microsoft Entra role or a custom role with the necessary permissions. The Attribute Definition Administrator is the only privileged role supported for this operation.
 
@@ -44,17 +44,16 @@ In delegated scenarios with work or school accounts, the signed-in user must be 
 
 ```powershell
 Connect-Entra -Scopes 'CustomSecAttributeDefinition.ReadWrite.All'
-$CustomSecurityAttributeDefinitionId = (Get-EntraCustomSecurityAttributeDefinition -Id '<attributename_attributedefinition>').Id
+$CustomSecurityAttributeDefinitionId = (Get-EntraBetaCustomSecurityAttributeDefinition -Id '<attributename_attributedefinition>').Id
 $params = @{
     CustomSecurityAttributeDefinitionId = $CustomSecurityAttributeDefinitionId
     Id = 'Alpine'
     IsActive = $true
 }
-Add-EntraCustomSecurityAttributeDefinitionAllowedValues @params
+Add-EntraBetaCustomSecurityAttributeDefinitionAllowedValue @params
 ```
 
 ```Output
-
 Id   IsActive
 --   --------
 Alpine True
@@ -62,7 +61,7 @@ Alpine True
 
 This example adds a predefined value to a custom security attribute definition.
 
-- `-CustomSecurityAttributeDefinitionId` parameter specifies the custom security attribute definition ID. You can use the command `Get-EntraCustomSecurityAttributeDefinition` to get the ID.
+- `-CustomSecurityAttributeDefinitionId` parameter specifies the custom security attribute definition ID. You can use the command `Get-EntraBetaCustomSecurityAttributeDefinition` to get the ID.
 - `-Id` parameter specifies the identifier for the predefined value.
 - `-IsActive` parameter specifies the predefined value is active or deactivated.
 
@@ -86,7 +85,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-The unique identifier for the predefined value, which can be up to 64 characters long and include Unicode characters. Spaces are allowed, but some special characters are not. This identifier is case sensitive, cannot be changed later, and is required.
+The unique identifier for the predefined value, which can be up to 64 characters long and include Unicode characters. Spaces are allowed, but some special characters aren't. This identifier is case sensitive, can't be changed later, and is required.
 
 ```yaml
 Type: System.String
@@ -132,6 +131,6 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## Related Links
 
-[Get-EntraCustomSecurityAttributeDefinitionAllowedValues](Get-EntraCustomSecurityAttributeDefinitionAllowedValues.md)
+[Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](Get-EntraBetaCustomSecurityAttributeDefinitionAllowedValue.md)
 
-[Set-EntraCustomSecurityAttributeDefinitionAllowedValues](Set-EntraCustomSecurityAttributeDefinitionAllowedValues.md)
+[Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue](Set-EntraBetaCustomSecurityAttributeDefinitionAllowedValue.md)
