@@ -38,7 +38,6 @@
   "Get-EntraBetaDeletedGroup": "Groups",
   "Get-EntraBetaGroupAppRoleAssignment": "Groups",
   "Get-EntraBetaGroupLifecyclePolicy": "Groups",
-  "Add-EntraLifecyclePolicyGroup": "Groups",
   "Get-EntraBetaGroupPermissionGrant": "Groups",
   "Get-EntraBetaLifecyclePolicyGroup": "Groups",
   "New-EntraBetaGroupAppRoleAssignment": "Groups",
@@ -200,7 +199,6 @@
   "Set-EntraBetaPrivilegedRoleAssignmentRequest": "Privileged identity management",
   "Set-EntraBetaPrivilegedRoleSetting": "Privileged identity management",
   "Get-EntraBetaAccountSku": "Licenses and subscriptions",
-  "Get-EntraBetaExtensionProperty": "Directory",
   "Get-EntraBetaFederationProperty": "Domains",
   "Enable-EntraAzureADAlias": "Migration",
   "Test-EntraScript": "Migration",
@@ -301,5 +299,6 @@
   "Remove-EntraBetaDirectoryRoleDefinition": "Directory",
   "Remove-EntraBetaServicePrincipalAppRoleAssignment": "Service princiapl",
   "Set-EntraBetaDirectoryRoleDefinition": "Directory",
-  "Update-EntraBetaUserFromFederated": "Users"
+  "Update-EntraBetaUserFromFederated": "Users",
+  "Get-EntraBetaAuditSignInLogs": ""
 }

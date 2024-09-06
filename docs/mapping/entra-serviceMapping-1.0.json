@@ -103,7 +103,6 @@
   "Get-EntraDirectoryRoleMember": "Directory",
   "Get-EntraDirectoryRoleTemplate": "Directory",
   "Get-EntraDirSyncConfiguration": "Directory",
-  "Get-EntraDirSyncfeature": "Directory",
   "Get-EntraHasObjectsWithDirSyncProvisioningError": "Directory",
   "Remove-EntraDirectoryRoleMember": "Directory",
   "Restore-EntraDeletedDirectoryObject": "Directory",
