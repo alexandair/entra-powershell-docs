@@ -66,12 +66,30 @@ To manage users, you can perform the following common user management tasks:
     Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
     ```
 
+### Retrieve a User's Sign-In Activity
+
+1. Retrieve the SignInActivity of a specific user.
+
+    ```powershell
+    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
+    Get-EntraUser -ObjectId 'SawyerM@contoso.com' -Property 'SignInActivity' | Select-Object -ExpandProperty 'SignInActivity'
+    ```
+
+    ```Output
+    lastSignInDateTime                : 07/09/2024 09:15:41
+    lastNonInteractiveSignInDateTime  : 07/09/2024 07:15:41
+    lastSuccessfulSignInRequestId     : bbbbbbbb-1111-2222-3333-aaaaaaaaaaaa
+    lastNonInteractiveSignInRequestId : 00001111-aaaa-2222-bbbb-3333cccc4444
+    lastSignInRequestId               : bbbbbbbb-1111-2222-3333-aaaaaaaaaaaa
+    lastSuccessfulSignInDateTime      : 07/09/2024 09:15:41
+    ```
+
 ### List a user's group memberships
 
 1. List a user’s group memberships.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserMembership -ObjectId 'SawyerM@contoso.com'
     ```
 
