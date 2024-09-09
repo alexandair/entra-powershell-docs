@@ -40,9 +40,10 @@ This article lists all new articles that were added or had significant updates i
   - Updated configuration to manage the **required version** for dependent modules.
   - Enabled **PSScriptAnalyzer** for code analysis.
   - Housekeeping tasks, including improvements to the build and release pipelines.
-- Get-EntraUser has changed and does not return the `SignInActivity` by default. To return the sign-in activity, use [this example](/powershell/module/microsoft.graph.entra/get-entrauser?view=entra-powershell#example-6-get-signinactivity-of-a-user).
+
 - [Version 0.14.0-preview][posh-0.14.0]
 
+  - The `Get-EntraUser` cmdlet has been updated and no longer returns the `SignInActivity` by default. To retrieve sign-in activity, refer to [this example](/powershell/module/microsoft.graph.entra/get-entrauser#example-6-get-signinactivity-of-a-user).
   - Added 17 net new cmdlets (Custom Security attributes, Application template, Feature Rollout policy, Audit Directory logs, Audit sign in Logs, Administrative Unit)
   - Improved documentation for over 25 existing cmdlets.
   - Added documentation for more than 20 v1.0 cmdlets.
