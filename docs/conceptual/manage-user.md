@@ -107,7 +107,7 @@ To manage users, you can perform the following common user management tasks:
 1. Get a user's manager.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserManager -ObjectId 'SawyerM@contoso.com'
     ```
 
@@ -120,7 +120,7 @@ To manage users, you can perform the following common user management tasks:
 1. List the users who report to a specific user.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
+    Connect-Entra -Scopes 'User.Read.All'
     Get-EntraUserDirectReport -ObjectId 'SawyerM@contoso.com'
     ```
 
@@ -212,7 +212,7 @@ Grant a user an administrative role.
 1. Assign a license to a user based on a template user.
 
     ```powershell
-    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All','AuditLog.Read.all'
+    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All'
     $User = Get-EntraUser -ObjectId 'SawyerM@contoso.com'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
     $License.SkuId = (Get-EntraSubscribedSku | Where SkuPartNumber -eq 'FLOW_FREE').SkuId
