@@ -206,7 +206,8 @@ Uninstall-Module -Name Microsoft.Graph.Entra.Beta -AllVersions
 To start managing your Microsoft Entra resources with the Microsoft Entra PowerShell module, launch a PowerShell session and run [Connect-Entra][Connect-Entra] to sign in to Microsoft Entra ID:
 
 ```powershell
-Connect-Entra
+Connect-Entra -Scopes 'User.Read.All'
+Get-EntraUser -Filter "userPrincipalName eq 'SawyerM@contoso.com'"
 ```
 
 Use your Microsoft Entra sign-in credentials to log into the sign-in window that opens.

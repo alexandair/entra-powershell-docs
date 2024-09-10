@@ -53,25 +53,35 @@ To manage users, you can perform the following common user management tasks:
     New-EntraUser @userParams
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {}
-    preferredLanguage               :
-    mail                            :
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=NewUser@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
-    assignedLicenses                : {}
+    ```Output
+    DisplayName    Id                                   Mail UserPrincipalName
+    -----------    --                                   ---- -----------------
+    New User aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb      NewUser@contoso.com
     ```
 
 1. Delete a user.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Remove-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
+    ```
+
+### Retrieve a User's Sign-In Activity
+
+1. Retrieve the SignInActivity of a specific user.
+
+    ```powershell
+    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
+    Get-EntraUser -ObjectId 'SawyerM@contoso.com' -Property 'SignInActivity' | Select-Object -ExpandProperty 'SignInActivity'
+    ```
+
+    ```Output
+    lastSignInDateTime                : 07/09/2024 09:15:41
+    lastNonInteractiveSignInDateTime  : 07/09/2024 07:15:41
+    lastSuccessfulSignInRequestId     : bbbbbbbb-1111-2222-3333-aaaaaaaaaaaa
+    lastNonInteractiveSignInRequestId : 00001111-aaaa-2222-bbbb-3333cccc4444
+    lastSignInRequestId               : bbbbbbbb-1111-2222-3333-aaaaaaaaaaaa
+    lastSuccessfulSignInDateTime      : 07/09/2024 09:15:41
     ```
 
 ### List a user's group memberships
@@ -79,11 +89,11 @@ To manage users, you can perform the following common user management tasks:
 1. List a user’s group memberships.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserMembership -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Connect-Entra -Scopes 'User.Read.All'
+    Get-EntraUserMembership -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
+    ```Output
     Id                                   DeletedDateTime
     --                                   ---------------
     eeeeeeee-4444-5555-6666-ffffffffffff
@@ -97,61 +107,45 @@ To manage users, you can perform the following common user management tasks:
 1. Get a user's manager.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserManager -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Connect-Entra -Scopes 'User.Read.All'
+    Get-EntraUserManager -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {UserManager@contoso.com}
-    preferredLanguage               :
-    mail                            : UserManager@contoso.com
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=UserManager@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
+    ```Output
+     Id                                   DeletedDateTime
+    --                                   ---------------
+    eeeeeeee-4444-5555-6666-ffffffffffff
     ```
 
 1. List the users who report to a specific user.
 
     ```powershell
-    Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
-    Get-EntraUserDirectReport -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Connect-Entra -Scopes 'User.Read.All'
+    Get-EntraUserDirectReport -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
-    ageGroup                        :
-    onPremisesLastSyncDateTime      :
-    creationType                    :
-    imAddresses                     : {User@contoso.com}
-    preferredLanguage               :
-    mail                            : User@contoso.com
-    securityIdentifier              : S-1-12-1-2222222222-3333333333-4444444444-5555555555
-                                      S-1-12-1-3333333333-4444444444-5555555555-6666666666
-    identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=User@contoso.com}}
-    consentProvidedForMinor         :
-    onPremisesUserPrincipalName     :
-    assignedLicenses                : {@{disabledPlans=System.Object[]; skuId=0a0a0a0a-1111-bbbb-2222-3c3c3c3c3c3c}, @{disabledPlans=System.Object[]; skuId=1b1b1b1b-2222-cccc-3333-4d4d4d4d4d4d},
-                                    @{disabledPlans=System.Object[]; skuId=2c2c2c2c-3333-dddd-4444-5e5e5e5e5e5e}}
+    ```Output
+     Id                                   DeletedDateTime
+    --                                   ---------------
+    eeeeeeee-4444-5555-6666-ffffffffffff
     ```
 
 1. Assign a manager to a user.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
+    $manager = Get-EntraUser -Filter "UserPrincipalName eq 'AdeleV@contoso.com'"
     $params = @{
-        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
-        RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+         ObjectId = 'SawyerM@contoso.com'
+         RefObjectId = $manager.ObjectId
     }
-
+    
     Set-EntraUserManager @params
     ```
 
-   - `-ObjectId` - specifies the unique identifier (ID) of the user who have their manager set or updated.
+   - `-ObjectId` - specifies the ID (as a UserPrincipalName or ObjectId) of a user in Microsoft Entra ID.
 
-   - `-RefObjectId` - specifies the unique ID of the user who is to be set as the manager.
+   - `-RefObjectId` - specifies the ID as a UserPrincipalName or ObjectId) of the Microsoft Entra ID object to assign as a manager.
 
 ### Upload or retrieve a photo for the user
 
@@ -160,7 +154,7 @@ To manage users, you can perform the following common user management tasks:
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
     $photoParams = @{
-        ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+        ObjectId = 'SawyerM@contoso.com'
         FilePath = 'D:\UserThumbnailPhoto.jpg'
     }
     
@@ -173,7 +167,7 @@ To manage users, you can perform the following common user management tasks:
 
     ```powershell
     Connect-Entra -Scopes 'ProfilePhoto.Read.All'
-    Get-EntraUserThumbnailPhoto -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserThumbnailPhoto -ObjectId 'SawyerM@contoso.com'
     ```
 
     This example demonstrates how to retrieve the thumbnail photo of a user that is specified through the value of the ObjectId parameter.
@@ -182,17 +176,19 @@ To manage users, you can perform the following common user management tasks:
 
 Grant a user an administrative role.
 
-```powershell
-Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
-$roleMemberParams = @{
-    ObjectId = 'cccccccc-2222-3333-4444-dddddddddddd'
-    RefObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
-}
+   ```powershell
+   Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
+   $directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
+   $user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
+   $roleMemberParams = @{
+        ObjectId = $directoryRole.ObjectId
+        RefObjectId = $user.ObjectId
+   }
 
-Add-EntraDirectoryRoleMember @roleMemberParams
+   Add-EntraDirectoryRoleMember @roleMemberParams
 ```
 
-This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
+   This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
 
 - `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
 
@@ -204,10 +200,10 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
-    Get-EntraUserLicenseDetail -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    Get-EntraUserLicenseDetail -ObjectId 'SawyerM@contoso.com'
     ```
 
-    ```output
+    ```Output
     Id                                          SkuId                                SkuPartNumber
     --                                          -----                                -------------
     ouL7hgqFM0GkdqXrzahI4u7E6wa1G91HgSARMkvFTgY 06ebc4ee-1bb5-47dd-8120-11324bc54e06 SPE_E5
@@ -216,8 +212,8 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
 1. Assign a license to a user based on a template user.
 
     ```powershell
-    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All','AuditLog.Read.all'
-    $User = Get-EntraUser -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'  
+    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All'
+    $User = Get-EntraUser -ObjectId 'SawyerM@contoso.com'  
     $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense 
     $License.SkuId = (Get-EntraSubscribedSku | Where SkuPartNumber -eq 'FLOW_FREE').SkuId
     $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses 
@@ -225,7 +221,7 @@ This command adds a user to a Microsoft Entra role. To retrieve roles, use the c
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
+    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
 
 ## Next steps
 
