@@ -202,7 +202,7 @@ To manage users, you can perform the following common user management tasks:
     - `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
     - `-RefObjectId` - specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
 
-## Work with user licenses
+## Manage user licenses
 
 1. Get details of a user's licenses.
 
