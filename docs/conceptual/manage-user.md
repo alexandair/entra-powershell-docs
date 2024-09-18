@@ -231,6 +231,37 @@ To manage users, you can perform the following common user management tasks:
 
     This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
 
+1. Remove a license from a user.
+
+    ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All', 'Organization.Read.All'
+    $UserPrincipalName = 'SawyerM@contoso.com'
+    $User = Get-EntraUser -ObjectId $UserPrincipalName
+    $SkuId = (Get-EntraUserLicenseDetail -ObjectId $UserPrincipalName).SkuId
+    $Licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+    $Licenses.RemoveLicenses = $SkuId
+    Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
+    ```
+
+    ```Output
+    Name                           Value
+    ----                           -----
+    preferredLanguage
+    givenName
+    @odata.context                 https://graph.microsoft.com/v1.0/$metadata#users/$entity
+    id                             hhhhhhhh-7777-8888-9999-iiiiiiiiiiii
+    mail                           SawyerM@contoso.com
+    userPrincipalName              SawyerM@contoso.com
+    jobTitle
+    displayName                    Sawyer Miller
+    officeLocation
+    surname
+    mobilePhone
+    businessPhones                 {}
+    ```
+
+    This example shows how to remove from a user.
+
 ## Offboarding  a user
 
 1. Invalidate Active Sessions and tokens.
