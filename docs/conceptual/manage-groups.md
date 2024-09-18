@@ -128,6 +128,48 @@ consentProvidedForMinor         :
 onPremisesUserPrincipalName     :
 ```
 
+## Querying Ownerless and Empty Groups
+
+1. Groups Without Owners.
+
+    ```powershell
+    $allGroups = Get-EntraGroup -All
+    $groupsWithoutOwners = foreach ($group in $allGroups) {
+        $owners = Get-EntraGroupOwner -ObjectId $group.Id
+        if ($owners.Count -eq 0) {
+            $group
+        }
+    }
+    $groupsWithoutOwners | Format-Table DisplayName, Id, GroupTypes
+    ```
+
+    ```Output
+    DisplayName           Id                                   GroupTypes
+    -----------           --                                   ----------
+    My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+    HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
+    ```
+
+1. Groups Without Members (empty groups).
+
+    ```powershell
+    $allGroups = Get-EntraGroup -All
+    $groupsWithoutMembers = foreach ($group in $allGroups) {
+        $members = Get-EntraGroupMember -ObjectId $group.Id
+        if ($members.Count -eq 0) {
+            $group
+        }
+    }
+    $groupsWithoutMembers | Format-Table DisplayName, Id, GroupTypes
+    ```
+
+    ```Output
+    DisplayName           Id                                   GroupTypes
+    -----------           --                                   ----------
+    My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+    HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
+    ```
+
 ## Clean up resources
 
 To remove the group, run the following command.
