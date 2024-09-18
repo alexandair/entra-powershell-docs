@@ -186,22 +186,21 @@ To manage users, you can perform the following common user management tasks:
 Grant a user an administrative role.
 
    ```powershell
-   Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
-   $directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
-   $user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
-   $roleMemberParams = @{
-        ObjectId = $directoryRole.ObjectId
-        RefObjectId = $user.ObjectId
-   }
+    Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
+    $directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
+    $user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
+    $roleMemberParams = @{
+         ObjectId = $directoryRole.ObjectId
+         RefObjectId = $user.ObjectId
+    }
 
-   Add-EntraDirectoryRoleMember @roleMemberParams
-```
+    Add-EntraDirectoryRoleMember @roleMemberParams
+    ```
 
    This command adds a user to a Microsoft Entra role. To retrieve roles, use the command [Get-EntraDirectoryRole](/powershell/module/microsoft.graph.entra/get-entradirectoryrole).
 
-- `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
-
-- `-RefObjectId` - specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
+    - `-ObjectId` - specifies the unique identifier (ObjectId) of the directory role to which you want to add a member.
+    - `-RefObjectId` - specifies the unique identifier (ObjectId) of the user, group, or service principal that you want to add as a member of the specified directory role.
 
 ## Work with user licenses
 
