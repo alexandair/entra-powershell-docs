@@ -229,7 +229,7 @@ To manage users, you can perform the following common user management tasks:
     Set-EntraUserLicense -ObjectId $User.ObjectId -AssignedLicenses $Licenses
     ```
 
-    This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
+    The following example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
 
 1. Remove a license from a user.
 
