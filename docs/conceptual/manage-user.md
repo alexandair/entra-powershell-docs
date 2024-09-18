@@ -271,7 +271,7 @@ To manage users, you can perform the following common user management tasks:
     Revoke-EntraUserAllRefreshToken -ObjectId 'SawyerM@contoso.com'
     ```
 
-    Revoking authentication tokens invalidates them, preventing reaccess through cached logins or remembered sessions.
+    Revoking authentication tokens invalidates them, thus preventing reaccess through cached logins or remembered sessions.
 
 1. Disable a user.
 
