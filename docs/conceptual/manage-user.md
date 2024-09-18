@@ -142,6 +142,8 @@ To manage users, you can perform the following common user management tasks:
 
 ## List of Inactive Users
 
+1. List of disabled accounts.
+
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
     Get-EntraUser -Filter "accountEnabled eq false" | Select-Object DisplayName, Id, Mail, UserPrincipalName
