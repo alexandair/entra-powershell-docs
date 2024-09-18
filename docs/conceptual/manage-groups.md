@@ -38,7 +38,6 @@ $groupParams = @{
     SecurityEnabled = $true
     MailNickName = 'NotSet'
 }
-
 New-EntraGroup @groupParams
 ```
 
@@ -129,43 +128,43 @@ eeeeeeee-4444-5555-6666-ffffffffffff
 
 To query groups without owners, run the following command.
 
-    ```powershell
-    $allGroups = Get-EntraGroup -All
-    $groupsWithoutOwners = foreach ($group in $allGroups) {
-        $owners = Get-EntraGroupOwner -ObjectId $group.Id
-        if ($owners.Count -eq 0) {
-            $group
-        }
+```powershell
+$allGroups = Get-EntraGroup -All
+$groupsWithoutOwners = foreach ($group in $allGroups) {
+    $owners = Get-EntraGroupOwner -ObjectId $group.Id
+    if ($owners.Count -eq 0) {
+        $group
     }
-    $groupsWithoutOwners | Format-Table DisplayName, Id, GroupTypes
-    ```
+}
+$groupsWithoutOwners | Format-Table DisplayName, Id, GroupTypes
+```
 
-    ```Output
-    DisplayName           Id                                   GroupTypes
-    -----------           --                                   ----------
-    My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
-    HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
-    ```
+```Output
+DisplayName           Id                                   GroupTypes
+-----------           --                                   ----------
+My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
+```
 
 To query groups without members (empty groups), run the following command.
 
-    ```powershell
-    $allGroups = Get-EntraGroup -All
-    $groupsWithoutMembers = foreach ($group in $allGroups) {
-        $members = Get-EntraGroupMember -ObjectId $group.Id
-        if ($members.Count -eq 0) {
-            $group
-        }
+```powershell
+$allGroups = Get-EntraGroup -All
+$groupsWithoutMembers = foreach ($group in $allGroups) {
+    $members = Get-EntraGroupMember -ObjectId $group.Id
+    if ($members.Count -eq 0) {
+        $group
     }
-    $groupsWithoutMembers | Format-Table DisplayName, Id, GroupTypes
-    ```
+}
+$groupsWithoutMembers | Format-Table DisplayName, Id, GroupTypes
+```
 
-    ```Output
-    DisplayName           Id                                   GroupTypes
-    -----------           --                                   ----------
-    My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
-    HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
-    ```
+```Output
+DisplayName           Id                                   GroupTypes
+-----------           --                                   ----------
+My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
+```
 
 ## Clean up resources
 
