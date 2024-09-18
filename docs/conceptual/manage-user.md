@@ -262,7 +262,7 @@ To manage users, you can perform the following common user management tasks:
 
     This example shows how to remove from a user.
 
-## Offboarding  a user
+## Offboard a user
 
 1. Invalidate active sessions and tokens.
 
