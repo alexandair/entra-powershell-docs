@@ -6,7 +6,7 @@ author: omondiatieno
 manager: CelesteDG
 ms.service: entra
 ms.topic: how-to
-ms.date: 06/26/2024
+ms.date: 09/18/2024
 ms.author: jomondi
 ms.reviewer: stevemutungi
 
@@ -33,7 +33,7 @@ You can access a user's information and manage their data on their behalf or as 
 
 To manage users, you can perform the following common user management tasks:
 
-### Create and delete users
+### Create users
 
 1. Create a new user using the `UserPrincipalName` parameter.
 
@@ -57,13 +57,6 @@ To manage users, you can perform the following common user management tasks:
     DisplayName    Id                                   Mail UserPrincipalName
     -----------    --                                   ---- -----------------
     New User aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb      NewUser@contoso.com
-    ```
-
-1. Delete a user.
-
-    ```powershell
-    Connect-Entra -Scopes 'User.ReadWrite.All'
-    Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
     ```
 
 ### Retrieve a User's Sign-In Activity
@@ -222,6 +215,56 @@ Grant a user an administrative role.
     ```
 
     This example shows how to assign a `FLOW_FREE` license to a user with ObjectId `SawyerM@contoso.com`.
+
+## Offboarding  a user
+
+1. Invalidate Active Sessions and tokens.
+
+    ```powershell
+    Connect-Entra -Scopes 'Directory.AccessAsUser.All'
+    Revoke-EntraUserAllRefreshToken -ObjectId 'SawyerM@contoso.com'
+    ```
+
+    Revoking authentication tokens invalidates them, preventing re-access through cached logins or remembered sessions.
+
+1. Disable a user.
+
+    ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
+    Set-EntraUser -ObjectId 'SawyerM@contoso.com' -AccountEnabled $false
+    ```
+
+    Disabling the account instantly blocks the user from accessing company resources, applications, and data.
+
+1. Reset user's password.
+
+    ```powershell
+    Connect-Entra -Scopes 'Directory.AccessAsUser.All'
+    $securePassword = ConvertTo-SecureString 'Some-strong-random-password' -AsPlainText -Force
+    Set-EntraUserPassword -ObjectId 'SawyerM@contoso.com' -Password $securePassword
+    ```
+
+    To prevent unauthorized access before the account is fully disabled or deleted, resetting the password ensures that the user can no longer use their old credentials to access company resources, thereby preventing any potential misuse of the account.
+
+1. Disable user device.
+
+    ```powershell
+    Connect-Entra -Scopes 'Directory.AccessAsUser.All'
+    $Device = Get-EntraDevice -Filter "DisplayName eq 'Sawyer Laptop'"
+    $Owner = Get-EntraDeviceRegisteredOwner -ObjectId $Device.ObjectId
+    Remove-EntraDeviceRegisteredOwner -ObjectId $Device.ObjectId -OwnerId $Owner.ObjectId
+    ```
+
+    Disabling a user's device helps safeguard the organization's security, data, and resources.
+
+1. Remove a user account.
+
+    ```powershell
+    Connect-Entra -Scopes 'Directory.AccessAsUser.All'
+    Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
+    ```
+
+**Note**: You can also reclaim any licenses for software and services that were assigned to the user.
 
 ## Next steps
 
