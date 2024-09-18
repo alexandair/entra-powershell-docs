@@ -125,7 +125,7 @@ aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 eeeeeeee-4444-5555-6666-ffffffffffff
 ```
 
-## Querying Ownerless and Empty Groups
+## Query ownerless or empty groups
 
 1. Groups Without Owners.
 
