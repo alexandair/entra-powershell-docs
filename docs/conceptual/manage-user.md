@@ -225,7 +225,7 @@ Grant a user an administrative role.
     Revoke-EntraUserAllRefreshToken -ObjectId 'SawyerM@contoso.com'
     ```
 
-    Revoking authentication tokens invalidates them, preventing re-access through cached logins or remembered sessions.
+    Revoking authentication tokens invalidates them, preventing reaccess through cached logins or remembered sessions.
 
 1. Disable a user.
 
@@ -244,7 +244,7 @@ Grant a user an administrative role.
     Set-EntraUserPassword -ObjectId 'SawyerM@contoso.com' -Password $securePassword
     ```
 
-    To prevent unauthorized access before the account is fully disabled or deleted, resetting the password ensures that the user can no longer use their old credentials to access company resources, thereby preventing any potential misuse of the account.
+    Resetting the user's password ensures they can't use their old credentials to access company resources before their account is disabled or deleted. This prevents unauthorized access and potential misuse of the account.
 
 1. Disable user device.
 
