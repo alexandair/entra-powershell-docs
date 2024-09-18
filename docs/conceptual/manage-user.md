@@ -140,7 +140,7 @@ To manage users, you can perform the following common user management tasks:
 
    - `-RefObjectId` - specifies the ID as a UserPrincipalName or ObjectId) of the Microsoft Entra ID object to assign as a manager.
 
-## List of Inactive Users
+## List inactive users
 
 1. List of disabled accounts.
 
