@@ -140,6 +140,20 @@ To manage users, you can perform the following common user management tasks:
 
    - `-RefObjectId` - specifies the ID as a UserPrincipalName or ObjectId) of the Microsoft Entra ID object to assign as a manager.
 
+## List of Inactive Users
+
+    ```powershell
+    Connect-Entra -Scopes 'User.ReadWrite.All'
+    Get-EntraUser -Filter "accountEnabled eq false" | Select-Object DisplayName, Id, Mail, UserPrincipalName
+    ```
+
+    ```Output
+    DisplayName    Id                                   Mail userPrincipalName
+    -----------    --                                   ---- -----------------
+    Sawyer Miller hhhhhhhh-7777-8888-9999-iiiiiiiiiiii      SawyerM@contoso.com
+    Kez Michael   eeeeeeee-4444-5555-6666-ffffffffffff      KezM@contoso.com
+    ```
+
 ### Upload or retrieve a photo for the user
 
 1. Upload a photo for a user.
