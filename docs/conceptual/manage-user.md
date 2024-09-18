@@ -35,7 +35,7 @@ To manage users, you can perform the following common user management tasks:
 
 ### Create users
 
-1. Create a new user using the `UserPrincipalName` parameter.
+The following example creates a new user using the `UserPrincipalName` parameter.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
