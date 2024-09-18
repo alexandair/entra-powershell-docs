@@ -310,7 +310,8 @@ To manage users, you can perform the following common user management tasks:
     Remove-EntraUser -ObjectId 'SawyerM@contoso.com'
     ```
 
-**Note**: You can also reclaim any licenses for software and services that were assigned to the user.
+> [!Note]
+> You can also reclaim any licenses for software and services that were assigned to the user.
 
 ## Next steps
 
