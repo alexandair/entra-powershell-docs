@@ -183,9 +183,9 @@ To manage users, you can perform the following common user management tasks:
 
 ### Grant users administrative roles in your organization
 
-Grant a user an administrative role.
+1. Grant a user an administrative role.
 
-   ```powershell
+    ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All', 'RoleManagement.ReadWrite.Directory'
     $directoryRole = Get-EntraDirectoryRole -Filter "DisplayName eq 'Helpdesk Administrator'"
     $user = Get-EntraUser -Filter "UserPrincipalName eq 'SawyerM@contoso.com'"
