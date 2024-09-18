@@ -61,7 +61,7 @@ To manage users, you can perform the following common user management tasks:
 
 ### Retrieve a user's sign-in activity
 
-1. Retrieve the sign in activity of a specific user.
+The following example shows how to retrieves the sign-in activity of a specific user.
 
     ```powershell
     Connect-Entra -Scopes 'User.Read.All','AuditLog.Read.All'
