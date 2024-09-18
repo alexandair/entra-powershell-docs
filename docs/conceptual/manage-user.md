@@ -59,7 +59,7 @@ To manage users, you can perform the following common user management tasks:
     New User aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb      NewUser@contoso.com
     ```
 
-### Retrieve a User's Sign-In Activity
+### Retrieve a user's sign-in activity
 
 1. Retrieve the SignInActivity of a specific user.
 
