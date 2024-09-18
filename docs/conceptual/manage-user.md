@@ -260,7 +260,7 @@ To manage users, you can perform the following common user management tasks:
     businessPhones                 {}
     ```
 
-    This example shows how to remove from a user.
+    This example shows how to remove a license from a user.
 
 ## Offboard a user
 
