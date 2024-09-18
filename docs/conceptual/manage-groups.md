@@ -147,7 +147,7 @@ To query groups without owners, run the following command.
     HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
     ```
 
-1. Groups Without Members (empty groups).
+To query groups without members (empty groups), run the following command.
 
     ```powershell
     $allGroups = Get-EntraGroup -All
