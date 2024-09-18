@@ -292,7 +292,7 @@ To manage users, you can perform the following common user management tasks:
 
     Resetting the user's password ensures they can't use their old credentials to access company resources before their account is disabled or deleted. This prevents unauthorized access and potential misuse of the account.
 
-1. Disable user device.
+1. Disable a user's device.
 
     ```powershell
     Connect-Entra -Scopes 'Directory.AccessAsUser.All'
