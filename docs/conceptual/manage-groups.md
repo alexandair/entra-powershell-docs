@@ -2,7 +2,7 @@
 title: Manage groups
 description: Learn how to create, edit, update, and delete a group in Microsoft Entra PowerShell.
 ms.topic: how-to
-ms.date: 06/26/2024
+ms.date: 09/18/2024
 author: csmulligan
 manager: CelesteDG
 ms.author: cmulligan
@@ -38,7 +38,6 @@ $groupParams = @{
     SecurityEnabled = $true
     MailNickName = 'NotSet'
 }
-
 New-EntraGroup @groupParams
 ```
 
@@ -69,11 +68,11 @@ This command returns the details of the newly created group. You can also use th
 Update the group description by running the following command. The `ObjectId` is the Group ID.
 
 ```powershell
+$group = Get-EntraGroup -Filter "DisplayName eq 'My new group'"
 $groupParams = @{
-    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    ObjectId = $group.ObjectId
     Description = 'This is my new updated group details'
 }
-
 Set-EntraGroup @groupParams
 ```
 
@@ -88,11 +87,12 @@ Get-EntraGroup -Filter "DisplayName eq 'My new group'"
 Add a user to the group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID. You can get the User ID from the [Microsoft Entra admin center](https://entra.microsoft.com/) or by running the [Get-EntraUser](/powershell/module/microsoft.graph.entra/get-entrauser) command.
 
 ```powershell
+$group = Get-EntraGroup -Filter "DisplayName eq 'My new group'"
+$user = Get-EntraUser -ObjectId 'SawyerM@contoso.com'
 $memberParams = @{
-    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
-    RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+    ObjectId = $group.ObjectId
+    RefObjectId = $user.ObjectId
 }
-
 Add-EntraGroupMember @memberParams
 ```
 
@@ -101,31 +101,69 @@ Add-EntraGroupMember @memberParams
 Add a group owner to a group by running the following command. The `ObjectId` is the Group ID and the `RefObjectId` is the User ID.
 
 ```powershell
+$group = Get-EntraGroup -Filter "DisplayName eq 'My new group'"
+$owner = Get-EntraUser -ObjectId 'AdeleV@contoso.com'
 $ownerParams = @{
-    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
-    RefObjectId = 'bbbbbbbb-1111-2222-3333-cccccccccccc'
+    ObjectId = $group.ObjectId
+    RefObjectId = $owner.ObjectId
 }
-
 Add-EntraGroupOwner @ownerParams
 ```
 
 To confirm the updated group owner, run the [Get-EntraGroupOwner](/powershell/module/microsoft.graph.entra/get-entragroupowner) command. This command returns the User ID of one or more group owners.
 
 ```powershell
-Get-EntraGroupOwner -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+$group = Get-EntraGroup -Filter "DisplayName eq 'My new group'"
+Get-EntraGroupOwner -ObjectId $group.ObjectId
 ```
 
 ```Output
-ageGroup                        :
-onPremisesLastSyncDateTime      :
-creationType                    :
-imAddresses                     : {Hayden@contoso.com}
-preferredLanguage               : en
-mail                            : Hayden@contoso.com
-securityIdentifier              : B-2-33-4-5555555555-6666666666-7777777-8888888888
-identities                      : {@{signInType=userPrincipalName; issuer=contoso.com; issuerAssignedId=Hayden@contoso.com}}
-consentProvidedForMinor         :
-onPremisesUserPrincipalName     :
+Id                                   DeletedDateTime
+--                                   ---------------
+aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+eeeeeeee-4444-5555-6666-ffffffffffff
+```
+
+## Query ownerless or empty groups
+
+To query groups without owners, run the following command.
+
+```powershell
+$allGroups = Get-EntraGroup -All
+$groupsWithoutOwners = foreach ($group in $allGroups) {
+    $owners = Get-EntraGroupOwner -ObjectId $group.Id
+    if ($owners.Count -eq 0) {
+        $group
+    }
+}
+$groupsWithoutOwners | Format-Table DisplayName, Id, GroupTypes
+```
+
+```Output
+DisplayName           Id                                   GroupTypes
+-----------           --                                   ----------
+My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
+```
+
+To query groups without members (empty groups), run the following command.
+
+```powershell
+$allGroups = Get-EntraGroup -All
+$groupsWithoutMembers = foreach ($group in $allGroups) {
+    $members = Get-EntraGroupMember -ObjectId $group.Id
+    if ($members.Count -eq 0) {
+        $group
+    }
+}
+$groupsWithoutMembers | Format-Table DisplayName, Id, GroupTypes
+```
+
+```Output
+DisplayName           Id                                   GroupTypes
+-----------           --                                   ----------
+My new group          aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb {}
+HelpDesk admin group  eeeeeeee-4444-5555-6666-ffffffffffff {}
 ```
 
 ## Clean up resources
@@ -133,7 +171,8 @@ onPremisesUserPrincipalName     :
 To remove the group, run the following command.
 
 ```powershell
-Remove-EntraGroup -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+$group = Get-EntraGroup -Filter "DisplayName eq 'My new group'"
+Remove-EntraGroup -ObjectId $group.ObjectId
 ```
 
 ## Related content
