@@ -127,7 +127,7 @@ eeeeeeee-4444-5555-6666-ffffffffffff
 
 ## Query ownerless or empty groups
 
-1. Groups Without Owners.
+To query groups without owners, run the following command.
 
     ```powershell
     $allGroups = Get-EntraGroup -All
