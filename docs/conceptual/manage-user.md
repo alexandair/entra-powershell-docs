@@ -142,7 +142,7 @@ To manage users, you can perform the following common user management tasks:
 
 ## List inactive users
 
-1. List of disabled accounts.
+1. The following example generates a list of disabled accounts.
 
     ```powershell
     Connect-Entra -Scopes 'User.ReadWrite.All'
