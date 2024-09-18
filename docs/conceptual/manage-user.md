@@ -282,7 +282,7 @@ To manage users, you can perform the following common user management tasks:
 
     Disabling the account instantly blocks the user from accessing company resources, applications, and data.
 
-1. Reset user's password.
+1. Reset a user's password.
 
     ```powershell
     Connect-Entra -Scopes 'Directory.AccessAsUser.All'
