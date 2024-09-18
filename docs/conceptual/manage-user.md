@@ -264,7 +264,7 @@ To manage users, you can perform the following common user management tasks:
 
 ## Offboarding  a user
 
-1. Invalidate Active Sessions and tokens.
+1. Invalidate active sessions and tokens.
 
     ```powershell
     Connect-Entra -Scopes 'Directory.AccessAsUser.All'
