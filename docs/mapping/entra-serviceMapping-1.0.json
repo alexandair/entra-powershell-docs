@@ -225,7 +225,7 @@
   "Set-EntraUserPassword": "Users",
   "Set-EntraUserThumbnailPhoto": "Users",
   "Update-EntraSignedInUserPassword": "Users",
-  "Reset-EntraStrongAuthenticationMethodByUpn": "",
+  "Reset-EntraStrongAuthenticationMethodByUpn": "Authentication",
   "Get-EntraDirSyncfeature": "Directory",
   "Get-EntraAttributeSet": "Custom security attributes",
   "New-EntraAttributeSet": "Custom security attributes",
