@@ -31,6 +31,18 @@ This article lists all new articles that were added or had significant updates i
 
 ## Module version history
 
+- [Version 0.16.0-preview][posh-0.16.0]
+
+  - Added a new cmdlet: `Reset-EntraStrongAuthenticationMethodByUpn`.
+  - Fixed issue [#1090](https://github.com/microsoftgraph/entra-powershell/issues/1090) where `Get-EntraUserManager` ignored the Property parameter.
+  - Fixed broken links in the `Remove-EntraFeatureRolloutPolicyDirectoryObject` documentation.
+  - Updated documentation for 300+ cmdlets to align with both `Beta` and `v1.0` versions.
+  - Upgraded the pipeline to the latest version 5 of the Engineering Security and Release Platform (ESRP) for the CI/CD pipeline.
+  - Added a sample script for retrieving [Entitlement-assignment-policies-without-approval](https://github.com/microsoftgraph/entra-powershell/blob/main/samples/identify-assignment-policies-without-approval.ps1).
+  - Added 28 cmdlet aliases for backward compatibility.
+  - Included examples for removing licenses in `Set-EntraUserLicense`.
+  - Added unit tests for 48 commands.
+
 - [Version 0.15.0-preview][posh-0.15.0]
 
   - Added six new cmdlets for **FeatureRolloutPolicy**, **TrustedCertificateAuthority**, and **CustomSecurityAttributeDefinitionAllowedValue**.
@@ -82,6 +94,7 @@ This article lists all new articles that were added or had significant updates i
 
 [assign-app-roles]: create-assign-app-roles.md
 [cmdlet-map]: azuread-powershell-to-entra-powershell-mapping.md
+[posh-0.16.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.16.0-preview
 [posh-0.15.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.15.0-preview
 [posh-0.14.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.14.0-preview
 [posh-0.13.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.13.0-preview
