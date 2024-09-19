@@ -19,6 +19,8 @@
   "Remove-EntraBetaUserAppRoleAssignment": "Users",
   "Remove-EntraBetaUserExtension": "Users",
   "Remove-EntraBetaUserManager": "Users",
+  "Reset-EntraBetaStrongAuthenticationMethodByUpn": "",
+  "Get-EntraBetaDirSyncfeature": "Directory",
   "Set-EntraBetaUserExtension": "Users",
   "Set-EntraBetaUserLicense": "Users",
   "Set-EntraBetaUserManager": "Users",
