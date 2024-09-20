@@ -31,7 +31,19 @@ This article lists all new articles that were added or had significant updates i
 
 ## Module version history
 
-- [Version 0.15.0-preview][posh-0.15.0]
+- [Version 0.16.0-preview][posh-0.16.0] - **September 2024**
+
+  - Added a new cmdlet: `Reset-EntraStrongAuthenticationMethodByUpn`.
+  - Fixed issue [#1090](https://github.com/microsoftgraph/entra-powershell/issues/1090) where `Get-EntraUserManager` ignored the `-Property` parameter.
+  - Fixed broken links in the `Remove-EntraFeatureRolloutPolicyDirectoryObject` documentation.
+  - Updated documentation for 300+ cmdlets to align with both `Beta` and `v1.0` versions.
+  - Upgraded the pipeline to the latest version 5 of the Engineering Security and Release Platform (ESRP) for the CI/CD pipeline.
+  - Added a sample script for retrieving [Entitlement-assignment-policies-without-approval](https://github.com/microsoftgraph/entra-powershell/blob/main/samples/identify-assignment-policies-without-approval.ps1).
+  - Added 28 cmdlet aliases for backward compatibility.
+  - Included examples for removing licenses in `Set-EntraUserLicense`.
+  - Added unit tests for 48 commands.
+
+- [Version 0.15.0-preview][posh-0.15.0] - **September 2024**
 
   - Added six new cmdlets for **FeatureRolloutPolicy**, **TrustedCertificateAuthority**, and **CustomSecurityAttributeDefinitionAllowedValue**.
   - Renamed over 40 cmdlets to follow [PowerShell cmdlet naming best practices](/powershell/scripting/developer/cmdlet/strongly-encouraged-development-guidelines#use-a-specific-noun-for-a-cmdlet-name-sd01), ensuring singular nouns are used.
@@ -41,7 +53,7 @@ This article lists all new articles that were added or had significant updates i
   - Enabled **PSScriptAnalyzer** for code analysis.
   - Housekeeping tasks, including improvements to the build and release pipelines.
 
-- [Version 0.14.0-preview][posh-0.14.0]
+- [Version 0.14.0-preview][posh-0.14.0] - **August 2024**
 
   - The `Get-EntraUser` cmdlet has been updated and no longer returns the `SignInActivity` by default. To retrieve sign-in activity, refer to [this example](/powershell/module/microsoft.graph.entra/get-entrauser#example-6-get-signinactivity-of-a-user).
   - Added 17 net new cmdlets (Custom Security attributes, Application template, Feature Rollout policy, Audit Directory logs, Audit sign in Logs, Administrative Unit)
@@ -52,7 +64,7 @@ This article lists all new articles that were added or had significant updates i
   - Bug fix to return actual Microsoft Graph types instead of PSCustomObjects.
   - Performed housekeeping tasks, including strengthening the build and release pipelines.
 
-- [Version 0.13.0-preview][posh-0.13.0]
+- [Version 0.13.0-preview][posh-0.13.0] - **August 2024**
 
   - Added five net new cmdlets (Entra Policy, Application Password, Application Service Endpoints)
   - Documentation improvements for over 25 existing cmdlet references documentation.
@@ -60,7 +72,7 @@ This article lists all new articles that were added or had significant updates i
   - Bug fix for `Get-EntraGroupMember` to return Service Principal as a member.
   - Bug fix to decouple SignInActivity with more examples.
 
-- [Version 0.12.0-preview][posh-0.12.0]
+- [Version 0.12.0-preview][posh-0.12.0] - **July 2024**
 
   - Added three new cmdlets for Global Secure Access - Private Access App segment management (preview)
   - Added missing types that were throwing warnings on missing types for Get-EntraApplication and Get-EntraBetaApplication commands.
@@ -68,13 +80,13 @@ This article lists all new articles that were added or had significant updates i
   - Added required permissions for 34 more commands.
   - Resolved broken link in `New-EntraRoleDefinition`.
 
-- [Version 0.11.0-preview][posh-0.11.0]
+- [Version 0.11.0-preview][posh-0.11.0] - **July 2024**
 
   - Added the required scopes in the examples for top cmdlets.
   - Resolved local build issue for PowerShell 7.x.
   - Bug fixes from GitHub issues.
 
-- [Version 0.10.0-preview][posh-0.10.0]
+- [Version 0.10.0-preview][posh-0.10.0] - **June 2024**
 
   - Added the ability to autoinstall module dependencies.
   - Official public preview release version.
@@ -82,6 +94,7 @@ This article lists all new articles that were added or had significant updates i
 
 [assign-app-roles]: create-assign-app-roles.md
 [cmdlet-map]: azuread-powershell-to-entra-powershell-mapping.md
+[posh-0.16.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.16.0-preview
 [posh-0.15.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.15.0-preview
 [posh-0.14.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.14.0-preview
 [posh-0.13.0]: https://www.powershellgallery.com/packages/Microsoft.Graph.Entra/0.13.0-preview
