@@ -177,7 +177,6 @@
   "Set-EntraIdentityProvider": "Identity provider",
   "Set-EntraPermissionGrantConditionSet": "Policies",
   "Set-EntraPermissionGrantPolicy": "Policies",
-  "Set-EntraRoleDefinition": "Role management",
   "New-EntraNamedLocationPolicy": "Policies",
   "Remove-EntraNamedLocationPolicy": "Policies",
   "Set-EntraNamedLocationPolicy": "Policies",
