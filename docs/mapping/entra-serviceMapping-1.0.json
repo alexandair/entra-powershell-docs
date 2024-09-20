@@ -121,7 +121,6 @@
   "Get-EntraFederationProperty": "Domains",
   "Add-EntraGroupMember": "Groups",
   "Add-EntraGroupOwner": "Groups",
-  "Add-EntraLifecyclePolicyGroup": "Groups",
   "Set-EntraFeatureRolloutPolicy": "Policies",
   "Get-EntraDeletedGroup": "Groups",
   "Get-EntraGroup": "Groups",
