@@ -34,7 +34,7 @@ This article lists all new articles that were added or had significant updates i
 - [Version 0.16.0-preview][posh-0.16.0] - **September 2024**
 
   - Added a new cmdlet: `Reset-EntraStrongAuthenticationMethodByUpn`.
-  - Fixed issue [#1090](https://github.com/microsoftgraph/entra-powershell/issues/1090) where `Get-EntraUserManager` ignored the Property parameter.
+  - Fixed issue [#1090](https://github.com/microsoftgraph/entra-powershell/issues/1090) where `Get-EntraUserManager` ignored the `-Property` parameter.
   - Fixed broken links in the `Remove-EntraFeatureRolloutPolicyDirectoryObject` documentation.
   - Updated documentation for 300+ cmdlets to align with both `Beta` and `v1.0` versions.
   - Upgraded the pipeline to the latest version 5 of the Engineering Security and Release Platform (ESRP) for the CI/CD pipeline.
