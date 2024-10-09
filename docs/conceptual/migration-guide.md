@@ -22,7 +22,7 @@ This article details the process of running your existing AzureAD PowerShell scr
 
 The `Enable-EntraAzureADAlias` cmdlet enables compatibility mode through aliases. By default, Enable-EntraAzureADAlias only enables compatibility aliases for the current Microsoft Entra PowerShell session. For more information, see the [Enable-EntraAzureADAlias][enable-entraazureadalias] reference documentation.
 
-To use Microsoft Entra PowerShell with your existing AzureAD PowerShell scripts, replace the `Connect-AzureAD` command with the three provided lines. These three lines will be the beginning of your migrated AzureAD PowerShell script.
+To use Microsoft Entra PowerShell with your existing AzureAD PowerShell scripts, replace the `Connect-AzureAD` command with the three provided lines. These three lines are the beginning of your migrated AzureAD PowerShell script.
 
 ```powershell
 Import-Module -Name Microsoft.Graph.Entra
@@ -38,23 +38,23 @@ The following example script is the original AzureAD PowerShell script.
 
 ```powershell
 Connect-AzureAD
-$Applications = Get-AzureADApplication -All $true
+$applications = Get-AzureADApplication -All $true
 $Logs = @()
 Write-Host "I would like to see the Applications with the Secrets and Certificates that expire in the next X amount of Days? <<Replace X with the number of days. The answer should be ONLY in Numbers>>" -ForegroundColor Green
 $Days = Read-Host
 
 Write-Host "Would you like to see Applications with already expired secrets or certificates as well? <<Answer with [Yes] [No]>>" -ForegroundColor Green
-$AlreadyExpired = Read-Host
+$alreadyExpired = Read-Host
 
 $now = Get-Date
 
-foreach ($app in $Applications) {
-    $AppName = $app.DisplayName
-    $AppID = $app.objectid
-    $ApplID = $app.AppId
-    $AppCreds = Get-AzureADApplication -ObjectId $AppID | Select-Object -Property PasswordCredentials, KeyCredentials
-    $secret = $AppCreds.PasswordCredentials
-    $cert = $AppCreds.KeyCredentials
+foreach ($app in $applications) {
+    $appName = $app.DisplayName
+    $appID = $app.objectid
+    $applID = $app.AppId
+    $appCreds = Get-AzureADApplication -ObjectId $appID | Select-Object -Property PasswordCredentials, KeyCredentials
+    $secret = $appCreds.PasswordCredentials
+    $cert = $appCreds.KeyCredentials
 
 ```
 
@@ -67,20 +67,20 @@ Import-Module -Name Microsoft.Graph.Entra
 Connect-MgGraph #Replaces Connect-AzureAD for auth
 Enable-EntraAzureADAlias #Activate aliasing
 
-$Applications = Get-AzureADApplication -All $true
-$Logs = @()
+$applications = Get-AzureADApplication -All $true
+$logs = @()
 Write-Host "I would like to see the Applications with the Secrets and Certificates that expire in the next X amount of Days? <<Replace X with the number of days. The answer should be ONLY in Numbers>>" -ForegroundColor Green
-$Days = Read-Host
+$days = Read-Host
 Write-Host "Would you like to see Applications with already expired secrets or certificates as well? <<Answer with [Yes] [No]>>" -ForegroundColor Green
-$AlreadyExpired = Read-Host
+$alreadyExpired = Read-Host
 $now = Get-Date
-foreach ($app in $Applications) {
-    $AppName = $app.DisplayName
-    $AppID = $app.Objectid
-    $ApplID = $app.AppId
-    $AppCreds = Get-AzureADApplication -ObjectId $AppID | Select-Object -Property PasswordCredentials, KeyCredentials
-    $secret = $AppCreds.PasswordCredentials
-    $cert = $AppCreds.KeyCredentials
+foreach ($app in $applications) {
+    $appName = $app.DisplayName
+    $appID = $app.Objectid
+    $applID = $app.AppId
+    $appCreds = Get-AzureADApplication -ObjectId $appID | Select-Object -Property PasswordCredentials, KeyCredentials
+    $secret = $appCreds.PasswordCredentials
+    $cert = $appCreds.KeyCredentials
 ```
 
 ## Test compatibility with Test-EntraScript command
@@ -93,7 +93,7 @@ When migrating from the Azure AD PowerShell module to Microsoft Graph endpoints,
 
 - Parameter `-Filter` might not work correctly.
 - Parameter `-SearchString` might not work correctly.
-- Output objects may differ slightly with AzureAD output objects.
+- Output objects can differ slightly with AzureAD output objects.
 
 ## Related content
 
