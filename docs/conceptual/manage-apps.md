@@ -5,7 +5,7 @@ description: Learn how to register, configure, and update apps in Microsoft Entr
 author: csmulligan
 manager: CelesteDG
 ms.topic: how-to
-ms.date: 10/02/2024
+ms.date: 10/05/2024
 ms.author: cmulligan
 ms.reviewer: stevemutungi
 
@@ -48,8 +48,8 @@ The application is assigned an ID that's unique for apps in the tenant, and an a
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-$MyApp=(Get-EntraApplication -Filter "DisplayName eq 'My new application'")
-New-EntraServicePrincipal  -AppId $MyApp.AppId 
+$myApp=(Get-EntraApplication -Filter "DisplayName eq 'My new application'")
+New-EntraServicePrincipal  -AppId $myApp.AppId 
 ```
 
 ```Output
@@ -63,18 +63,23 @@ My new application   bbbbbbbb-1111-2222-3333-cccccccccccc 00001111-aaaa-2222-bbb
 You can configure multiple properties for your app. The following example shows how to update the display name of an application.
 
 ```powershell
-Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -DisplayName 'New Name'
+$application = Get-EntraApplication -Filter "DisplayName eq 'My new application'"
+$parameters = @{
+    ApplicationId = $application.Id
+    DisplayName   = 'Contoso application'
+}
+Set-EntraApplication @parameters
 ```
 
 The following example shows how to update the sign out url of an application:
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
+$application = Get-EntraApplication -Filter "DisplayName eq 'My new application'"
 $appParams = @{
-    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    ApplicationId = $application.Id
     LogoutUrl = 'https://contoso.com/Security/ADFS.aspx/logout'
 }
-
 Set-EntraApplication @appParams
 ```
 
@@ -86,23 +91,24 @@ Limiting app sign-ins to only assigned identities using Microsoft Entra PowerShe
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
+$application = Get-EntraApplication -Filter "DisplayName eq 'My new application'"
 $servicePrincipalParams = @{
-    ObjectId = 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'
+    ServicePrincipalId = $application.Id
     AppRoleAssignmentRequired = $True
 }
-
 Set-EntraServicePrincipal @servicePrincipalParams
 ```
 
 ## Assign permissions to an app
 
-While you can assign permissions to an app through the Microsoft Entra admin center, you also assign permissions through Microsoft Entra PowerShell by updating the `requiredResourceAccess` property of the app object. You must pass in both existing and new permissions. Passing in only new permissions overwrites and removes the existing permissions that haven't yet been consented to.
+You assign permissions to an app through the Microsoft Entra admin center or by using Microsoft Entra PowerShell. In PowerShell, you update the app's `requiredResourceAccess` property, including both existing and new permissions. If you only pass in new permissions, it removes any existing permissions that haven't been consented to.
 
-Assigning permissions doesn't automatically grant them to the app. You must still grant admin consent using the Microsoft Entra admin center. 
+Assigning permissions doesn't automatically grant them to the app. You must still grant admin consent using the Microsoft Entra admin center.
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-$RequiredResourceAccess = @(
+$application = Get-EntraApplication -Filter "DisplayName eq 'My new application'"
+$requiredResourceAccess = @(
   @{resourceAppId = '00000003-0000-0000-c000-000000000000'
       resourceAccess = @(
            @{
@@ -113,7 +119,7 @@ $RequiredResourceAccess = @(
                 id = '9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30'
                 type = 'Role'
            } )})
- Set-EntraApplication -ObjectId 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' -RequiredResourceAccess $RequiredResourceAccess 
+Set-EntraApplication -ApplicationId $application.Id -RequiredResourceAccess $requiredResourceAccess 
 ```
 
 ## Manage owners
@@ -122,29 +128,27 @@ $RequiredResourceAccess = @(
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-$ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
-Get-EntraServicePrincipalOwner -ObjectId $ServicePrincipalId
+$servicePrincipalId = (Get-EntraServicePrincipal -Top 1).Id
+Get-EntraServicePrincipalOwner -ServicePrincipalId $servicePrincipalId
 ```
 
 ### Assign an owner to a service principal
 
 ```powershell
 Connect-Entra -Scopes 'Application.ReadWrite.All'
-$ServicePrincipalId = (Get-EntraServicePrincipal -Top 1).ObjectId
-$OwnerId = (Get-EntraUser -Top 1).ObjectId
+$servicePrincipalId = (Get-EntraServicePrincipal -Top 1).Id
+$ownerId = (Get-EntraUser -Top 1).Id
 
 $params = @{
-    ObjectId = $ServicePrincipalId
-    RefObjectId = $OwnerId
+    ServicePrincipalId = $servicePrincipalId
+    RefObjectId = $ownerId
 }
-
 Add-EntraServicePrincipalOwner @params
 ```
 
 This example shows how to add an owner to a service principal.
 
-- `-ObjectId` - specifies the unique identifier (ObjectId) of the service principal to which you want to add an owner.
-
+- `-ServicePrincipalId` - specifies the unique identifier (ObjectId) of the service principal to which you want to add an owner.
 - `-RefObjectId` - specifies the unique identifier (ObjectId) of the user or group that you want to add as an owner of the specified service principal.
 
 ### Get a list of all applications without user assignment
